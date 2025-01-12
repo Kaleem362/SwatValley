@@ -1,6 +1,6 @@
-// import Malamjabba from "../assets/Valley images/Malamjabbachairlifts.jpg";
-// import PCfront from "../assets/Valley images/PC front image.jpg";
-// import kalam from "../assets/Valley images/hotelsKalam.jpg";
+import Malamjabba from "../assets/Valley images/Malamjabbachairlifts.jpg";
+import PCfront from "../assets/Valley images/PC front image.jpg";
+import kalam from "../assets/Valley images/hotelsKalam.jpg";
 import swatriver from "../assets/Valley images/riverview.jpg";
 export const tours = [
   {

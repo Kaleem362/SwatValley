@@ -1,8 +1,9 @@
 import React from "react";
-
+import Ushuforest from "../assets/Valley images/ushu forests.jpg";
+import SwatValley from "../assets/Valley images/Swat Valley.jpg";
 import chairlifts from "../assets/Valley images/Malamjabbachairlifts.jpg";
 import kalamhills from "../assets/Valley images/snowy.jpg";
-import PCfrontimage from "../assets/Valley images/PC front image.jpg";
+import PCfrontimage from "../assets/Valley images/PC hotel malamjabba.jpg";
 
 const HomeScreenCarousal = () => {
   return (
@@ -19,13 +20,27 @@ const HomeScreenCarousal = () => {
           <div className="h-full carousel-item">
             <img
               src={kalamhills}
-              className="object-center w-full h-full d-block"
+              className="object-cover w-full h-full d-block"
               alt="..."
             />
           </div>
           <div className="h-full carousel-item">
             <img
               src={PCfrontimage}
+              className="object-cover w-full h-full d-block"
+              alt="..."
+            />
+          </div>
+          <div className="h-full carousel-item">
+            <img
+              src={Ushuforest}
+              className="object-cover w-full h-full d-block"
+              alt="..."
+            />
+          </div>
+          <div className="h-full carousel-item">
+            <img
+              src={SwatValley}
               className="object-cover w-full h-full d-block"
               alt="..."
             />
