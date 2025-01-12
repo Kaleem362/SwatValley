@@ -18,11 +18,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between w-full py-4 pr-5 h-28 bg-slate-300">
+    <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-300">
       <h1 className="ml-10 text-5xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xlmd:text-3xl lg:text-5xl xs:text-4xl">
         The Swat Tours
       </h1>
-      {/* Main navigation */}
       <ul
         className={`${
           isMenuOpen
@@ -31,26 +30,26 @@ const Navbar = () => {
         } lg:relative lg:flex lg:flex-row lg:top-0 lg:w-auto lg:p-0 lg:space-y-0 lg:items-center lg:justify-between lg:gap-4 lg:mr-10 lg:bg-transparent`}
       >
         <li
-          className={`p-2 px-3 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Home"
-              ? "bg-green-500 text-white"
-              : "text-white lg:text-black"
+              ? "bg-green-900 text-white"
+              : "text-black lg:text-black"
           } hover:text-slate-300 hover:bg-green-500`}
           onClick={() => handleTabClick("Home")}
         >
           Home
         </li>
         <li
-          className={`p-2 px-3 text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Packages"
-              ? "bg-green-500 text-white"
-              : "text-white lg:text-black"
+              ? "bg-green-900 text-white"
+              : "text-black lg:text-black"
           } hover:text-slate-300 hover:bg-green-500`}
           onClick={() => handleTabClick("Packages")}
         >
           Packages
         </li>
-        <li className="relative z-50 flex items-center gap-1 p-2 px-3 font-semibold text-white transition-all duration-200 rounded-full cursor-pointer font-Manrope lg:text-black hover:text-slate-300 hover:bg-green-500 group">
+        <li className="relative z-50 flex items-center gap-1 p-2 px-3 text-lg font-semibold text-black transition-all duration-200 rounded-full cursor-pointer font-Manrope lg:text-black hover:bg-green-500 group">
           Tours <AiFillCaretDown />
           <ul className="absolute flex-col justify-center hidden w-56 h-auto top-10 -left-20 group-hover:flex bg-slate-800 border-slate-800">
             <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
@@ -74,20 +73,20 @@ const Navbar = () => {
           </ul>
         </li>
         <li
-          className={`p-2 px-3 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Contact"
-              ? "bg-green-500 text-white"
-              : "text-white lg:text-black"
+              ? "bg-green-900 text-white"
+              : "text-black lg:text-black"
           } hover:text-slate-300 hover:bg-green-500`}
           onClick={() => handleTabClick("Contact")}
         >
           Contact
         </li>
         <li
-          className={`p-2 px-3 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "About us"
-              ? "bg-green-500 text-white"
-              : "text-white lg:text-black"
+              ? "bg-green-900 text-white"
+              : "text-black lg:text-black"
           } hover:text-slate-300 hover:bg-green-500`}
           onClick={() => handleTabClick("About us")}
         >
