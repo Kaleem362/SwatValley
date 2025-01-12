@@ -9,7 +9,7 @@ import googleplus from "../assets/icons-asset/googleplus.png";
 
 const Topbar = () => {
   return (
-    <div className="lg:flex-col sm:flex sm:gap-10 sm:justify-between sm:items-center xs:h-24 xs:gap-4 xs:p-4 items-center justify-between w-full h-16 px-5 bg-[#222]">
+    <div className="lg:flex sm:flex sm:gap-4 sm:justify-between sm:items-center  xs:gap-4 xs:p-4 items-center justify-between w-full h-auto px-5 bg-[#222]">
       <div className="flex items-center justify-center text-white contact-bar text-[16px] text-start xs:my-2">
         <a
           href="mailto:fawadkhan1930@gmail.com"
