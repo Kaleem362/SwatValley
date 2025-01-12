@@ -1,22 +1,38 @@
 import React from "react";
 
+import chairlifts from "../assets/Valley images/Malamjabbachairlifts.jpg";
+import kalamhills from "../assets/Valley images/snowy.jpg";
+import PCfrontimage from "../assets/Valley images/PC front image.jpg";
+
 const HomeScreenCarousal = () => {
   return (
     <div>
-      <div id="carouselExample" className="carousel slide">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src="..." className="d-block w-100" alt="..." />
+      <div id="carouselExample" className="carousel slide h-[500px] relative">
+        <div className="h-full carousel-inner">
+          <div className="h-full carousel-item active">
+            <img
+              src={chairlifts}
+              className="object-cover w-full h-full d-block"
+              alt="..."
+            />
           </div>
-          <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
+          <div className="h-full carousel-item">
+            <img
+              src={kalamhills}
+              className="object-center w-full h-full d-block"
+              alt="..."
+            />
           </div>
-          <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
+          <div className="h-full carousel-item">
+            <img
+              src={PCfrontimage}
+              className="object-cover w-full h-full d-block"
+              alt="..."
+            />
           </div>
         </div>
         <button
-          className="carousel-control-prev"
+          className="absolute z-10 text-white -translate-y-1/2 bg-gray-800 rounded-full carousel-control-prev top-1/2 left-4 h-[70px] w-[70px]"
           type="button"
           data-bs-target="#carouselExample"
           data-bs-slide="prev"
@@ -28,7 +44,7 @@ const HomeScreenCarousal = () => {
           <span className="visually-hidden">Previous</span>
         </button>
         <button
-          className="carousel-control-next"
+          className="absolute z-10  text-white -translate-y-1/2 bg-gray-800 rounded-full carousel-control-next top-1/2 right-4 h-[70px] w-[70px]"
           type="button"
           data-bs-target="#carouselExample"
           data-bs-slide="next"

@@ -12,7 +12,7 @@ const Topbar = () => {
     <div className="flex items-center justify-between w-full h-16 px-5 bg-[#222]">
       <div className="flex  items-center justify-center text-white contact-bar text-[16px] text-start">
         <a
-          href="mailto:"
+          href="mailto:fawadkhan1930@gmail.com"
           className="flex items-center justify-center gap-1 mr-2"
         >
           Email us <img src={email} alt="whatsapp icon" className="w-6 h-6" /> |
