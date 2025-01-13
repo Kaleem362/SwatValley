@@ -28,7 +28,7 @@ const Services = () => {
             </a>
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
               We provide 4x4 vehicles for a comfortable ride both off-road and
-              on-road. Your safety is our top priority.
+              on-road. Your safety is our priority.
             </p>
             <Link
               to={""}
@@ -70,7 +70,7 @@ const Services = () => {
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
               Enjoy comfort and luxury in our cozy hotels with exceptional
               service and serene locations, our hotel provides top-notch
-              amnities.
+              amenities.
             </p>
             <Link
               to={""}
@@ -110,9 +110,8 @@ const Services = () => {
               </h5>
             </a>
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
-              Travel with ease and discover new horizons with seamless planning
-              and curated experiences. Enjoy a hassle-free journey creating
-              memories.
+              Travel with ease and discover new horizons through seamless
+              planning and curated experiences. Enjoy a hassle-free journey.
             </p>
             <Link
               to={""}
@@ -147,12 +146,12 @@ const Services = () => {
           <div className="px-4 py-2 ">
             <a href="#">
               <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-                4x4 Off-Road Adventure
+                Experienced Travelling Guide
               </h5>
             </a>
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
-              We provide 4x4 vehicles for a comfortable ride both off-road and
-              on-road. Your safety is our top priority.
+              Our guides ensure a safe, enriching journey, sharing local culture
+              and history to make your trip enjoyable.
             </p>
             <Link
               to={""}
@@ -187,6 +186,22 @@ const Services = () => {
           services are designed to provide an unforgettable experience. From
           serene valleys and majestic peaks to luxurious accommodations and
           hassle-free travel, we ensure your trip is seamless and extraordinary.
+        </p>
+        <p className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500">
+          <b>Swat Valley,</b> often called the{" "}
+          <strong>"Switzerland of the East,"</strong> is a breathtaking
+          destination known for its majestic mountains, lush green meadows, and
+          crystal-clear rivers. Whether you are a nature enthusiast, an
+          adventure seeker, or a history lover, Swat Valley has something for
+          everyone. Explore the enchanting beauty of Malam Jabba, a popular ski
+          resort, or wander through the serene landscapes of Kalam and Mingora.
+          Discover the valley's rich cultural heritage with ancient Buddhist
+          sites like Butkara Stupa and Udegram Monastery. Swat offers
+          unparalleled experiences, from thrilling hikes and river rafting to
+          relaxing by pristine lakes like Mahodand and Daral. With its welcoming
+          locals, vibrant traditions, and year-round festivals, Swat Valley is
+          truly a paradise waiting to be explored. Plan your trip today and
+          immerse yourself in the unmatched beauty and charm of Swat Valley!
         </p>
       </div>
     </div>
