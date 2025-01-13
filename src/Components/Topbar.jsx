@@ -9,8 +9,8 @@ import googleplus from "../assets/icons-asset/googleplus.png";
 
 const Topbar = () => {
   return (
-    <div className="lg:flex sm:flex sm:gap-4 sm:justify-between sm:items-center  xs:gap-4 xs:p-4 items-center justify-between w-full h-auto px-5 bg-[#222]">
-      <div className="flex items-center justify-center text-white contact-bar text-[16px] text-start xs:my-2">
+    <div className="lg:flex sm:flex sm:gap-4 sm:justify-between sm:items-center  xs:gap-4 xs:p-4 items-center justify-between w-full h-auto px-5 bg-[#222] p-4">
+      <div className="flex items-center justify-center  text-white contact-bar  text-[14px] my-2 sm:text-[16px] text-start xs:my-2">
         <a
           href="mailto:fawadkhan1930@gmail.com"
           className="flex items-center justify-center gap-1 mr-2"
@@ -22,13 +22,13 @@ const Topbar = () => {
         </a>
         <a
           href="https://wa.me/923489857193"
-          className="flex items-center gap-2 ml-1"
+          className="flex items-center gap-2 ml-2"
         >
           WhatsApp us{" "}
           <img src={whatsapp1} alt="whatsapp icon" className="w-6 h-6" />
         </a>
       </div>
-      <div className="flex justify-center gap-3 social-media-handles">
+      <div className="flex justify-center gap-3 mt-4 social-media-handles">
         <a href="https://www.facebook.com">
           <img src={facebook} alt="facebook" className="w-6 h-6" />
         </a>

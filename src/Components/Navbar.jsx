@@ -19,18 +19,18 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-300">
-      <h1 className="ml-10 text-5xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xlmd:text-3xl lg:text-5xl xs:text-4xl">
+      <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xlmd:text-3xl lg:text-5xl xs:text-4xl ">
         The Swat Tours
       </h1>
       <ul
         className={`${
           isMenuOpen
-            ? "flex flex-col absolute top-40 left-0 w-full bg-slate-800 p-4 space-y-2  z-50"
+            ? "flex flex-col absolute top-52 sm:top-40 xs:text-white left-0 w-full bg-slate-800 p-4 space-y-2  z-50"
             : "hidden"
-        } lg:relative lg:flex lg:flex-row lg:top-0 lg:w-auto lg:p-0 lg:space-y-0 lg:items-center lg:justify-between lg:gap-4 lg:mr-10 lg:bg-transparent`}
+        } lg:relative lg:flex lg:flex-row lg:top-0 lg:w-auto lg:p-0  lg:space-y-0 lg:items-center lg:justify-between lg:gap-4 lg:mr-10 lg:bg-transparent`}
       >
         <li
-          className={`p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg xs:text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Home"
               ? "bg-green-900 text-white"
               : "text-black lg:text-black"
