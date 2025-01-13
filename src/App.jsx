@@ -3,14 +3,28 @@ import Topbar from "./Components/Topbar";
 import Navbar from "./Components/Navbar";
 import HomeScreenCarousal from "./Components/HomeScreenCarousal";
 import Hero from "./Components/Hero";
+import Services from "./Components/Services";
+import { Route, Routes } from "react-router";
+import ErrorPage from "./Components/ErrorPage";
 
 const App = () => {
   return (
     <div>
-      <Topbar />
-      <Navbar />
-      <HomeScreenCarousal />
-      <Hero />
+      <Routes>
+        <Route path="*" element={<ErrorPage />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Topbar />
+              <Navbar />
+              <HomeScreenCarousal />
+              <Hero />
+              <Services />
+            </>
+          }
+        />
+      </Routes>
     </div>
   );
 };
