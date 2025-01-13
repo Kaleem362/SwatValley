@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Navbar.css";
+// import "./Navbar.css";
 import { AiFillCaretDown } from "react-icons/ai";
 import { TiThMenu } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-300">
+    <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-green-100">
       <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xlmd:text-3xl lg:text-5xl xs:text-4xl ">
         The Swat Tours
       </h1>
@@ -30,7 +30,7 @@ const Navbar = () => {
         } lg:relative lg:flex lg:flex-row lg:top-0 lg:w-auto lg:p-0  lg:space-y-0 lg:items-center lg:justify-between lg:gap-4 lg:mr-10 lg:bg-transparent`}
       >
         <li
-          className={`p-2 px-3 text-lg text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Home"
               ? "bg-green-900 text-white"
               : "text-black lg:text-black"
@@ -40,7 +40,7 @@ const Navbar = () => {
           Home
         </li>
         <li
-          className={`p-2 px-3 text-lg text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Packages"
               ? "bg-green-900 text-white"
               : "text-black lg:text-black"
@@ -49,9 +49,10 @@ const Navbar = () => {
         >
           Packages
         </li>
-        <li className="relative z-50 flex gap-1 p-2 px-3 text-lg font-semibold text-white transition-all duration-200 rounded-full cursor-pointer items- center font-Manrope lg:text-black hover:bg-green-500 group">
-          Tours <AiFillCaretDown />
-          <ul className="absolute flex-col justify-center hidden w-56 h-auto xs:top-0 xs:left-0 lg:top-10 lg:-left-20 xs:w-full group-hover:flex bg-slate-800 border-slate-800">
+        <li className="relative z-50 flex gap-2 p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer text-slate-900 items- center font-Manrope lg:text-black group hover:bg-green-500">
+          Tours{" "}
+          <AiFillCaretDown className="m-auto transition-all duration-200 -rotate-180 group-hover:-rotate-0" />
+          <ul className="absolute flex-col justify-center hidden h-auto lg:w-72 xs:top-0 xs:left-0 lg:top-10 lg:-left-20 xs:w-full group-hover:flex bg-slate-800 border-slate-800">
             <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
               Kalam Tour
             </li>
@@ -73,7 +74,7 @@ const Navbar = () => {
           </ul>
         </li>
         <li
-          className={`p-2 px-3 text-lg text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Contact"
               ? "bg-green-900 text-white"
               : "text-black lg:text-black"
@@ -83,7 +84,7 @@ const Navbar = () => {
           Contact
         </li>
         <li
-          className={`p-2 px-3 text-lg text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "About us"
               ? "bg-green-900 text-white"
               : "text-black lg:text-black"

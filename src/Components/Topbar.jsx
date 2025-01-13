@@ -29,7 +29,7 @@ const Topbar = () => {
         </a>
       </div>
       <div className="flex justify-center gap-3 xs:mt-4 md:mt-0 social-media-handles">
-        <a href="https://www.facebook.com">
+        <a href="https://www.facebook.com/fawadkhan1930?mibextid=kFxxJD">
           <img src={facebook} alt="facebook" className="w-6 h-6" />
         </a>
         <a href="https://www.instagram.com">
