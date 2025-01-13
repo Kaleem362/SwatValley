@@ -1,10 +1,9 @@
 import React from "react";
-
 const Hero = () => {
   return (
-    <div className="flex flex-col items-start justify-start h-screen p-10 tracking-tighter bg-green-100">
+    <div className="relative flex flex-col items-start justify-start h-screen p-10 tracking-tighter bg-green-100">
       <div className="flex header">
-        <h1 className="w-full my-4 font-bold text-slate-800 text-start xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope">
+        <h1 className="w-full mb-2 font-bold text-slate-800 text-start xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope">
           Welcome to Swat Tours
         </h1>
       </div>
