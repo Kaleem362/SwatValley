@@ -25,12 +25,12 @@ const Navbar = () => {
       <ul
         className={`${
           isMenuOpen
-            ? "flex flex-col absolute top-52 sm:top-40 xs:text-white left-0 w-full bg-slate-800 p-4 space-y-2  z-50"
+            ? "flex flex-col absolute top-48  sm:top-40 xs:text-white md:text-white lg:text-white xl:text-white left-0 w-full bg-slate-800 p-4 space-y-2  z-50"
             : "hidden"
         } lg:relative lg:flex lg:flex-row lg:top-0 lg:w-auto lg:p-0  lg:space-y-0 lg:items-center lg:justify-between lg:gap-4 lg:mr-10 lg:bg-transparent`}
       >
         <li
-          className={`p-2 px-3 text-lg xs:text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Home"
               ? "bg-green-900 text-white"
               : "text-black lg:text-black"
@@ -40,7 +40,7 @@ const Navbar = () => {
           Home
         </li>
         <li
-          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Packages"
               ? "bg-green-900 text-white"
               : "text-black lg:text-black"
@@ -49,9 +49,9 @@ const Navbar = () => {
         >
           Packages
         </li>
-        <li className="relative z-50 flex items-center gap-1 p-2 px-3 text-lg font-semibold text-black transition-all duration-200 rounded-full cursor-pointer font-Manrope lg:text-black hover:bg-green-500 group">
+        <li className="relative z-50 flex gap-1 p-2 px-3 text-lg font-semibold text-white transition-all duration-200 rounded-full cursor-pointer items- center font-Manrope lg:text-black hover:bg-green-500 group">
           Tours <AiFillCaretDown />
-          <ul className="absolute flex-col justify-center hidden w-56 h-auto top-10 -left-20 group-hover:flex bg-slate-800 border-slate-800">
+          <ul className="absolute flex-col justify-center hidden w-56 h-auto xs:top-0 xs:left-0 lg:top-10 lg:-left-20 xs:w-full group-hover:flex bg-slate-800 border-slate-800">
             <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
               Kalam Tour
             </li>
@@ -73,7 +73,7 @@ const Navbar = () => {
           </ul>
         </li>
         <li
-          className={`p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Contact"
               ? "bg-green-900 text-white"
               : "text-black lg:text-black"
@@ -83,7 +83,7 @@ const Navbar = () => {
           Contact
         </li>
         <li
-          className={`p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-3 text-lg text-white font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "About us"
               ? "bg-green-900 text-white"
               : "text-black lg:text-black"
