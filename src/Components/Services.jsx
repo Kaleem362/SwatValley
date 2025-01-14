@@ -2,6 +2,7 @@ import React from "react";
 import vehicle from "../assets/Valley images/carcamping.jpg";
 import CozyHotels from "../assets/Valley images/PC hotel malamjabba.jpg";
 import Travel from "../assets/Valley images/travel.jpg";
+import guide from "../assets/images/guide.jpg";
 import { Link } from "react-router";
 
 const Services = () => {
@@ -77,7 +78,7 @@ const Services = () => {
         <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
-            src={vehicle}
+            src={guide}
             alt=""
           />
 
@@ -120,7 +121,7 @@ const Services = () => {
           truly a paradise waiting to be explored. Plan your trip today and
           immerse yourself in the unmatched beauty and charm of Swat Valley!
         </p>
-        <button className="relative flex items-center overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group">
+        <button className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group">
           <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>

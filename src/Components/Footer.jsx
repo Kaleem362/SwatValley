@@ -10,7 +10,7 @@ const Footer = () => {
         className="w-16 h-16 sm:w-24 sm-h-24 md:h-32 md:w-32 lg:h-60 lg:w-60"
       />
 
-      <div className="tit">
+      <div className="title min-w-fit-content">
         <h1>The Swat Tours</h1>
       </div>
     </div>
