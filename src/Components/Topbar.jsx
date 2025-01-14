@@ -13,17 +13,20 @@ const Topbar = () => {
       <div className=" flex items-center justify-center  text-white contact-bar  text-[14px] my-2 sm:text-[16px] text-start xs:my-2">
         <a
           href="mailto:fawadkhan1930@gmail.com"
-          className="flex items-center justify-center gap-1 mr-2"
+          className="flex items-center justify-center gap-1 mr-2 min-w-fit"
         >
           Email us <img src={email} alt="email icon" className="w-6 h-6" /> |
         </a>
-        <a href="tel:+923489857193" className="flex items-center gap-1">
+        <a
+          href="tel:+923489857193"
+          className="flex items-center gap-1 min-w-fit"
+        >
           +923489857193{" "}
           <img src={callicon} alt="call icon" className="w-6 h-6" /> |
         </a>
         <a
           href="https://wa.me/923489857193"
-          className="flex items-center gap-2 ml-2"
+          className="flex items-center gap-2 ml-2 min-w-fit"
         >
           WhatsApp us{" "}
           <img src={whatsapp1} alt="whatsapp icon" className="w-6 h-6" />
