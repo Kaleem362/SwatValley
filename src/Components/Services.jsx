@@ -13,20 +13,18 @@ const Services = () => {
       </h1>
       <div className="flex flex-wrap justify-center w-full gap-6 xs:p-2 sm:p-4 card-container">
         {/* card */}
-        <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
-          <Link to="#">
-            <img
-              className="object-cover w-full h-auto rounded-t-lg"
-              src={vehicle}
-              alt=""
-            />
-          </Link>
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105">
+          <img
+            className="object-cover w-full h-auto rounded-t-lg"
+            src={vehicle}
+            alt=""
+          />
+
           <div className="px-4 py-2 ">
-            <Link to="#">
-              <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-                4x4 Off-Road Adventure
-              </h5>
-            </Link>
+            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              4x4 Off-Road Adventure
+            </h5>
+
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
               We provide 4x4 vehicles for a comfortable ride both off-road and
               on-road. Your safety is our priority.
@@ -34,20 +32,18 @@ const Services = () => {
           </div>
         </div>
         {/* card */}
-        <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
-          <Link to="#">
-            <img
-              className="object-cover w-full h-auto rounded-t-lg"
-              src={CozyHotels}
-              alt=""
-            />
-          </Link>
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105">
+          <img
+            className="object-cover w-full h-auto rounded-t-lg"
+            src={CozyHotels}
+            alt=""
+          />
+
           <div className="px-4 py-2 ">
-            <Link to="#">
-              <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-                Cozy Hotels
-              </h5>
-            </Link>
+            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              Cozy Hotels
+            </h5>
+
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
               Enjoy comfort and luxury in our cozy hotels with exceptional
               service and serene locations, our hotel provides top-notch
@@ -56,14 +52,13 @@ const Services = () => {
           </div>
         </div>
         {/* card */}
-        <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
-          <Link to="#">
-            <img
-              className="object-cover w-full h-auto rounded-t-lg"
-              src={Travel}
-              alt=""
-            />
-          </Link>
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105">
+          <img
+            className="object-cover w-full h-auto rounded-t-lg"
+            src={Travel}
+            alt=""
+          />
+
           <div className="px-4 py-2 ">
             <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
               Travel with Ease
@@ -75,7 +70,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
             src={guide}
