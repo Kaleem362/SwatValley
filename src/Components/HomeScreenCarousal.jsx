@@ -30,7 +30,7 @@ const HomeScreenCarousal = () => {
           <div className="relative h-full carousel-item">
             <img
               src={kalamhills}
-              className="object-cover w-full h-auto d-block"
+              className="object-cover w-full h-full d-block"
               alt="..."
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -38,7 +38,7 @@ const HomeScreenCarousal = () => {
           <div className="relative h-full carousel-item">
             <img
               src={PCfrontimage}
-              className="object-cover w-full h-auto d-block"
+              className="object-cover w-full h-full d-block"
               alt="..."
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -46,7 +46,7 @@ const HomeScreenCarousal = () => {
           <div className="relative h-full carousel-item">
             <img
               src={Ushuforest}
-              className="object-cover w-full h-auto d-block"
+              className="object-cover w-full h-full d-block"
               alt="..."
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -63,6 +63,7 @@ const HomeScreenCarousal = () => {
             <img
               src={forestroad}
               className="object-cover w-full h-full overflow-hidden d-block"
+              s
               alt="..."
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>

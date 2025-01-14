@@ -6,6 +6,7 @@ import Hero from "./Components/Hero";
 import Services from "./Components/Services";
 import { Route, Routes } from "react-router";
 import ErrorPage from "./Components/ErrorPage";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
               <HomeScreenCarousal />
               <Hero />
               <Services />
+              <Footer />
             </>
           }
         />
