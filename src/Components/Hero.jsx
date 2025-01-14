@@ -5,17 +5,17 @@ import destination from "../assets/icons-asset/mountainsun.png";
 import { Link } from "react-router";
 const Hero = () => {
   return (
-    <div className="relative flex flex-col items-start justify-start h-auto p-10 tracking-tighter transition-all duration-200 bg-green-400">
+    <div className="relative flex flex-col items-start justify-start h-auto p-10 tracking-tighter transition-all duration-200 bg-green-400 animate-fadeIn">
       <div className="flex header">
-        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope">
+        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Welcome to Swat Tours
         </h1>
       </div>
-      <h4 className="xs:text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-600">
+      <h4 className="xs:text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-600 animate-fadeInFromLeft">
         Discover Nature’s Paradise!
       </h4>
       <div className="flex flex-col w-full gap-10 my-2 lg:flex-row lg:items-start lg:justify-between">
-        <p className="flex justify-start  items-start text-slate-500 flex-start font-manrope text-sm sm:text-md md:text-lg lg:text-lg xl:text-xl lg:w-[50%]">
+        <p className="flex justify-start  items-start text-slate-500 flex-start font-manrope text-sm sm:text-md md:text-lg lg:text-lg xl:text-xl lg:w-[50%] animate-fadeInFromLeft">
           Plan your dream escape to Swat Valley with our all-inclusive tour
           packages. Explore breathtaking landscapes, from lush green valleys to
           majestic mountains, while enjoying luxurious accommodations and
@@ -27,7 +27,7 @@ const Hero = () => {
           destinations. Your adventure begins here—book your Swat Valley tour
           today!
         </p>
-        <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200 hover:scale-105 shadow-slate-800 lg:flex-col m-x-auto">
+        <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200 hover:scale-105 shadow-slate-800 lg:flex-col m-x-auto animate-fadeInFromRight">
           <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl border-slate-300">
             <img
               src={destination}
@@ -46,11 +46,11 @@ const Hero = () => {
           </li>
         </ul>
       </div>
-      <div className="flex items-center justify-between w-full gap-4 mt-4 xs:w-full md:w-fit lg:w-fit button">
+      <div className="flex items-center justify-between w-full gap-4 mt-4 xs:w-full md:w-fit lg:w-fit button animate-fadeInFromBottom">
         <p className="text-lg text-slate-900 font-Manrope">
           Start Your Journey
         </p>
-        <button className="relative flex items-center overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group">
+        <button className="relative flex items-center overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group ">
           <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>
@@ -62,7 +62,7 @@ const Hero = () => {
             <Link to={"/packages"}>Explore Packages</Link>
           </span>
         </button>
-        <div className="relative overflow-x-visible text-center w-14 h-14 overflow-y-clip group">
+        <div className="relative overflow-x-visible text-center cursor-pointer w-14 h-14 overflow-y-clip group">
           <div className="flex justify-center items-center w-14 h-14 rounded-full bg-slate-900 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
             <img src={car} alt="Car" className="w-10 h-10" />
           </div>

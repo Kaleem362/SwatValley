@@ -5,11 +5,10 @@ import swatriver from "../assets/Valley images/riverview.jpg";
 export const tours = [
   {
     id: 1,
-    title: "Swat Valley Explorer",
+    title: "Kalam Valley Tour",
     description:
       "Experience the breathtaking beauty of Swat Valley with our comprehensive tour package. Visit pristine lakes, lush forests, and historic sites.",
-    image:
-      "https://images.unsplash.com/photo-1544084944-15c579d82ca8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: kalam,
     coverImage: swatriver,
     duration: "8 hours per day",
     daysNights: "5 Days / 4 Nights",

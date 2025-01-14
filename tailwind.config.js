@@ -6,16 +6,45 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Manrope: "Manrope",
+        Manrope: ["Manrope", "sans-serif"], // Ensure a fallback font
       },
-    },
-    screens: {
-      xs: "414px",
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeInFromLeft: {
+          "0%": { opacity: "0", transform: "translateX(-100%)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        fadeInFromRight: {
+          "0%": { opacity: "0", transform: "translateX(100%)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        fadeInFromTop: {
+          "0%": { opacity: "0", transform: "translateY(-100%)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeInFromBottom: {
+          "0%": { opacity: "0", transform: "translateY(100%)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 1s ease-in-out",
+        fadeInFromLeft: "fadeInFromLeft 1s ease-in-out",
+        fadeInFromRight: "fadeInFromRight 1s ease-in-out",
+        fadeInFromTop: "fadeInFromTop 1s ease-in-out",
+        fadeInFromBottom: "fadeInFromBottom 1s ease-in-out",
+      },
+      screens: {
+        xs: "414px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
     },
   },
   plugins: [typography],

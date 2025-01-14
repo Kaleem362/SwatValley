@@ -7,13 +7,13 @@ import { Link } from "react-router";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 p-10 bg-green-400">
-      <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope">
+    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 p-10 bg-green-400 animate-fadeIn">
+      <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Services We offer
       </h1>
-      <div className="flex flex-wrap justify-center w-full gap-6 xs:p-2 sm:p-4 card-container">
+      <div className="flex flex-wrap justify-center w-full gap-6 xs:p-2 sm:p-4 card-container animate-fadeInFromTop">
         {/* card */}
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105">
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromLeft">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
             src={vehicle}
@@ -70,7 +70,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105">
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromRight">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
             src={guide}
@@ -90,17 +90,17 @@ const Services = () => {
         </div>
       </div>
       <div className="whyChooseSwat">
-        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope">
+        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Why Visit Swat Valley?
         </h1>
-        <p className="p-4 my-4 xs:text-md sm:text-lg lg:text-xl  bg-white rounded-lg shadow-lg  xs:w-[400px] sm:w-[520px] md:w-[600px] lg:w-[700px] text-slate-500">
+        <p className="p-4 my-4 xs:text-md sm:text-lg lg:text-xl  bg-white rounded-lg shadow-lg  xs:w-[400px] sm:w-[520px] md:w-[600px] lg:w-[700px] text-slate-500 animate-fadeInFromLeft">
           <b>Welcome to Swat Valley,</b> the Switzerland of the East! Whether
           you're seeking adventure, relaxation, or a mix of both, our tour
           services are designed to provide an unforgettable experience. From
           serene valleys and majestic peaks to luxurious accommodations and
           hassle-free travel, we ensure your trip is seamless and extraordinary.
         </p>
-        <p className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500">
+        <p className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromRight">
           <b>Swat Valley,</b> often called the{" "}
           <strong>"Switzerland of the East,"</strong> is a breathtaking
           destination known for its majestic mountains, lush green meadows, and
@@ -116,7 +116,7 @@ const Services = () => {
           truly a paradise waiting to be explored. Plan your trip today and
           immerse yourself in the unmatched beauty and charm of Swat Valley!
         </p>
-        <button className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group">
+        <button className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group animate-fadeInFromBottom">
           <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>
@@ -130,37 +130,37 @@ const Services = () => {
         </button>
       </div>
       <div className="why-choose-us">
-        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope">
+        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Why Choose us?
         </h1>
-        <div className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500">
+        <div className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromLeft">
           At <b>The Swat Tours</b>, we strive to make your travel experience
           seamless, comfortable, and memorable. Here’s why we stand out:
           <br />
           <ul className="bg-white">
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromRight">
               <b>Expert Tour Guides:</b>
               Our professional guides are well-versed in local history, culture,
               and attractions, ensuring an informative and enriching journey
               through Swat Valley.
             </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromLeft">
               <b>Reliable Tour Vehicles:</b>We provide well-maintained vehicles,
               including 4x4 options for off-road adventures, ensuring a smooth
               ride across all terrains.
             </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromRight">
               <b>Comprehensive Packages</b>From car fuel and parking charges to
               accommodation in cozy, well-equipped hotels, we cover all
               tour-related expenses so you can focus on enjoying the journey.
             </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromLeft">
               <b>Tailored Services:</b>Whether it’s exploring scenic routes,
               visiting historical landmarks, or trekking through nature, we
               cater to your preferences to deliver a personalized travel
               experience.
             </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromRight">
               <b>Hassle-Free Planning:</b>Leave the details to us! We manage
               logistics, so you can immerse yourself in the breathtaking beauty
               of Swat Valley without any worries.
