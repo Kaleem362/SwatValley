@@ -13,166 +13,83 @@ const Services = () => {
       <div className="flex flex-wrap justify-center w-full gap-6 xs:p-2 sm:p-4 card-container">
         {/* card */}
         <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
-          <a href="#">
+          <Link to="#">
             <img
               className="object-cover w-full h-auto rounded-t-lg"
               src={vehicle}
               alt=""
             />
-          </a>
+          </Link>
           <div className="px-4 py-2 ">
-            <a href="#">
+            <Link to="#">
               <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
                 4x4 Off-Road Adventure
               </h5>
-            </a>
+            </Link>
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
               We provide 4x4 vehicles for a comfortable ride both off-road and
               on-road. Your safety is our priority.
             </p>
-            <Link
-              to={""}
-              className="inline-flex items-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-slate-800 hover:bg-slate-900"
-            >
-              Explore
-              <svg
-                className="w-4 h-4 ml-2 rtl:rotate-180"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </Link>
           </div>
         </div>
         {/* card */}
         <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
-          <a href="#">
+          <Link to="#">
             <img
               className="object-cover w-full h-auto rounded-t-lg"
               src={CozyHotels}
               alt=""
             />
-          </a>
+          </Link>
           <div className="px-4 py-2 ">
-            <a href="#">
+            <Link to="#">
               <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
                 Cozy Hotels
               </h5>
-            </a>
+            </Link>
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
               Enjoy comfort and luxury in our cozy hotels with exceptional
               service and serene locations, our hotel provides top-notch
               amenities.
             </p>
-            <Link
-              to={""}
-              className="inline-flex items-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-slate-800 hover:bg-slate-900"
-            >
-              Explore
-              <svg
-                className="w-4 h-4 ml-2 rtl:rotate-180"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </Link>
           </div>
         </div>
         {/* card */}
         <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
-          <a href="#">
+          <Link to="#">
             <img
               className="object-cover w-full h-auto rounded-t-lg"
               src={Travel}
               alt=""
             />
-          </a>
+          </Link>
           <div className="px-4 py-2 ">
-            <a href="#">
-              <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-                Travel with Ease
-              </h5>
-            </a>
+            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              Travel with Ease
+            </h5>
+
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
               Travel with ease and discover new horizons through seamless
               planning and curated experiences. Enjoy a hassle-free journey.
             </p>
-            <Link
-              to={""}
-              className="inline-flex items-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-slate-800 hover:bg-slate-900"
-            >
-              Explore
-              <svg
-                className="w-4 h-4 ml-2 rtl:rotate-180"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </Link>
           </div>
         </div>
         <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
-          <a href="#">
-            <img
-              className="object-cover w-full h-auto rounded-t-lg"
-              src={vehicle}
-              alt=""
-            />
-          </a>
+          <img
+            className="object-cover w-full h-auto rounded-t-lg"
+            src={vehicle}
+            alt=""
+          />
+
           <div className="px-4 py-2 ">
-            <a href="#">
-              <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-                Experienced Travelling Guide
-              </h5>
-            </a>
+            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              Experienced Travelling Guide
+            </h5>
+
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
               Our guides ensure a safe, enriching journey, sharing local culture
               and history to make your trip enjoyable.
             </p>
-            <Link
-              to={""}
-              className="inline-flex items-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-slate-800 hover:bg-slate-900"
-            >
-              Explore
-              <svg
-                className="w-4 h-4 ml-2 rtl:rotate-180"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </Link>
           </div>
         </div>
       </div>

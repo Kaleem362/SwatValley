@@ -18,7 +18,8 @@ const Topbar = () => {
           Email us <img src={email} alt="email icon" className="w-6 h-6" /> |
         </a>
         <a href="tel:+923489857193" className="flex items-center gap-1">
-          Call us <img src={callicon} alt="call icon" className="w-6 h-6" /> |
+          Call us at +923489857193{" "}
+          <img src={callicon} alt="call icon" className="w-6 h-6" /> |
         </a>
         <a
           href="https://wa.me/923489857193"
