@@ -10,9 +10,9 @@ const Services = () => {
       <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope">
         Services We offer
       </h1>
-      <div className="flex flex-wrap justify-center w-full gap-6 p-4 card-container">
+      <div className="flex flex-wrap justify-center w-full gap-6 xs:p-2 sm:p-4 card-container">
         {/* card */}
-        <div className="w-64 h-auto bg-white border-2 rounded-lg shadow xs border-slate-300">
+        <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
           <a href="#">
             <img
               className="object-cover w-full h-auto rounded-t-lg"
@@ -53,7 +53,7 @@ const Services = () => {
           </div>
         </div>
         {/* card */}
-        <div className="w-64 h-auto bg-white border-2 rounded-lg shadow xs border-slate-300">
+        <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
           <a href="#">
             <img
               className="object-cover w-full h-auto rounded-t-lg"
@@ -95,7 +95,7 @@ const Services = () => {
           </div>
         </div>
         {/* card */}
-        <div className="w-64 h-auto bg-white border-2 rounded-lg shadow xs border-slate-300">
+        <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
           <a href="#">
             <img
               className="object-cover w-full h-auto rounded-t-lg"
@@ -135,7 +135,7 @@ const Services = () => {
             </Link>
           </div>
         </div>
-        <div className="w-64 h-auto bg-white border-2 rounded-lg shadow xs border-slate-300">
+        <div className="h-auto bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300">
           <a href="#">
             <img
               className="object-cover w-full h-auto rounded-t-lg"
