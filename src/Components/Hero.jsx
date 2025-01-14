@@ -70,12 +70,6 @@ const Hero = () => {
             Book Now
           </div>
         </div>
-        {/* <Link
-          to="/packages"
-          className="px-4 font-bold bg-green-300 rounded-full text-slate-900 md:px-6 md:py-4 btn hover:bg-slate-700 hover:text-white font-Manrope"
-        >
-          Explore packages
-        </Link> */}
       </div>
       <hr className="w-full mt-10" />
     </div>

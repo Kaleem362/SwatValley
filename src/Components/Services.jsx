@@ -120,6 +120,60 @@ const Services = () => {
           truly a paradise waiting to be explored. Plan your trip today and
           immerse yourself in the unmatched beauty and charm of Swat Valley!
         </p>
+        <button className="relative flex items-center overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group">
+          <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+            <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+          </span>
+          <span className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
+            <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+          </span>
+          <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
+          <span className="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+            <Link to={"/gallery"}>Image Gallery</Link>
+          </span>
+        </button>
+      </div>
+      <div className="why-choose-us">
+        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope">
+          Why Choose us?
+        </h1>
+        <p className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500">
+          At <b>The Swat Tours</b>, we strive to make your travel experience
+          seamless, comfortable, and memorable. Here’s why we stand out:
+          <br />
+          <ul className="bg-white">
+            <li className="my-1 list-disc sm:ml-10 bg-slate-300">
+              <b>Expert Tour Guides:</b>
+              Our professional guides are well-versed in local history, culture,
+              and attractions, ensuring an informative and enriching journey
+              through Swat Valley.
+            </li>
+            <li className="my-1 list-disc sm:ml-10 bg-slate-300">
+              <b>Reliable Tour Vehicles:</b>We provide well-maintained vehicles,
+              including 4x4 options for off-road adventures, ensuring a smooth
+              ride across all terrains.
+            </li>
+            <li className="my-1 list-disc sm:ml-10 bg-slate-300">
+              <b>Comprehensive Packages</b>From car fuel and parking charges to
+              accommodation in cozy, well-equipped hotels, we cover all
+              tour-related expenses so you can focus on enjoying the journey.
+            </li>
+            <li className="my-1 list-disc sm:ml-10 bg-slate-300">
+              <b>Tailored Services:</b>Whether it’s exploring scenic routes,
+              visiting historical landmarks, or trekking through nature, we
+              cater to your preferences to deliver a personalized travel
+              experience.
+            </li>
+            <li className="my-1 list-disc sm:ml-10 bg-slate-300">
+              <b>Hassle-Free Planning:</b>Leave the details to us! We manage
+              logistics, so you can immerse yourself in the breathtaking beauty
+              of Swat Valley without any worries.
+            </li>
+          </ul>
+          Choose <b>The Swat Tours</b> for a stress-free and unforgettable tour,
+          where every detail is taken care of with care and expertise. Let’s
+          make your travel dreams a reality!
+        </p>
       </div>
     </div>
   );
