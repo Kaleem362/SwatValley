@@ -50,14 +50,14 @@ const Hero = () => {
         <p className="text-lg text-slate-900 font-Manrope xs:text-md sm:text-lg md:text-lg md:font-bold lg:text-xl xl:text-2xl">
           Start Your Journey
         </p>
-        <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group ">
-          <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+        <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 xs:px-6 xs:py-3 group ">
+          <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-slate-400 group-hover:-mr-4 group-hover:-mt-4">
             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>
-          <span className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
+          <span className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 rounded bg-slate-400 group-hover:-ml-4 group-hover:-mb-4">
             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>
-          <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
+          <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md bg-slate-600 group-hover:translate-x-0"></span>
           <span className="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white xs:text-md sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
             <Link to={"/packages"}>Explore Packages</Link>
           </span>
@@ -66,7 +66,7 @@ const Hero = () => {
           <div className="flex justify-center items-center w-14 h-14 rounded-full bg-slate-900 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
             <img src={car} alt="Car" className="w-10 h-10" />
           </div>
-          <div className="absolute text-sm font-bold text-center text-black transition-all duration-300 transform -translate-x-1/2 -bottom-10 left-1/2 whitespace-nowrap group-hover:bottom-0">
+          <div className="absolute text-sm font-bold text-center text-black transition-all duration-300 transform -translate-x-1/2 group-hover:text-slate-700 -bottom-10 left-1/2 whitespace-nowrap group-hover:bottom-0">
             Book Now
           </div>
         </div>

@@ -142,14 +142,14 @@ const Services = () => {
         </div>
       </div>
       {/* packages mapped here */}
-      <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-1 py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
+      <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-1 py-0 lg:py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
         <h1 className="w-full text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Highlight Tours
         </h1>
-        <div className="flex flex-wrap items-center justify-center w-full gap-4 my-4 xs:w-full sm:w-full md:w-full lg:w-full cards-container">
+        <div className="flex flex-wrap items-center justify-center w-full gap-4 my-4 xs:w-full sm:w-full md:w-full lg:w-full cards-container xs:px-3">
           {toursPackage.slice(0, 3).map((tour) => {
             return (
-              <div class="relative w-96 mx-auto bg-slate-100 rounded z-50 group">
+              <div class="relative w-96  lg:mx-auto bg-slate-100 rounded z-50 group mb-20 lg:mb-0 animate-fadeInFromTop">
                 <img
                   class="h-64 w-full object-cover rounded-md z-50"
                   src={tour.Image}
@@ -161,10 +161,11 @@ const Services = () => {
                     {tour.packageName}
                   </h2>
                 </div>
-                <div className="absolute flex items-center justify-center gap-4 mt-3 transition-all duration-300 xs:-bottom-20 lg:group-hover:-bottom-20 -bottom-0 -z-50 buttons">
+                {/* buttontag */}
+                <div className="absolute flex items-center justify-center gap-4 mt-3 transition-all duration-300 -bottom-20 lg:group-hover:-bottom-20 lg:-bottom-0 -z-50 buttons">
                   <Link
                     to={`/tour/${tour.id}`}
-                    className="flex justify-center h-auto gap-2 px-6 py-3 text-center text-white transition-all duration-200 rounded-full w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105"
+                    className="flex justify-center h-auto gap-2 px-6 py-3 text-center text-white transition-all duration-200 rounded-full shadow-xl w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 shadow-white"
                   >
                     {" "}
                     View Details
@@ -172,7 +173,7 @@ const Services = () => {
                   </Link>
                   <a
                     href="https://wa.me/923489857193"
-                    className="flex items-center justify-center p-1 -ml-2 bg-green-500 rounded-full w-fit whatsappbtn hover:p-2"
+                    className="flex items-center justify-center p-1 -ml-2 bg-green-500 rounded-full w-fit whatsappbtn hover:p-2 hover:shadow-lg hover:shadow-slate-800"
                   >
                     {" "}
                     <TbBrandWhatsappFilled
@@ -185,14 +186,14 @@ const Services = () => {
             );
           })}
         </div>
-        <Link className="px-6 py-3 mt-20 text-center border-2 rounded-full text-slate-300 bg-slate-800 w-fit border-red">
+        <Link className="px-6 py-3 text-center text-white border-2 rounded-full shadow-xl xs:mx-auto w-fit border-red bg-gradient-to-r from-slate-500 to-slate-900 lg:mt-10">
           See All Tour Packages
         </Link>
       </div>
 
       {/* Rent a car Division */}
       <div className="w-full py-10 Car-service">
-        <div className="flex w-full h-auto header">
+        <div className="flex w-full h-auto pr-20 header">
           <h1 className="w-full mb-2 text-3xl font-extrabold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
             Rent a Car
           </h1>
@@ -201,7 +202,7 @@ const Services = () => {
               <img
                 src={whatsappIcon}
                 alt="WhatsApp Icon"
-                className="w-[10%] max-w-24 min-w-12 h-auto animate-fadeInFromRight"
+                className="w-[10%] max-w-24 min-w-12 h-auto animate-fadeInFromRight hover:scale-90 duration-200 transition-scale"
               />
             </a>
             <Link to={"/contactPage"}>
