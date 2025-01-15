@@ -3,11 +3,12 @@ import vehicle from "../assets/Valley images/carcamping.jpg";
 import CozyHotels from "../assets/Valley images/PC hotel malamjabba.jpg";
 import Travel from "../assets/Valley images/travel.jpg";
 import guide from "../assets/images/guide.jpg";
+import ContactButton from "../Components/ContactButton";
 import { Link } from "react-router";
-
+import whatsappIcon from "../assets/icons-asset/whatsapp (1).png";
 const Services = () => {
   return (
-    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-10 bg-green-400 animate-fadeIn">
+    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-10 xs:px-3 sm:px-4 md:px-6 lg:px-8 animate-fadeIn">
       <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Services We offer
       </h1>
@@ -98,29 +99,29 @@ const Services = () => {
           seamless, comfortable, and memorable. Here’s why we stand out:
           <br />
           <ul className="bg-white">
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromRight">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromRight">
               <b>Expert Tour Guides:</b>
               Our professional guides are well-versed in local history, culture,
               and attractions, ensuring an informative and enriching journey
               through Swat Valley.
             </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromLeft">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromLeft">
               <b>Reliable Tour Vehicles:</b>We provide well-maintained vehicles,
               including 4x4 options for off-road adventures, ensuring a smooth
               ride across all terrains.
             </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromRight">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromRight">
               <b>Comprehensive Packages</b>From car fuel and parking charges to
               accommodation in cozy, well-equipped hotels, we cover all
               tour-related expenses so you can focus on enjoying the journey.
             </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromLeft">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromLeft">
               <b>Tailored Services:</b>Whether it’s exploring scenic routes,
               visiting historical landmarks, or trekking through nature, we
               cater to your preferences to deliver a personalized travel
               experience.
             </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-300 animate-fadeInFromRight">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromRight">
               <b>Hassle-Free Planning:</b>Leave the details to us! We manage
               logistics, so you can immerse yourself in the breathtaking beauty
               of Swat Valley without any worries.
@@ -133,51 +134,67 @@ const Services = () => {
       </div>
       {/* Rent a car Division */}
       <div className="w-full Car-service">
-        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-          Rent a Car
-        </h1>
-        <div className="overflow-x-auto md:p-4">
-          <table className="w-full border border-collapse rounded-lg table-auto bg-slate-900 text-slate-100 border-slate-700">
+        <div className="flex w-full h-auto header">
+          <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+            Rent a Car
+          </h1>
+          <div className="flex items-center justify-end w-full gap-2 animate-fadeInFromRight">
+            <a href="https://wa.me/923489857193">
+              <img src={whatsappIcon} className="w-12 h-12" />
+            </a>
+            <Link to={"/contactPage"}>
+              <ContactButton />
+            </Link>
+          </div>
+        </div>
+        <div className="p-1 overflow-x-auto sm:p-4">
+          <table className="min-w-full text-center border border-collapse rounded-lg table-auto bg-slate-900 text-slate-100 border-slate-700">
             <thead>
               <tr>
-                <th className="px-6 py-3 border-b border-slate-700">
+                <th className="px-1 py-2 text-center border-2 sm:px-6 sm:py-3 border-slate-700 xs:text-sm sm:text-lg">
                   Cars for Rent
                 </th>
-                <th className="px-6 py-3 border-b border-slate-700">
+                <th className="px-1 py-2 text-center border-2 sm:px-6 sm:py-3 border-slate-700 xs:text-sm sm:text-lg">
                   Hotel Accommodations
                 </th>
-                <th className="px-6 py-3 border-b border-slate-700">
+                <th className="px-1 py-2 text-center border-2 sm:px-6 sm:py-3 border-slate-700 xs:text-sm sm:text-lg">
                   Taxi Pick and Drop Service
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="px-6 py-4 border-b border-slate-700">
+                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
                   Prado Jeep
                 </td>
-                <td className="px-6 py-4 border-b border-slate-700">
+                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
                   Executive Room
                 </td>
-                <td className="px-6 py-4 border-b border-slate-700">
+                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
                   VIP Taxi
                 </td>
               </tr>
               <tr>
-                <td className="px-6 py-4 border-b border-slate-700">
+                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
                   Car Corolla or Prius
                 </td>
-                <td className="px-6 py-4 border-b border-slate-700">
+                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
                   Deluxe Room
                 </td>
-                <td className="px-6 py-4 border-b border-slate-700">
+                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
                   Simple Taxi
                 </td>
               </tr>
               <tr>
-                <td className="px-6 py-4">APV or BRV (Seven Seater)</td>
-                <td className="px-6 py-4">Economic Room</td>
-                <td className="px-6 py-4"></td>
+                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
+                  APV or BRV (Seven Seater)
+                </td>
+                <td className="py-2 border-2 border-slate-700 px-auto sm:px-6 sm:py-4 xs:text-sm sm:text-lg">
+                  Economic Room
+                </td>
+                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
+                  —
+                </td>
               </tr>
             </tbody>
           </table>

@@ -551,7 +551,7 @@ export const foreignerPackages = [
           ],
         },
         day3: {
-          title: "Swat Valley Tour",
+          title: "MalamJabba Tour",
           activities: [
             "Visit Malam Jabba for skiing or trekking",
             "Explore Mingora city and its bazaars",
@@ -559,7 +559,7 @@ export const foreignerPackages = [
           ],
         },
         day4: {
-          title: "Swat Valley Tour",
+          title: "Kalam Valley Tour",
           activities: [
             "Visit Kalam Valley and its scenic views",
             "Explore Ushu Forest and Mahodand Lake",
