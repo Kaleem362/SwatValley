@@ -24,7 +24,7 @@ const Navbar = () => {
       <ul
         className={`${
           isMenuOpen
-            ? "flex flex-col absolute top-48 text-white  sm:top-40 xs:text-white md:text-white lg:text-white xl:text-white left-0 w-full bg-slate-800 p-4 space-y-2  z-50"
+            ? "flex flex-col absolute top-48 text-slate-800  sm:top-40 xs:text-slate-800 md:text-slate-800 lg:text-slate-800 xl:text-slate-800 left-0 w-full bg-[#becbd6] p-4 space-y-2  z-50"
             : "hidden"
         } lg:relative lg:flex lg:flex-row lg:top-0 lg:w-auto lg:p-0  lg:space-y-0 lg:items-center lg:justify-between lg:gap-4 lg:mr-10 lg:bg-transparent`}
       >

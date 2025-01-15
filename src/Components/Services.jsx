@@ -135,12 +135,16 @@ const Services = () => {
       {/* Rent a car Division */}
       <div className="w-full Car-service">
         <div className="flex w-full h-auto header">
-          <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+          <h1 className="w-full mb-2 text-3xl font-extrabold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
             Rent a Car
           </h1>
-          <div className="flex items-center justify-end w-full gap-2 animate-fadeInFromRight">
+          <div className="flex items-center justify-end w-auto gap-2 animate-fadeInFromRight">
             <a href="https://wa.me/923489857193">
-              <img src={whatsappIcon} className="w-12 h-12" />
+              <img
+                src={whatsappIcon}
+                alt="WhatsApp Icon"
+                className="w-[10%] max-w-24 min-w-12 h-auto animate-fadeInFromRight"
+              />
             </a>
             <Link to={"/contactPage"}>
               <ContactButton />
