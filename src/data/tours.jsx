@@ -1,9 +1,16 @@
-export const tours = [
+import kalamvalley from "../../public/PackagesImages/beautifulhills.jpg";
+import malamjabbacover from "../../public/PackagesImages/malamjabbacover.jpg";
+import kalam from "../../public/PackagesImages/kalamprofile.jpg";
+import MalamJabba from "../../public/PackagesImages/malamjabbaprofile.jpg";
+import HoneyMoonone from "../../public/PackagesImages/honeymoonprofile.jpg";
+import HoneyMoontwo from "../../public/PackagesImages/honeymoonprofiletwo.jpg";
+import HoneyMoonthree from "../../public/PackagesImages/honeymoonthree.jpg";
+export const toursPackage = [
   {
     id: 1,
     packageName: "Luxury Honeymoon/Couple Tour Package",
     coverImage: kalamvalley,
-    Image: kalam,
+    Image: HoneyMoonone,
     duration: {
       days: 4,
       nights: 3,
@@ -42,8 +49,8 @@ export const tours = [
   {
     id: 2,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
-    coverImage: MalamJabba,
-    Image: MalamJabba,
+    coverImage: malamjabbacover,
+    Image: HoneyMoontwo,
     duration: {
       days: 3,
       nights: 2,
@@ -79,7 +86,7 @@ export const tours = [
     id: 3,
     packageName: "Private Luxury Honeymoon/Couple Tour Package",
     coverImage: MalamJabba,
-    Image: MalamJabba,
+    Image: HoneyMoonthree,
     duration: {
       total: "7 days (Karachi to Karachi)",
       destinationStay: "5 days, 4 nights",
@@ -195,7 +202,7 @@ export const tours = [
   {
     id: 6,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
-    coverImage: MalamJabba,
+    coverImage: malamjabbacover,
     Image: MalamJabba,
     packageOverview: {
       duration: "3 Days, 2 Nights",

@@ -27,8 +27,8 @@ const Hero = () => {
           destinations. Your adventure begins here—book your Swat Valley tour
           today!
         </p>
-        <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200 hover:scale-105 shadow-slate-800 lg:flex-col m-x-auto animate-fadeInFromRight">
-          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl border-slate-300">
+        <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200 hover:scale-105 border-2 border-slate-800 shadow-slate-800 lg:flex-col m-x-auto animate-fadeInFromRight">
+          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl border-slate-800">
             <img
               src={destination}
               alt="Explore Destinations"
@@ -36,11 +36,11 @@ const Hero = () => {
             />
             Explore Top Destinations
           </li>
-          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 border-slate-300 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
+          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
             <img src={hotel} alt="Stay in Hotels" className="w-8 h-8" />
             Stay in Cozy Hotels
           </li>
-          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 border-slate-300 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
+          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
             <img src={car} alt="Travel Comfortably" className="w-8 h-8" />
             Travel Comfortably
           </li>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import vehicle from "../assets/Valley images/carcamping.jpg";
 import CozyHotels from "../assets/Valley images/PC hotel malamjabba.jpg";
 import Travel from "../assets/Valley images/travel.jpg";
@@ -6,8 +6,16 @@ import guide from "../assets/images/guide.jpg";
 import ContactButton from "../Components/ContactButton";
 import { Link } from "react-router";
 import whatsappIcon from "../assets/icons-asset/whatsapp (1).png";
+import { store } from "../assets/Store/Context";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
+import { TbBrandWhatsappFilled } from "react-icons/tb";
+
 const Services = () => {
+  const { toursPackage } = useContext(store);
+  console.log(toursPackage);
+
   return (
+    // services we offer
     <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-10 xs:px-3 sm:px-4 md:px-6 lg:px-8 animate-fadeIn">
       <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Services We offer
@@ -90,7 +98,8 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div className="why-choose-us">
+      {/* why choose us */}
+      <div className="py-10 why-choose-us">
         <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Why Choose us?
         </h1>
@@ -132,13 +141,62 @@ const Services = () => {
           make your travel dreams a reality!
         </div>
       </div>
+      {/* packages mapped here */}
+      <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-1 py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
+        <h1 className="w-full text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+          Highlight Tours
+        </h1>
+        <div className="flex flex-wrap items-center justify-center w-full gap-4 my-4 xs:w-full sm:w-full md:w-full lg:w-full cards-container">
+          {toursPackage.slice(0, 3).map((tour) => {
+            return (
+              <div class="relative w-96 mx-auto bg-slate-100 rounded z-50 group">
+                <img
+                  class="h-64 w-full object-cover rounded-md z-50"
+                  src={tour.Image}
+                  alt={tour.packageName}
+                ></img>
+                <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md "></div>
+                <div class="absolute inset-0 flex items-end justify-center">
+                  <h2 class="text-white text-2xl text-center  font-bold w-full mb-2 ">
+                    {tour.packageName}
+                  </h2>
+                </div>
+                <div className="absolute flex items-center justify-center gap-4 mt-3 transition-all duration-300 xs:-bottom-20 lg:group-hover:-bottom-20 -bottom-0 -z-50 buttons">
+                  <Link
+                    to={`/tour/${tour.id}`}
+                    className="flex justify-center h-auto gap-2 px-6 py-3 text-center text-white transition-all duration-200 rounded-full w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105"
+                  >
+                    {" "}
+                    View Details
+                    <BsArrowUpRightCircleFill className="inline-block w-6 h-6 ml-2" />
+                  </Link>
+                  <a
+                    href="https://wa.me/923489857193"
+                    className="flex items-center justify-center p-1 -ml-2 bg-green-500 rounded-full w-fit whatsappbtn hover:p-2"
+                  >
+                    {" "}
+                    <TbBrandWhatsappFilled
+                      className="inline-block text-white"
+                      size={28}
+                    />
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <Link className="px-6 py-3 mt-20 text-center border-2 rounded-full text-slate-300 bg-slate-800 w-fit border-red">
+          See All Tour Packages
+        </Link>
+      </div>
+
       {/* Rent a car Division */}
-      <div className="w-full Car-service">
+      <div className="w-full py-10 Car-service">
         <div className="flex w-full h-auto header">
           <h1 className="w-full mb-2 text-3xl font-extrabold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
             Rent a Car
           </h1>
-          <div className="flex items-center justify-end w-auto gap-2 animate-fadeInFromRight">
+          <div className="flex items-center justify-end w-auto gap-2 my-2 animate-fadeInFromRight">
             <a href="https://wa.me/923489857193">
               <img
                 src={whatsappIcon}
@@ -204,6 +262,7 @@ const Services = () => {
           </table>
         </div>
       </div>
+      {/* why visit swat valley */}
       <div className="whyChooseSwat">
         <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Why Visit Swat Valley?
