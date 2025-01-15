@@ -193,16 +193,16 @@ const Services = () => {
 
       {/* Rent a car Division */}
       <div className="w-full py-10 Car-service">
-        <div className="flex w-full h-auto pr-20 header">
-          <h1 className="w-full mb-2 text-3xl font-extrabold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
+        <div className="flex items-center justify-between w-full h-auto md:pr-20 header animate-fadeInFromTop ">
+          <h1 className="w-full mb-2 text-3xl font-extrabold text-slate-800 text-start xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
             Rent a Car
           </h1>
-          <div className="flex items-center justify-end w-auto gap-2 my-2 animate-fadeInFromRight">
+          <div className="flex items-center justify-end w-auto my-2 xs:gap-2 animate-fadeInFromRight xs:justify-between">
             <a href="https://wa.me/923489857193">
               <img
                 src={whatsappIcon}
                 alt="WhatsApp Icon"
-                className="w-[10%] max-w-24 min-w-12 h-auto animate-fadeInFromRight hover:scale-90 duration-200 transition-scale"
+                className="w-10 h-auto duration-200 max-w-24 min-w-12 animate-fadeInFromRight hover:scale-90 transition-scale"
               />
             </a>
             <Link to={"/contactPage"}>
@@ -291,15 +291,15 @@ const Services = () => {
           truly a paradise waiting to be explored. Plan your trip today and
           immerse yourself in the unmatched beauty and charm of Swat Valley!
         </p>
-        <button className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group animate-fadeInFromBottom">
-          <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+        <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 xs:px-6 xs:py-3 group ">
+          <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-slate-400 group-hover:-mr-4 group-hover:-mt-4">
             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>
-          <span className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
+          <span className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 rounded bg-slate-400 group-hover:-ml-4 group-hover:-mb-4">
             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>
-          <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
-          <span className="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+          <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md bg-slate-600 group-hover:translate-x-0"></span>
+          <span className="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white xs:text-md sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
             <Link to={"/gallery"}>Image Gallery</Link>
           </span>
         </button>
