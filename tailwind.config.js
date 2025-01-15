@@ -37,6 +37,16 @@ export default {
         fadeInFromTop: "fadeInFromTop 1s ease-in-out",
         fadeInFromBottom: "fadeInFromBottom 1s ease-in-out",
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
+      },
       screens: {
         xs: "414px",
         sm: "640px",

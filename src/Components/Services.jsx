@@ -7,7 +7,7 @@ import { Link } from "react-router";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 p-10 bg-green-400 animate-fadeIn">
+    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-10 bg-green-400 animate-fadeIn">
       <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Services We offer
       </h1>
@@ -89,46 +89,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div className="whyChooseSwat">
-        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-          Why Visit Swat Valley?
-        </h1>
-        <p className="p-4 my-4 xs:text-md sm:text-lg lg:text-xl  bg-white rounded-lg shadow-lg  xs:w-[400px] sm:w-[520px] md:w-[600px] lg:w-[700px] text-slate-500 animate-fadeInFromLeft">
-          <b>Welcome to Swat Valley,</b> the Switzerland of the East! Whether
-          you're seeking adventure, relaxation, or a mix of both, our tour
-          services are designed to provide an unforgettable experience. From
-          serene valleys and majestic peaks to luxurious accommodations and
-          hassle-free travel, we ensure your trip is seamless and extraordinary.
-        </p>
-        <p className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromRight">
-          <b>Swat Valley,</b> often called the{" "}
-          <strong>"Switzerland of the East,"</strong> is a breathtaking
-          destination known for its majestic mountains, lush green meadows, and
-          crystal-clear rivers. Whether you are a nature enthusiast, an
-          adventure seeker, or a history lover, Swat Valley has something for
-          everyone. Explore the enchanting beauty of Malam Jabba, a popular ski
-          resort, or wander through the serene landscapes of Kalam and Mingora.
-          Discover the valley's rich cultural heritage with ancient Buddhist
-          sites like Butkara Stupa and Udegram Monastery. Swat offers
-          unparalleled experiences, from thrilling hikes and river rafting to
-          relaxing by pristine lakes like Mahodand and Daral. With its welcoming
-          locals, vibrant traditions, and year-round festivals, Swat Valley is
-          truly a paradise waiting to be explored. Plan your trip today and
-          immerse yourself in the unmatched beauty and charm of Swat Valley!
-        </p>
-        <button className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group animate-fadeInFromBottom">
-          <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-            <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-          </span>
-          <span className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
-            <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-          </span>
-          <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
-          <span className="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-            <Link to={"/gallery"}>Image Gallery</Link>
-          </span>
-        </button>
-      </div>
       <div className="why-choose-us">
         <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Why Choose us?
@@ -170,6 +130,98 @@ const Services = () => {
           where every detail is taken care of with care and expertise. Let’s
           make your travel dreams a reality!
         </div>
+      </div>
+      {/* Rent a car Division */}
+      <div className="w-full Car-service">
+        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+          Rent a Car
+        </h1>
+        <div className="overflow-x-auto md:p-4">
+          <table className="w-full border border-collapse rounded-lg table-auto bg-slate-900 text-slate-100 border-slate-700">
+            <thead>
+              <tr>
+                <th className="px-6 py-3 border-b border-slate-700">
+                  Cars for Rent
+                </th>
+                <th className="px-6 py-3 border-b border-slate-700">
+                  Hotel Accommodations
+                </th>
+                <th className="px-6 py-3 border-b border-slate-700">
+                  Taxi Pick and Drop Service
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-6 py-4 border-b border-slate-700">
+                  Prado Jeep
+                </td>
+                <td className="px-6 py-4 border-b border-slate-700">
+                  Executive Room
+                </td>
+                <td className="px-6 py-4 border-b border-slate-700">
+                  VIP Taxi
+                </td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 border-b border-slate-700">
+                  Car Corolla or Prius
+                </td>
+                <td className="px-6 py-4 border-b border-slate-700">
+                  Deluxe Room
+                </td>
+                <td className="px-6 py-4 border-b border-slate-700">
+                  Simple Taxi
+                </td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4">APV or BRV (Seven Seater)</td>
+                <td className="px-6 py-4">Economic Room</td>
+                <td className="px-6 py-4"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div className="whyChooseSwat">
+        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+          Why Visit Swat Valley?
+        </h1>
+        <p className="p-4 my-4 xs:text-md sm:text-lg lg:text-xl  bg-white rounded-lg shadow-lg  xs:w-full sm:w-[520px] md:w-[600px] lg:w-[700px] text-slate-500 animate-fadeInFromLeft">
+          <b>Swat Valley,</b> the Switzerland of the East! Whether you're
+          seeking adventure, relaxation, or a mix of both, our tour services are
+          designed to provide an unforgettable experience. From serene valleys
+          and majestic peaks to luxurious accommodations and hassle-free travel,
+          we ensure your trip is seamless and extraordinary.
+        </p>
+        <p className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromRight">
+          <b>Swat Valley,</b> often called the{" "}
+          <strong>"Switzerland of the East,"</strong> is a breathtaking
+          destination known for its majestic mountains, lush green meadows, and
+          crystal-clear rivers. Whether you are a nature enthusiast, an
+          adventure seeker, or a history lover, Swat Valley has something for
+          everyone. Explore the enchanting beauty of Malam Jabba, a popular ski
+          resort, or wander through the serene landscapes of Kalam and Mingora.
+          Discover the valley's rich cultural heritage with ancient Buddhist
+          sites like Butkara Stupa and Udegram Monastery. Swat offers
+          unparalleled experiences, from thrilling hikes and river rafting to
+          relaxing by pristine lakes like Mahodand and Daral. With its welcoming
+          locals, vibrant traditions, and year-round festivals, Swat Valley is
+          truly a paradise waiting to be explored. Plan your trip today and
+          immerse yourself in the unmatched beauty and charm of Swat Valley!
+        </p>
+        <button className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md xs:px-6 xs:py-3 group animate-fadeInFromBottom">
+          <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+            <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+          </span>
+          <span className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
+            <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+          </span>
+          <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
+          <span className="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+            <Link to={"/gallery"}>Image Gallery</Link>
+          </span>
+        </button>
       </div>
     </div>
   );

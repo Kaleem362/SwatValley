@@ -12,7 +12,7 @@ const Footer = () => {
       />
 
       <div className="flex-col items-start justify-center h-full title md:w-96">
-        <h1 className="w-full my-2 text-5xl font-extrabold text-center text-slate-100 animate-fadeInFromTop">
+        <h1 className="w-full my-2 text-3xl font-extrabold text-center md:text-4xl lg:text-5xl text-slate-100 animate-fadeInFromTop">
           The Swat Tours
         </h1>
         <p className="my-2 text-slate-100 md:w-fit animate-fadeInFromBottom">

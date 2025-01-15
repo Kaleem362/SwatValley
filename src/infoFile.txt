@@ -33,3 +33,5 @@ module.exports = {
     },
   },
 };
+hero continer style
+className="container relative flex flex-col items-start justify-start w-full h-auto py-10 tracking-tighter transition-all duration-200 bg-green-400 animate-fadeIn"
