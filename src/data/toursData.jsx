@@ -5,7 +5,7 @@ import MalamJabba from "../../public/PackagesImages/malamjabbaprofile.jpg";
 import HoneyMoonone from "../../public/PackagesImages/honeymoonprofile.jpg";
 import HoneyMoontwo from "../../public/PackagesImages/honeymoonprofiletwo.jpg";
 import HoneyMoonthree from "../../public/PackagesImages/honeymoonthree.jpg";
-import honeymooncover from "../../public/PackagesImages/honeymooncover.jpg";
+import honeymooncover from "../../public/PackagesImages/HoneyMoonCover.jpg";
 import honeymoonfive from "../../public/PackagesImages/honeymoonfive.jpg";
 import honeymoonsix from "../../public/PackagesImages/honeymoonsix.jpg";
 import honeymoonseven from "../../public/PackagesImages/honeymoonseven.jpg";
