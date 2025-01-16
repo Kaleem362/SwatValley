@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { store } from "../assets/Store/Context";
+import { Link } from "react-router";
 
 const TourPackages = () => {
   const { toursPackage } = useContext(store);
@@ -18,24 +19,28 @@ const TourPackages = () => {
             <img
               src={pkg.Image}
               alt={pkg.packageName}
-              className="object-cover w-full h-64 transition-transform duration-300 transform group-hover:scale-110"
+              className="object-cover w-full h-64 transition-transform duration-300 transform group-hover:scale-110 "
             />
             {/* Overlay */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
-              <button className="px-4 py-2 mb-2 text-black bg-white rounded-md shadow hover:bg-gray-200">
+            <div className="absolute inset-0 z-50 flex flex-col items-center justify-center w-full h-64 transition-all duration-300 bg-black opacity-50 group-hover:opacity-50 group-hover:scale-110">
+              <Link className="relative z-50 px-4 py-2 mb-2 text-black bg-white rounded-md shadow opacity-100 hover:bg-slate-900">
                 Book Now
-              </button>
-              <button className="px-4 py-2 text-black bg-white rounded-md shadow hover:bg-gray-200">
-                Details
-              </button>
+              </Link>
             </div>
+
             {/* Title and Description */}
             <div className="p-4 bg-white">
-              <h2 className="mb-2 text-xl font-bold">{pkg.packageName}</h2>
-              <p className="text-sm text-gray-600">
+              <h2 className="text-xl font-bold ">{pkg.packageName}</h2>
+              <p className="mb-3 text-sm text-gray-600">
                 {pkg.description ||
                   "Enjoy an exclusive and luxurious experience with this package!"}
               </p>
+              <Link
+                to={`/tourdetails/tour/${pkg.id}`}
+                className="px-4 py-2 mt-4 text-white transition-all rounded-md duration-400 from-black to-slate-700 bg-gradient-to-r hover:bg-gradient-to-l hover:from-black hover:to-slate-700 font-Manrope"
+              >
+                Tour Details
+              </Link>
             </div>
           </div>
         ))}

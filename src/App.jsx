@@ -11,6 +11,7 @@ import Footer from "./Components/Footer";
 // import Tourservices from "./Components/Tourservices";
 import Events from "./Components/Events";
 import TourPackages from "./Components/TourPackages";
+import TourDetails from "./Components/TourDetails";
 
 const App = () => {
   return (
@@ -48,6 +49,17 @@ const App = () => {
               <Topbar />
               <Navbar />
               <Events />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/tourdetails/tour/:id"
+          element={
+            <>
+              <Topbar />
+              <Navbar />
+              <TourDetails />
               <Footer />
             </>
           }
