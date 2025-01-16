@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AiFillCaretDown } from "react-icons/ai";
 import { TiThMenu } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [selectedTab, setSelectedTab] = useState("");
@@ -28,40 +29,54 @@ const Navbar = () => {
             : "hidden"
         } lg:relative lg:flex lg:flex-row lg:top-0 lg:w-auto lg:p-0  lg:space-y-0 lg:items-center lg:justify-between lg:gap-4 lg:mr-10 lg:bg-transparent`}
       >
-        <li
+        <Link
           className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Home"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
           } hover:text-slate-100 hover:bg-green-500`}
+          to={"/"}
           onClick={() => handleTabClick("Home")}
         >
           Home
-        </li>
-        <li
+        </Link>
+        <Link
           className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Packages"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
           } hover:text-slate-100 hover:bg-green-500`}
           onClick={() => handleTabClick("Packages")}
+          to={"/tourpackages"}
         >
           Packages
-        </li>
-        <li
+        </Link>
+        <Link
           className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "services"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
           } hover:text-slate-100 hover:bg-green-500`}
+          to={"/tourservices"}
           onClick={() => handleTabClick("services")}
         >
           Services
-        </li>
+        </Link>
+        <Link
+          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+            selectedTab === "Events"
+              ? "bg-green-900 text-white"
+              : "text-slate-900 lg:text-black"
+          } hover:text-slate-100 hover:bg-green-500`}
+          onClick={() => handleTabClick("Events")}
+          to={"/events"}
+        >
+          Events
+        </Link>
         <li className="relative z-50 flex gap-2 p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer text-slate-900 items- center font-Manrope lg:text-slate-900 group hover:bg-green-500 hover:text-slate-100">
           Tours{" "}
-          <AiFillCaretDown className="m-auto transition-all duration-200 -rotate-180 group-hover:-rotate-0" />
-          <ul className="absolute flex-col justify-center hidden h-auto lg:w-72 xs:top-0 xs:left-0 lg:top-10 lg:-left-20 xs:w-full group-hover:flex bg-slate-800 border-slate-800">
+          {/* <AiFillCaretDown className="m-auto transition-all duration-200 -rotate-180 group-hover:-rotate-0" /> */}
+          {/* <ul className="absolute flex-col justify-center hidden h-auto lg:w-72 xs:top-0 xs:left-0 lg:top-10 lg:-left-20 xs:w-full group-hover:flex bg-slate-800 border-slate-800">
             <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
               Kalam Tour
             </li>
@@ -80,7 +95,7 @@ const Navbar = () => {
             <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
               Sangar Tour
             </li>
-          </ul>
+          </ul> */}
         </li>
         <li
           className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${

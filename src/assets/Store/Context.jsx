@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { toursPackage } from "../../data/tours";
+import { toursPackage } from "../../data/toursData";
 export const store = createContext();
 
 export const StoreProvider = ({ children }) => {

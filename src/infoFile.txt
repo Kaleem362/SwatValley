@@ -35,3 +35,14 @@ module.exports = {
 };
 hero continer style
 className="container relative flex flex-col items-start justify-start w-full h-auto py-10 tracking-tighter transition-all duration-200 bg-green-400 animate-fadeIn"
+
+ {/* <a
+                    href="https://wa.me/923489857193"
+                    className="flex items-center justify-center p-1 -ml-2 bg-green-500 rounded-full w-fit whatsappbtn hover:p-2 hover:shadow-lg hover:shadow-slate-800"
+                  >
+                    {" "}
+                    <TbBrandWhatsappFilled
+                      className="inline-block text-white"
+                      size={28}
+                    />
+                  </a> */}

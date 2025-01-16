@@ -7,6 +7,10 @@ import Services from "./Components/Services";
 import { Route, Routes } from "react-router";
 import ErrorPage from "./Components/ErrorPage";
 import Footer from "./Components/Footer";
+// import Packages from "./Components/Packages";
+// import Tourservices from "./Components/Tourservices";
+import Events from "./Components/Events";
+import TourPackages from "./Components/TourPackages";
 
 const App = () => {
   return (
@@ -22,6 +26,28 @@ const App = () => {
               <HomeScreenCarousal />
               <Hero />
               <Services />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/tourpackages"
+          element={
+            <>
+              <Topbar />
+              <Navbar />
+              <TourPackages />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/events"
+          element={
+            <>
+              <Topbar />
+              <Navbar />
+              <Events />
               <Footer />
             </>
           }

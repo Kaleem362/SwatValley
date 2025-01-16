@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useContext } from "react";
+import { store } from "../assets/Store/Context";
 
 const TourPackages = () => {
+  const { toursPackage } = useContext(store);
   return (
-    <div>
-      <h1>No Tours Right Now</h1>
+    <div className="container px-4 py-8 mx-auto">
+      <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+        Tour Packages
+      </h1>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {toursPackage.map((pkg) => (
+          <div
+            key={pkg.id}
+            className="relative overflow-hidden rounded-lg shadow-lg group"
+          >
+            {/* Cover Image */}
+            <img
+              src={pkg.Image}
+              alt={pkg.packageName}
+              className="object-cover w-full h-64 transition-transform duration-300 transform group-hover:scale-110"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
+              <button className="px-4 py-2 mb-2 text-black bg-white rounded-md shadow hover:bg-gray-200">
+                Book Now
+              </button>
+              <button className="px-4 py-2 text-black bg-white rounded-md shadow hover:bg-gray-200">
+                Details
+              </button>
+            </div>
+            {/* Title and Description */}
+            <div className="p-4 bg-white">
+              <h2 className="mb-2 text-xl font-bold">{pkg.packageName}</h2>
+              <p className="text-sm text-gray-600">
+                {pkg.description ||
+                  "Enjoy an exclusive and luxurious experience with this package!"}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

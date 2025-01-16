@@ -6,8 +6,8 @@ import { Link } from "react-router";
 const Hero = () => {
   return (
     <div className="relative flex flex-col items-start justify-start h-auto px-3 py-10 tracking-tighter transition-all duration-200 xl:px-10 xs:px-3 sm:px-5 md:px-6 animate-fadeIn lg:px-8">
-      <div className="flex header">
-        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
+      <div className="flex w-full text-center header">
+        <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Welcome to Swat Tours
         </h1>
       </div>
@@ -27,8 +27,8 @@ const Hero = () => {
           destinations. Your adventure begins here—book your Swat Valley tour
           today!
         </p>
-        <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200 hover:scale-105 border-2 border-slate-800 shadow-slate-800 lg:flex-col m-x-auto animate-fadeInFromRight">
-          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl border-slate-800">
+        <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200  border-2 border-slate-100 shadow-slate-800 lg:flex-col m-x-auto animate-fadeInFromRight">
+          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 rounded-lg border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
             <img
               src={destination}
               alt="Explore Destinations"
@@ -36,11 +36,11 @@ const Hero = () => {
             />
             Explore Top Destinations
           </li>
-          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
+          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 rounded-lg border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
             <img src={hotel} alt="Stay in Hotels" className="w-8 h-8" />
             Stay in Cozy Hotels
           </li>
-          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
+          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 rounded-lg border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
             <img src={car} alt="Travel Comfortably" className="w-8 h-8" />
             Travel Comfortably
           </li>
@@ -59,7 +59,7 @@ const Hero = () => {
           </span>
           <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md bg-slate-600 group-hover:translate-x-0"></span>
           <span className="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white xs:text-md sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
-            <Link to={"/packages"}>Explore Packages</Link>
+            <Link to={"/tourpackages"}>Explore Packages</Link>
           </span>
         </button>
         <div className="relative overflow-x-visible text-center cursor-pointer w-14 h-14 overflow-y-clip group">

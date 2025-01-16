@@ -8,7 +8,6 @@ import { Link } from "react-router";
 import whatsappIcon from "../assets/icons-asset/whatsapp (1).png";
 import { store } from "../assets/Store/Context";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
-import { TbBrandWhatsappFilled } from "react-icons/tb";
 
 const Services = () => {
   const { toursPackage } = useContext(store);
@@ -17,7 +16,7 @@ const Services = () => {
   return (
     // services we offer
     <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-3 xl:px-10 xs:px-3 sm:px-4 md:px-6 lg:px-10 animate-fadeIn">
-      <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+      <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Services We offer
       </h1>
       <div className="flex flex-wrap justify-center w-full gap-10 xs:p-2 sm:p-4 card-container animate-fadeInFromTop">
@@ -99,45 +98,45 @@ const Services = () => {
         </div>
       </div>
       {/* packages mapped here */}
-      <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-1 py-0 lg:py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
-        <h1 className="w-full text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+      <div className="flex flex-col items-start justify-start w-full gap-2 px-1 py-0 h-fit lg:py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
+        <h1 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Highlight Tours
         </h1>
-        <div className="flex flex-wrap items-center justify-center w-full gap-4 my-4 xs:w-full sm:w-full md:w-full lg:w-full cards-container xs:px-3">
-          {toursPackage.slice(0, 3).map((tour) => {
+        <div className="flex flex-wrap items-center justify-start w-full md:my-4 xs:w-full sm:w-full md:w-full lg:w-full cards-container xs:px-3">
+          {toursPackage.slice(0, 4).map((tour) => {
             return (
-              <div class="relative w-96  lg:mx-auto bg-slate-100 rounded z-50 group mb-20 lg:mb-0 animate-fadeInFromTop">
+              <div
+                class="relative sm:w-56 xs:w-full md:w-52 lg:w-72 mx-auto lg:mx-auto bg-slate-100 rounded z-50 group mb-20 lg:mb-0 mt-10 animate-fadeInFromTop"
+                key={tour.id}
+              >
                 <img
-                  class="h-64 w-full object-cover rounded-md z-50"
+                  className="z-50 object-cover w-full h-64 rounded-md"
                   src={tour.Image}
                   alt={tour.packageName}
                 ></img>
-                <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md "></div>
-                <div class="absolute inset-0 flex items-end justify-center">
-                  <h2 class="text-white text-2xl text-center  font-bold w-full mb-2 ">
+                <div className="absolute inset-0 bg-gray-700 rounded-md opacity-60 "></div>
+                <div className="absolute inset-0 flex items-end justify-center">
+                  <h2 className="w-full mb-2 text-2xl font-bold text-center text-white ">
                     {tour.packageName}
                   </h2>
                 </div>
                 {/* buttontag */}
-                <div className="absolute flex items-center justify-center gap-4 mt-3 transition-all duration-300 -bottom-20 lg:group-hover:-bottom-20 lg:-bottom-0 -z-50 buttons">
+                <div className="absolute flex items-center justify-center gap-2 mt-1 transition-all duration-300 lg:mt-0 -bottom-20 lg:group-hover:-bottom-16 lg:-bottom-0 -z-50 buttons">
                   <Link
                     to={`/tour/${tour.id}`}
-                    className="flex justify-center h-auto gap-2 px-6 py-3 text-center text-white transition-all duration-200 rounded-full shadow-xl w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 shadow-white"
+                    className="flex items-center justify-center gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full shadow-xl xs:text-md sm:text-md md:text-sm lg:text-sm h-14 w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 shadow-white"
                   >
                     {" "}
-                    View Details
-                    <BsArrowUpRightCircleFill className="inline-block w-6 h-6 ml-2" />
+                    Details
+                    <BsArrowUpRightCircleFill className="inline-block w-5 h-5 ml-2" />
                   </Link>
-                  <a
-                    href="https://wa.me/923489857193"
-                    className="flex items-center justify-center p-1 -ml-2 bg-green-500 rounded-full w-fit whatsappbtn hover:p-2 hover:shadow-lg hover:shadow-slate-800"
+                  <Link
+                    to={"/contactPage"}
+                    className="flex items-center justify-center gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full shadow-xl xs:text-md sm:text-md md:text-lg lg:text-sm h-14 w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 shadow-white"
                   >
                     {" "}
-                    <TbBrandWhatsappFilled
-                      className="inline-block text-white"
-                      size={28}
-                    />
-                  </a>
+                    Book now
+                  </Link>
                 </div>
               </div>
             );
@@ -147,9 +146,9 @@ const Services = () => {
           See All Tour Packages
         </Link>
       </div>
-      <section className="w-full py-10 bg-gray-50">
+      <section className="w-full py-10 ">
         <div className="container px-6 mx-auto md:px-10">
-          <h2 className="mb-8 text-3xl font-bold text-center text-gray-800 sm:text-4xl">
+          <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
             Explore Our Tour Packages
           </h2>
           <p className="mb-10 text-lg text-center text-gray-600">
@@ -160,7 +159,7 @@ const Services = () => {
           </p>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {/* Customize Tours */}
-            <div className="p-6 text-center bg-white rounded-lg hover:shadow-lg hover:shadow-black">
+            <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black border-1 border-slate-800">
               <h3 className="mb-4 text-2xl font-bold text-gray-800">
                 Customize Tour
               </h3>
@@ -168,12 +167,12 @@ const Services = () => {
                 Create your dream tour! Choose destinations, activities, and
                 plan a trip that fits your needs and budget.
               </p>
-              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-900">
+              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
                 Book Now
               </button>
             </div>
             {/* Family Tours */}
-            <div className="p-6 text-center bg-white rounded-lg hover:shadow-lg hover:shadow-black">
+            <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
               <h3 className="mb-4 text-2xl font-bold text-gray-800">
                 Family Tours
               </h3>
@@ -181,34 +180,34 @@ const Services = () => {
                 Spend quality time with your loved ones! Our family-friendly
                 packages include activities for all ages.
               </p>
-              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-900">
-                Explore Now
+              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                See Now
               </button>
             </div>
             {/* Budget Tour Packages */}
-            <div className="p-6 text-center bg-white rounded-lg hover:shadow-lg hover:shadow-black">
+            <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
               <h3 className="mb-4 text-2xl font-bold text-gray-800">
-                Budget Tours
+                Foreigner Tours
               </h3>
               <p className="mb-6 text-gray-600">
                 Enjoy amazing adventures without breaking the bank! Our budget
                 packages offer great value and unforgettable experiences.
               </p>
-              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-900">
+              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
                 View Packages
               </button>
             </div>
             {/* Private Tour Packages */}
-            <div className="p-6 text-center bg-white rounded-lg hover:shadow-lg hover:shadow-black">
+            <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
               <h3 className="mb-4 text-2xl font-bold text-gray-800">
                 Private Tours
               </h3>
               <p className="mb-6 text-gray-600">
-                Looking for exclusivity? Our private tour packages ensure a
+                Looking for exclusivity? Our customized tour packages ensure a
                 personalized and luxurious travel experience.
               </p>
-              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-900">
-                Learn More
+              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                Contact
               </button>
             </div>
           </div>
@@ -217,7 +216,7 @@ const Services = () => {
 
       {/* why choose us */}
       <div className="py-10 why-choose-us">
-        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+        <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Why Choose us?
         </h1>
         <div className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromLeft">
@@ -339,7 +338,7 @@ const Services = () => {
       </div>
       {/* why visit swat valley */}
       <div className="whyChooseSwat">
-        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+        <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Why Visit Swat Valley?
         </h1>
         <p className="p-4 my-4 xs:text-md sm:text-lg lg:text-xl  bg-white rounded-lg shadow-lg  xs:w-full sm:w-[520px] md:w-[600px] lg:w-[700px] text-slate-500 animate-fadeInFromLeft">
@@ -363,7 +362,14 @@ const Services = () => {
           relaxing by pristine lakes like Mahodand and Daral. With its welcoming
           locals, vibrant traditions, and year-round festivals, Swat Valley is
           truly a paradise waiting to be explored. Plan your trip today and
-          immerse yourself in the unmatched beauty and charm of Swat Valley!
+          immerse yourself in the unmatched beauty and charm of Swat Valley!{" "}
+          {/* <br /> */}
+          <a
+            href="#SwatArticle"
+            className="font-serif text-sm underline text-slate-800"
+          >
+            read more
+          </a>
         </p>
         <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 xs:px-6 xs:py-3 group ">
           <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-slate-400 group-hover:-mr-4 group-hover:-mt-4">
