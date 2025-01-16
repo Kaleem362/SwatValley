@@ -48,6 +48,16 @@ const Navbar = () => {
         >
           Packages
         </li>
+        <li
+          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+            selectedTab === "services"
+              ? "bg-green-900 text-white"
+              : "text-slate-900 lg:text-black"
+          } hover:text-slate-100 hover:bg-green-500`}
+          onClick={() => handleTabClick("services")}
+        >
+          Services
+        </li>
         <li className="relative z-50 flex gap-2 p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer text-slate-900 items- center font-Manrope lg:text-slate-900 group hover:bg-green-500 hover:text-slate-100">
           Tours{" "}
           <AiFillCaretDown className="m-auto transition-all duration-200 -rotate-180 group-hover:-rotate-0" />

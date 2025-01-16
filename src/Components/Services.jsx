@@ -16,13 +16,13 @@ const Services = () => {
 
   return (
     // services we offer
-    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-10 xs:px-3 sm:px-4 md:px-6 lg:px-8 animate-fadeIn">
+    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-3 xl:px-10 xs:px-3 sm:px-4 md:px-6 lg:px-10 animate-fadeIn">
       <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Services We offer
       </h1>
-      <div className="flex flex-wrap justify-center w-full gap-6 xs:p-2 sm:p-4 card-container animate-fadeInFromTop">
+      <div className="flex flex-wrap justify-center w-full gap-10 xs:p-2 sm:p-4 card-container animate-fadeInFromTop">
         {/* card */}
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromLeft">
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromLeft">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
             src={vehicle}
@@ -41,7 +41,7 @@ const Services = () => {
           </div>
         </div>
         {/* card */}
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105">
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
             src={CozyHotels}
@@ -61,7 +61,7 @@ const Services = () => {
           </div>
         </div>
         {/* card */}
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105">
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
             src={Travel}
@@ -79,7 +79,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-64 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromRight">
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromRight">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
             src={guide}
@@ -96,49 +96,6 @@ const Services = () => {
               and history to make your trip enjoyable.
             </p>
           </div>
-        </div>
-      </div>
-      {/* why choose us */}
-      <div className="py-10 why-choose-us">
-        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-          Why Choose us?
-        </h1>
-        <div className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromLeft">
-          At <b>The Swat Tours</b>, we strive to make your travel experience
-          seamless, comfortable, and memorable. Here’s why we stand out:
-          <br />
-          <ul className="bg-white">
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromRight">
-              <b>Expert Tour Guides:</b>
-              Our professional guides are well-versed in local history, culture,
-              and attractions, ensuring an informative and enriching journey
-              through Swat Valley.
-            </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromLeft">
-              <b>Reliable Tour Vehicles:</b>We provide well-maintained vehicles,
-              including 4x4 options for off-road adventures, ensuring a smooth
-              ride across all terrains.
-            </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromRight">
-              <b>Comprehensive Packages</b>From car fuel and parking charges to
-              accommodation in cozy, well-equipped hotels, we cover all
-              tour-related expenses so you can focus on enjoying the journey.
-            </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromLeft">
-              <b>Tailored Services:</b>Whether it’s exploring scenic routes,
-              visiting historical landmarks, or trekking through nature, we
-              cater to your preferences to deliver a personalized travel
-              experience.
-            </li>
-            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 animate-fadeInFromRight">
-              <b>Hassle-Free Planning:</b>Leave the details to us! We manage
-              logistics, so you can immerse yourself in the breathtaking beauty
-              of Swat Valley without any worries.
-            </li>
-          </ul>
-          Choose <b>The Swat Tours</b> for a stress-free and unforgettable tour,
-          where every detail is taken care of with care and expertise. Let’s
-          make your travel dreams a reality!
         </div>
       </div>
       {/* packages mapped here */}
@@ -189,6 +146,123 @@ const Services = () => {
         <Link className="px-6 py-3 text-center text-white border-2 rounded-full shadow-xl xs:mx-auto w-fit border-red bg-gradient-to-r from-slate-500 to-slate-900 lg:mt-10">
           See All Tour Packages
         </Link>
+      </div>
+      <section className="w-full py-10 bg-gray-50">
+        <div className="container px-6 mx-auto md:px-10">
+          <h2 className="mb-8 text-3xl font-bold text-center text-gray-800 sm:text-4xl">
+            Explore Our Tour Packages
+          </h2>
+          <p className="mb-10 text-lg text-center text-gray-600">
+            Discover a range of tour options tailored to meet your unique
+            preferences. Whether you're planning a family vacation, a
+            budget-friendly adventure, or a private getaway, we’ve got you
+            covered.
+          </p>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Customize Tours */}
+            <div className="p-6 text-center bg-white rounded-lg hover:shadow-lg hover:shadow-black">
+              <h3 className="mb-4 text-2xl font-bold text-gray-800">
+                Customize Tour
+              </h3>
+              <p className="mb-6 text-gray-600">
+                Create your dream tour! Choose destinations, activities, and
+                plan a trip that fits your needs and budget.
+              </p>
+              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-900">
+                Book Now
+              </button>
+            </div>
+            {/* Family Tours */}
+            <div className="p-6 text-center bg-white rounded-lg hover:shadow-lg hover:shadow-black">
+              <h3 className="mb-4 text-2xl font-bold text-gray-800">
+                Family Tours
+              </h3>
+              <p className="mb-6 text-gray-600">
+                Spend quality time with your loved ones! Our family-friendly
+                packages include activities for all ages.
+              </p>
+              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-900">
+                Explore Now
+              </button>
+            </div>
+            {/* Budget Tour Packages */}
+            <div className="p-6 text-center bg-white rounded-lg hover:shadow-lg hover:shadow-black">
+              <h3 className="mb-4 text-2xl font-bold text-gray-800">
+                Budget Tours
+              </h3>
+              <p className="mb-6 text-gray-600">
+                Enjoy amazing adventures without breaking the bank! Our budget
+                packages offer great value and unforgettable experiences.
+              </p>
+              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-900">
+                View Packages
+              </button>
+            </div>
+            {/* Private Tour Packages */}
+            <div className="p-6 text-center bg-white rounded-lg hover:shadow-lg hover:shadow-black">
+              <h3 className="mb-4 text-2xl font-bold text-gray-800">
+                Private Tours
+              </h3>
+              <p className="mb-6 text-gray-600">
+                Looking for exclusivity? Our private tour packages ensure a
+                personalized and luxurious travel experience.
+              </p>
+              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-900">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* why choose us */}
+      <div className="py-10 why-choose-us">
+        <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+          Why Choose us?
+        </h1>
+        <div className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromLeft">
+          At <b>The Swat Tours</b>, we strive to make your travel experience
+          seamless, comfortable, and memorable. Here’s why we stand out:
+          <br />
+          <ul className="bg-white">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Expert Tour Guides:</b>
+              Our professional guides are well-versed in local history, culture,
+              and attractions, ensuring an informative and enriching journey
+              through Swat Valley.
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Reliable Tour Vehicles:</b>We provide well-maintained vehicles,
+              including 4x4 options for off-road adventures, ensuring a smooth
+              ride across all terrains.
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Comprehensive Packages</b>From car fuel and parking charges to
+              accommodation in cozy, well-equipped hotels, we cover all
+              tour-related expenses so you can focus on enjoying the journey.
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Tailored Services:</b>Whether it’s exploring scenic routes,
+              visiting historical landmarks, or trekking through nature, we
+              cater to your preferences to deliver a personalized travel
+              experience.
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Hassle-Free Planning:</b>Leave the details to us! We manage
+              logistics, so you can immerse yourself in the breathtaking beauty
+              of Swat Valley without any worries.
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Customizable Tours:</b> Plan your perfect adventure with us!
+              Our flexible tour options allow you to customize every detail—from
+              destinations to activities—ensuring a personalized experience that
+              fits your preferences and budget.
+            </li>
+          </ul>
+          Choose <b>The Swat Tours</b> for a stress-free and unforgettable tour,
+          where every detail is taken care of with care and expertise. Let’s
+          make your travel dreams a reality!
+        </div>
       </div>
 
       {/* Rent a car Division */}

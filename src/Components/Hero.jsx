@@ -5,7 +5,7 @@ import destination from "../assets/icons-asset/mountainsun.png";
 import { Link } from "react-router";
 const Hero = () => {
   return (
-    <div className="relative flex flex-col items-start justify-start h-auto px-3 py-10 tracking-tighter transition-all duration-200 xs:px-3 sm:px-5 md:px-6 animate-fadeIn lg:px-8">
+    <div className="relative flex flex-col items-start justify-start h-auto px-3 py-10 tracking-tighter transition-all duration-200 xl:px-10 xs:px-3 sm:px-5 md:px-6 animate-fadeIn lg:px-8">
       <div className="flex header">
         <h1 className="w-full mb-2 text-4xl font-bold text-slate-800 text-start xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Welcome to Swat Tours
