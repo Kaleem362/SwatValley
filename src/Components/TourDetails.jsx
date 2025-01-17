@@ -39,7 +39,7 @@ const TourDetails = () => {
         </div>
 
         <div className="p-6">
-          <h1 className="mb-4 text-3xl font-bold text-gray-800">
+          <h1 className="mb-2 text-3xl font-bold text-gray-800 uppercase">
             {selectedPackage.destinations.map((destination) => (
               <>
                 <span>{destination}</span>
@@ -93,7 +93,7 @@ const TourDetails = () => {
                 </span>
               </h2>
             </div>
-            <div className="accomodation-hotels">
+            <div className="my-2 accomodation-hotels">
               <ul className="flex items-center font-bold text-slate-700">
                 <h2 className="my-1 text-xl font-bold text-slate-700">
                   Hotels :{" "}
@@ -108,7 +108,7 @@ const TourDetails = () => {
                 })}
               </ul>
             </div>
-            <div className=" Transporation">
+            <div className="my-2 Transporation">
               <h2 className="my-1 text-xl font-bold text-slate-700">
                 Transportation :
                 <span className="ml-1 text-xl font-normal">
@@ -121,7 +121,7 @@ const TourDetails = () => {
                   {selectedPackage.transportation.details}{" "}
                 </span>
                 <br />
-                <h2 className="my-1 text-xl font-bold text-slate-700">
+                <h2 className="my-2 text-xl font-bold text-slate-700">
                   Companies :
                   <span className="text-xl font-normal text-slate-700">
                     {" "}
