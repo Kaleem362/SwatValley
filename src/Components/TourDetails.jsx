@@ -40,28 +40,102 @@ const TourDetails = () => {
 
         <div className="p-6">
           <h1 className="mb-4 text-3xl font-bold text-gray-800">
-            {selectedPackage.packageName}
+            {selectedPackage.destinations.map((destination) => (
+              <>
+                <span>{destination}</span>
+                {selectedPackage.destinations && <span> - </span>}{" "}
+                {/* Add '-' as separator */}
+              </>
+            ))}
           </h1>
-          <p className="mb-4 text-gray-700">
-            Days {selectedPackage.duration.days}
-          </p>
-          <p className="mb-4 text-gray-700">
-            Nights {selectedPackage.duration.nights}
-          </p>
-          <div className="flex items-center justify-between h-10 gap-2 w-fit buttons">
-            <Link className="px-4 py-2 text-white transition-all rounded-md duration-400 from-black to-slate-700 bg-gradient-to-r hover:bg-gradient-to-l hover:from-black hover:to-slate-700 font-Manrope">
-              Book Now
-            </Link>
-            <a
-              href="wa.me/923489857193"
-              className="flex items-center justify-center h-full gap-2 px-2 py-2 text-white bg-green-500 rounded-md text-md w-fit"
-            >
-              Whatsapp us <AiOutlineWhatsApp />
-            </a>
+          <div className="my-2 packageduration">
+            <p className="text-xl font-bold text-gray-700 ">
+              Tour Duration :
+              <span className="font-normal">
+                {" "}
+                Days {selectedPackage.duration.days}
+              </span>
+              <span className="font-normal">
+                {" "}
+                Nights {selectedPackage.duration.nights}
+              </span>
+            </p>
+          </div>
+          <div className="my-2 package-type">
+            <h2 className="text-xl font-bold text-slate-700">
+              package Type :{" "}
+              <span className="font-normal">Executive Package</span>{" "}
+            </h2>
+          </div>
+          <div className="my-2 package-price ">
+            <h2 className="my-1 text-xl font-bold text-slate-700">
+              Package Price :{" "}
+              <span className="font-normal">
+                One Couple -{" "}
+                <span className="font-bold">
+                  {selectedPackage.packagePrices.for1Couple}
+                </span>{" "}
+              </span>
+              <span className="font-normal">
+                Two Couples -{" "}
+                <span className="font-bold">
+                  {selectedPackage.packagePrices.for2Couples}
+                </span>{" "}
+              </span>
+            </h2>
+          </div>
+          <div className="my-2 accomodation">
+            <div className="flex items-center gap-2 accomodation-type">
+              <h2 className="text-xl font-bold text-slate-700">
+                Accommodation Type :{" "}
+                <span className="font-normal">
+                  {selectedPackage.accommodation.type}
+                </span>
+              </h2>
+            </div>
+            <div className="accomodation-hotels">
+              <ul className="flex items-center font-bold text-slate-700">
+                <h2 className="my-1 text-xl font-bold text-slate-700">
+                  Hotels :{" "}
+                </h2>
+                {selectedPackage.accommodation.hotels.map((hotel, index) => {
+                  return (
+                    <li key={index} className="text-xl font-normal">
+                      {" - "}
+                      {hotel}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className=" Transporation">
+              <h2 className="my-1 text-xl font-bold text-slate-700">
+                Transportation :
+                <span className="ml-1 text-xl font-normal">
+                  {selectedPackage.transportation.options}
+                </span>
+              </h2>
+              <p className="my-2 text-xl font-bold text-slate-700">
+                Transport Details :{" "}
+                <span className="font-normal">
+                  {selectedPackage.transportation.details}{" "}
+                </span>
+                <br />
+                <h2 className="my-1 text-xl font-bold text-slate-700">
+                  Companies :
+                  <span className="text-xl font-normal text-slate-700">
+                    {" "}
+                    {!selectedPackage.transportation.busTickets.companies
+                      ? "loading the data..."
+                      : `${selectedPackage.transportation.busTickets.companies}`}
+                  </span>
+                </h2>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="sidebar w-[25%]">
+      <div className="sidebar w-[25%] bg-white">
         <h3 className="w-full p-2 font-extrabold text-center xs:text-md sm:text-md lg:text-xl xl:text-3xl font-Manrope">
           Tour Inclusive
         </h3>

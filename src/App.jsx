@@ -12,6 +12,7 @@ import Footer from "./Components/Footer";
 import Events from "./Components/Events";
 import TourPackages from "./Components/TourPackages";
 import TourDetails from "./Components/TourDetails";
+import ScrollToTop from "./Components/ScrollToTop";
 
 const App = () => {
   return (

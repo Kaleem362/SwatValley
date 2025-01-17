@@ -91,21 +91,22 @@ export const toursPackage = [
     packageName: "Private Luxury Honeymoon/Couple Tour Package",
     coverImage: MalamJabba,
     Image: HoneyMoonthree,
-    duration: {
-      total: "7 days (Karachi to Karachi)",
-      destinationStay: "5 days, 4 nights",
-    },
+    duration: "7 days 4 Nights (Karachi to Karachi)",
+
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
-      executivePackageFor1Couple: "₨ 95,000/-",
-      executivePackageFor2Couples: "₨ 150,000/-",
+      for1Couple: "₨ 95,000/-",
+      for2Couples: "₨ 150,000/-",
     },
     accommodation: {
       type: "Executive Accommodations",
-      hotels: {
-        Swat: ["Malam Jabba Palace", "Burj Al Swat", "Swat Hilton"],
-        Kalam: ["Rock City Resort", "Honeymoon Hotel"],
-      },
+      hotels: [
+        "Malam Jabba Palace",
+        "Burj Al Swat",
+        "Swat Hilton",
+        "Rock City Resort",
+        "Honeymoon Hotel",
+      ],
     },
     transportation: {
       options: ["Prius/Corolla Car", "Prado Jeep"],
@@ -130,10 +131,7 @@ export const toursPackage = [
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
     coverImage: MalamJabba,
     Image: honeymooncover,
-    duration: {
-      total: "6 days (Karachi to Karachi)",
-      destinationStay: "4 days, 3 nights",
-    },
+    duration: "4 days 3 Nights (karachi to karachi)",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
       for1Couple: "₨ 60,000/-",
@@ -172,14 +170,13 @@ export const toursPackage = [
     packageName: "Private Luxury Honeymoon/Couple Tour Package",
     coverImage: MalamJabba,
     Image: HoneyMoonone,
-    packageOverview: {
-      duration: "4 Days, 3 Nights",
-      destinations: ["Swat", "Kalam", "Malam Jabba"],
-      startingAndEndingPoint: "Islamabad",
-    },
+    duration: "4 Days, 3 Nights",
+    destinations: ["Swat", "Kalam", "Malam Jabba"],
+    startingAndEndingPoint: "Islamabad",
+
     packagePrices: {
-      executivePackageFor1Couple: "₨ 65,000/-",
-      executivePackageFor2Couples: "₨ 98,000/-",
+      for1Couple: "₨ 65,000/-",
+      for2Couples: "₨ 98,000/-",
     },
     accommodation: {
       type: "Executive Accommodations",
@@ -208,10 +205,10 @@ export const toursPackage = [
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
     coverImage: malamjabbacover,
     Image: honeymoonfive,
-    packageOverview: {
-      duration: "3 Days, 2 Nights",
-      destinations: ["Swat", "Kalam", "Malam Jabba"],
-    },
+
+    duration: "3 Days, 2 Nights",
+    destinations: ["Swat", "Kalam", "Malam Jabba"],
+
     packagePrices: {
       for1Couple: "₨ 38,000/-",
       for2Couples: "₨ 60,000/-",
@@ -243,11 +240,10 @@ export const toursPackage = [
     packageName: "Luxury 3-Day Swat Tour Package",
     coverImage: MalamJabba,
     Image: honeymoonseven,
-    packageOverview: {
-      duration: "3 Days, 2 Nights",
-      destinations: ["Swat", "Kalam", "Malam Jabba"],
-      totalCost: "₨ 35,000/-",
-    },
+    duration: "3 Days, 2 Nights",
+    destinations: ["Swat", "Kalam", "Malam Jabba"],
+    packagePrices: "₨ 35,000/-",
+
     itinerary: [
       {
         day: 1,
@@ -294,11 +290,9 @@ export const toursPackage = [
     packageName: "Luxury 2-Day Swat Tour Package",
     coverImage: MalamJabba,
     Image: honeymoonsix,
-    packageOverview: {
-      duration: "2 Days, 1 Night",
-      destinations: ["Swat", "Kalam"],
-      totalCost: "₨ 20,000/-",
-    },
+    duration: "2 Days, 1 Night",
+    destinations: ["Swat", "Kalam"],
+    totalCost: "₨ 20,000/-",
     itinerary: [
       {
         day: 1,
@@ -338,11 +332,9 @@ export const service = [
     serviceName: "Malam Jabba Day Tour",
     coverImage: MalamJabba,
     Image: MalamJabba,
-    packageOverview: {
-      duration: "1 Day",
-      destination: "Malam Jabba",
-      price: "₨ 10,000/-",
-    },
+    duration: "1 Day",
+    destination: "Malam Jabba",
+    price: "₨ 10,000/-",
     features: [
       "Round-trip transportation",
       "Guided tour",
@@ -351,10 +343,10 @@ export const service = [
   },
   {
     serviceName: "Malam Jabba Pick/Drop Service",
-    packageOverview: {
-      destination: "Malam Jabba",
-      price: "₨ 6,000/-",
-    },
+
+    destination: "Malam Jabba",
+    price: "₨ 6,000/-",
+
     features: ["One-way transportation to/from Malam Jabba"],
   },
 ];

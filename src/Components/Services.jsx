@@ -142,7 +142,10 @@ const Services = () => {
             );
           })}
         </div>
-        <Link className="px-6 py-3 text-center text-white border-2 rounded-full shadow-xl xs:mx-auto w-fit border-red bg-gradient-to-r from-slate-500 to-slate-900 lg:mt-10">
+        <Link
+          className="px-6 py-3 text-center text-white transition-all rounded-full shadow-xl duration-1000border-2 xs:mx-auto w-fit border-red bg-gradient-to-r from-slate-400 to-slate-900 lg:mt-10 hover:bg-gradient-to-l hover:from-slate-400 hover:to-slate-900"
+          to={"/tourpackages"}
+        >
           See All Tour Packages
         </Link>
       </div>
