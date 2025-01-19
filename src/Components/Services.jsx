@@ -106,7 +106,7 @@ const Services = () => {
           {toursPackage.slice(0, 4).map((tour) => {
             return (
               <div
-                class="relative sm:w-56 xs:w-full md:w-52 lg:w-72 mx-auto lg:mx-auto bg-slate-100 rounded z-50 group mb-20 lg:mb-0 mt-10 animate-fadeInFromTop"
+                class="relative w-full sm:w-56 xs:w-full md:w-52 lg:w-72 mx-auto lg:mx-auto bg-slate-100 rounded z-50 group mb-20 lg:mb-0 mt-10 animate-fadeInFromTop"
                 key={tour.id}
               >
                 <img
@@ -123,8 +123,8 @@ const Services = () => {
                 {/* buttontag */}
                 <div className="absolute flex items-center justify-center gap-2 mt-1 transition-all duration-300 lg:mt-0 -bottom-20 lg:group-hover:-bottom-16 lg:-bottom-0 -z-50 buttons">
                   <Link
-                    to={`/tour/${tour.id}`}
-                    className="flex items-center justify-center gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full shadow-xl xs:text-md sm:text-md md:text-sm lg:text-sm h-14 w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 shadow-white"
+                    to={`/tourdetails/tour/${tour.id}`}
+                    className="flex items-center justify-center gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-sm lg:text-sm h-14 w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
                   >
                     {" "}
                     Details
@@ -132,7 +132,7 @@ const Services = () => {
                   </Link>
                   <Link
                     to={"/contactPage"}
-                    className="flex items-center justify-center gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full shadow-xl xs:text-md sm:text-md md:text-lg lg:text-sm h-14 w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 shadow-white"
+                    className="flex items-center justify-center gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-lg lg:text-sm h-14 w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
                   >
                     {" "}
                     Book now
@@ -143,7 +143,7 @@ const Services = () => {
           })}
         </div>
         <Link
-          className="px-6 py-3 text-center text-white transition-all rounded-full shadow-xl duration-1000border-2 xs:mx-auto w-fit border-red bg-gradient-to-r from-slate-400 to-slate-900 lg:mt-10 hover:bg-gradient-to-l hover:from-slate-400 hover:to-slate-900"
+          className="px-6 py-3 mx-auto text-center text-white transition-all duration-1000 border-2 rounded-full shadow-xl xs:mx-auto w-fit border-red bg-gradient-to-r from-slate-400 to-slate-900 xs:mt-10 lg:mt-10 hover:bg-gradient-to-l hover:from-slate-400 hover:to-slate-900 sm:mx-auto"
           to={"/tourpackages"}
         >
           See All Tour Packages

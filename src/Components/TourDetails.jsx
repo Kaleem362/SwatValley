@@ -165,7 +165,12 @@ const TourDetails = () => {
                       <div>
                         {Array.isArray(day.activities) &&
                           day.activities.map((activity, idx) => (
-                            <div key={idx}>{activity}</div>
+                            <div
+                              key={idx}
+                              className="text-sm xs:text- ssmm:text-md md:text-lg lg:text-xl"
+                            >
+                              {activity}
+                            </div>
                           ))}
                       </div>
                     </div>
@@ -177,12 +182,12 @@ const TourDetails = () => {
             </h1>
             <div className="flex book-now-buttons">
               <Link to={"/contactpage"}>
-                <button className="p-2 md:p-4 font-semibold !text-white rounded-full !hover:bg-white !hover:text-slate-900 !bg-slate-800 mx-1">
+                <button className="p-2 xs:p-1 sm:p-2 md:p-4 lg:p-10 xl:p-12  font-semibold !text-white rounded-full !hover:bg-white !hover:text-slate-900 !bg-slate-800 mx-1">
                   Book Now
                 </button>
               </Link>
               <a
-                href="wa.me/923489857193"
+                href="https://wa.me/923489857193"
                 className="flex items-center p-2 mx-1 font-semibold text-white transition-all duration-300 bg-green-600 rounded-full md:p-4 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-800 hover:text-black"
               >
                 Whatsapp
@@ -194,9 +199,7 @@ const TourDetails = () => {
                   selectedPackage.packageName
                 )} for the destination of ${encodeURIComponent(
                   selectedPackage.destinations
-                )} at the price ${encodeURIComponent(
-                  selectedPackage.packagePrices
-                )}. Can you provide more information?`}
+                )} Can you provide more information?`}
                 className="flex items-center p-2 mx-1 font-semibold text-center text-white transition-all duration-300 border-2 border-white rounded-full hover:border-slate-900 hover:border-2 hover:bg-gradient-to-r hover:from-slate-900 hover:to-slate-500 bg-slate-800 group"
               >
                 Send Email
