@@ -10,15 +10,13 @@ import honeymoonfive from "../../public/PackagesImages/honeymoonfive.jpg";
 import honeymoonsix from "../../public/PackagesImages/honeymoonsix.jpg";
 import honeymoonseven from "../../public/PackagesImages/honeymoonseven.jpg";
 export const toursPackage = [
+  // consistent object
   {
     id: 1,
     packageName: "Luxury Honeymoon/Couple Tour Package",
     coverImage: kalamvalley,
     Image: HoneyMoonone,
-    duration: {
-      days: 4,
-      nights: 3,
-    },
+    duration: "days 4 Nights 3",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packageType: "Executive Package",
     packagePrices: {
@@ -50,6 +48,7 @@ export const toursPackage = [
       "Breakfast at the hotel",
     ],
   },
+  // consistent object
   {
     id: 2,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
@@ -86,6 +85,7 @@ export const toursPackage = [
       },
     },
   },
+  // consistent object
   {
     id: 3,
     packageName: "Private Luxury Honeymoon/Couple Tour Package",
@@ -126,6 +126,7 @@ export const toursPackage = [
       "Breakfast and dinner at the hotel",
     ],
   },
+  // consistent object
   {
     id: 4,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
@@ -165,6 +166,7 @@ export const toursPackage = [
       "Breakfast and dinner at the hotel",
     ],
   },
+  // consistent object
   {
     id: 5,
     packageName: "Private Luxury Honeymoon/Couple Tour Package",
@@ -200,6 +202,7 @@ export const toursPackage = [
       },
     },
   },
+  // consistent object
   {
     id: 6,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
@@ -235,6 +238,7 @@ export const toursPackage = [
       },
     },
   },
+  // unconsistent data with intinerary
   {
     id: 7,
     packageName: "Luxury 3-Day Swat Tour Package",
@@ -292,7 +296,7 @@ export const toursPackage = [
     Image: honeymoonsix,
     duration: "2 Days, 1 Night",
     destinations: ["Swat", "Kalam"],
-    totalCost: "₨ 20,000/-",
+    packagePrices: "₨ 20,000/-",
     itinerary: [
       {
         day: 1,
