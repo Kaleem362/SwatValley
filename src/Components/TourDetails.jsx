@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { store } from "../assets/Store/Context";
+import email from "../assets/icons-asset/gmail.png";
+import { AiFillMessage } from "react-icons/ai";
+import { Button } from "bootstrap";
 
 const TourDetails = () => {
   const { id } = useParams();
@@ -152,11 +155,13 @@ const TourDetails = () => {
             selectedPackage.itinerary.length > 0
               ? selectedPackage.itinerary.map((day, index) => (
                   <div key={index} className="w-full py-6 itinerary-container">
-                    <div className="p-2 text-white bg-black days card">
-                      <h1 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
+                    <div className="p-2 text-slate-900 font-Manrope bg-slate-300 days card">
+                      <h1 className="text-xl font-bold xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl font-Manrope">
                         {day.title || `Day ${index + 1}`}
                       </h1>
-                      <p>Day:{day.day || "-"}</p>
+                      <p className="float-right text-2xl font-extrabold">
+                        Day:{day.day || "-"}
+                      </p>
                       <div>
                         {Array.isArray(day.activities) &&
                           day.activities.map((activity, idx) => (
@@ -167,6 +172,41 @@ const TourDetails = () => {
                   </div>
                 ))
               : ""}
+            <h1 className="my-2 text-2xl font-extrabold text-slate-800 font-Manrope">
+              Book Your Tour Now
+            </h1>
+            <div className="flex book-now-buttons">
+              <Link to={"/contactpage"}>
+                <button className="p-2 md:p-4 font-semibold !text-white rounded-full !hover:bg-white !hover:text-slate-900 !bg-slate-800 mx-1">
+                  Book Now
+                </button>
+              </Link>
+              <a
+                href="wa.me/923489857193"
+                className="flex items-center p-2 mx-1 font-semibold text-white transition-all duration-300 bg-green-600 rounded-full md:p-4 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-800 hover:text-black"
+              >
+                Whatsapp
+              </a>
+              <a
+                href={`mailto:fawadkhan1930@gmail.com?subject=Booking Inquiry: ${encodeURIComponent(
+                  selectedPackage.packageName
+                )}&body=Hello! We want to book the tour ${encodeURIComponent(
+                  selectedPackage.packageName
+                )} for the destination of ${encodeURIComponent(
+                  selectedPackage.destinations
+                )} at the price ${encodeURIComponent(
+                  selectedPackage.packagePrices
+                )}. Can you provide more information?`}
+                className="flex items-center p-2 mx-1 font-semibold text-center text-white transition-all duration-300 border-2 border-white rounded-full hover:border-slate-900 hover:border-2 hover:bg-gradient-to-r hover:from-slate-900 hover:to-slate-500 bg-slate-800 group"
+              >
+                Send Email
+                <img
+                  src={email}
+                  className="w-3 h-3 mx-1 transition-all duration-300 xs:w-5 xs:h-5 group-hover:scale-150 group-hover:rotate-6 group-hover:translate-x-2"
+                  alt={<AiFillMessage />}
+                />
+              </a>
+            </div>
           </div>
 
           {/* Sidebar: Tour Inclusive */}
