@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { store } from "../assets/Store/Context";
 import { Link } from "react-router";
-import SwatTours from "./swatTours";
 import ForeignerPackages from "./ForeignersTours";
+import SwatTours from "./SwatTours";
 
 const TourPackages = () => {
   const { toursPackage } = useContext(store);
