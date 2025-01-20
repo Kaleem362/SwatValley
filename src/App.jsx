@@ -13,6 +13,10 @@ import Events from "./Components/Events";
 import TourPackages from "./Components/TourPackages";
 import TourDetails from "./Components/TourDetails";
 import ScrollToTop from "./Components/ScrollToTop";
+import SwatTours from "./Components/swatTours";
+import TourServices from "./Components/TourServices";
+import EventsActivities from "./Components/EventsActivities";
+import Contact from "./Components/Contact";
 
 const App = () => {
   return (
@@ -61,6 +65,39 @@ const App = () => {
               <Topbar />
               <Navbar />
               <TourDetails />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/ourservices"
+          element={
+            <>
+              <Topbar />
+              <Navbar />
+              <TourServices />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/eventsactivites"
+          element={
+            <>
+              <Topbar />
+              <Navbar />
+              <EventsActivities />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Topbar />
+              <Navbar />
+              <Contact />
               <Footer />
             </>
           }

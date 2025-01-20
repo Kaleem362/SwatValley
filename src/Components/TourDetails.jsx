@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router";
 import { store } from "../assets/Store/Context";
 import email from "../assets/icons-asset/gmail.png";
 import { AiFillMessage } from "react-icons/ai";
-import { Button } from "bootstrap";
 
 const TourDetails = () => {
   const { id } = useParams();

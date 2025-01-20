@@ -1,6 +1,5 @@
 import kalamvalley from "../../public/PackagesImages/beautifulhills.jpg";
 import malamjabbacover from "../../public/PackagesImages/malamjabbacover.jpg";
-import kalam from "../../public/PackagesImages/kalamprofile.jpg";
 import MalamJabba from "../../public/PackagesImages/malamjabbaprofile.jpg";
 import HoneyMoonone from "../../public/PackagesImages/honeymoonprofile.jpg";
 import HoneyMoontwo from "../../public/PackagesImages/honeymoonprofiletwo.jpg";

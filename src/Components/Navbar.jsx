@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 animate-fadeInFromTop">
+    <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-400 animate-fadeInFromTop">
       <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xlmd:text-3xl lg:text-5xl xs:text-4xl ">
         The Swat Tours
       </h1>
@@ -49,7 +49,7 @@ const Navbar = () => {
           onClick={() => handleTabClick("Packages")}
           to={"/tourpackages"}
         >
-          Packages
+          Tour Packages
         </Link>
         <Link
           className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
@@ -57,7 +57,7 @@ const Navbar = () => {
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
           } hover:text-slate-100 hover:bg-green-500`}
-          to={"/tourservices"}
+          to={"/ourservices"}
           onClick={() => handleTabClick("services")}
         >
           Services
@@ -69,45 +69,23 @@ const Navbar = () => {
               : "text-slate-900 lg:text-black"
           } hover:text-slate-100 hover:bg-green-500`}
           onClick={() => handleTabClick("Events")}
-          to={"/events"}
+          to={"/eventsactivites"}
         >
-          Events
+          Events & Activities
         </Link>
-        <li className="relative z-50 flex gap-2 p-2 px-3 text-lg font-semibold transition-all duration-200 rounded-full cursor-pointer text-slate-900 items- center font-Manrope lg:text-slate-900 group hover:bg-green-500 hover:text-slate-100">
-          Tours{" "}
-          {/* <AiFillCaretDown className="m-auto transition-all duration-200 -rotate-180 group-hover:-rotate-0" /> */}
-          {/* <ul className="absolute flex-col justify-center hidden h-auto lg:w-72 xs:top-0 xs:left-0 lg:top-10 lg:-left-20 xs:w-full group-hover:flex bg-slate-800 border-slate-800">
-            <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
-              Kalam Tour
-            </li>
-            <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
-              MalamJabba Tour
-            </li>
-            <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
-              Mahodand Lake Tour
-            </li>
-            <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
-              Jarogo Abshar Tour
-            </li>
-            <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
-              Murghuzar Tour
-            </li>
-            <li className="w-full px-2 py-2 font-bold bg-slate-300 text-slate-800 hover:text-slate-300 font-Manrope hover:bg-slate-800">
-              Sangar Tour
-            </li>
-          </ul> */}
-        </li>
-        <li
+
+        <Link
           className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Contact"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
           } hover:text-slate-100 hover:bg-green-500`}
           onClick={() => handleTabClick("Contact")}
+          to={"/contact"}
         >
           Contact
-        </li>
-        <li
+        </Link>
+        <Link
           className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "About us"
               ? "bg-green-900 text-white"
@@ -116,7 +94,7 @@ const Navbar = () => {
           onClick={() => handleTabClick("About us")}
         >
           About us
-        </li>
+        </Link>
       </ul>
       <span
         className="p-2 border rounded-lg cursor-pointer bg-slate-800 border-slate-800 menu lg:hidden"

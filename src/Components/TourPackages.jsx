@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { store } from "../assets/Store/Context";
 import { Link } from "react-router";
+import SwatTours from "./swatTours";
+import ForeignerPackages from "./ForeignersTours";
 
 const TourPackages = () => {
   const { toursPackage } = useContext(store);
@@ -19,25 +21,30 @@ const TourPackages = () => {
             <img
               src={pkg.Image}
               alt={pkg.packageName}
-              className="object-cover w-full h-64 transition-transform duration-300 transform group-hover:scale-110 "
+              className="object-cover w-full h-64 transition-transform duration-300 transform group-hover:scale-110"
             />
             {/* Overlay */}
-            <div className="absolute inset-0 z-50 flex flex-col items-center justify-center w-full h-64 transition-all duration-300 bg-black opacity-50 group-hover:opacity-50 group-hover:scale-110">
-              <Link className="relative z-50 px-4 py-2 mb-2 text-black bg-white rounded-md shadow opacity-100 hover:bg-slate-900">
+            {/* Two separate divs - one for overlay, one for button */}
+            <div className="absolute inset-0 z-10 w-full h-64 transition-all duration-300 bg-black opacity-40 group-hover:opacity-60 group-hover:scale-110" />
+            <div className="absolute inset-0 z-20 flex items-center justify-center w-full h-64 group">
+              <Link
+                className="px-6 py-3 font-semibold transition-all duration-300 transform bg-white rounded-full shadow-lg text-slate-800 hover:bg-black"
+                to={"/contactpage"}
+              >
                 Book Now
               </Link>
             </div>
 
             {/* Title and Description */}
             <div className="p-4 bg-white">
-              <h2 className="text-xl font-bold ">{pkg.packageName}</h2>
+              <h2 className="text-xl font-bold">{pkg.packageName}</h2>
               <p className="mb-3 text-sm text-gray-600">
                 {pkg.description ||
                   "Enjoy an exclusive and luxurious experience with this package!"}
               </p>
               <Link
                 to={`/tourdetails/tour/${pkg.id}`}
-                className="px-4 py-2 mt-4 text-white transition-all rounded-md duration-400 from-black to-slate-700 bg-gradient-to-r hover:bg-gradient-to-l hover:from-black hover:to-slate-700 font-Manrope"
+                className="inline-block px-4 py-2 mt-4 text-white transition-all rounded-md duration-400 from-black to-slate-700 bg-gradient-to-r hover:bg-gradient-to-l hover:from-black hover:to-slate-700 font-Manrope"
               >
                 Tour Details
               </Link>
@@ -45,6 +52,9 @@ const TourPackages = () => {
           </div>
         ))}
       </div>
+
+      <SwatTours />
+      <ForeignerPackages />
     </div>
   );
 };
