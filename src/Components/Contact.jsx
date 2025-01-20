@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { IoCall } from "react-icons/io5";
-
-const Contact = ({ selectedPackage }) => {
+const Contact = () => {
   const [formType, setFormType] = useState("customizeTour"); // Default form type
   const [kids, setKids] = useState(false);
   const [selectedCar, setSelectedCar] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
 
   const carOptions = [
     "Prado Jeep",
@@ -191,9 +192,10 @@ const Contact = ({ selectedPackage }) => {
               </label>
               <input
                 type="text"
-                value={selectedPackage?.name || ""}
+                value={packageName || ""}
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 readOnly
+                placeholder="Package Name"
               />
             </div>
             <div className="mb-4">
@@ -202,9 +204,58 @@ const Contact = ({ selectedPackage }) => {
               </label>
               <input
                 type="text"
-                value={selectedPackage?.destination || ""}
+                value={destination || ""}
+                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                placeholder="Destination"
+                readOnly
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold text-slate-700">
+                package Duration
+              </label>
+              <input
+                type="text"
+                value={duration || ""}
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 readOnly
+                placeholder="Duration"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold text-slate-700">
+                Package Price
+              </label>
+              <input
+                type="text"
+                value={price || ""}
+                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                readOnly
+                placeholder="Package Price"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold text-slate-700">
+                Accommodation
+              </label>
+              <input
+                type="text"
+                value={accommodation || ""}
+                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                readOnly
+                placeholder="Accommodation"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold text-slate-700">
+                Transportation
+              </label>
+              <input
+                type="text"
+                value={transportation || ""}
+                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                readOnly
+                placeholder="Transportation"
               />
             </div>
             <div className="mb-4">
@@ -214,6 +265,21 @@ const Contact = ({ selectedPackage }) => {
               <input
                 type="text"
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Enter Your Name"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold text-slate-700">
+                Phone Number
+              </label>
+              <input
+                type="text"
+                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="Enter Your Phone"
               />
             </div>
             <button className="px-6 py-2 text-white rounded-lg bg-slate-800">

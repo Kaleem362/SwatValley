@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import { store } from "../assets/Store/Context";
 import email from "../assets/icons-asset/gmail.png";
 import { AiFillMessage } from "react-icons/ai";
@@ -7,6 +7,7 @@ import { AiFillMessage } from "react-icons/ai";
 const TourDetails = () => {
   const { id } = useParams();
   const { toursPackage } = useContext(store);
+  const navigate = useNavigate();
 
   // Find the selected package based on id
   const selectedPackage = toursPackage.find((pkg) => pkg.id === parseInt(id));
@@ -21,6 +22,18 @@ const TourDetails = () => {
       </div>
     );
   }
+  const handleBookNow = () => {
+    navigate("/contact", {
+      state: {
+        packageName: selectedPackage.packageName,
+        destination: selectedPackage.destinations,
+        duration: selectedPackage.duration,
+        price: selectedPackage.packagePrices,
+        accommodation: selectedPackage.accommodation,
+        transportation: selectedPackage.transportation,
+      },
+    });
+  };
 
   return (
     <div className="flex flex-col w-full bg-gray-100">
@@ -180,8 +193,11 @@ const TourDetails = () => {
               Book Your Tour Now
             </h1>
             <div className="flex book-now-buttons">
-              <Link to={"/contactpage"}>
-                <button className="p-2 xs:p-1 sm:p-2 md:p-4 lg:p-10 xl:p-12  font-semibold !text-white rounded-full !hover:bg-white !hover:text-slate-900 !bg-slate-800 mx-1">
+              <Link to={"/contact"}>
+                <button
+                  className="p-2 xs:p-1 sm:p-2 md:p-4 lg:p-10 xl:p-12  font-semibold !text-white rounded-full !hover:bg-white !hover:text-slate-900 !bg-slate-800 mx-1"
+                  onClick={handleBookNow}
+                >
                   Book Now
                 </button>
               </Link>
