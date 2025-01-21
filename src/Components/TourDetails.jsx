@@ -36,7 +36,7 @@ const TourDetails = () => {
   };
 
   return (
-    <div className="flex flex-col w-full bg-gray-100">
+    <div className="flex flex-col w-full bg-gray-100 ">
       <div className="w-full mx-auto bg-white shadow-lg">
         {/* Image and Title */}
         <div className="relative">
@@ -192,10 +192,10 @@ const TourDetails = () => {
             <h1 className="my-2 text-2xl font-extrabold text-slate-800 font-Manrope">
               Book Your Tour Now
             </h1>
-            <div className="flex book-now-buttons">
+            <div className="flex flex-wrap justify-center gap-3 book-now-buttons">
               <Link to={"/contact"}>
                 <button
-                  className="p-2 xs:p-1 sm:p-2 md:p-4 lg:p-10 xl:p-12  font-semibold !text-white rounded-full !hover:bg-white !hover:text-slate-900 !bg-slate-800 mx-1"
+                  className="flex items-center justify-center px-4 py-2 mx-1 font-semibold text-white transition-all duration-300 rounded-full bg-slate-800 xs:px-3 xs:py-1 sm:px-4 sm:py-2 md:px-5 md:py-2 lg:px-6 lg:py-3 xl:px-6 xl:py-3 "
                   onClick={handleBookNow}
                 >
                   Book Now
@@ -203,7 +203,7 @@ const TourDetails = () => {
               </Link>
               <a
                 href="https://wa.me/923489857193"
-                className="flex items-center p-2 mx-1 font-semibold text-white transition-all duration-300 bg-green-600 rounded-full md:p-4 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-800 hover:text-black"
+                className="flex items-center justify-center px-4 py-2 mx-1 font-semibold text-white transition-all duration-300 bg-green-600 rounded-full xs:px-3 xs:py-1 sm:px-4 sm:py-2 md:px-5 md:py-2 lg:px-6 lg:py-2 xl:px-6 xl:py-2 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-800 hover:text-black"
               >
                 Whatsapp
               </a>
@@ -215,13 +215,13 @@ const TourDetails = () => {
                 )} for the destination of ${encodeURIComponent(
                   selectedPackage.destinations
                 )} Can you provide more information?`}
-                className="flex items-center p-2 mx-1 font-semibold text-center text-white transition-all duration-300 border-2 border-white rounded-full hover:border-slate-900 hover:border-2 hover:bg-gradient-to-r hover:from-slate-900 hover:to-slate-500 bg-slate-800 group"
+                className="flex items-center justify-center px-4 py-2 mx-1 font-semibold text-white transition-all duration-300 border-2 border-white rounded-full bg-slate-800 xs:px-3 xs:py-1 sm:px-4 sm:py-2 md:px-5 md:py-2 lg:px-6 lg:py-2 xl:px-6 xl:py-2 hover:bg-gradient-to-r hover:from-slate-900 hover:to-slate-500 hover:border-slate-900 group"
               >
                 Send Email
                 <img
                   src={email}
-                  className="w-3 h-3 mx-1 transition-all duration-300 xs:w-5 xs:h-5 group-hover:scale-150 group-hover:rotate-6 group-hover:translate-x-2"
-                  alt={<AiFillMessage />}
+                  className="w-4 h-4 ml-2 transition-transform duration-300 xs:w-5 xs:h-5 group-hover:scale-125 group-hover:rotate-6"
+                  alt="Email Icon"
                 />
               </a>
             </div>

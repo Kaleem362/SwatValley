@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="items-center w-full p-6 h-52 xs:justify-between xs:flex xs:flex-col sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-row animate-fadeInFromBottom bg-slate-400">
+    <div className="items-center w-full p-6 h-52 xs:justify-between xs:flex xs:flex-col sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-row animate-fadeInFromRight bg-slate-400">
       <div className="flex items-center justify-center w-auto h-full ">
         <img
           src={logo}
@@ -26,31 +26,31 @@ const Footer = () => {
       <div className="flex flex-col items-start justify-center w-full h-full gap-2 pages-content md:w-fit animate-fadeInFromBottom">
         <h4 className="w-full text-lg text-slate-900 hover:underline font-manrope">
           {" "}
-          <Link rel="stylesheet" href="">
-            packages
+          <Link rel="stylesheet" to={"/tourpackages"}>
+            Tour packages
           </Link>
         </h4>
         <h4 className="text-lg text-slate-900 hover:underline font-manrope">
           {" "}
-          <Link rel="stylesheet" href="">
-            Tours
+          <Link rel="stylesheet" to={"/eventsactivites"}>
+            Events & Activities
           </Link>
         </h4>
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}
-          <Link rel="stylesheet" href="">
+          <Link rel="stylesheet" to={"/gallery"}>
             Gallery
           </Link>
         </h4>
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}
-          <Link rel="stylesheet" href="">
+          <Link rel="stylesheet" to={"/contact"}>
             Contact us
           </Link>
         </h4>
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}
-          <Link rel="stylesheet" href="">
+          <Link rel="stylesheet" to={"/about"}>
             About us
           </Link>
         </h4>

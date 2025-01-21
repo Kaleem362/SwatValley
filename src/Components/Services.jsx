@@ -116,15 +116,17 @@ const Services = () => {
                 ></img>
                 <div className="absolute inset-0 bg-gray-700 rounded-md opacity-60 "></div>
                 <div className="absolute inset-0 flex items-end justify-center">
-                  <h2 className="w-full mb-2 text-2xl font-bold text-center text-white ">
+                  <h2 className="w-full text-xl font-bold text-center text-white ">
                     {tour.packageName}
+                    <br />
+                    <div className="bg-slate-800">{tour.duration || "-"}</div>
                   </h2>
                 </div>
                 {/* buttontag */}
                 <div className="absolute flex items-center justify-center gap-2 mt-1 transition-all duration-300 lg:mt-0 -bottom-20 lg:group-hover:-bottom-16 lg:-bottom-0 -z-50 buttons">
                   <Link
                     to={`/tourdetails/tour/${tour.id}`}
-                    className="flex items-center justify-center gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-sm lg:text-sm h-14 w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
+                    className="flex items-center justify-center h-10 gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-sm lg:text-sm w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
                   >
                     {" "}
                     Details
@@ -132,7 +134,7 @@ const Services = () => {
                   </Link>
                   <Link
                     to={"/contact"}
-                    className="flex items-center justify-center gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-lg lg:text-sm h-14 w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
+                    className="flex items-center justify-center h-10 gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-lg lg:text-sm w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
                   >
                     {" "}
                     Book now

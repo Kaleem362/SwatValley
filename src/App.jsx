@@ -14,6 +14,7 @@ import TourServices from "./Components/TourServices";
 import EventsActivities from "./Components/EventsActivities";
 import Contact from "./Components/Contact";
 import Gallery from "./Components/Gallery";
+import AboutUs from "./Components/About";
 
 const App = () => {
   return (
@@ -106,6 +107,17 @@ const App = () => {
               <Topbar />
               <Navbar />
               <Gallery />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Topbar />
+              <Navbar />
+              <AboutUs />
               <Footer />
             </>
           }

@@ -12,6 +12,11 @@ const Contact = () => {
   const [duration, setDuration] = useState("");
   const [message, setMessage] = useState("");
   const [selectedService, setSelectedService] = useState("");
+  const [packageType, setPackageType] = useState(""); // Add packageType here
+  const [price, setPrice] = useState("");
+  const [couples, setCouples] = useState("");
+  const [accommodation, setAccommodation] = useState("");
+  const [hotel, setHotel] = useState("");
 
   const carOptions = [
     "Prado Jeep",
@@ -29,8 +34,98 @@ const Contact = () => {
     "Events planning",
     "Tours packages",
   ];
+  const tourPackageOptions = [
+    { id: 1, name: "Luxury Honeymoon/Couple Tour Package" },
+    { id: 2, name: "Honeymoon Couple / Family Tour Package" },
+    { id: 3, name: "Private Luxury Honeymoon/Couple Tour Package" },
+    { id: 4, name: "Deluxe Private Luxury Honeymoon/Couple Tour Package" },
+    { id: 5, name: "Private Luxury Honeymoon/Couple Tour Package" },
+    { id: 6, name: "Deluxe Private Luxury Honeymoon/Couple Tour Package" },
+    { id: 7, name: "Luxury 3-Day Swat Tour Package" },
+    { id: 8, name: "Luxury 2-Day Swat Tour Package" },
+  ];
+
+  const tourDurationOptions = [
+    "4 Days 3 Nights",
+    "3 Days 2 Nights",
+    "7 Days 4 Nights (Karachi)",
+    "4 days 3 Nights (Karachi)",
+    "2 Days 1 Night",
+  ];
+
+  const tourDestinationOptions = [
+    "Kalam",
+    "Malam Jabba",
+    "Mingora",
+    "Ushu Forest",
+    "Mahodand Lake",
+    "White Palace",
+  ];
+
+  const packageTypeOptions = ["Executive Package", "Deluxe Accommodations"];
+
+  const packagePriceOptions = [
+    { id: 1, prices: { for1Couple: "₨ 80,000", for2Couples: "₨ 130,000" } },
+    { id: 2, prices: { for1Couple: "₨ 45,000", for2Couples: "₨ 75,000" } },
+    { id: 3, prices: { for1Couple: "₨ 95,000", for2Couples: "₨ 150,000" } },
+    { id: 4, prices: { for1Couple: "₨ 60,000", for2Couples: "₨ 100,000" } },
+    { id: 5, prices: { for1Couple: "₨ 65,000", for2Couples: "₨ 98,000" } },
+    { id: 6, prices: { for1Couple: "₨ 38,000", for2Couples: "₨ 60,000" } },
+    { id: 7, prices: "₨ 35,000" },
+    { id: 8, prices: "₨ 20,000" },
+  ];
+
+  const coupleOptions = ["Single Couple", "Double Couple"];
+
+  const accommodationTypeOptions = [
+    "Executive Hotels",
+    "Deluxe Accommodations",
+  ];
+
+  const hotelOptions = [
+    "Malam Jabba Palace",
+    "Burj Al Swat",
+    "Swat Hilton",
+    "Rock City Resort",
+    "Honeymoon Hotel",
+    "Hotel Liberty Bahrain",
+    "Swat Palace",
+    "Swastu Resorts",
+    "Holiday Inn Kalam",
+  ];
 
   const handleFormSwitch = (type) => setFormType(type);
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission behavior (page reload).
+
+    // 1. Collect the submitted form data.
+    const formData = new FormData(e.target);
+
+    // 2. Convert form data to a plain JavaScript object.
+    const data = Object.fromEntries(formData.entries());
+
+    // 3. Print the collected data to verify it works.
+    console.log(data);
+
+    // 4. Send the form data to Email.js.
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID", // Replace with Email.js Service ID
+        "YOUR_TEMPLATE_ID", // Replace with Email.js Template ID
+        data, // Form data collected as an object
+        "YOUR_PUBLIC_KEY" // Replace with Email.js Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          alert("Form submitted successfully!");
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          alert("Failed to submit the form. Please try again.");
+        }
+      );
+  };
 
   return (
     <div className="container w-full p-6 mx-auto my-10">
@@ -104,7 +199,7 @@ const Contact = () => {
       {/* Conditional Forms */}
       <div className="p-6 my-2 rounded-lg shadow-xl bg-slate-400 shadow-slate-700 font-Manrope">
         {formType === "customizeTour" && (
-          <form>
+          <form onSubmit={handleSubmit}>
             <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
               Customize Your Budget Tour
             </h2>
@@ -113,6 +208,7 @@ const Contact = () => {
               response you Soon
             </p>
             <div className="mb-4">
+              <input type="hidden" name="formType" value="customizeTour" />
               <label className="block mb-2 font-semibold text-slate-700">
                 Your Name
               </label>
@@ -120,6 +216,7 @@ const Contact = () => {
                 type="text"
                 className="w-full px-4 py-2 border border-none rounded-full outline-none"
                 placeholder="Enter Name"
+                required
               />
             </div>
             <div className="mb-4">
@@ -127,6 +224,7 @@ const Contact = () => {
                 Phone Number
               </label>
               <input
+                required
                 type="text"
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 placeholder="Enter Phone Number..."
@@ -139,6 +237,7 @@ const Contact = () => {
               <input
                 type="number"
                 className="w-full px-4 py-2 border rounded-full outline-none"
+                required
                 placeholder="Amount of Persons..."
               />
             </div>
@@ -150,6 +249,7 @@ const Contact = () => {
                 type="number"
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 placeholder="No of males..."
+                required
               />
             </div>
             <div className="mb-4">
@@ -160,6 +260,7 @@ const Contact = () => {
                 type="number"
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 placeholder="No of Females..."
+                required
               />
             </div>
 
@@ -171,6 +272,7 @@ const Contact = () => {
                 type="checkbox"
                 onChange={(e) => setKids(e.target.checked)}
                 className="w-5 h-5 mr-2 border-none outline-none"
+                required
               />
               Yes
             </div>
@@ -201,6 +303,7 @@ const Contact = () => {
                 className="mr-2 w-[70%] p-2 rounded-lg border-none outline-none"
                 value={message}
                 placeholder="Write a message"
+                required
               />
             </div>
             <button className="px-6 py-2 text-white rounded-full bg-slate-800">
@@ -210,10 +313,12 @@ const Contact = () => {
         )}
 
         {formType === "packageTour" && (
-          <form>
+          <form onSubmit={handleSubmit}>
             <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-              Book a Tour Package
+              Book a Tour package
             </h2>
+            {/* Name Input */}{" "}
+            <input type="hidden" name="formType" value="packageTour" />
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Your Name
@@ -224,81 +329,184 @@ const Contact = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter Your Name"
+                required
               />
             </div>
+            {/* Tour Package Options */}
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Tour Name
               </label>
-              <input
-                type="text"
-                value={packageName}
+              <select
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
-                placeholder="Tell us Tour Name"
+                value={packageName}
                 onChange={(e) => setPackageName(e.target.value)}
-              />
+              >
+                <option value="">Select Tour Name</option>
+                {tourPackageOptions.map((option) => (
+                  <option key={option.id} value={option.name}>
+                    {option.name}
+                  </option>
+                ))}
+              </select>
             </div>
+            {/* Tour Destination Options */}
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Tour Destination
               </label>
-              <input
-                type="text"
-                value={destination}
+              <select
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
-                placeholder="where you want to travel..."
+                value={destination}
                 onChange={(e) => setDestination(e.target.value)}
-              />
+              >
+                <option value="">Select Destination</option>
+                {tourDestinationOptions.map((destination, index) => (
+                  <option key={index} value={destination}>
+                    {destination}
+                  </option>
+                ))}
+              </select>
             </div>
+            {/* Duration Options */}
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
-                package Duration days
+                Package Duration
               </label>
-              <input
-                type="text"
-                value={duration}
+              <select
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
-                placeholder="how Many days tour..."
+                value={duration}
                 onChange={(e) => setDuration(e.target.value)}
-              />
+              >
+                <option value="">Select Duration</option>
+                {tourDurationOptions.map((duration, index) => (
+                  <option key={index} value={duration}>
+                    {duration}
+                  </option>
+                ))}
+              </select>
             </div>
-            {/* <div className="mb-4">
+            {/* Package Type */}
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold text-slate-700">
+                Package Type
+              </label>
+              <select
+                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                value={packageType}
+                onChange={(e) => setPackageType(e.target.value)}
+              >
+                <option value="">Select Package Type</option>
+                {packageTypeOptions.map((type, index) => (
+                  <option key={index} value={type}>
+                    {type}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Couple Options */}
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold text-slate-700">
+                Number of Couples
+              </label>
+              <select
+                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                value={couples}
+                onChange={(e) => setCouples(e.target.value)}
+              >
+                <option value="">Select Couple Option</option>
+                {coupleOptions.map((option, index) => (
+                  <option key={index} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Price Options */}
+            <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Package Price
               </label>
-              <input
-                type="text"
-                value={packagePrice}
+              <select
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
-                placeholder="Package Price"
-                onChange={(e) => setPackagePrice(e.target.value)}
-              />
-            </div> */}
-            {/* <div className="mb-4">
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                disabled={!couples} // Disable if no couple option is selected
+              >
+                <option value="">Select Price</option>
+                {packagePriceOptions.map((option) => {
+                  // Determine the price to show based on the couple selection
+                  if (typeof option.prices === "object") {
+                    if (couples === "Single Couple") {
+                      return (
+                        <option
+                          key={option.id}
+                          value={option.prices.for1Couple}
+                        >
+                          {"For One couple "}
+                          {option.prices.for1Couple}
+                        </option>
+                      );
+                    } else if (couples === "Double Couple") {
+                      return (
+                        <option
+                          key={option.id}
+                          value={option.prices.for2Couples}
+                        >
+                          {"For Double couples "}
+                          {option.prices.for2Couples}
+                        </option>
+                      );
+                    }
+                  } else {
+                    // Show single price for non-object prices
+                    return (
+                      <option key={option.id} value={option.prices}>
+                        {option.prices}
+                      </option>
+                    );
+                  }
+                  return null; // Skip options not matching the condition
+                })}
+              </select>
+            </div>
+            {/* Accommodation Options */}
+            <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
-                Accommodation
+                Accommodation Type
               </label>
-              <input
-                type="text"
+              <select
+                className="w-full px-4 py-2 border-none rounded-full outline-none"
                 value={accommodation}
                 onChange={(e) => setAccommodation(e.target.value)}
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                placeholder="Accommodation"
-              />
-            </div> */}
-            {/* <div className="mb-4">
+              >
+                <option value="">Select Accommodation Type</option>
+                {accommodationTypeOptions.map((type, index) => (
+                  <option key={index} value={type}>
+                    {type}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Hotel Options */}
+            <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
-                Transportation
+                Hotel Name
               </label>
-              <input
-                type="text"
-                value={transportation}
+              <select
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
-                onChange={(e) => setTranportation(e.target.value)}
-                placeholder="Transportation"
-              />
-            </div> */}
-
+                value={hotel}
+                onChange={(e) => setHotel(e.target.value)}
+              >
+                <option value="">Select Hotel</option>
+                {hotelOptions.map((hotel, index) => (
+                  <option key={index} value={hotel}>
+                    {hotel}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Phone Input */}
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Phone Number
@@ -318,11 +526,13 @@ const Contact = () => {
         )}
 
         {formType === "serviceForm" && (
-          <form>
+          <form onSubmit={handleSubmit}>
             <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
               Rent a Car or Service
             </h2>
             <div className="mb-4">
+              {" "}
+              <input type="hidden" name="formType" value="serviceForm" />
               <label className="block mb-2 font-semibold text-slate-700">
                 Your Name
               </label>
@@ -330,6 +540,7 @@ const Contact = () => {
                 type="text"
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 placeholder="Enter Your Name"
+                required
               />
             </div>
             <div className="mb-4">
@@ -340,6 +551,7 @@ const Contact = () => {
                 type="tel"
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 placeholder="Enter Phone Number"
+                required
               />
             </div>
             <div className="mb-4">

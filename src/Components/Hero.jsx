@@ -28,7 +28,7 @@ const Hero = () => {
           today!
         </p>
         <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200  border-2 border-slate-100 shadow-slate-800 lg:flex-col m-x-auto animate-fadeInFromRight">
-          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 rounded-lg border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
+          <li className="flex items-center w-full gap-2 p-2 text-lg rounded-lg sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
             <img
               src={destination}
               alt="Explore Destinations"
@@ -36,11 +36,11 @@ const Hero = () => {
             />
             Explore Top Destinations
           </li>
-          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 rounded-lg border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
+          <li className="flex items-center w-full gap-2 p-2 text-lg rounded-lg sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
             <img src={hotel} alt="Stay in Hotels" className="w-8 h-8" />
             Stay in Cozy Hotels
           </li>
-          <li className="flex items-center w-full gap-2 p-2 text-lg border-b-2 rounded-lg border-slate-800 sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
+          <li className="flex items-center w-full gap-2 p-2 text-lg rounded-lg sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
             <img src={car} alt="Travel Comfortably" className="w-8 h-8" />
             Travel Comfortably
           </li>

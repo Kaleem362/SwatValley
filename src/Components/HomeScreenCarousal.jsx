@@ -1,10 +1,13 @@
 import React from "react";
-import Ushuforest from "../assets/Valley images/ushu forests.jpg";
-import SwatValley from "../assets/Valley images/Swat Valley.jpg";
+import hotelsKalam from "../assets/Valley images/hotelsKalam.jpg";
 import chairlifts from "../assets/Valley images/Malamjabbachairlifts.jpg";
 import kalamhills from "../assets/Valley images/snowy.jpg";
 import PCfrontimage from "../assets/Valley images/PC hotel malamjabba.jpg";
 import forestroad from "../assets/Valley images/roadbetweenforests.jpg";
+import kalammountains from "../assets/Valley images/beautifulhills.jpg";
+import kandollake from "../assets/Valley images/kandollake.jpg";
+import Mahodandlakecover from "../assets/Valley images/Mahodandlakecover.jpg";
+import malamjabbamountains from "../assets/Valley images/malamjabba mountains.jpg";
 const HomeScreenCarousal = () => {
   return (
     <div>
@@ -45,7 +48,7 @@ const HomeScreenCarousal = () => {
           </div>
           <div className="relative h-full carousel-item">
             <img
-              src={Ushuforest}
+              src={kalammountains}
               className="object-cover w-full h-full d-block"
               alt="..."
             />
@@ -53,7 +56,31 @@ const HomeScreenCarousal = () => {
           </div>
           <div className="relative h-full carousel-item">
             <img
-              src={SwatValley}
+              src={hotelsKalam}
+              className="object-cover w-full h-full d-block"
+              alt="..."
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          </div>
+          <div className="relative h-full carousel-item">
+            <img
+              src={Mahodandlakecover}
+              className="object-cover w-full h-full d-block"
+              alt="..."
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          </div>
+          <div className="relative h-full carousel-item">
+            <img
+              src={malamjabbamountains}
+              className="object-cover w-full h-full d-block"
+              alt="..."
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          </div>
+          <div className="relative h-full carousel-item">
+            <img
+              src={kandollake}
               className="object-center w-full h-full overflow-hidden d-block"
               alt="..."
             />

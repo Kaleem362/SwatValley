@@ -15,7 +15,7 @@ export const toursPackage = [
     packageName: "Luxury Honeymoon/Couple Tour Package",
     coverImage: kalamvalley,
     Image: HoneyMoonone,
-    duration: "days 4 Nights 3",
+    duration: "6 days",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packageType: "Executive Package",
     packagePrices: {
@@ -50,13 +50,10 @@ export const toursPackage = [
   // consistent object
   {
     id: 2,
-    packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
+    packageName: "Honeymoon Couple / Family Tour Package",
     coverImage: malamjabbacover,
     Image: HoneyMoontwo,
-    duration: {
-      days: 3,
-      nights: 2,
-    },
+    duration: "days 3 nights 2",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
       for1Couple: "Rs. 45,000/-",
@@ -90,7 +87,8 @@ export const toursPackage = [
     packageName: "Private Luxury Honeymoon/Couple Tour Package",
     coverImage: MalamJabba,
     Image: HoneyMoonthree,
-    duration: "7 days 4 Nights (Karachi to Karachi)",
+    tourPoints: "(Karachi)",
+    duration: "7 days (Karachi)",
 
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
@@ -131,7 +129,7 @@ export const toursPackage = [
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
     coverImage: MalamJabba,
     Image: honeymooncover,
-    duration: "4 days 3 Nights (karachi to karachi)",
+    duration: "7 days (karachi)",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
       for1Couple: "₨ 60,000/-",
@@ -200,6 +198,11 @@ export const toursPackage = [
         route: "Islamabad to Swat (Return)",
       },
     },
+    packageIncludes: [
+      "accommodation in deluxe hotels",
+      "Car  & Driver",
+      "Breakfast and dinner at the hotel",
+    ],
   },
   // consistent object
   {
@@ -236,6 +239,11 @@ export const toursPackage = [
         route: "Islamabad to Swat (Return)",
       },
     },
+    packageIncludes: [
+      "accommodation in deluxe hotels",
+      "Car  & Driver",
+      "Breakfast and dinner at the hotel",
+    ],
   },
   // unconsistent data with intinerary
   {
