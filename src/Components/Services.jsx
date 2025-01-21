@@ -16,87 +16,6 @@ const Services = () => {
   return (
     // services we offer
     <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-3 xl:px-10 xs:px-3 sm:px-4 md:px-6 lg:px-10 animate-fadeIn">
-      <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-        Services We offer
-      </h1>
-      <div className="flex flex-wrap justify-center w-full gap-10 xs:p-2 sm:p-4 card-container animate-fadeInFromTop">
-        {/* card */}
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromLeft">
-          <img
-            className="object-cover w-full h-auto rounded-t-lg"
-            src={vehicle}
-            alt=""
-          />
-
-          <div className="px-4 py-2 ">
-            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-              Luxury Transportation
-            </h5>
-
-            <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
-              We provide 4x4 vehicles for a comfortable ride both off-road and
-              on-road. Your safety is our priority.
-            </p>
-          </div>
-        </div>
-        {/* card */}
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105">
-          <img
-            className="object-cover w-full h-auto rounded-t-lg"
-            src={CozyHotels}
-            alt=""
-          />
-
-          <div className="px-4 py-2 ">
-            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-              Cozy Hotels
-            </h5>
-
-            <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
-              Enjoy comfort and luxury in our cozy hotels with exceptional
-              service and serene locations, our hotel provides top-notch
-              amenities.
-            </p>
-          </div>
-        </div>
-        {/* card */}
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105">
-          <img
-            className="object-cover w-full h-auto rounded-t-lg"
-            src={Travel}
-            alt=""
-          />
-
-          <div className="px-4 py-2 ">
-            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-              Travel with Ease
-            </h5>
-
-            <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
-              Travel with ease and discover new horizons through seamless
-              planning and curated experiences. Enjoy a hassle-free journey.
-            </p>
-          </div>
-        </div>
-        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromRight">
-          <img
-            className="object-cover w-full h-auto rounded-t-lg"
-            src={guide}
-            alt=""
-          />
-
-          <div className="px-4 py-2 ">
-            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-              Experienced Travelling Guide
-            </h5>
-
-            <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
-              Our guides ensure a safe, enriching journey, sharing local culture
-              and history to make your trip enjoyable.
-            </p>
-          </div>
-        </div>
-      </div>
       {/* packages mapped here */}
       <div className="flex flex-col items-start justify-start w-full gap-2 px-1 py-0 h-fit lg:py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
         <h1 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
@@ -123,7 +42,7 @@ const Services = () => {
                   </h2>
                 </div>
                 {/* buttontag */}
-                <div className="absolute flex items-center justify-center gap-2 mt-1 transition-all duration-300 lg:mt-0 -bottom-20 lg:group-hover:-bottom-16 lg:-bottom-0 -z-50 buttons">
+                <div className="absolute flex items-center justify-center gap-2 transition-all duration-300 lg:mt-0 -bottom-20 lg:group-hover:-bottom-12 lg:-bottom-0 -z-50 buttons">
                   <Link
                     to={`/tourdetails/tour/${tour.id}`}
                     className="flex items-center justify-center h-10 gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-sm lg:text-sm w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
@@ -226,6 +145,87 @@ const Services = () => {
           </div>
         </div>
       </section>
+      <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+        Services We offer
+      </h1>
+      <div className="flex flex-wrap justify-center w-full gap-10 xs:p-2 sm:p-4 card-container animate-fadeInFromTop">
+        {/* card */}
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromLeft">
+          <img
+            className="object-cover w-full h-auto rounded-t-lg"
+            src={vehicle}
+            alt=""
+          />
+
+          <div className="px-4 py-2 ">
+            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              Luxury Transportation
+            </h5>
+
+            <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
+              We provide 4x4 vehicles for a comfortable ride both off-road and
+              on-road. Your safety is our priority.
+            </p>
+          </div>
+        </div>
+        {/* card */}
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105">
+          <img
+            className="object-cover w-full h-auto rounded-t-lg"
+            src={CozyHotels}
+            alt=""
+          />
+
+          <div className="px-4 py-2 ">
+            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              Cozy Hotels
+            </h5>
+
+            <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
+              Enjoy comfort and luxury in our cozy hotels with exceptional
+              service and serene locations, our hotel provides top-notch
+              amenities.
+            </p>
+          </div>
+        </div>
+        {/* card */}
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105">
+          <img
+            className="object-cover w-full h-auto rounded-t-lg"
+            src={Travel}
+            alt=""
+          />
+
+          <div className="px-4 py-2 ">
+            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              Travel with Ease
+            </h5>
+
+            <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
+              Travel with ease and discover new horizons through seamless
+              planning and curated experiences. Enjoy a hassle-free journey.
+            </p>
+          </div>
+        </div>
+        <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromRight">
+          <img
+            className="object-cover w-full h-auto rounded-t-lg"
+            src={guide}
+            alt=""
+          />
+
+          <div className="px-4 py-2 ">
+            <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              Experienced Travelling Guide
+            </h5>
+
+            <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
+              Our guides ensure a safe, enriching journey, sharing local culture
+              and history to make your trip enjoyable.
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* why choose us */}
       <div className="py-10 why-choose-us">

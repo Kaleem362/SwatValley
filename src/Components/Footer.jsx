@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="items-center w-full p-6 h-52 xs:justify-between xs:flex xs:flex-col sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-row animate-fadeInFromRight bg-slate-400">
+    <div className="items-center w-full p-6 xs:justify-between xs:flex xs:flex-col sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-row animate-fadeInFromRight bg-slate-400">
       <div className="flex items-center justify-center w-auto h-full ">
         <img
           src={logo}
