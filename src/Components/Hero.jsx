@@ -62,14 +62,16 @@ const Hero = () => {
             <Link to={"/tourpackages"}>Explore Packages</Link>
           </span>
         </button>
-        <div className="relative overflow-x-visible text-center cursor-pointer w-14 h-14 overflow-y-clip group">
-          <div className="flex justify-center items-center w-14 h-14 rounded-full bg-slate-900 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
-            <img src={car} alt="Car" className="w-10 h-10" />
+        <Link to={"/contact"}>
+          <div className="relative overflow-x-visible text-center cursor-pointer w-14 h-14 overflow-y-clip group">
+            <div className="flex justify-center items-center w-14 h-14 rounded-full bg-slate-900 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
+              <img src={car} alt="Car" className="w-10 h-10" />
+            </div>
+            <div className="absolute text-sm font-bold text-center text-black transition-all duration-300 transform -translate-x-1/2 group-hover:text-slate-700 -bottom-10 left-1/2 whitespace-nowrap group-hover:bottom-0">
+              Book Now
+            </div>
           </div>
-          <div className="absolute text-sm font-bold text-center text-black transition-all duration-300 transform -translate-x-1/2 group-hover:text-slate-700 -bottom-10 left-1/2 whitespace-nowrap group-hover:bottom-0">
-            Book Now
-          </div>
-        </div>
+        </Link>
       </div>
       <hr className="w-full mt-10" />
     </div>

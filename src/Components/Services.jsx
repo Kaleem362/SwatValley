@@ -131,7 +131,7 @@ const Services = () => {
                     <BsArrowUpRightCircleFill className="inline-block w-5 h-5 ml-2" />
                   </Link>
                   <Link
-                    to={"/contactPage"}
+                    to={"/contact"}
                     className="flex items-center justify-center gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-lg lg:text-sm h-14 w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
                   >
                     {" "}
@@ -170,9 +170,11 @@ const Services = () => {
                 Create your dream tour! Choose destinations, activities, and
                 plan a trip that fits your needs and budget.
               </p>
-              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
-                Book Now
-              </button>
+              <Link to={"/contact"}>
+                <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                  Book Now
+                </button>
+              </Link>
             </div>
             {/* Family Tours */}
             <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
@@ -183,9 +185,11 @@ const Services = () => {
                 Spend quality time with your loved ones! Our family-friendly
                 packages include activities for all ages.
               </p>
-              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
-                See Now
-              </button>
+              <Link to={"/contact"}>
+                <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                  See Now
+                </button>
+              </Link>
             </div>
             {/* Budget Tour Packages */}
             <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
@@ -196,9 +200,11 @@ const Services = () => {
                 Enjoy amazing adventures without breaking the bank! Our budget
                 packages offer great value and unforgettable experiences.
               </p>
-              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
-                View Packages
-              </button>
+              <Link to={"/tourpackages"}>
+                <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                  View Packages
+                </button>
+              </Link>
             </div>
             {/* Private Tour Packages */}
             <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
@@ -209,9 +215,11 @@ const Services = () => {
                 Looking for exclusivity? Our customized tour packages ensure a
                 personalized and luxurious travel experience.
               </p>
-              <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
-                Contact
-              </button>
+              <Link to={"/contact"}>
+                <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                  Contact
+                </button>
+              </Link>
             </div>
           </div>
         </div>

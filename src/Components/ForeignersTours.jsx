@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { store } from "../assets/Store/Context";
+import { Link } from "react-router";
 
 const ForeignerPackages = () => {
   const { foreignerPackages } = useContext(store);
@@ -137,9 +138,11 @@ const ForeignerPackages = () => {
             {notes && callToAction && (
               <div className="p-8 bg-slate-50">
                 <p className="mb-6 text-slate-600">{notes}</p>
-                <button className="px-8 py-3 font-semibold text-white transition-colors duration-300 rounded-lg bg-slate-800 hover:bg-slate-700">
-                  {callToAction}
-                </button>
+                <Link to={"/contact"}>
+                  <button className="px-8 py-3 font-semibold text-white transition-colors duration-300 rounded-lg bg-slate-800 hover:bg-slate-700">
+                    {callToAction}
+                  </button>
+                </Link>
               </div>
             )}
           </div>
