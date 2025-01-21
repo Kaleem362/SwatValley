@@ -30,7 +30,7 @@ const Services = () => {
 
           <div className="px-4 py-2 ">
             <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-              4x4 Off-Road Adventure
+              Luxury Transportation
             </h5>
 
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
