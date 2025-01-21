@@ -4,17 +4,17 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="items-start w-full p-8 xs:justify-around xs:flex xs:flex-col sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-row animate-fadeInFromBottom bg-slate-400">
-      <div className="flex items-center justify-center w-auto h-full image">
+    <div className="items-center w-full p-6 h-52 xs:justify-between xs:flex xs:flex-col sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-row animate-fadeInFromBottom bg-slate-400">
+      <div className="flex items-center justify-center w-auto h-full ">
         <img
           src={logo}
           alt="Logo"
-          className="w-40 h-40 mx-0 animate-fadeInFromLeft xs:w-48 xs:h-48 sm:w-24 sm:h-24 md:h-32 md:w-32 lg:h-48 lg:w-48"
+          className="w-auto !h-[300px] animate-fadeInFromLeft "
         />
       </div>
 
       <div className="flex-col items-start justify-center h-full title md:w-96">
-        <h1 className="w-full my-2 text-3xl font-extrabold text-center md:text-4xl lg:text-5xl text-slate-900 animate-fadeInFromTop">
+        <h1 className="w-full text-3xl font-extrabold text-center md:text-4xl lg:text-5xl text-slate-900 animate-fadeInFromTop">
           The Swat Tours
         </h1>
         <p className="my-2 text-slate-900 md:w-fit animate-fadeInFromBottom">

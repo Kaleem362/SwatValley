@@ -13,6 +13,7 @@ import TourDetails from "./Components/TourDetails";
 import TourServices from "./Components/TourServices";
 import EventsActivities from "./Components/EventsActivities";
 import Contact from "./Components/Contact";
+import Gallery from "./Components/Gallery";
 
 const App = () => {
   return (
@@ -94,6 +95,17 @@ const App = () => {
               <Topbar />
               <Navbar />
               <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <>
+              <Topbar />
+              <Navbar />
+              <Gallery />
               <Footer />
             </>
           }
