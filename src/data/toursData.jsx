@@ -646,9 +646,9 @@ export const foreignerPackages = [
 
       pricing: {
         luxuryPackage: {
-          singleOrCouple: "$2500",
-          twoCouples: "$4000",
-          Family: "$6000",
+          singleOrCouple: "$550",
+          twoCouples: "$1000",
+          Family: "$1800",
         },
       },
       inclusions: [

@@ -161,8 +161,8 @@ const Services = () => {
             </h5>
 
             <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
-              We provide 4x4 vehicles for a comfortable ride both off-road and
-              on-road. Your safety is our priority.
+              We provide all types of vehicles for a comfortable ride both
+              off-road and on-road. Your safety is our priority.
             </p>
           </div>
         </div>
