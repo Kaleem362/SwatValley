@@ -532,9 +532,9 @@ export const foreignerPackages = [
       },
       pricing: {
         luxuryPackage: {
-          "1Person": 600,
-          "2to3Persons": 1000,
-          "4to5Persons": 1500,
+          "1Person": "$600",
+          "2to3Persons": "$1000",
+          "4to5Persons": "$1500",
         },
       },
       inclusions: [
@@ -613,10 +613,10 @@ export const foreignerPackages = [
       },
       pricing: {
         luxuryPackage: {
-          singleOrCouple: "Up to 700",
-          smallGroup: "Up to 1,200",
-          mediumGroup: "2,200",
-          largeGroup: "4,000 and so on...",
+          singleOrCouple: "Up to $700",
+          smallGroup: "Up to $1,200",
+          mediumGroup: "$2,200",
+          largeGroup: "$4,000 and so on...",
         },
       },
       inclusions: [
@@ -628,7 +628,7 @@ export const foreignerPackages = [
       ],
       notes:
         "The package price may vary depending on the season, accommodation options, and other factors.",
-      callToAction: "Book Your Luxury Tour Today!",
+      callToAction: "Book Tour Now",
     },
   },
   {
@@ -639,9 +639,9 @@ export const foreignerPackages = [
 
       pricing: {
         luxuryPackage: {
-          singleOrCouple: "2500",
-          twoCouples: "4000",
-          Family: "6000",
+          singleOrCouple: "$2500",
+          twoCouples: "$4000",
+          Family: "$6000",
         },
       },
       inclusions: [
@@ -651,6 +651,9 @@ export const foreignerPackages = [
         "Guided tours of Swat and Hunza  Valleys",
         "Entrance fees for museums and historical sites",
       ],
+      notes:
+        "The package price may vary depending on the season, accommodation options, and other factors.",
+      callToAction: "Book Tour Now",
     },
   },
   {
@@ -716,9 +719,9 @@ export const foreignerPackages = [
       },
       pricing: {
         luxuryPackage: {
-          singleOrCouple: "3,50,000",
-          twoCouples: "6,00,000",
-          Family: "8,00,000",
+          singleOrCouple: "3,50,000 pkr/-",
+          twoCouples: "6,00,000 pkr/-",
+          Family: "8,00,000 pkr/-",
         },
       },
       inclusions: [
@@ -728,6 +731,9 @@ export const foreignerPackages = [
         "Guided tours of Swat and Hunza  Valleys",
         "Entrance fees for museums and historical sites",
       ],
+      notes:
+        "The package price may vary depending on the season, accommodation options, and other factors.",
+      callToAction: "Book Tour Now",
     },
   },
 ];

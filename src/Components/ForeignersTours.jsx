@@ -1,11 +1,16 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { store } from "../assets/Store/Context";
-import { Link } from "react-router";
+import Modal from "./Modal";
+// Import the modal component
 
 const ForeignerPackages = () => {
-  const { foreignerPackages } = useContext(store);
-  console.log(foreignerPackages);
+  const { foreignerPackages, modalState, setModalState } = useContext(store);
+  const [selectedPackage, setSelectedPackage] = useState(null); // Store the selected package
+
+  const handleBookNow = (tourPackage) => {
+    setSelectedPackage(tourPackage);
+    setModalState(true); // Open the modal
+  };
 
   return (
     <div className="container p-6 max-w-7xl">
@@ -18,15 +23,8 @@ const ForeignerPackages = () => {
           return null; // Skip rendering if the item or required data is missing
         }
 
-        const {
-          title,
-          duration,
-          itinerary,
-          pricing,
-          inclusions,
-          notes,
-          callToAction,
-        } = item.tourPackage;
+        const { title, duration, pricing, inclusions, callToAction } =
+          item.tourPackage;
 
         return (
           <div
@@ -38,43 +36,6 @@ const ForeignerPackages = () => {
               <h2 className="mb-3 text-3xl font-bold">{title}</h2>
               <p className="text-xl text-slate-200">{duration}</p>
             </div>
-
-            {/* Itinerary Section */}
-            {itinerary && (
-              <div className="p-8">
-                <h3 className="mb-6 text-2xl font-bold text-slate-800">
-                  Detailed Itinerary
-                </h3>
-                <div className="space-y-6">
-                  {Object.entries(itinerary).map(
-                    ([day, details]) =>
-                      details && (
-                        <div
-                          key={day}
-                          className="flex py-2 pl-6 border-l-4 border-slate-800"
-                        >
-                          <div className="flex-1">
-                            <h4 className="mb-2 text-xl font-semibold text-slate-800">
-                              {details.title}
-                            </h4>
-                            <ul className="space-y-2">
-                              {details.activities.map((activity, idx) => (
-                                <li
-                                  key={idx}
-                                  className="flex items-start text-slate-600"
-                                >
-                                  <span className="inline-block w-2 h-2 mt-2 mr-3 rounded-full bg-slate-800"></span>
-                                  {activity}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      )
-                  )}
-                </div>
-              </div>
-            )}
 
             {/* Pricing Section */}
             {pricing && pricing.luxuryPackage && (
@@ -96,7 +57,7 @@ const ForeignerPackages = () => {
                             .trim()}
                         </h4>
                         <p className="text-2xl font-bold text-slate-900">
-                          ${price}
+                          {price}
                         </p>
                       </div>
                     )
@@ -134,20 +95,29 @@ const ForeignerPackages = () => {
               </div>
             )}
 
-            {/* Notes & CTA Section */}
-            {notes && callToAction && (
+            {/* Book Now Button */}
+            {callToAction && (
               <div className="p-8 bg-slate-50">
-                <p className="mb-6 text-slate-600">{notes}</p>
-                <Link to={"/contact"}>
-                  <button className="px-8 py-3 font-semibold text-white transition-colors duration-300 rounded-lg bg-slate-800 hover:bg-slate-700">
-                    {callToAction}
-                  </button>
-                </Link>
+                <button
+                  onClick={() => handleBookNow(item.tourPackage)}
+                  className="px-8 py-3 font-semibold text-white transition-colors duration-300 rounded-lg bg-slate-800 hover:bg-slate-700"
+                >
+                  {callToAction}
+                </button>
               </div>
             )}
           </div>
         );
       })}
+
+      {/* Modal Component */}
+      {modalState && (
+        <Modal
+          isOpen={modalState}
+          onClose={() => setModalState(false)}
+          packageDetails={selectedPackage}
+        />
+      )}
     </div>
   );
 };

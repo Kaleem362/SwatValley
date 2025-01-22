@@ -5,19 +5,8 @@ const Contact = () => {
   const [formType, setFormType] = useState("customizeTour"); // Default form type
   const [kids, setKids] = useState(false);
   const [selectedCar, setSelectedCar] = useState("");
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [packageName, setPackageName] = useState("");
-  const [destination, setDestination] = useState("");
-  const [duration, setDuration] = useState("");
   const [message, setMessage] = useState("");
-  const [selectedService, setSelectedService] = useState("");
-  const [packageType, setPackageType] = useState(""); // Add packageType here
-  const [price, setPrice] = useState("");
-  const [couples, setCouples] = useState("");
-  const [accommodation, setAccommodation] = useState("");
-  const [hotel, setHotel] = useState("");
-
+  const [selectedServices, setSelectedServices] = useState([]);
   const carOptions = [
     "Prado Jeep",
     "Corolla Car",
@@ -34,65 +23,65 @@ const Contact = () => {
     "Events planning",
     "Tours packages",
   ];
-  const tourPackageOptions = [
-    { id: 1, name: "Luxury Honeymoon/Couple Tour Package" },
-    { id: 2, name: "Honeymoon Couple / Family Tour Package" },
-    { id: 3, name: "Private Luxury Honeymoon/Couple Tour Package" },
-    { id: 4, name: "Deluxe Private Luxury Honeymoon/Couple Tour Package" },
-    { id: 5, name: "Private Luxury Honeymoon/Couple Tour Package" },
-    { id: 6, name: "Deluxe Private Luxury Honeymoon/Couple Tour Package" },
-    { id: 7, name: "Luxury 3-Day Swat Tour Package" },
-    { id: 8, name: "Luxury 2-Day Swat Tour Package" },
-  ];
+  // const tourPackageOptions = [
+  //   { id: 1, name: "Luxury Honeymoon/Couple Tour Package" },
+  //   { id: 2, name: "Honeymoon Couple / Family Tour Package" },
+  //   { id: 3, name: "Private Luxury Honeymoon/Couple Tour Package" },
+  //   { id: 4, name: "Deluxe Private Luxury Honeymoon/Couple Tour Package" },
+  //   { id: 5, name: "Private Luxury Honeymoon/Couple Tour Package" },
+  //   { id: 6, name: "Deluxe Private Luxury Honeymoon/Couple Tour Package" },
+  //   { id: 7, name: "Luxury 3-Day Swat Tour Package" },
+  //   { id: 8, name: "Luxury 2-Day Swat Tour Package" },
+  // ];
 
-  const tourDurationOptions = [
-    "4 Days 3 Nights",
-    "3 Days 2 Nights",
-    "7 Days 4 Nights (Karachi)",
-    "4 days 3 Nights (Karachi)",
-    "2 Days 1 Night",
-  ];
+  // const tourDurationOptions = [
+  //   "4 Days 3 Nights",
+  //   "3 Days 2 Nights",
+  //   "7 Days 4 Nights (Karachi)",
+  //   "4 days 3 Nights (Karachi)",
+  //   "2 Days 1 Night",
+  // ];
 
-  const tourDestinationOptions = [
-    "Kalam",
-    "Malam Jabba",
-    "Mingora",
-    "Ushu Forest",
-    "Mahodand Lake",
-    "White Palace",
-  ];
+  // const tourDestinationOptions = [
+  //   "Kalam",
+  //   "Malam Jabba",
+  //   "Mingora",
+  //   "Ushu Forest",
+  //   "Mahodand Lake",
+  //   "White Palace",
+  // ];
 
-  const packageTypeOptions = ["Executive Package", "Deluxe Accommodations"];
+  // const packageTypeOptions = ["Executive Package", "Deluxe Accommodations"];
 
-  const packagePriceOptions = [
-    { id: 1, prices: { for1Couple: "₨ 80,000", for2Couples: "₨ 130,000" } },
-    { id: 2, prices: { for1Couple: "₨ 45,000", for2Couples: "₨ 75,000" } },
-    { id: 3, prices: { for1Couple: "₨ 95,000", for2Couples: "₨ 150,000" } },
-    { id: 4, prices: { for1Couple: "₨ 60,000", for2Couples: "₨ 100,000" } },
-    { id: 5, prices: { for1Couple: "₨ 65,000", for2Couples: "₨ 98,000" } },
-    { id: 6, prices: { for1Couple: "₨ 38,000", for2Couples: "₨ 60,000" } },
-    { id: 7, prices: "₨ 35,000" },
-    { id: 8, prices: "₨ 20,000" },
-  ];
+  // const packagePriceOptions = [
+  //   { id: 1, prices: { for1Couple: "₨ 80,000", for2Couples: "₨ 130,000" } },
+  //   { id: 2, prices: { for1Couple: "₨ 45,000", for2Couples: "₨ 75,000" } },
+  //   { id: 3, prices: { for1Couple: "₨ 95,000", for2Couples: "₨ 150,000" } },
+  //   { id: 4, prices: { for1Couple: "₨ 60,000", for2Couples: "₨ 100,000" } },
+  //   { id: 5, prices: { for1Couple: "₨ 65,000", for2Couples: "₨ 98,000" } },
+  //   { id: 6, prices: { for1Couple: "₨ 38,000", for2Couples: "₨ 60,000" } },
+  //   { id: 7, prices: "₨ 35,000" },
+  //   { id: 8, prices: "₨ 20,000" },
+  // ];
 
-  const coupleOptions = ["Single Couple", "Double Couple"];
+  // const coupleOptions = ["Single Couple", "Double Couple"];
 
-  const accommodationTypeOptions = [
-    "Executive Hotels",
-    "Deluxe Accommodations",
-  ];
+  // const accommodationTypeOptions = [
+  //   "Executive Hotels",
+  //   "Deluxe Accommodations",
+  // ];
 
-  const hotelOptions = [
-    "Malam Jabba Palace",
-    "Burj Al Swat",
-    "Swat Hilton",
-    "Rock City Resort",
-    "Honeymoon Hotel",
-    "Hotel Liberty Bahrain",
-    "Swat Palace",
-    "Swastu Resorts",
-    "Holiday Inn Kalam",
-  ];
+  // const hotelOptions = [
+  //   "Malam Jabba Palace",
+  //   "Burj Al Swat",
+  //   "Swat Hilton",
+  //   "Rock City Resort",
+  //   "Honeymoon Hotel",
+  //   "Hotel Liberty Bahrain",
+  //   "Swat Palace",
+  //   "Swastu Resorts",
+  //   "Holiday Inn Kalam",
+  // ];
 
   const handleFormSwitch = (type) => setFormType(type);
   const handleSubmit = (e) => {
@@ -152,16 +141,7 @@ const Contact = () => {
         >
           Customize Budget Tour
         </button>
-        <button
-          onClick={() => handleFormSwitch("packageTour")}
-          className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 py-2 font-semibold rounded-full text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl ${
-            formType === "packageTour"
-              ? "bg-slate-800 text-white"
-              : "bg-gray-200 text-gray-800"
-          }`}
-        >
-          Package Tour
-        </button>
+
         <button
           onClick={() => handleFormSwitch("serviceForm")}
           className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 py-2 font-semibold rounded-full text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl ${
@@ -228,6 +208,17 @@ const Contact = () => {
                 type="text"
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 placeholder="Enter Phone Number..."
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold text-slate-700">
+                Destination
+              </label>
+              <input
+                required
+                type="text"
+                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                placeholder="Where you want to travel..."
               />
             </div>
             <div className="mb-4">
@@ -306,221 +297,11 @@ const Contact = () => {
                 required
               />
             </div>
+            <p className="my-2 font-semibold font-Manrope">
+              Submit the Form , and We Will get back to you very Soon.
+            </p>
             <button className="px-6 py-2 text-white rounded-full bg-slate-800">
               Submit
-            </button>
-          </form>
-        )}
-
-        {formType === "packageTour" && (
-          <form onSubmit={handleSubmit}>
-            <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-              Book a Tour package
-            </h2>
-            {/* Name Input */}{" "}
-            <input type="hidden" name="formType" value="packageTour" />
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Your Name
-              </label>
-              <input
-                type="text"
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Enter Your Name"
-                required
-              />
-            </div>
-            {/* Tour Package Options */}
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Tour Name
-              </label>
-              <select
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={packageName}
-                onChange={(e) => setPackageName(e.target.value)}
-              >
-                <option value="">Select Tour Name</option>
-                {tourPackageOptions.map((option) => (
-                  <option key={option.id} value={option.name}>
-                    {option.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {/* Tour Destination Options */}
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Tour Destination
-              </label>
-              <select
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={destination}
-                onChange={(e) => setDestination(e.target.value)}
-              >
-                <option value="">Select Destination</option>
-                {tourDestinationOptions.map((destination, index) => (
-                  <option key={index} value={destination}>
-                    {destination}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {/* Duration Options */}
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Package Duration
-              </label>
-              <select
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={duration}
-                onChange={(e) => setDuration(e.target.value)}
-              >
-                <option value="">Select Duration</option>
-                {tourDurationOptions.map((duration, index) => (
-                  <option key={index} value={duration}>
-                    {duration}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {/* Package Type */}
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Package Type
-              </label>
-              <select
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={packageType}
-                onChange={(e) => setPackageType(e.target.value)}
-              >
-                <option value="">Select Package Type</option>
-                {packageTypeOptions.map((type, index) => (
-                  <option key={index} value={type}>
-                    {type}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {/* Couple Options */}
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Number of Couples
-              </label>
-              <select
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={couples}
-                onChange={(e) => setCouples(e.target.value)}
-              >
-                <option value="">Select Couple Option</option>
-                {coupleOptions.map((option, index) => (
-                  <option key={index} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {/* Price Options */}
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Package Price
-              </label>
-              <select
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-                disabled={!couples} // Disable if no couple option is selected
-              >
-                <option value="">Select Price</option>
-                {packagePriceOptions.map((option) => {
-                  // Determine the price to show based on the couple selection
-                  if (typeof option.prices === "object") {
-                    if (couples === "Single Couple") {
-                      return (
-                        <option
-                          key={option.id}
-                          value={option.prices.for1Couple}
-                        >
-                          {"For One couple "}
-                          {option.prices.for1Couple}
-                        </option>
-                      );
-                    } else if (couples === "Double Couple") {
-                      return (
-                        <option
-                          key={option.id}
-                          value={option.prices.for2Couples}
-                        >
-                          {"For Double couples "}
-                          {option.prices.for2Couples}
-                        </option>
-                      );
-                    }
-                  } else {
-                    // Show single price for non-object prices
-                    return (
-                      <option key={option.id} value={option.prices}>
-                        {option.prices}
-                      </option>
-                    );
-                  }
-                  return null; // Skip options not matching the condition
-                })}
-              </select>
-            </div>
-            {/* Accommodation Options */}
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Accommodation Type
-              </label>
-              <select
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={accommodation}
-                onChange={(e) => setAccommodation(e.target.value)}
-              >
-                <option value="">Select Accommodation Type</option>
-                {accommodationTypeOptions.map((type, index) => (
-                  <option key={index} value={type}>
-                    {type}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {/* Hotel Options */}
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Hotel Name
-              </label>
-              <select
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={hotel}
-                onChange={(e) => setHotel(e.target.value)}
-              >
-                <option value="">Select Hotel</option>
-                {hotelOptions.map((hotel, index) => (
-                  <option key={index} value={hotel}>
-                    {hotel}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {/* Phone Input */}
-            <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700">
-                Phone Number
-              </label>
-              <input
-                type="text"
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="Enter Your Phone"
-              />
-            </div>
-            <button className="px-6 py-2 text-white rounded-lg bg-slate-800">
-              Book Tour
             </button>
           </form>
         )}
@@ -531,7 +312,6 @@ const Contact = () => {
               Rent a Car or Service
             </h2>
             <div className="mb-4">
-              {" "}
               <input type="hidden" name="formType" value="serviceForm" />
               <label className="block mb-2 font-semibold text-slate-700">
                 Your Name
@@ -573,21 +353,34 @@ const Contact = () => {
             </div>
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
-                select Your Service
+                Select Your Services
               </label>
-              <select
-                className="w-full px-8 py-2 border-none rounded-full outline-none"
-                value={selectedService}
-                onChange={(e) => setSelectedService(e.target.value)}
-              >
-                <option value="">Select a service</option>
+              <div className="flex flex-col">
                 {servicesOptions.map((service) => (
-                  <option key={service} value={service}>
+                  <label key={service} className="flex items-center mb-2">
+                    <input
+                      type="checkbox"
+                      value={service}
+                      onChange={(e) => {
+                        const value = e.target.value;
+                        setSelectedServices((prev) =>
+                          prev.includes(value)
+                            ? prev.filter((s) => s !== value)
+                            : [...prev, value]
+                        );
+                      }}
+                      className="mr-2"
+                    />
                     {service}
-                  </option>
+                  </label>
                 ))}
-              </select>
+              </div>
             </div>
+            <p className="mb-4 text-slate-600">
+              We have received your information. Kindly wait for our response.
+              If we are available, we will let you know. If we are busy with
+              other clients, we sincerely apologize for the inconvenience.
+            </p>
             <button className="px-6 py-2 text-white rounded-lg bg-slate-800">
               Send
             </button>
