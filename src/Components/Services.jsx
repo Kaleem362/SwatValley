@@ -7,10 +7,9 @@ import ContactButton from "../Components/ContactButton";
 import { Link } from "react-router";
 import whatsappIcon from "../assets/icons-asset/whatsapp (1).png";
 import { store } from "../assets/Store/Context";
-import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 const Services = () => {
-  const { toursPackage } = useContext(store);
+  const { toursPackage, services } = useContext(store);
   console.log(toursPackage);
 
   return (
@@ -42,21 +41,20 @@ const Services = () => {
                   </h2>
                 </div>
                 {/* buttontag */}
-                <div className="absolute flex items-center justify-center gap-2 transition-all duration-300 lg:mt-0 -bottom-20 lg:group-hover:-bottom-12 lg:-bottom-0 -z-50 buttons">
-                  <Link
-                    to={`/tourdetails/tour/${tour.id}`}
-                    className="flex items-center justify-center h-10 gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-sm lg:text-sm w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
-                  >
-                    {" "}
-                    Details
-                    <BsArrowUpRightCircleFill className="inline-block w-5 h-5 ml-2" />
-                  </Link>
-                  <Link
-                    to={"/contact"}
-                    className="flex items-center justify-center h-10 gap-1 px-3 py-1 text-center text-white transition-all duration-200 rounded-full md:shadow-xl xs:text-md sm:text-md md:text-lg lg:text-sm w-fit bg-slate-800 hover:bg-slate-700 font-manrope hover:scale-105 md:shadow-white"
-                  >
-                    {" "}
-                    Book now
+                <div className="absolute flex items-center justify-center w-full gap-2 transition-all duration lg:mt-0 xs:-bottom-14 -bottom-16 sm:-bottom-14 lg:group-hover:-bottom-12 lg:-bottom-0 -z-50 buttons">
+                  <Link>
+                    <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 group ">
+                      <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-slate-400 group-hover:-mr-4 group-hover:-mt-4">
+                        <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                      </span>
+                      <span className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 rounded bg-slate-400 group-hover:-ml-4 group-hover:-mb-4">
+                        <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                      </span>
+                      <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md bg-slate-600 group-hover:translate-x-0"></span>
+                      <span className="relative w-full text-xs text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white md:text-lg xs:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
+                        Tour Details
+                      </span>
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -92,7 +90,7 @@ const Services = () => {
                 plan a trip that fits your needs and budget.
               </p>
               <Link to={"/contact"}>
-                <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                <button className="px-4 py-2 text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
                   Book Now
                 </button>
               </Link>
@@ -107,7 +105,7 @@ const Services = () => {
                 packages include activities for all ages.
               </p>
               <Link to={"/contact"}>
-                <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                <button className="px-4 py-2 text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
                   See Now
                 </button>
               </Link>
@@ -122,7 +120,7 @@ const Services = () => {
                 packages offer great value and unforgettable experiences.
               </p>
               <Link to={"/tourpackages"}>
-                <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                <button className="px-4 py-2 text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
                   View Packages
                 </button>
               </Link>
@@ -137,7 +135,7 @@ const Services = () => {
                 personalized and luxurious travel experience.
               </p>
               <Link to={"/contact"}>
-                <button className="px-4 py-2 text-white transition rounded-md bg-slate-600 hover:bg-slate-800">
+                <button className="px-4 py-2 text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
                   Contact
                 </button>
               </Link>
@@ -226,6 +224,43 @@ const Services = () => {
           </div>
         </div>
       </div>
+      {/* Rent a car Division */}
+      <div className="w-full px-6 py-10 Car-service">
+        <div className="flex items-center justify-between w-full h-auto md:pr-20 header animate-fadeInFromTop ">
+          <h1 className="text-5xl font-extrabold text-slate-800 font-Manrope">
+            Our Services
+          </h1>
+          <div className="flex items-center justify-end w-auto my-2 xs:gap-2 animate-fadeInFromRight xs:justify-between">
+            <a href="https://wa.me/923489857193">
+              <img
+                src={whatsappIcon}
+                alt="WhatsApp Icon"
+                className="w-10 h-auto duration-200 max-w-24 min-w-12 animate-fadeInFromRight hover:scale-90 transition-scale"
+              />
+            </a>
+            <Link to={"/contactPage"}>
+              <ContactButton />
+            </Link>
+          </div>
+        </div>
+        <div className="p-6">
+          <Link to={"/contact"}>
+            <div className="flex flex-wrap justify-center gap-6 p-6">
+              {services.map((service, index) => (
+                <div
+                  className="w-64 p-6 transition-transform transform rounded-lg shadow-lg bg-slate-300 hover:scale-105 hover:shadow-xl"
+                  key={index}
+                >
+                  <h3 className="mb-2 text-xl font-semibold">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </Link>
+        </div>
+      </div>
 
       {/* why choose us */}
       <div className="py-10 why-choose-us">
@@ -277,78 +312,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Rent a car Division */}
-      <div className="w-full py-10 Car-service">
-        <div className="flex items-center justify-between w-full h-auto md:pr-20 header animate-fadeInFromTop ">
-          <h1 className="w-full mb-2 text-3xl font-extrabold text-slate-800 text-start xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
-            Rent a Car
-          </h1>
-          <div className="flex items-center justify-end w-auto my-2 xs:gap-2 animate-fadeInFromRight xs:justify-between">
-            <a href="https://wa.me/923489857193">
-              <img
-                src={whatsappIcon}
-                alt="WhatsApp Icon"
-                className="w-10 h-auto duration-200 max-w-24 min-w-12 animate-fadeInFromRight hover:scale-90 transition-scale"
-              />
-            </a>
-            <Link to={"/contactPage"}>
-              <ContactButton />
-            </Link>
-          </div>
-        </div>
-        <div className="p-1 overflow-x-auto sm:p-4">
-          <table className="min-w-full text-center border border-collapse rounded-lg table-auto bg-slate-900 text-slate-100 border-slate-700">
-            <thead>
-              <tr>
-                <th className="px-1 py-2 text-center border-2 sm:px-6 sm:py-3 border-slate-700 xs:text-sm sm:text-lg">
-                  Cars for Rent
-                </th>
-                <th className="px-1 py-2 text-center border-2 sm:px-6 sm:py-3 border-slate-700 xs:text-sm sm:text-lg">
-                  Hotel Accommodations
-                </th>
-                <th className="px-1 py-2 text-center border-2 sm:px-6 sm:py-3 border-slate-700 xs:text-sm sm:text-lg">
-                  Taxi Pick and Drop Service
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
-                  Prado Jeep
-                </td>
-                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
-                  Executive Room
-                </td>
-                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
-                  VIP Taxi
-                </td>
-              </tr>
-              <tr>
-                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
-                  Car Corolla or Prius
-                </td>
-                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
-                  Deluxe Room
-                </td>
-                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
-                  Simple Taxi
-                </td>
-              </tr>
-              <tr>
-                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
-                  APV or BRV (Seven Seater)
-                </td>
-                <td className="py-2 border-2 border-slate-700 px-auto sm:px-6 sm:py-4 xs:text-sm sm:text-lg">
-                  Economic Room
-                </td>
-                <td className="px-1 py-2 border-2 sm:px-6 sm:py-4 border-slate-700 xs:text-sm sm:text-lg">
-                  —
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
       {/* why visit swat valley */}
       <div className="whyChooseSwat">
         <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">

@@ -47,10 +47,10 @@ const Hero = () => {
         </ul>
       </div>
       <div className="flex items-center justify-between w-full gap-4 mt-4 xs:w-fit md:w-fit lg:w-fit button animate-fadeInFromBottom">
-        <p className="text-lg text-slate-900 font-Manrope xs:text-md sm:text-lg md:text-lg md:font-bold lg:text-xl xl:text-2xl">
+        <p className="text-lg text-slate-900 font-Manrope xs:text-sm sm:text-md md:text-md md:font-bold lg:text-xl xl:text-2xl">
           Start Your Journey
         </p>
-        <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 xs:px-6 xs:py-3 group ">
+        <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 group ">
           <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-slate-400 group-hover:-mr-4 group-hover:-mt-4">
             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>
@@ -58,7 +58,7 @@ const Hero = () => {
             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>
           <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md bg-slate-600 group-hover:translate-x-0"></span>
-          <span className="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white xs:text-md sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
+          <span className="relative w-full text-xs text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white md:text-lg xs:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
             <Link to={"/tourpackages"}>Explore Packages</Link>
           </span>
         </button>

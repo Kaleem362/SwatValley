@@ -3,6 +3,7 @@ import { toursPackage } from "../../data/toursData";
 export const store = createContext();
 import { Swatdaytourpackage } from "../../data/toursData";
 import { foreignerPackages } from "../../data/toursData";
+import { services } from "../../data/toursData";
 
 export const StoreProvider = ({ children }) => {
   const [modalState, setModalState] = useState(false);
@@ -14,6 +15,7 @@ export const StoreProvider = ({ children }) => {
         foreignerPackages,
         modalState,
         setModalState,
+        services,
       }}
     >
       {children}

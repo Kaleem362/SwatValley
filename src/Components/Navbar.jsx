@@ -19,9 +19,11 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-400 animate-fadeInFromTop">
-      <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xlmd:text-3xl lg:text-5xl xs:text-4xl ">
-        The Swat Tours
-      </h1>
+      <Link to={"/"}>
+        <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xlmd:text-3xl lg:text-5xl xs:text-4xl ">
+          The Swat Tours
+        </h1>
+      </Link>
       <ul
         className={`${
           isMenuOpen

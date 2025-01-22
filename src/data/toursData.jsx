@@ -13,7 +13,7 @@ export const toursPackage = [
   // consistent object
   {
     id: 1,
-    packageName: "Luxury Honeymoon/Couple Tour Package",
+    packageName: "Luxury Honeymoon/Couple Tour ",
     coverImage: kalamvalley,
     Image: HoneyMoonone,
     duration: "4 days 3 nights",
@@ -51,7 +51,7 @@ export const toursPackage = [
   // consistent object
   {
     id: 2,
-    packageName: "Honeymoon Couple / Family Tour Package",
+    packageName: "Honeymoon Couple / Family Tour ",
     coverImage: malamjabbacover,
     Image: HoneyMoontwo,
     duration: "days 3 nights 2",
@@ -91,7 +91,7 @@ export const toursPackage = [
   // consistent object
   {
     id: 3,
-    packageName: "Private Luxury Honeymoon/Couple Tour Package",
+    packageName: "Private Luxury Honeymoon/Couple Tour ",
     coverImage: MalamJabba,
     Image: HoneyMoonthree,
     tourPoints: "(Karachi)",
@@ -133,7 +133,7 @@ export const toursPackage = [
   // consistent object
   {
     id: 4,
-    packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
+    packageName: "Deluxe Private Luxury Honeymoon/Couple Tour ",
     coverImage: MalamJabba,
     Image: honeymoonfour,
     duration: "6 days (karachi)",
@@ -173,7 +173,7 @@ export const toursPackage = [
   // consistent object
   {
     id: 5,
-    packageName: "Private Luxury Honeymoon/Couple Tour Package",
+    packageName: "Private Luxury Honeymoon/Couple Tour ",
     coverImage: MalamJabba,
     Image: honeymoonfive,
     duration: "4 Days, 3 Nights",
@@ -214,7 +214,7 @@ export const toursPackage = [
   // consistent object
   {
     id: 6,
-    packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
+    packageName: "Deluxe Private Luxury Honeymoon/Couple Tour ",
     coverImage: malamjabbacover,
     Image: honeymoonsix,
 
@@ -255,7 +255,7 @@ export const toursPackage = [
   // unconsistent data with intinerary
   {
     id: 7,
-    packageName: "Luxury 3-Day Swat Tour Package",
+    packageName: "Luxury 3-Day Swat Tour ",
     coverImage: MalamJabba,
     Image: familytour,
     duration: "3 Days, 2 Nights",
@@ -305,7 +305,7 @@ export const toursPackage = [
   },
   {
     id: 8,
-    packageName: "Luxury 2-Day Swat Tour Package",
+    packageName: "Luxury 2-Day Swat Tour ",
     coverImage: MalamJabba,
     Image: swattour,
     duration: "2 Days, 1 Night",
@@ -345,27 +345,34 @@ export const toursPackage = [
   },
 ];
 //services
-export const service = [
+export const services = [
   {
-    serviceName: "Malam Jabba Day Tour",
-    coverImage: MalamJabba,
-    Image: MalamJabba,
-    duration: "1 Day",
-    destination: "Malam Jabba",
-    price: "₨ 10,000/-",
-    features: [
-      "Round-trip transportation",
-      "Guided tour",
-      "Adventure activities (optional)",
-    ],
+    title: "Rent A Car or Taxi Service",
+    description: "Convenient transportation options for your travels.",
   },
   {
-    serviceName: "Malam Jabba Pick/Drop Service",
-
-    destination: "Malam Jabba",
-    price: "₨ 6,000/-",
-
-    features: ["One-way transportation to/from Malam Jabba"],
+    title: "Hotel Accommodation",
+    description: "Comfortable stays at various hotels.",
+  },
+  {
+    title: "Tourist Information Center",
+    description: "Get all the information you need for your visit.",
+  },
+  {
+    title: "Tours Guide",
+    description: "Guided tours in English, Urdu, and Pashto.",
+  },
+  {
+    title: "Pick and Drop Services",
+    description: "Reliable pick-up and drop-off services.",
+  },
+  {
+    title: "Event Planning",
+    description: "Professional planning for your events.",
+  },
+  {
+    title: "Tours Packages",
+    description: "Exciting tour packages tailored for you.",
   },
 ];
 //day packages

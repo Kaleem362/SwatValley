@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router";
+import { useParams } from "react-router";
 import { store } from "../assets/Store/Context";
 import email from "../assets/icons-asset/gmail.png";
 import BookingModal from "./BookingModal";
@@ -8,7 +8,6 @@ const TourDetails = () => {
   const { id } = useParams();
   const { toursPackage } = useContext(store);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
 
   // Find the selected package based on id
   const selectedPackage = toursPackage.find((pkg) => pkg.id === parseInt(id));
@@ -44,7 +43,8 @@ const TourDetails = () => {
             />
             <div className="absolute inset-0 flex items-end justify-center pb-4 bg-opacity-50 bg-gradient-to-t from-black to-transparent">
               <h1 className="text-xl font-bold text-center text-white uppercase xs:text-2xl sm:text-lg md:text-3xl lg:text-5xl">
-                Tour to
+                {selectedPackage.packageName}
+                to
                 <br />
                 {selectedPackage.destinations?.join(" - ") || "No Destinations"}
               </h1>
