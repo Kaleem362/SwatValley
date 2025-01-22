@@ -4,10 +4,11 @@ import MalamJabba from "../../public/PackagesImages/malamjabbaprofile.jpg";
 import HoneyMoonone from "../../public/PackagesImages/honeymoonprofile.jpg";
 import HoneyMoontwo from "../../public/PackagesImages/honeymoonprofiletwo.jpg";
 import HoneyMoonthree from "../../public/PackagesImages/honeymoonthree.jpg";
-import honeymooncover from "../../public/PackagesImages/HoneyMoonCover.jpg";
+import honeymoonfour from "../../public/PackagesImages/honeymoonfour.jpg";
 import honeymoonfive from "../../public/PackagesImages/honeymoonfive.jpg";
 import honeymoonsix from "../../public/PackagesImages/honeymoonsix.jpg";
-import honeymoonseven from "../../public/PackagesImages/honeymoonseven.jpg";
+import familytour from "../../public/PackagesImages/familytour.jpg";
+import swattour from "../../public/PackagesImages/swattour.jpg";
 export const toursPackage = [
   // consistent object
   {
@@ -15,7 +16,7 @@ export const toursPackage = [
     packageName: "Luxury Honeymoon/Couple Tour Package",
     coverImage: kalamvalley,
     Image: HoneyMoonone,
-    duration: "6 days",
+    duration: "4 days 3 nights",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packageType: "Executive Package",
     packagePrices: {
@@ -80,6 +81,12 @@ export const toursPackage = [
         route: "Lahore to Swat (Return)",
       },
     },
+    packageIncludes: [
+      "2 nights accommodation in Deluxe hotels",
+      "Private transportation with fuel and toll expenses",
+      "Return bus tickets from Islamabad to Swat",
+      "Breakfast at the hotel",
+    ],
   },
   // consistent object
   {
@@ -128,8 +135,8 @@ export const toursPackage = [
     id: 4,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
     coverImage: MalamJabba,
-    Image: honeymooncover,
-    duration: "7 days (karachi)",
+    Image: honeymoonfour,
+    duration: "6 days (karachi)",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
       for1Couple: "₨ 60,000/-",
@@ -168,7 +175,7 @@ export const toursPackage = [
     id: 5,
     packageName: "Private Luxury Honeymoon/Couple Tour Package",
     coverImage: MalamJabba,
-    Image: HoneyMoonone,
+    Image: honeymoonfive,
     duration: "4 Days, 3 Nights",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     startingAndEndingPoint: "Islamabad",
@@ -209,7 +216,7 @@ export const toursPackage = [
     id: 6,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour Package",
     coverImage: malamjabbacover,
-    Image: honeymoonfive,
+    Image: honeymoonsix,
 
     duration: "3 Days, 2 Nights",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
@@ -250,7 +257,7 @@ export const toursPackage = [
     id: 7,
     packageName: "Luxury 3-Day Swat Tour Package",
     coverImage: MalamJabba,
-    Image: honeymoonseven,
+    Image: familytour,
     duration: "3 Days, 2 Nights",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: "₨ 35,000/-",
@@ -300,7 +307,7 @@ export const toursPackage = [
     id: 8,
     packageName: "Luxury 2-Day Swat Tour Package",
     coverImage: MalamJabba,
-    Image: honeymoonsix,
+    Image: swattour,
     duration: "2 Days, 1 Night",
     destinations: ["Swat", "Kalam"],
     packagePrices: "₨ 20,000/-",
@@ -456,7 +463,6 @@ export const Swatdaytourpackage = [
     contactInformation: {
       phone: "+92 348 9857193",
       email: "fawadkhan1930@gmail.com",
-      website: "[insert website]",
     },
   },
 ];
@@ -607,10 +613,10 @@ export const foreignerPackages = [
       },
       pricing: {
         luxuryPackage: {
-          singleOrCouple: "Up to $700",
-          smallGroup: "Up to $1,200",
-          mediumGroup: "$2,200",
-          largeGroup: "$4,000 and so on...",
+          singleOrCouple: "Up to 700",
+          smallGroup: "Up to 1,200",
+          mediumGroup: "2,200",
+          largeGroup: "4,000 and so on...",
         },
       },
       inclusions: [
@@ -623,6 +629,105 @@ export const foreignerPackages = [
       notes:
         "The package price may vary depending on the season, accommodation options, and other factors.",
       callToAction: "Book Your Luxury Tour Today!",
+    },
+  },
+  {
+    tourPackage: {
+      title:
+        "Luxury 7-Day Swat and Hunza Tour Package for International Tourists",
+      duration: "7-Day Itinerary",
+
+      pricing: {
+        luxuryPackage: {
+          singleOrCouple: "2500",
+          twoCouples: "4000",
+          Family: "6000",
+        },
+      },
+      inclusions: [
+        "Private transportation (luxury car or SUV)",
+        "Accommodation in luxury hotels",
+        "Breakfast and dinner at hotels",
+        "Guided tours of Swat and Hunza  Valleys",
+        "Entrance fees for museums and historical sites",
+      ],
+    },
+  },
+  {
+    tourPackage: {
+      title: "Luxury 7-Day Swat and Hunza Tour Package for Pakistani Citizens",
+
+      itinerary: {
+        day1: {
+          title: "Arrival in Islamabad",
+          activities: [
+            "Arrival in Islamabad",
+            "Transfer to hotel for overnight stay",
+            "Explore Islamabad city (optional)",
+          ],
+        },
+        day2: {
+          title: "Islamabad to Swat",
+          activities: [
+            "Departure for Swat",
+            "Visit Taxila Museum and ancient ruins (optional)",
+            "Overnight stay in Swat",
+          ],
+        },
+        day3: {
+          title: "Swat Valley Tour",
+          activities: [
+            "Visit Malam Jabba for skiing or trekking",
+            "Explore Mingora city and its bazaars",
+            "Overnight stay in Swat",
+          ],
+        },
+        day4: {
+          title: "Kalam to Hunza",
+          activities: [
+            "Departure for Hunza",
+            "Stop over to Naran and Babusar Top (optional)",
+            "Overnight stay in Hunza",
+          ],
+        },
+        day5: {
+          title: "Hunza Valley Tour",
+          activities: [
+            "Visit Altit and Baltit Forts",
+            "Explore Karimabad and its Bazaars",
+            "Overnight stay in Hunza Valley",
+          ],
+        },
+        day6: {
+          title: "Hunza Valley Tour",
+          activities: [
+            "Visit Attabad Lake and Nagar Valley (optional)",
+            "Explore Duikar viewpoint for sunset",
+            "Overnight stay in Hunza",
+          ],
+        },
+        day7: {
+          title: "Departure from Islamabad",
+          activities: [
+            "Departure for Islamabad",
+            "Drop-off at Islamabad airport for onward journey",
+          ],
+        },
+      },
+      pricing: {
+        luxuryPackage: {
+          singleOrCouple: "3,50,000",
+          twoCouples: "6,00,000",
+          Family: "8,00,000",
+        },
+      },
+      inclusions: [
+        "Private transportation (luxury car or SUV)",
+        "Accommodation in luxury hotels",
+        "Breakfast and dinner at hotels",
+        "Guided tours of Swat and Hunza  Valleys",
+        "Entrance fees for museums and historical sites",
+      ],
     },
   },
 ];
