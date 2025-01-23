@@ -1,63 +1,8 @@
 import React from "react";
-import {
-  Truck,
-  Mountain,
-  Camera,
-  Vegan,
-  Calendar1,
-  Package2,
-  Users2,
-  LanguagesIcon,
-  InfoIcon,
-  HotelIcon,
-  CarFront,
-} from "lucide-react";
+
 import FAQ from "./FAQ";
 
 const AboutUs = () => {
-  const services = [
-    {
-      icon: CarFront,
-      title: "Rent A Car / Taxi",
-      desc: "Premium vehicle rental and taxi services for comfortable travel",
-    },
-    {
-      icon: HotelIcon,
-      title: "Hotel Accommodation",
-      desc: "Quality lodging options across Swat Valley",
-    },
-    {
-      icon: InfoIcon,
-      title: "Tourist Information",
-      desc: "Comprehensive guidance and support center",
-    },
-    {
-      icon: LanguagesIcon,
-      title: "Tour Guides",
-      desc: "Professional guides fluent in English, Urdu and Pashto",
-    },
-    {
-      icon: Truck,
-      title: "Pick & Drop",
-      desc: "Convenient transportation from your location",
-    },
-    {
-      icon: Calendar1,
-      title: "Event Planning",
-      desc: "Custom event organization in Swat Valley",
-    },
-    {
-      icon: Package2,
-      title: "Tour Packages",
-      desc: "All-inclusive tour packages for every preference",
-    },
-    {
-      icon: Users2,
-      title: "Guest Services",
-      desc: "Personalized attention for local and foreign tourists",
-    },
-  ];
-
   const activities = [
     {
       icon: Mountain,
@@ -95,7 +40,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen py-10 overflow-hidden border-2 border-red-600 ">
+    <div className="w-full min-h-screen py-10 overflow-hidden ">
       {/* Header Section */}
       <div className="w-full mb-16">
         <h1 className="mb-2 text-5xl font-bold text-center md:text-5xl text-slate-800 animate-fade-in">
@@ -310,22 +255,6 @@ const AboutUs = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="p-6 transition-shadow duration-300 transform bg-white shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1"
-            >
-              <service.icon className="w-12 h-12 mb-4 text-slate-800" />
-              <h3 className="mb-2 text-xl font-semibold text-slate-800">
-                {service.title}
-              </h3>
-              <p className="text-slate-600">{service.desc}</p>
             </div>
           ))}
         </div>

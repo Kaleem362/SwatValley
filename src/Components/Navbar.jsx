@@ -62,7 +62,7 @@ const Navbar = () => {
           to={"/ourservices"}
           onClick={() => handleTabClick("services")}
         >
-          Services
+          Pick & Drop Services
         </Link>
         <Link
           className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${

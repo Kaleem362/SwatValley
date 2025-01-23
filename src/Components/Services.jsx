@@ -226,11 +226,11 @@ const Services = () => {
       </div>
       {/* Rent a car Division */}
       <div className="w-full px-6 py-10 Car-service">
-        <div className="flex items-center justify-between w-full h-auto md:pr-20 header animate-fadeInFromTop ">
-          <h1 className="text-5xl font-extrabold text-slate-800 font-Manrope">
-            Our Services
+        <div className="flex flex-col md:pr-20 header animate-fadeInFromTop">
+          <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+            Pick and Drop Service
           </h1>
-          <div className="flex items-center justify-end w-auto my-2 xs:gap-2 animate-fadeInFromRight xs:justify-between">
+          <div className="flex items-center justify-center w-full gap-4 my-2 animate-fadeInFromRight">
             <a href="https://wa.me/923489857193">
               <img
                 src={whatsappIcon}
@@ -243,12 +243,12 @@ const Services = () => {
             </Link>
           </div>
         </div>
-        <div className="p-6">
+        <div className="py-4 ">
           <Link to={"/contact"}>
-            <div className="flex flex-wrap justify-center gap-6 p-6">
+            <div className="flex flex-wrap justify-center gap-6">
               {services.map((service, index) => (
                 <div
-                  className="w-64 p-6 transition-transform transform rounded-lg shadow-lg bg-slate-300 hover:scale-105 hover:shadow-xl"
+                  className="w-full p-6 transition-transform transform rounded-lg shadow-lg sm:w-64 bg-slate-300 hover:scale-105 hover:shadow-xl"
                   key={index}
                 >
                   <h3 className="mb-2 text-xl font-semibold">
