@@ -88,7 +88,7 @@ const TourServices = () => {
               <service.icon className="mb-4 w-14 h-14 text-slate-800" />
               <h3 className="flex flex-col items-center justify-between mb-2 text-3xl font-extrabold lg:flex lg:flex-row text-slate-800 font-Manrope">
                 {service.title}
-                <div className="flex flex-col items-center justify-around w-full text-sm lg:w-fit lg:items-center lg:justify-center xs:text-sm sm:text-md lg:text-2xl contactdiv font-Manrope">
+                <div className="flex flex-col items-center justify-around w-full text-sm lg:w-fit lg:items-center lg:justify-center xs:text-lg sm:text-lg lg:text-2xl font-Manrope">
                   <a
                     href="tel:+923489857193"
                     className="flex items-center gap-1 min-w-fit animate-fadeIn"
@@ -112,9 +112,10 @@ const TourServices = () => {
               <ul className="ml-8 text-lg text-slate-600 font-Manrope">
                 {service.packages.map((pkg, pkgIndex) => (
                   <li key={pkgIndex} className="my-2 list-disc">
-                    <div className="text-xl font-bold text-slate-800">
-                      {pkg.location} —{" "}
-                      <strong className="p-1 text-xl bg-white rounded-lg">
+                    <div className="flex items-center justify-between w-full text-xs font-bold xs:text-sm sm:text-md md:text-lg lg:text-xl text-slate-800">
+                      {pkg.location}
+
+                      <strong className="p-1 ml-8 text-xs font-bold bg-white rounded-lg xs:text-sm sm:text-md md:text-lg lg:text-xl">
                         {pkg.price}
                       </strong>
                     </div>
