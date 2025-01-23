@@ -13,7 +13,7 @@ const ForeignerPackages = () => {
   };
 
   return (
-    <div className="container p-6 max-w-7xl">
+    <div className="container w-full px-2 my-10 md:p-6 font-Manrope">
       <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Exclusive Foreign Tour Packages
       </h1>
@@ -29,17 +29,21 @@ const ForeignerPackages = () => {
         return (
           <div
             key={index}
-            className="mb-20 overflow-hidden bg-white shadow-xl rounded-2xl"
+            className="mb-20 overflow-hidden shadow-xl bg-slate-300 rounded-2xl"
           >
             {/* Package Header */}
             <div className="p-8 text-white bg-gradient-to-r from-slate-800 to-slate-900">
-              <h2 className="mb-3 text-3xl font-bold">{title}</h2>
-              <p className="text-xl text-slate-200">{duration}</p>
+              <h2 className="mb-3 font-bold md:text-3xl xs:text-2xl sm:text-2xl">
+                {title}
+              </h2>
+              <p className="md:text-3xl xs:text-xl sm:text-xl lg:text-3xl text-slate-200">
+                {duration}
+              </p>
             </div>
 
             {/* Pricing Section */}
             {pricing && pricing.luxuryPackage && (
-              <div className="p-8 bg-slate-50">
+              <div className="p-8 bg-slate-300">
                 <h3 className="mb-6 text-2xl font-bold text-slate-800">
                   Package Pricing
                 </h3>
@@ -97,7 +101,7 @@ const ForeignerPackages = () => {
 
             {/* Book Now Button */}
             {callToAction && (
-              <div className="p-8 bg-slate-50">
+              <div className="p-8 bg-slate-300">
                 <button
                   onClick={() => handleBookNow(item.tourPackage)}
                   className="px-8 py-3 font-semibold text-white transition-colors duration-300 rounded-lg bg-slate-800 hover:bg-slate-700"

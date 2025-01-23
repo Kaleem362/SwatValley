@@ -24,7 +24,7 @@ const TourPackages = () => {
   };
 
   return (
-    <div className="container px-4 py-8 mx-auto">
+    <div className="container p-6 mx-auto">
       <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Tour Packages
       </h1>
