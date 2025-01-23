@@ -31,7 +31,7 @@ const SwatTours = () => {
       <h2 className="mb-8 text-5xl font-extrabold text-center text-slate-800 font-Manrope">
         Swat Tour Packages
       </h2>
-      <h2 className="my-2 text-2xl text-start xs:text-md sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-Manrope text-slate-800">
+      <h2 className="my-4 text-2xl text-start xs:text-md sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-Manrope text-slate-800">
         We Provide Day packages for swat Valley
       </h2>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

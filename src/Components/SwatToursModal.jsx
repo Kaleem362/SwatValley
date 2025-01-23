@@ -52,7 +52,7 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
               alert("Booking request sent!");
               onClose();
             }}
-            className="px-4 py-2 text-white rounded bg-slate-800 hover:bg-slate-500"
+            className="px-4 py-2 text-white rounded bg-slate-800 hover:bg-green-500"
           >
             Book Now
           </button>

@@ -42,7 +42,7 @@ const Services = () => {
                 </div>
                 {/* buttontag */}
                 <div className="absolute flex items-center justify-center w-full gap-2 transition-all duration lg:mt-0 xs:-bottom-14 -bottom-16 sm:-bottom-14 lg:group-hover:-bottom-12 lg:-bottom-0 -z-50 buttons">
-                  <Link>
+                  <Link to={`/tourdetails/tour/${tour.id}`}>
                     <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 group ">
                       <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-slate-400 group-hover:-mr-4 group-hover:-mt-4">
                         <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>

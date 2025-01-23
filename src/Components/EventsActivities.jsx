@@ -1,14 +1,36 @@
 import React from "react";
+import skating from "../../public/PackagesImages/skatinggallerycoverimage.jpg";
 
 const EventsActivities = () => {
   const events = [
-    "Swat summer festival",
-    "Swat winter festival",
-    "culture's festival at PC Malamjabba",
-    "Eid-ul-Fitar",
-    "Eid-ul-Adha",
-    "culture's festival Gabenjabba",
-    "Kalam jeep acing game and others",
+    {
+      name: "Swat Summer Festival",
+      image: skating, // Assuming "skating" is the imported image variable
+    },
+    {
+      name: "Swat Winter Festival",
+      image: skating, // Replace with the actual image variable
+    },
+    {
+      name: "Culture's Festival at PC Malamjabba",
+      image: skating, // Replace with the actual image variable
+    },
+    {
+      name: "Eid-ul-Fitr",
+      image: skating, // Replace with the actual image variable
+    },
+    {
+      name: "Eid-ul-Adha",
+      image: skating, // Replace with the actual image variable
+    },
+    {
+      name: "Culture's Festival at Gaben Jabba",
+      image: skating, // Replace with the actual image variable
+    },
+    {
+      name: "Kalam Jeep Racing Game and Others",
+      image: skating, // Replace with the actual image variable
+    },
   ];
 
   const activities = [
@@ -31,23 +53,19 @@ const EventsActivities = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen p-8 ">
+    <div className="w-full min-h-screen p-8 font-Manrope ">
       <style>{`
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-          100% { transform: translateY(0px); }
-        }
+        
 
         @keyframes shine {
           0% { background-position: 200% center; }
           100% { background-position: -200% center; }
         }
 
-        @keyframes borderGlow {
-          0%, 100% { border-color: rgba(30, 41, 59, 0.5); }
-          50% { border-color: rgba(255, 255, 255, 0.8); }
-        }
+        // @keyframes borderGlow {
+        //   0%, 100% { border-color: rgba(30, 41, 59, 0.5); }
+        //   50% { border-color: rgba(255, 255, 255, 0.8); }
+        // }
 
         @keyframes scale {
           0% { transform: scale(1); }
@@ -109,14 +127,14 @@ const EventsActivities = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <img
-                src={`/api/placeholder/600/400`}
-                alt={event}
+                src={event.image}
+                alt={event.name}
                 className="object-cover w-full h-64 transition-transform duration-700 transform scale-animate"
               />
-              <div className="absolute inset-0 transition-all duration-500 opacity-0 bg-gradient-to-t from-slate-800 to-transparent group-hover:opacity-100" />
+              <div className="absolute inset-0 transition-all duration-500 opacity-5 bg-gradient-to-t from-white to-transparent group-hover:opacity-100" />
               <div className="absolute inset-0 transition-all duration-500 border-4 border-transparent opacity-50 group-hover:border-white glow-border" />
-              <h3 className="absolute text-xl font-semibold text-white transition-all duration-500 transform translate-y-full bottom-4 left-4 group-hover:translate-y-0">
-                {event}
+              <h3 className="absolute text-3xl font-extrabold translate-y-full text-slate-800 -bottom-10 left-4 group-hover:-translate-y-10 lg:group-hover:translate-y-30 lg:opacity-0 lg:group-hover:opacity-100 xs:translate-y-30 xs:opacity-100">
+                {event.name}
               </h3>
             </div>
           ))}
