@@ -14,7 +14,7 @@ const ForeignerPackages = () => {
 
   return (
     <div className="container p-6 max-w-7xl">
-      <h1 className="mb-16 text-5xl font-bold text-center text-slate-800 font-Manrope">
+      <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Exclusive Foreign Tour Packages
       </h1>
 

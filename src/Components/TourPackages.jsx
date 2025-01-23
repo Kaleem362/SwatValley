@@ -45,7 +45,7 @@ const TourPackages = () => {
             <div className="absolute inset-0 z-20 flex items-center justify-center w-full h-64 group">
               <button
                 onClick={(e) => handleBookNow(e, pkg)}
-                className="px-6 py-3 font-semibold transition-all duration-300 transform bg-white rounded-full shadow-lg text-slate-800 hover:bg-black hover:text-white"
+                className="px-6 py-3 font-semibold transition-all duration-300 transform bg-white rounded-full shadow-lg text-slate-800 "
               >
                 Book Now
               </button>
