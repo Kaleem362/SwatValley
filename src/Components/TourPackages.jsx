@@ -7,7 +7,7 @@ import SwatTours from "./SwatTours";
 
 const TourPackages = () => {
   const { toursPackage } = useContext(store);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // State for modal
   const [isModalOpen, setIsModalOpen] = useState(false);

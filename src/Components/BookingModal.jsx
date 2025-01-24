@@ -66,17 +66,31 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
               <h3 className="text-lg font-semibold text-slate-700">
                 Price Details
               </h3>
+
               {typeof tourDetails.price === "object" ? (
                 <div className="space-y-1">
+                  <p>Choose Your price below</p>
                   {tourDetails.price.for1Couple && (
-                    <p className="text-slate-600">
-                      One Couple: {tourDetails.price.for1Couple}
-                    </p>
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name="price"
+                        value={tourDetails.price.for1Couple}
+                        className="text-slate-600"
+                      />
+                      <span>One Couple: {tourDetails.price.for1Couple}</span>
+                    </label>
                   )}
                   {tourDetails.price.for2Couples && (
-                    <p className="text-slate-600">
-                      Two Couples: {tourDetails.price.for2Couples}
-                    </p>
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name="price"
+                        value={tourDetails.price.for2Couples}
+                        className="text-slate-600"
+                      />
+                      <span>Two Couples: {tourDetails.price.for2Couples}</span>
+                    </label>
                   )}
                 </div>
               ) : (
