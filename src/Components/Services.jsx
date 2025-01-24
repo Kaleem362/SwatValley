@@ -24,7 +24,7 @@ const Services = () => {
           {toursPackage.slice(0, 4).map((tour) => {
             return (
               <div
-                class="relative w-full sm:w-56 xs:w-full md:w-52 lg:w-72 mx-auto lg:mx-auto bg-slate-100 rounded z-50 group mb-20 lg:mb-0 mt-10 animate-fadeInFromTop"
+                className="relative z-50 w-full mx-auto mt-10 mb-20 rounded sm:w-56 xs:w-full md:w-52 lg:w-72 lg:mx-auto bg-slate-100 group lg:mb-0 animate-fadeInFromTop"
                 key={tour.id}
               >
                 <img

@@ -1,13 +1,12 @@
 import React, { useContext, useState } from "react";
 import { store } from "../assets/Store/Context";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import BookingModal from "./BookingModal";
 import ForeignerPackages from "./ForeignersTours";
 import SwatTours from "./SwatTours";
 
 const TourPackages = () => {
   const { toursPackage } = useContext(store);
-  // const navigate = useNavigate();
 
   // State for modal
   const [isModalOpen, setIsModalOpen] = useState(false);

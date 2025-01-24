@@ -1,6 +1,7 @@
 import React from "react";
 
 import FAQ from "./FAQ";
+import { Camera, Mountain, Vegan } from "lucide-react";
 
 const AboutUs = () => {
   const activities = [
