@@ -1,42 +1,87 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
-const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
+const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
   const [selectedPrice, setSelectedPrice] = useState("");
   const [userName, setUserName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [errors, setErrors] = useState({
+    userName: "",
+    phoneNumber: "",
+    selectedPrice: "",
+  });
 
   const handlePriceChange = (event) => {
     setSelectedPrice(event.target.value);
+    if (errors.selectedPrice) {
+      setErrors((prev) => ({ ...prev, selectedPrice: "" }));
+    }
+  };
+
+  const handleInputChange = (setter, fieldName) => (event) => {
+    setter(event.target.value);
+    if (errors[fieldName]) {
+      setErrors((prev) => ({ ...prev, [fieldName]: "" }));
+    }
+  };
+
+  const validateForm = () => {
+    let isValid = true;
+    let newErrors = { userName: "", phoneNumber: "", selectedPrice: "" };
+
+    if (!userName) {
+      newErrors.userName = "Please enter your name";
+      isValid = false;
+    }
+    if (!phoneNumber) {
+      newErrors.phoneNumber = "Please enter your phone number";
+      isValid = false;
+    }
+    // Only validate selectedPrice if there are multiple price options
+    if (
+      typeof tourDetails.price === "object" &&
+      !selectedPrice &&
+      (tourDetails.price.for1Couple || tourDetails.price.for2Couples)
+    ) {
+      newErrors.selectedPrice = "Please select a price";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   const sendEmail = () => {
-    const emailData = {
-      userName: userName,
-      phoneNumber: phoneNumber,
-      packageName: tourDetails.packageName,
-      destination: tourDetails.destination,
-      duration: tourDetails.duration,
-      price: selectedPrice,
-      accommodation: tourDetails.accommodation,
-      transportation: tourDetails.transportation,
-    };
-    if (!userName || !phoneNumber || !selectedPrice) {
-      alert("please fill the contact Inputs");
+    if (!validateForm()) {
       return;
     }
 
+    const emailData = {
+      user_name: userName,
+      user_phone: phoneNumber,
+      package_name: tourDetails.packageName,
+      destinations: tourDetails.destination,
+      duration: tourDetails.duration,
+      price: selectedPrice || tourDetails.price, // Use selectedPrice or the fixed price
+      accommodation: tourDetails.accommodation,
+      transportation: tourDetails.transportation,
+    };
+
     emailjs
       .send(
-        "service_lo35keo", // Replace with your Email.js Service ID
-        "template_kwn2dnv", // Replace with your updated Email.js Template ID
+        "service_lo35keo", // Your service ID
+        "template_kwn2dnv", // Your template ID
         emailData,
-        "TN_SsrQLJSJwg7m9V" // Replace with your Email.js Public Key
+        "TN_SsrQLJSJwg7m9V" // Your public key
       )
       .then(
         (result) => {
           alert("Email sent successfully!");
           console.log(result.text);
+          setIsModalOpen(false);
+          setPhoneNumber("");
+          setUserName("");
+          setSelectedPrice("");
         },
         (error) => {
           console.log(error);
@@ -47,8 +92,16 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
   };
 
   const handleWhatsApp = () => {
-    const message = `Booking Details:%0A%0APackage Name: ${tourDetails.packageName}%0ADestination: ${tourDetails.destination}%0ADuration: ${tourDetails.duration}%0APrice: ${selectedPrice}%0AAccommodation: ${tourDetails.accommodation}%0ATransportation: ${tourDetails.transportation}%0AUser Name: ${userName}%0APhone Number: ${phoneNumber}`;
-    const whatsappLink = `https://wa.me/923489857193?text=${message}`; // Replace OWNER_PHONE_NUMBER with the owner's WhatsApp number
+    const message = `Booking Details:%0A%0APackage Name: ${
+      tourDetails.packageName
+    }%0ADestination: ${tourDetails.destination}%0ADuration: ${
+      tourDetails.duration
+    }%0APrice: ${selectedPrice || tourDetails.price}%0AAccommodation: ${
+      tourDetails.accommodation
+    }%0ATransportation: ${
+      tourDetails.transportation
+    }%0AUser Name: ${userName}%0APhone Number: ${phoneNumber}`;
+    const whatsappLink = `https://wa.me/923489857193?text=${message}`;
     window.open(whatsappLink, "_blank");
   };
 
@@ -98,10 +151,15 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
               <input
                 type="text"
                 value={userName}
-                onChange={(e) => setUserName(e.target.value)}
+                onChange={handleInputChange(setUserName, "userName")}
                 className="w-full px-3 py-2 mt-1 border rounded-md text-slate-800 focus:outline-none focus:ring focus:ring-slate-200"
                 placeholder="Enter your name"
               />
+              {errors.userName && (
+                <p className="p-2 mt-1 text-xs text-red-500 bg-red-100">
+                  {errors.userName}
+                </p>
+              )}
             </div>
 
             <div>
@@ -111,10 +169,15 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
               <input
                 type="text"
                 value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
+                onChange={handleInputChange(setPhoneNumber, "phoneNumber")}
                 className="w-full px-3 py-2 mt-1 border rounded-md text-slate-800 focus:outline-none focus:ring focus:ring-slate-200"
                 placeholder="Enter your phone number"
               />
+              {errors.phoneNumber && (
+                <p className="p-2 mt-1 text-xs text-red-500 bg-red-100">
+                  {errors.phoneNumber}
+                </p>
+              )}
             </div>
           </div>
 
@@ -173,6 +236,11 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
                 </div>
               ) : (
                 <p className="text-slate-600">{tourDetails.price}</p>
+              )}
+              {errors.selectedPrice && (
+                <p className="p-2 mt-1 text-xs text-red-500 bg-red-100">
+                  {errors.selectedPrice}
+                </p>
               )}
             </div>
 

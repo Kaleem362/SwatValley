@@ -73,6 +73,7 @@ const TourPackages = () => {
       <BookingModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+        setIsModalOpen={setIsModalOpen}
         onConfirm={handleConfirmBooking}
         tourDetails={{
           packageName: selectedPackage?.packageName,

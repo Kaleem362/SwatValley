@@ -6,7 +6,6 @@ import kalamValleyTour from "../../public/PackagesImages/kalamvalleytourenhanced
 import gabenJabbaTour from "../../public/PackagesImages/gabinjabbadaytour.jpg";
 import marghuzarTour from "../../public/PackagesImages/murghuzardaytour.jpg";
 import shanglaTopTour from "../../public/PackagesImages/shangladaytour.jpg";
-import { Link } from "react-router";
 
 const SwatTours = () => {
   const { Swatdaytourpackage, modalState, setModalState } = useContext(store);
