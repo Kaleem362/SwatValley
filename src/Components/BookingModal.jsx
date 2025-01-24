@@ -1,6 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
+  const [selectedPrice, setSelectedPrice] = useState("");
+  const [userName, setUserName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  const handlePriceChange = (event) => {
+    setSelectedPrice(event.target.value);
+  };
+
+  const sendEmail = () => {
+    const emailData = {
+      userName: userName,
+      phoneNumber: phoneNumber,
+      packageName: tourDetails.packageName,
+      destination: tourDetails.destination,
+      duration: tourDetails.duration,
+      price: selectedPrice,
+      accommodation: tourDetails.accommodation,
+      transportation: tourDetails.transportation,
+    };
+    if (!userName || !phoneNumber || !selectedPrice) {
+      alert("please fill the contact Inputs");
+      return;
+    }
+
+    emailjs
+      .send(
+        "service_lo35keo", // Replace with your Email.js Service ID
+        "template_kwn2dnv", // Replace with your updated Email.js Template ID
+        emailData,
+        "TN_SsrQLJSJwg7m9V" // Replace with your Email.js Public Key
+      )
+      .then(
+        (result) => {
+          alert("Email sent successfully!");
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error);
+          alert("Failed to send email. Please try WhatsApp.");
+          handleWhatsApp();
+        }
+      );
+  };
+
+  const handleWhatsApp = () => {
+    const message = `Booking Details:%0A%0APackage Name: ${tourDetails.packageName}%0ADestination: ${tourDetails.destination}%0ADuration: ${tourDetails.duration}%0APrice: ${selectedPrice}%0AAccommodation: ${tourDetails.accommodation}%0ATransportation: ${tourDetails.transportation}%0AUser Name: ${userName}%0APhone Number: ${phoneNumber}`;
+    const whatsappLink = `https://wa.me/923489857193?text=${message}`; // Replace OWNER_PHONE_NUMBER with the owner's WhatsApp number
+    window.open(whatsappLink, "_blank");
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -38,8 +89,37 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
 
         {/* Content */}
         <div className="max-h-[60vh] overflow-y-auto pr-4">
+          {/* User input fields at the top */}
+          <div className="mb-6 space-y-4">
+            <div>
+              <label className="block text-lg font-semibold text-slate-700">
+                Your Name
+              </label>
+              <input
+                type="text"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+                className="w-full px-3 py-2 mt-1 border rounded-md text-slate-800 focus:outline-none focus:ring focus:ring-slate-200"
+                placeholder="Enter your name"
+              />
+            </div>
+
+            <div>
+              <label className="block text-lg font-semibold text-slate-700">
+                Phone Number
+              </label>
+              <input
+                type="text"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                className="w-full px-3 py-2 mt-1 border rounded-md text-slate-800 focus:outline-none focus:ring focus:ring-slate-200"
+                placeholder="Enter your phone number"
+              />
+            </div>
+          </div>
+
+          {/* Existing tour details */}
           <div className="space-y-4">
-            {/* Package Name */}
             <div>
               <h3 className="text-lg font-semibold text-slate-700">
                 Package Name
@@ -47,7 +127,6 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
               <p className="text-slate-600">{tourDetails.packageName}</p>
             </div>
 
-            {/* Destinations */}
             <div>
               <h3 className="text-lg font-semibold text-slate-700">
                 Destinations
@@ -55,18 +134,15 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
               <p className="text-slate-600">{tourDetails.destination}</p>
             </div>
 
-            {/* Duration */}
             <div>
               <h3 className="text-lg font-semibold text-slate-700">Duration</h3>
               <p className="text-slate-600">{tourDetails.duration}</p>
             </div>
 
-            {/* Price */}
             <div>
               <h3 className="text-lg font-semibold text-slate-700">
                 Price Details
               </h3>
-
               {typeof tourDetails.price === "object" ? (
                 <div className="space-y-1">
                   <p>Choose Your price below</p>
@@ -77,6 +153,7 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
                         name="price"
                         value={tourDetails.price.for1Couple}
                         className="text-slate-600"
+                        onChange={handlePriceChange}
                       />
                       <span>One Couple: {tourDetails.price.for1Couple}</span>
                     </label>
@@ -88,6 +165,7 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
                         name="price"
                         value={tourDetails.price.for2Couples}
                         className="text-slate-600"
+                        onChange={handlePriceChange}
                       />
                       <span>Two Couples: {tourDetails.price.for2Couples}</span>
                     </label>
@@ -98,7 +176,6 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
               )}
             </div>
 
-            {/* Accommodation */}
             <div>
               <h3 className="text-lg font-semibold text-slate-700">
                 Accommodation
@@ -106,7 +183,6 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
               <p className="text-slate-600">{tourDetails.accommodation}</p>
             </div>
 
-            {/* Transportation */}
             <div>
               <h3 className="text-lg font-semibold text-slate-700">
                 Transportation
@@ -125,10 +201,16 @@ const BookingModal = ({ isOpen, onClose, tourDetails, onConfirm }) => {
             Close
           </button>
           <button
-            onClick={onConfirm}
+            onClick={sendEmail}
             className="px-4 py-2 text-white transition-colors rounded bg-slate-800 hover:bg-slate-700"
           >
-            Confirm Booking
+            Confirm Booking (Email)
+          </button>
+          <button
+            onClick={handleWhatsApp}
+            className="px-4 py-2 text-white transition-colors bg-green-600 rounded hover:bg-green-500"
+          >
+            Confirm Booking (WhatsApp)
           </button>
         </div>
       </div>
