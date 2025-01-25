@@ -108,7 +108,7 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto font-Manrope">
       {/* Overlay */}
       <div
         className="fixed inset-0 transition-opacity bg-black bg-opacity-50"

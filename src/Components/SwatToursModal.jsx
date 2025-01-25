@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com"; // Import Email.js
+import emailjs from "emailjs-com";
 
 const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
   if (!isOpen || !packageDetails) return null;
@@ -8,31 +8,39 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
   const [userName, setUserName] = useState("");
   const [userPhone, setUserPhone] = useState("");
 
+  // State for error messages
+  const [errors, setErrors] = useState({
+    userName: "",
+    userPhone: "",
+  });
+
   // Email.js send function
   const sendEmail = () => {
-    // Check if user has provided name and phone number
-    if (!userName || !userPhone) {
-      alert("Please enter your name and phone number.");
-      return;
+    let formErrors = { ...errors };
+    let formIsValid = true;
+
+    // Validate the fields
+    if (!userName) {
+      formErrors.userName = "Please enter your name.";
+      formIsValid = false;
+    }
+    if (!userPhone) {
+      formErrors.userPhone = "Please enter your phone number.";
+      formIsValid = false;
     }
 
-    // Define default values for Swat Tour packages
-    const isSwatTour = packageDetails.tourName === "Swat Tour Package"; // Adjust as needed
+    setErrors(formErrors);
+
+    if (!formIsValid) return;
+
+    // Define template parameters for Email.js
     const templateParams = {
-      package_name: isSwatTour
-        ? "Swat Tour Package"
-        : packageDetails.tourName || "Not specified",
-      destinations: isSwatTour
-        ? "Mingora, Kalam, Malam Jabba"
-        : packageDetails.destinations || "",
-      duration: isSwatTour ? "3 days, 2 nights" : packageDetails.duration || "",
-      price: packageDetails.price || "",
-      accommodation: isSwatTour
-        ? "3-star hotel with breakfast"
-        : packageDetails.accommodation || "",
-      transportation: isSwatTour
-        ? "Air-conditioned bus"
-        : packageDetails.transportation || "",
+      package_name: packageDetails.tourName || "-",
+      destinations: packageDetails.destinations || "-",
+      duration: packageDetails.duration || "-",
+      price: packageDetails.price || "-",
+      accommodation: packageDetails.accommodation || "-",
+      transportation: packageDetails.transportation || "-",
       customer_message: "Looking forward to this amazing trip!",
       user_name: userName,
       user_phone: userPhone,
@@ -58,39 +66,64 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
     );
   };
 
+  // Handle input change and remove the error when the user starts typing
+  const handleInputChange = (e, field) => {
+    if (e.target.value) {
+      setErrors((prev) => ({ ...prev, [field]: "" }));
+    }
+    if (field === "userName") {
+      setUserName(e.target.value);
+    } else if (field === "userPhone") {
+      setUserPhone(e.target.value);
+    }
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 font-Manrope">
       <div className="w-full max-w-lg p-6 bg-white rounded-lg shadow-lg">
         <p className="mb-4 text-5xl font-extrabold text-center text-slate-800">
           Swat Tours
         </p>
-        <h2 className="mb-4 text-2xl font-bold text-slate-800">
+        <h2 className="mb-4 text-2xl font-bold text-center text-slate-800">
           {packageDetails.tourName}
         </h2>
+
+        {/* User Input Fields */}
         <div className="mt-4">
-          <label className="block mb-2 text-sm font-bold text-slate-800">
+          <label className="block mb-2 text-lg font-bold text-slate-800">
             Your Name:
           </label>
           <input
             type="text"
             placeholder="Enter your name"
             value={userName}
-            onChange={(e) => setUserName(e.target.value)}
+            onChange={(e) => handleInputChange(e, "userName")}
             className="w-full px-3 py-2 border rounded-md text-slate-800"
           />
+          {errors.userName && (
+            <div className="p-2 mt-2 text-sm text-red-600 bg-red-100 rounded-md">
+              {errors.userName}
+            </div>
+          )}
         </div>
         <div className="mt-4">
-          <label className="block mb-2 text-sm font-bold text-slate-800">
+          <label className="block mb-2 text-lg font-bold text-slate-800">
             Your Phone Number:
           </label>
           <input
             type="tel"
             placeholder="Enter your phone number"
             value={userPhone}
-            onChange={(e) => setUserPhone(e.target.value)}
+            onChange={(e) => handleInputChange(e, "userPhone")}
             className="w-full px-3 py-2 border rounded-md text-slate-800"
           />
+          {errors.userPhone && (
+            <div className="p-2 mt-2 text-sm text-red-600 bg-red-100 rounded-md">
+              {errors.userPhone}
+            </div>
+          )}
         </div>
+
         {/* Pricing Section */}
         <div className="mt-4">
           <h3 className="text-lg font-bold text-slate-800">Tour Price:</h3>
@@ -116,8 +149,6 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
           </ul>
         </div>
 
-        {/* User Input Fields */}
-
         {/* Buttons */}
         <div className="flex items-center justify-start gap-6 mt-6">
           <button
@@ -127,9 +158,7 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
             Close
           </button>
           <button
-            onClick={() => {
-              sendEmail(); // Call Email.js send function
-            }}
+            onClick={sendEmail}
             className="px-4 py-2 text-white rounded bg-slate-800 hover:bg-green-500"
           >
             Book Now (Send Email)

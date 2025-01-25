@@ -1,14 +1,14 @@
-import kalamvalley from "../../public/PackagesImages/beautifulhills.jpg";
-import malamjabbacover from "../../public/PackagesImages/malamjabbacover.jpg";
-import MalamJabba from "../../public/PackagesImages/malamjabbaprofile.jpg";
-import HoneyMoonone from "../../public/PackagesImages/honeymoonprofile.jpg";
-import HoneyMoontwo from "../../public/PackagesImages/honeymoonprofiletwo.jpg";
-import HoneyMoonthree from "../../public/PackagesImages/honeymoonthree.jpg";
-import honeymoonfour from "../../public/PackagesImages/honeymoonfour.jpg";
-import honeymoonfive from "../../public/PackagesImages/honeymoonfive.jpg";
-import honeymoonsix from "../../public/PackagesImages/honeymoonsix.jpg";
-import familytour from "../../public/PackagesImages/familytour.jpg";
-import swattour from "../../public/PackagesImages/swattour.jpg";
+import kalamvalley from "./../assets/PackagesImages/beautifulhills.jpg";
+import malamjabbacover from "./../assets/PackagesImages/malamjabbacover.jpg";
+import MalamJabba from "./../assets/PackagesImages/malamjabbaprofile.jpg";
+import HoneyMoonone from "./../assets/PackagesImages/honeymoonprofile.jpg";
+import HoneyMoontwo from "./../assets/PackagesImages/honeymoonprofiletwo.jpg";
+import HoneyMoonthree from "./../assets/PackagesImages/honeymoonthree.jpg";
+import honeymoonfour from "./../assets/PackagesImages/honeymoonfour.jpg";
+import honeymoonfive from "./../assets/PackagesImages/honeymoonfive.jpg";
+import honeymoonsix from "./../assets/PackagesImages/honeymoonsix.jpg";
+import familytour from "./../assets/PackagesImages/familytour.jpg";
+import swattour from "./../assets/PackagesImages/swattour.jpg";
 export const toursPackage = [
   // consistent object
   {

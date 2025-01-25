@@ -1,132 +1,85 @@
 import React from "react";
-import skating from "../../public/PackagesImages/skatinggallerycoverimage.jpg";
+
+// Importing all images (keeping your original import statements)
+import skating from "./../assets/PackagesImages/skatinggallerycoverimage.jpg";
+import winterfestival from "./../assets/PackagesImages/swattour.jpg";
+import swatsummerfestival from "./../assets/PackagesImages/swatsummerfestival.jpg";
+import boating from "./../assets/PackagesImages/boating.jpg";
+import horseriding from "./../assets/PackagesImages/horseriding.jpg";
+import BoneFire from "./../assets/PackagesImages/BoneFire.jpg";
+import KalamJeep from "./../assets/PackagesImages/KalamJeep.jpg";
+import Eidulfitar from "./../assets/PackagesImages/Eidulfitar.jpg";
+import Eiduladha from "./../assets/PackagesImages/Eiduladha.jpg";
+import culturefestival from "./../assets/PackagesImages/culturefestival.jpg";
+import chairlift from "./../assets/PackagesImages/chairlift.jpg";
+import Zipline from "./../assets/PackagesImages/Zipline.jpg";
+import waterafting from "./../assets/PackagesImages/waterafting.jpg";
+import snowski from "./../assets/PackagesImages/snowski.jpg";
+import BBQ from "./../assets/PackagesImages/BBQ.jpeg";
+import musicnight from "./../assets/PackagesImages/musicnight.jpeg";
+import candlelight from "./../assets/PackagesImages/candlelight.jpeg";
+import birthdayparty from "./../assets/PackagesImages/birthdayparty.jpeg";
+import marriageanni from "./../assets/PackagesImages/marriageanni.jpeg";
+import decoratedroom from "./../assets/PackagesImages/decoratedroom.jpeg";
+import fishing from "./../assets/PackagesImages/fishing.jpeg";
+import photography from "./../assets/PackagesImages/photography.jpeg";
+import { useScrollAnimation } from "./useScrollAnimation";
 
 const EventsActivities = () => {
+  const { ref: eventsRef, isVisible: eventsVisible } = useScrollAnimation(0.1);
+  const { ref: activitiesRef, isVisible: activitiesVisible } =
+    useScrollAnimation(0.1);
+
   const events = [
-    {
-      name: "Swat Summer Festival",
-      image: skating, // Assuming "skating" is the imported image variable
-    },
-    {
-      name: "Swat Winter Festival",
-      image: skating, // Replace with the actual image variable
-    },
-    {
-      name: "Culture's Festival at PC Malamjabba",
-      image: skating, // Replace with the actual image variable
-    },
-    {
-      name: "Eid-ul-Fitr",
-      image: skating, // Replace with the actual image variable
-    },
-    {
-      name: "Eid-ul-Adha",
-      image: skating, // Replace with the actual image variable
-    },
-    {
-      name: "Culture's Festival at Gaben Jabba",
-      image: skating, // Replace with the actual image variable
-    },
-    {
-      name: "Kalam Jeep Racing Game and Others",
-      image: skating, // Replace with the actual image variable
-    },
+    { name: "Swat Summer Festival", image: swatsummerfestival },
+    { name: "Swat Winter Festival", image: winterfestival },
+    { name: "Culture's Festival", image: culturefestival },
+    { name: "Eid-ul-Fitr", image: Eidulfitar },
+    { name: "Eid-ul-Adha", image: Eiduladha },
+    { name: "Kalam Jeep Racing Game and Others", image: KalamJeep },
   ];
 
   const activities = [
-    "Chairlift",
-    "Zipline",
-    "Snow ski season",
-    "White water rafting",
-    "Boating",
-    "Horse riding",
-    "Air cycle",
-    "Bone fire",
-    "Barbeque (BBQ)",
-    "Musical night",
-    "Candal night dinner",
-    "Birthday party",
-    "Marriage anniversary",
-    "Decorated Room for Honeymoon couple",
-    "Photography",
-    "Fishing",
+    { name: "Chairlift", image: chairlift },
+    { name: "Zipline", image: Zipline },
+    { name: "Snow ski season", image: snowski },
+    { name: "White water rafting", image: waterafting },
+    { name: "Boating", image: boating },
+    { name: "Horse riding", image: horseriding },
+    { name: "Bone fire", image: BoneFire },
+    { name: "Barbeque (BBQ)", image: BBQ },
+    { name: "Musical night", image: musicnight },
+    { name: "Candal night dinner", image: candlelight },
+    { name: "Birthday party", image: birthdayparty },
+    { name: "Marriage anniversary", image: marriageanni },
+    { name: "Decorated Rooms", image: decoratedroom },
+    { name: "Photography", image: photography },
+    { name: "Fishing", image: fishing },
   ];
 
   return (
-    <div className="w-full min-h-screen p-8 font-Manrope ">
-      <style>{`
-        
-
-        @keyframes shine {
-          0% { background-position: 200% center; }
-          100% { background-position: -200% center; }
-        }
-
-        // @keyframes borderGlow {
-        //   0%, 100% { border-color: rgba(30, 41, 59, 0.5); }
-        //   50% { border-color: rgba(255, 255, 255, 0.8); }
-        // }
-
-        @keyframes scale {
-          0% { transform: scale(1); }
-          50% { transform: scale(1.05); }
-          100% { transform: scale(1); }
-        }
-
-        .floating {
-          animation: float 6s ease-in-out infinite;
-        }
-
-        .card-shine {
-          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-          background-size: 200% auto;
-          animation: shine 3s linear infinite;
-        }
-
-        .glow-border {
-          animation: borderGlow 2s ease-in-out infinite;
-        }
-
-        .scale-animate {
-          animation: scale 4s ease-in-out infinite;
-        }
-
-        .stagger-animate:nth-child(odd) {
-          animation-delay: 0.5s;
-        }
-
-        .stagger-animate:nth-child(even) {
-          animation-delay: 1s;
-        }
-
-        .hover-tilt {
-          transition: transform 0.3s ease-out;
-        }
-
-        .hover-tilt:hover {
-          transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale(1.05);
-        }
-      `}</style>
-
-      {/* Title Section with enhanced animation */}
-      <div className="duration-500 skew-x-0 m-14 group -rotate-12 hover:-rotate-0 hover:skew-x-1 hover:translate-x-6 hover:translate-y-12 w-fit">
-        {" "}
-        <div className="group-hover:duration-400 relative rounded-2xl w-64 h-36 bg-slate-800 text-gray-50 flex flex-col justify-center items-center gap-1 before:-skew-x-12  before:rounded-2xl  before:absolute before:content['']  before:bg-slate-600 before:right-3 before:top-0 before:w-64 before:h-32 before:-z-10">
-          <span className="text-5xl font-bold">SWAT</span>
-          <p className="font-thin text-slate-300">
-            - Events & activities -
-          </p>{" "}
-        </div>{" "}
-      </div>
-
+    <div className="w-full min-h-screen p-8 font-Manrope">
       {/* Events Gallery */}
-      <div className="mt-20">
+      <div
+        ref={eventsRef}
+        className={`
+        ${eventsVisible ? "animate-fadeInFromTop" : "opacity-0"}
+      `}
+      >
+        <h1 className="w-full my-4 text-6xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-8xl font-Manrope">
+          Events
+        </h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {events.map((event, index) => (
             <div
               key={index}
-              className="relative overflow-hidden shadow-lg group rounded-xl hover-tilt stagger-animate floating"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`
+                relative overflow-hidden shadow-lg group hover-tilt stagger-animate floating
+                ${eventsVisible ? "animate-fadeInFromBottom" : "opacity-0"}
+              `}
+              style={{
+                animationDelay: eventsVisible ? `${index * 0.2}s` : "0s",
+              }}
             >
               <img
                 src={event.image}
@@ -135,7 +88,7 @@ const EventsActivities = () => {
               />
               <div className="absolute inset-0 transition-all duration-500 opacity-5 bg-gradient-to-t from-white to-transparent group-hover:opacity-100" />
               <div className="absolute inset-0 transition-all duration-500 border-4 border-transparent opacity-50 group-hover:border-white glow-border" />
-              <h3 className="absolute text-3xl font-extrabold translate-y-full text-slate-800 -bottom-10 left-4 group-hover:-translate-y-10 lg:group-hover:translate-y-30 lg:opacity-0 lg:group-hover:opacity-100 xs:translate-y-30 xs:opacity-100">
+              <h3 className="absolute text-5xl font-extrabold translate-y-full text-start text-slate-800 -bottom-10 left-4 group-hover:-translate-y-10 lg:group-hover:translate-y-30 lg:opacity-0 lg:group-hover:opacity-100 xs:translate-y-30 xs:opacity-100">
                 {event.name}
               </h3>
             </div>
@@ -144,26 +97,42 @@ const EventsActivities = () => {
       </div>
 
       {/* Activities Gallery */}
-      <div className="mt-20">
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+      <div
+        ref={activitiesRef}
+        className={`
+          px-4 mt-20 sm:px-6 lg:px-8
+          ${activitiesVisible ? "animate-fadeInFromLeft" : "opacity-0"}
+        `}
+      >
+        <h1 className="w-full my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl text-slate-800 font-Manrope">
+          Activities
+        </h1>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-6">
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="relative overflow-hidden bg-white rounded-lg shadow-lg group hover-tilt stagger-animate scale-animate"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className={`
+                relative overflow-hidden bg-white rounded-lg shadow-lg group hover-tilt stagger-animate scale-animate
+                ${activitiesVisible ? "animate-fadeInFromBottom" : "opacity-0"}
+              `}
+              style={{
+                animationDelay: activitiesVisible ? `${index * 0.15}s` : "0s",
+              }}
             >
-              <div className="relative h-48">
+              <div className="relative pb-[56.25%]">
                 <img
-                  src={`/api/placeholder/400/300`}
-                  alt={activity}
-                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+                  src={activity.image}
+                  alt={activity.name}
+                  className="absolute inset-0 object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 transition-all duration-500 opacity-0 bg-gradient-to-b from-transparent to-slate-800 group-hover:opacity-70" />
-                <div className="absolute inset-0 transition-all duration-500 border-2 border-transparent opacity-50 group-hover:border-white glow-border" />
+                <div className="absolute inset-0 transition-opacity duration-500 bg-black bg-opacity-50 group-hover:opacity-0"></div>
+                <div className="absolute inset-0 transition-all duration-500 border-2 border-transparent opacity-50 group-hover:border-white glow-border"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <h3 className="text-lg font-bold text-white transition-all duration-500 sm:text-xl md:text-2xl group-hover:opacity-0">
+                    {activity.name}
+                  </h3>
+                </div>
               </div>
-              <h3 className="absolute text-lg font-semibold text-white transition-all duration-500 opacity-0 -bottom-4 left-4 group-hover:opacity-100">
-                {activity}
-              </h3>
             </div>
           ))}
         </div>

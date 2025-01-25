@@ -7,7 +7,6 @@ import Services from "./Components/Services";
 import { Route, Routes } from "react-router";
 import ErrorPage from "./Components/ErrorPage";
 import Footer from "./Components/Footer";
-import Events from "./Components/Events";
 import TourPackages from "./Components/TourPackages";
 import TourDetails from "./Components/TourDetails";
 import TourServices from "./Components/TourServices";
@@ -45,17 +44,7 @@ const App = () => {
             </>
           }
         />
-        <Route
-          path="/events"
-          element={
-            <>
-              <Topbar />
-              <Navbar />
-              <Events />
-              <Footer />
-            </>
-          }
-        />
+
         <Route
           path="/tourdetails/tour/:id"
           element={

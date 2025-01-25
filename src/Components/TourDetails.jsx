@@ -255,6 +255,7 @@ const TourDetails = () => {
       </div>
       <BookingModal
         isOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
         onClose={() => setIsModalOpen(false)}
         onConfirm={handleConfirmBooking}
         tourDetails={{

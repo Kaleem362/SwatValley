@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { store } from "../assets/Store/Context";
 import SwatToursModal from "./SwatToursModal"; // Assuming you created this modal
-import malamjabbadaytour from "../../public/PackagesImages/malamjabbadaytour.jpg";
-import kalamValleyTour from "../../public/PackagesImages/kalamvalleytourenhanced.jpg";
-import gabenJabbaTour from "../../public/PackagesImages/gabinjabbadaytour.jpg";
-import marghuzarTour from "../../public/PackagesImages/murghuzardaytour.jpg";
-import shanglaTopTour from "../../public/PackagesImages/shangladaytour.jpg";
+import malamjabbadaytour from "./../assets/PackagesImages/malamjabbadaytour.jpg";
+import kalamValleyTour from "./../assets/PackagesImages/kalamvalleytourenhanced.jpg";
+import gabenJabbaTour from "./../assets/PackagesImages/gabinjabbadaytour.jpg";
+import marghuzarTour from "./../assets/PackagesImages/murghuzardaytour.jpg";
+import shanglaTopTour from "./../assets/PackagesImages/shangladaytour.jpg";
 
 const SwatTours = () => {
   const { Swatdaytourpackage, modalState, setModalState } = useContext(store);
@@ -53,7 +53,7 @@ const SwatTours = () => {
                 <span className="text-xl font-semibold">{tour.price}</span>
                 <button
                   onClick={() => handleBookNow(tour)}
-                  className="px-6 py-2 font-semibold transition duration-300 transform rounded-full hover:scale-105 bg-slate-800 hover:bg-white hover:text-slate-800"
+                  className="px-6 py-2 font-semibold transition duration-300 transform bg-white rounded-full text-slate-800 hover:scale-105 hover:bg-slate-800"
                 >
                   Book Now
                 </button>
