@@ -32,7 +32,7 @@ const Navbar = () => {
         } lg:relative lg:flex lg:flex-row lg:top-0 lg:w-auto lg:p-0  lg:space-y-0 lg:items-center lg:justify-between lg:gap-4 lg:mr-10 lg:bg-transparent`}
       >
         <Link
-          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-auto text-md text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Home"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
@@ -43,7 +43,7 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-auto text-md text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Packages"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
@@ -54,7 +54,7 @@ const Navbar = () => {
           Tour Packages
         </Link>
         <Link
-          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-auto text-md text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "services"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
@@ -65,7 +65,7 @@ const Navbar = () => {
           Pick & Drop Services
         </Link>
         <Link
-          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-auto text-md text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Events"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
@@ -77,7 +77,7 @@ const Navbar = () => {
         </Link>
 
         <Link
-          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-auto text-md text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "Contact"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
@@ -88,7 +88,7 @@ const Navbar = () => {
           Contact
         </Link>
         <Link
-          className={`p-2 px-3 text-lg text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+          className={`p-2 px-auto text-md text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
             selectedTab === "About us"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
