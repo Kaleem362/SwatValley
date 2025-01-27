@@ -1,6 +1,6 @@
 import React from "react";
 import car from "../assets/icons-asset/yellowcar.png";
-import thumbnail from "../assets/PackagesImages/thumbnail.jpg";
+import thumbnail from "../assets/PackagesImages/thumbnail.png";
 import { Link } from "react-router";
 const Hero = () => {
   return (
