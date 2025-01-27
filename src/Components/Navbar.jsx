@@ -104,9 +104,9 @@ const Navbar = () => {
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
-          <ImCross className="text-white" size={28} />
+          <ImCross className="text-lg text-white lg:text-5xl xs:text-3xl md:text-4xl" />
         ) : (
-          <TiThMenu className="text-white lg:text-5xl xs:text-3xl md:text-4xl" />
+          <TiThMenu className="text-lg text-white lg:text-5xl xs:text-3xl md:text-4xl" />
         )}
       </span>
     </nav>

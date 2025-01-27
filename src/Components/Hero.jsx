@@ -15,8 +15,8 @@ const Hero = () => {
       <h4 className="xs:text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-600 animate-fadeInFromLeft">
         Discover Nature’s Paradise!
       </h4>
-      <div className="flex flex-col w-full h-auto gap-10 my-2 lg:flex-row lg:items-start lg:justify-between">
-        <p className="flex justify-start  items-start text-slate-500 flex-start font-manrope text-sm sm:text-md md:text-lg lg:text-lg xl:text-xl lg:w-[50%] animate-fadeInFromLeft">
+      <div className="flex flex-col w-full h-auto gap-2 my-2 lg:flex-row lg:items-start lg:justify-between">
+        <p className="flex justify-start  items-start text-slate-500 flex-start font-manrope text-sm sm:text-md md:text-lg lg:text-lg xl:text-xl lg:w-[50%] animate-fadeInFromLeft ">
           Escape to the stunning Swat Valley with our meticulously crafted,
           all-inclusive tour packages. Immerse yourself in the natural beauty of
           this picturesque region, where lush green valleys meet towering
@@ -32,25 +32,11 @@ const Hero = () => {
           in one of Pakistan's most captivating destinations. Your adventure
           awaits—book your Swat Valley tour today!
         </p>
-        <img src={aims} alt="" className="h-[400px] w-[800px] rounded-lg" />
-        {/* <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200  border-2 border-slate-100 shadow-slate-800 lg:flex-col m-x-auto animate-fadeInFromRight">
-          <li className="flex items-center w-full gap-2 p-2 text-lg rounded-lg sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
-            <img
-              src={destination}
-              alt="Explore Destinations"
-              className="w-8 h-8"
-            />
-            Explore Top Destinations
-          </li>
-          <li className="flex items-center w-full gap-2 p-2 text-lg rounded-lg sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
-            <img src={hotel} alt="Stay in Hotels" className="w-8 h-8" />
-            Stay in Cozy Hotels
-          </li>
-          <li className="flex items-center w-full gap-2 p-2 text-lg rounded-lg sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
-            <img src={car} alt="Travel Comfortably" className="w-8 h-8" />
-            Travel Comfortably
-          </li>
-        </ul> */}
+        <img
+          src={aims}
+          alt=""
+          className="h-auto  xs:w-full sm:w-full md:w-full lg:w-[700px] rounded-lg sm:h-auto xs:h-auto "
+        />
       </div>
       <div className="flex items-center justify-between w-full gap-4 mt-4 xs:w-fit md:w-fit lg:w-fit button animate-fadeInFromBottom">
         <p className="text-lg text-slate-900 font-Manrope xs:text-sm sm:text-md md:text-md md:font-bold lg:text-xl xl:text-2xl">

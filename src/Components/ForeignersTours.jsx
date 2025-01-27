@@ -1,26 +1,25 @@
 import React, { useContext, useState } from "react";
 import { store } from "../assets/Store/Context";
 import Modal from "./Modal";
-// Import the modal component
 
 const ForeignerPackages = () => {
   const { foreignerPackages, modalState, setModalState } = useContext(store);
-  const [selectedPackage, setSelectedPackage] = useState(null); // Store the selected package
+  const [selectedPackage, setSelectedPackage] = useState(null);
 
   const handleBookNow = (tourPackage) => {
     setSelectedPackage(tourPackage);
-    setModalState(true); // Open the modal
+    setModalState(true);
   };
 
   return (
     <div className="container w-full px-2 my-10 md:p-6 font-Manrope">
       <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-        Exclusive Foreign Tour Packages
+        Exclusive Swat Valley Tour Packages for Foreigners
       </h1>
 
       {foreignerPackages.map((item, index) => {
         if (!item || !item.tourPackage) {
-          return null; // Skip rendering if the item or required data is missing
+          return null;
         }
 
         const { title, duration, pricing, inclusions, callToAction } =
@@ -45,7 +44,7 @@ const ForeignerPackages = () => {
             {pricing && pricing.luxuryPackage && (
               <div className="p-8 bg-slate-300">
                 <h3 className="mb-6 text-2xl font-bold text-slate-800">
-                  Package Pricing
+                  Affordable Tour Packages with Luxury Options
                 </h3>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
                   {Object.entries(pricing.luxuryPackage).map(
@@ -74,7 +73,7 @@ const ForeignerPackages = () => {
             {inclusions && (
               <div className="p-8">
                 <h3 className="mb-6 text-2xl font-bold text-slate-800">
-                  Package Inclusions
+                  Scenic Tours and Inclusions in Pakistan
                 </h3>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   {inclusions.map((inclusion, idx) => (
