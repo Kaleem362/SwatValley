@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import car from "../assets/icons-asset/yellowcar.png";
-import thumbnail from "../assets/PackagesImages/thumbnail.png";
+
 import { Link } from "react-router";
+import { store } from "../assets/Store/Context";
 const Hero = () => {
+  const { thumbnail } = useContext(store);
   return (
     <div className="relative flex flex-col items-start justify-start h-auto px-3 py-10 tracking-tighter transition-all duration-200 xl:px-10 xs:px-3 sm:px-5 md:px-6 animate-fadeIn lg:px-8">
       <div className="flex w-full text-center header">
