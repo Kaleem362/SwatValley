@@ -1,7 +1,8 @@
 import React from "react";
 import car from "../assets/icons-asset/yellowcar.png";
-import hotel from "../assets/icons-asset/5starthotel.png";
-import destination from "../assets/icons-asset/mountainsun.png";
+// import hotel from "../assets/icons-asset/5starthotel.png";
+// import destination from "../assets/icons-asset/mountainsun.png";
+import aims from "../assets/packagesImages/thumbnail.jpg";
 import { Link } from "react-router";
 const Hero = () => {
   return (
@@ -14,20 +15,25 @@ const Hero = () => {
       <h4 className="xs:text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-600 animate-fadeInFromLeft">
         Discover Nature’s Paradise!
       </h4>
-      <div className="flex flex-col w-full gap-10 my-2 lg:flex-row lg:items-start lg:justify-between">
+      <div className="flex flex-col w-full h-auto gap-10 my-2 lg:flex-row lg:items-start lg:justify-between">
         <p className="flex justify-start  items-start text-slate-500 flex-start font-manrope text-sm sm:text-md md:text-lg lg:text-lg xl:text-xl lg:w-[50%] animate-fadeInFromLeft">
-          Plan your dream escape to Swat Valley with our all-inclusive tour
-          packages. Explore breathtaking landscapes, from lush green valleys to
-          majestic mountains, while enjoying luxurious accommodations and
-          seamless transportation. Whether you're seeking thrilling adventures,
-          cultural experiences, or peaceful retreats, we’ve got you covered. Our
-          packages include cozy hotel stays, comfortable travel, and flexible
-          durations to suit your needs. Leave the planning to us and focus on
-          creating unforgettable memories in one of Pakistan’s most beautiful
-          destinations. Your adventure begins here—book your Swat Valley tour
-          today!
+          Escape to the stunning Swat Valley with our meticulously crafted,
+          all-inclusive tour packages. Immerse yourself in the natural beauty of
+          this picturesque region, where lush green valleys meet towering
+          mountains. Whether you crave thrilling adventures, cultural
+          experiences, or peaceful relaxation, our packages cater to your every
+          desire. Indulge in luxurious accommodations amidst breathtaking
+          scenery, ensuring a perfect blend of comfort and immersion in nature.
+          With seamless transportation and flexible durations, enjoy hassle-free
+          travel tailored to your schedule. From cozy hotel stays with modern
+          amenities to personalized itineraries showcasing the best of Swat
+          Valley, every detail is planned to make your trip unforgettable. Let
+          us handle the logistics while you focus on creating cherished memories
+          in one of Pakistan's most captivating destinations. Your adventure
+          awaits—book your Swat Valley tour today!
         </p>
-        <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200  border-2 border-slate-100 shadow-slate-800 lg:flex-col m-x-auto animate-fadeInFromRight">
+        <img src={aims} alt="" className="h-[400px] w-[800px] rounded-lg" />
+        {/* <ul className="w-full h-auto lg:items-start rounded shadow-xl lg:w-[50%] lg:flex  lg:justify-center lg:p-4 lg:gap-8 transition-all mt-4 duration-200  border-2 border-slate-100 shadow-slate-800 lg:flex-col m-x-auto animate-fadeInFromRight">
           <li className="flex items-center w-full gap-2 p-2 text-lg rounded-lg sm:text-lg md:text-lg lg:text-2xl xl:text-3xl">
             <img
               src={destination}
@@ -44,7 +50,7 @@ const Hero = () => {
             <img src={car} alt="Travel Comfortably" className="w-8 h-8" />
             Travel Comfortably
           </li>
-        </ul>
+        </ul> */}
       </div>
       <div className="flex items-center justify-between w-full gap-4 mt-4 xs:w-fit md:w-fit lg:w-fit button animate-fadeInFromBottom">
         <p className="text-lg text-slate-900 font-Manrope xs:text-sm sm:text-md md:text-md md:font-bold lg:text-xl xl:text-2xl">

@@ -238,7 +238,7 @@ const Services = () => {
                 className="w-10 h-auto duration-200 max-w-24 min-w-12 animate-fadeInFromRight hover:scale-90 transition-scale"
               />
             </a>
-            <Link to={"/contactPage"}>
+            <Link to={"/contact"}>
               <ContactButton />
             </Link>
           </div>
@@ -340,12 +340,12 @@ const Services = () => {
           truly a paradise waiting to be explored. Plan your trip today and
           immerse yourself in the unmatched beauty and charm of Swat Valley!{" "}
           {/* <br /> */}
-          <a
-            href="#SwatArticle"
-            className="font-serif text-sm underline text-slate-800"
+          <Link
+            to={"/about"}
+            className="text-sm underline font-Manrope text-slate-800"
           >
             read more
-          </a>
+          </Link>
         </p>
         <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 xs:px-6 xs:py-3 group ">
           <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-slate-400 group-hover:-mr-4 group-hover:-mt-4">

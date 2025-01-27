@@ -2,6 +2,7 @@ import React from "react";
 
 import FAQ from "./FAQ";
 import { Camera, Mountain, Vegan } from "lucide-react";
+import { Link } from "react-router";
 
 const AboutUs = () => {
   const activities = [
@@ -268,9 +269,12 @@ const AboutUs = () => {
           <p className="mb-6 text-lg text-slate-200">
             Book your tour now and get ready for the adventure of a lifetime!
           </p>
-          <button className="px-8 py-3 font-semibold transition-colors duration-300 bg-white rounded-lg text-slate-800 hover:bg-slate-100">
-            Book Now
-          </button>
+          <Link
+            to={"/contact"}
+            className="px-8 py-3 font-semibold transition-colors duration-300 bg-white rounded-lg text-slate-800 hover:bg-slate-100"
+          >
+            Book Your Tour with us
+          </Link>
         </div>
       </div>
 
