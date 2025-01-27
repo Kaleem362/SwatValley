@@ -1,8 +1,6 @@
 import React from "react";
 import car from "../assets/icons-asset/yellowcar.png";
-// import hotel from "../assets/icons-asset/5starthotel.png";
-// import destination from "../assets/icons-asset/mountainsun.png";
-import aims from "../assets/packagesImages/thumbnail.jpg";
+import thumbnail from "../assets/PackagesImages/thumbnail.jpg";
 import { Link } from "react-router";
 const Hero = () => {
   return (
@@ -33,7 +31,7 @@ const Hero = () => {
           awaits—book your Swat Valley tour today!
         </p>
         <img
-          src={aims}
+          src={thumbnail}
           alt=""
           className="h-auto  xs:w-full sm:w-full md:w-full lg:w-[700px] rounded-lg sm:h-auto xs:h-auto "
         />
