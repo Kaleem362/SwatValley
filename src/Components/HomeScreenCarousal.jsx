@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import hotelsKalam from "../assets/Valley images/hotelsKalam.jpg";
 import chairlifts from "../assets/Valley images/Malamjabbachairlifts.jpg";
 import kalamhills from "../assets/Valley images/snowy.jpg";
-import PCfrontimage from "../assets/Valley images/PC hotel malamjabba.jpg";
+import PCfrontimage from "../assets/Valley images/PC front image.jpg";
 import forestroad from "../assets/Valley images/roadbetweenforests.jpg";
 import kalammountains from "../assets/Valley images/beautifulhills.jpg";
 import kandollake from "../assets/Valley images/kandollake.jpg";
