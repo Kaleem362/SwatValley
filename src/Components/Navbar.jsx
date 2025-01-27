@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AiFillCaretDown } from "react-icons/ai";
 import { TiThMenu } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
 import { Link } from "react-router";
