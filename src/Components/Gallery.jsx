@@ -10,11 +10,11 @@ import couplethree from "../assets/PackagesImages/honeymoonthree.jpg";
 import couplefour from "../assets/PackagesImages/honeymoonfour.jpg";
 import couplefive from "../assets/PackagesImages/honeymoonfive.jpg";
 import couplesix from "../assets/PackagesImages/honeymoonsix.jpg";
-import coupleseven from "../assets/PackagesImages/coupleone.jpg";
-import coupleeight from "../assets/PackagesImages/coupletwo.jpg";
-import couplenine from "../assets/PackagesImages/couplethree.jpg";
-import coupleten from "../assets/PackagesImages/couplefour.jpg";
-import coupleEleven from "../assets/PackagesImages/couplefive.jpg";
+import coupleseven from "../assets/PackagesImages/CoupleOne.jpg";
+import coupleeight from "../assets/PackagesImages/Coupletwo.jpg";
+import couplenine from "../assets/PackagesImages/Couplethree.jpg";
+import coupleten from "../assets/PackagesImages/CoupleFour.jpg";
+import coupleEleven from "../assets/PackagesImages/Couplefive.jpg";
 
 import AutoScrollGallery from "./ScrollGallery";
 
