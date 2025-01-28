@@ -21,9 +21,9 @@ import AutoScrollGallery from "./ScrollGallery";
 const Gallery = () => {
   return (
     <>
-      <div className="py-6 bg-white dark:bg-gray-800 sm:py-8 lg:py-12 font-Manrope">
+      <div className="p-6 bg-white dark:bg-gray-800 sm:py-8 lg:py-12 font-Manrope">
         <div className="h-auto px-4 mx-auto max-w-screen-2xl md:px-8">
-          <div className="flex items-center justify-between gap-8 mb-4 sm:mb-8 md:mb-12">
+          <div className="flex items-center justify-between gap-8 mb-4 sm:mb-8 md:mb-12 ">
             <div className="flex flex-col items-start gap-4">
               <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
                 Photo's Gallery

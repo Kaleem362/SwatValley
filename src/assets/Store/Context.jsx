@@ -8,7 +8,7 @@ import {
 export const store = createContext();
 
 // Importing image assets
-import shanglaDayTour from "./../PackagesImages/shanglaDayTour.jpg";
+import shanglaDayTour from "./../PackagesImages/shangladaytour.jpg";
 import mahodandboat from "./../PackagesImages/mahodandboat.jpg";
 import murghuzardaytour from "./../PackagesImages/murghuzardaytour.jpg";
 import malamjabbadaytour from "./../PackagesImages/malamjabbadaytour.jpg";
@@ -24,7 +24,6 @@ import snowysunny from "./../PackagesImages/snowysunny.jpg";
 import snowsunnytwo from "./../PackagesImages/snowsunnytwo.jpg";
 import treesinsnow from "./../PackagesImages/treesinsnow.jpg";
 
-// Swat Scenes Array
 // Swat Scenes Array
 const swatScenes = [
   { name: "Shangla Top", image: shanglaDayTour },
