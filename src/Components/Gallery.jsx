@@ -5,7 +5,7 @@ import swatroad from "../assets/PackagesImages/swatroad.jpg";
 import mesmerizingBeauty from "../assets/PackagesImages/greenerymountains.jpg";
 import travel from "../assets/Valley images/travel.jpg";
 import coupleone from "../assets/PackagesImages/honeymoonprofile.jpg";
-import coupletwo from "../assets/PackagesImages/HoneyMoonProfiletwo.jpg";
+import coupletwo from "../assets/PackagesImages/honeymoonprofiletwo.jpg";
 import couplethree from "../assets/PackagesImages/honeymoonthree.jpg";
 import couplefour from "../assets/PackagesImages/honeymoonfour.jpg";
 import couplefive from "../assets/PackagesImages/honeymoonfive.jpg";
