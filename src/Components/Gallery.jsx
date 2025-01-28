@@ -4,8 +4,8 @@ import gateway from "../assets/PackagesImages/gateway.jpg";
 import swatroad from "../assets/PackagesImages/swatroad.jpg";
 import mesmerizingBeauty from "../assets/PackagesImages/greenerymountains.jpg";
 import travel from "../assets/Valley images/travel.jpg";
-import coupleone from "../assets/PackagesImages/honeymoonprofile.jpg";
-import coupletwo from "../assets/PackagesImages/honeymoonprofiletwo.jpg";
+import honeymoonprofile from "../assets/PackagesImages/honeymoonprofile.jpg";
+import honeymoonprofiletwo from "../assets/PackagesImages/honeymoonprofiletwo.jpg";
 import couplethree from "../assets/PackagesImages/honeymoonthree.jpg";
 import couplefour from "../assets/PackagesImages/honeymoonfour.jpg";
 import couplefive from "../assets/PackagesImages/honeymoonfive.jpg";
@@ -166,14 +166,14 @@ const Gallery = () => {
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={coupleone}
+                src={honeymoonprofile}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={coupletwo}
+                src={honeymoonprofiletwo}
                 alt=""
               />
             </div>
