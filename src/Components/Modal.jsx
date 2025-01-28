@@ -41,9 +41,9 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
       inclusions: inclusions ? inclusions.join(", ") : "No Inclusions",
     };
 
-    const serviceId = "service_7ofnbp9";
-    const templateId = "template_kwn2dnv";
-    const userId = "TN_SsrQLJSJwg7m9V";
+    const serviceId = "service_2a2am5r";
+    const templateId = "template_a6kc84r";
+    const userId = "Pt_mzuyRqieukIXdt";
 
     emailjs
       .send(serviceId, templateId, templateParams, userId)

@@ -113,7 +113,7 @@ const AutoScrollGallery = () => {
       {/* First auto-scrolling gallery */}
       <div
         ref={scrollRef1}
-        className={`block w-full overflow-x-auto h-96 scrollbar-hide cursor-grab ${
+        className={`block w-full overflow-x-auto h-fit scrollbar-hide cursor-grab ${
           isDragging1 ? "cursor-grabbing" : ""
         }`}
         style={{
@@ -127,7 +127,7 @@ const AutoScrollGallery = () => {
         onMouseLeave={handleMouseUp1}
         onMouseMove={handleMouseMove1}
       >
-        <div className="inline-flex py-4 space-x-4">
+        <div className="inline-flex py-4 space-x-4 xs:py-1">
           {swatScenes.slice(0, 8).map((item, index) => (
             <div
               key={index}
@@ -140,7 +140,7 @@ const AutoScrollGallery = () => {
               <img
                 src={item.image}
                 alt={`Couple ${index}`}
-                className="object-cover w-[300px] h-[300px] rounded-lg hover:shadow-xl shadow-2xl shadow-slate-800"
+                className="object-cover xs:w-[200px] xs:h-[200px] w-[300px] h-[300px] rounded-lg hover:shadow-xl shadow-2xl shadow-slate-800"
                 draggable="false"
               />
             </div>
@@ -172,13 +172,13 @@ const AutoScrollGallery = () => {
               className="flex-none"
               onDragStart={(e) => e.preventDefault()}
             >
-              <h1 className="w-full text-lg font-bold text-center text-white rounded-lg bg-slate-800 font-Manrope">
+              <h1 className="w-full text-lg font-bold text-center text-white rounded-lg  inset-1 bottom-4 bg-slate-800 font-Manrope">
                 {item.name}
               </h1>
               <img
                 src={item.image}
                 alt={`Scene ${index + 8}`}
-                className="object-cover w-[300px] h-[300px] rounded-lg hover:shadow-xl shadow-2xl shadow-slate-800"
+                className="object-cover xs:w-[200px] xs:h-[200px] w-[300px] h-[300px] rounded-lg hover:shadow-xl shadow-2xl shadow-slate-800"
                 draggable="false"
               />
             </div>

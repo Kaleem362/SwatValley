@@ -15,10 +15,13 @@ import couple8 from "../assets/PackagesImages/c2.jpg";
 import couple9 from "../assets/PackagesImages/c3.jpg";
 import couple10 from "../assets/PackagesImages/c6.jpg";
 import coupleeleven from "../assets/PackagesImages/c5.jpg";
+import familytour from "../assets/PackagesImages/familyPhotowithBGremove.png";
+// import familiyphotoone from "../assets/PackagesImages/familiyphotoone.png";
 
 import AutoScrollGallery from "./ScrollGallery";
 
 const Gallery = () => {
+  // const familytourImages = [familiyphotoone];
   return (
     <>
       <div className="p-6 bg-white dark:bg-gray-800 sm:py-8 lg:py-12 font-Manrope">
@@ -228,6 +231,14 @@ const Gallery = () => {
         Swat Valley Beautiful Sceneries
       </h1>
       <AutoScrollGallery />
+      <div className="familyTours">
+        <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
+          Family Tours
+        </h1>
+        <marquee>
+          {/* <img src={familytour} alt="familyTour" className="w-48 h-48" /> */}
+        </marquee>
+      </div>
     </>
   );
 };

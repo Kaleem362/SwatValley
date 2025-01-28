@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import Loader from "../Components/Loader";
 
 const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
   if (!isOpen || !packageDetails) return null;
@@ -7,6 +8,7 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
   // State for user inputs
   const [userName, setUserName] = useState("");
   const [userPhone, setUserPhone] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // State for error messages
   const [errors, setErrors] = useState({
@@ -31,7 +33,13 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
 
     setErrors(formErrors);
 
-    if (!formIsValid) return;
+    // If validation fails, don't proceed but set loading to false
+    if (!formIsValid) {
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true); // Set loading before sending the email
 
     // Define template parameters for Email.js
     const templateParams = {
@@ -47,21 +55,20 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
     };
 
     // Replace these with your Email.js credentials
-    const serviceId = "service_lo35keo";
-    const templateId = "template_kwn2dnv";
-    const userId = "TN_SsrQLJSJwg7m9V";
+    const serviceId = "service_casw1hg";
+    const templateId = "template_tdnpfww";
+    const userId = "Pt_mzuyRqieukIXdt";
 
     emailjs.send(serviceId, templateId, templateParams, userId).then(
       (response) => {
         console.log("Email successfully sent!", response.status, response.text);
-        alert(
-          `Thank you, ${userName}! Your booking request has been sent successfully. We will contact you soon at ${userPhone}.`
-        );
+        setLoading(false); // Stop loading
         onClose(); // Close modal on success
       },
       (error) => {
         console.error("Failed to send email:", error);
         alert("Failed to send booking request. Please try again.");
+        setLoading(false); // Stop loading on error
       }
     );
   };
@@ -123,7 +130,7 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
             </div>
           )}
         </div>
-
+        {loading && <Loader />}
         {/* Pricing Section */}
         <div className="mt-4">
           <h3 className="text-lg font-bold text-slate-800">Tour Price:</h3>
@@ -149,6 +156,8 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
           </ul>
         </div>
 
+        {/* Loader */}
+
         {/* Buttons */}
         <div className="flex items-center justify-start gap-6 mt-6">
           <button
@@ -160,8 +169,9 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
           <button
             onClick={sendEmail}
             className="px-4 py-2 text-white rounded bg-slate-800 hover:bg-green-500"
+            disabled={loading} // Disable button while loading
           >
-            Book Now (Send Email)
+            {loading ? "Booking..." : "Book Now (Send Email)"}
           </button>
         </div>
       </div>

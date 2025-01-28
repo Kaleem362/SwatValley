@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import Loader from "./Loader";
 
 const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
   const [selectedPrice, setSelectedPrice] = useState("");
   const [userName, setUserName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({
     userName: "",
     phoneNumber: "",
@@ -53,9 +55,10 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
 
   const sendEmail = () => {
     if (!validateForm()) {
+      setLoading(false);
       return;
     }
-
+    setLoading(true);
     const emailData = {
       user_name: userName,
       user_phone: phoneNumber,
@@ -69,14 +72,15 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
 
     emailjs
       .send(
-        "service_lo35keo", // Your service ID
-        "template_kwn2dnv", // Your template ID
+        "service_casw1hg", // Your service ID
+        "template_tdnpfww", // Your template ID
         emailData,
-        "TN_SsrQLJSJwg7m9V" // Your public key
+        "Pt_mzuyRqieukIXdt" // Your public key
       )
       .then(
         (result) => {
-          alert("Email sent successfully!");
+          // alert("Email sent successfully!");
+          setLoading(false);
           console.log(result.text);
           setIsModalOpen(false);
           setPhoneNumber("");
@@ -87,6 +91,7 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
           console.log(error);
           alert("Failed to send email. Please try WhatsApp.");
           handleWhatsApp();
+          setLoading(false);
         }
       );
   };
@@ -161,7 +166,7 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
                 </p>
               )}
             </div>
-
+            {loading ? <Loader /> : ""}
             <div>
               <label className="block text-lg font-semibold text-slate-700">
                 Phone Number

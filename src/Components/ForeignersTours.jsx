@@ -107,6 +107,19 @@ const ForeignerPackages = () => {
                 >
                   {callToAction}
                 </button>
+
+                <a
+                  href="https://wa.me/923489857193"
+                  className="px-4 py-3 mx-4 font-semibold text-white transition-colors duration-300 bg-green-500 rounded-full hover:bg-green-800"
+                >
+                  Whatsapp us
+                </a>
+                <div className="my-4 text">
+                  <marquee>
+                    "For any inquiries or assistance, feel free to contact us on
+                    WhatsApp. We're here to help!"
+                  </marquee>
+                </div>
               </div>
             )}
           </div>
