@@ -4,8 +4,8 @@ import gateway from "../assets/PackagesImages/gateway.jpg";
 import swatroad from "../assets/PackagesImages/swatroad.jpg";
 import mesmerizingBeauty from "../assets/PackagesImages/greenerymountains.jpg";
 import travel from "../assets/Valley images/travel.jpg";
-import honeymoonprofile from "../assets/PackagesImages/honeymoonprofile.jpg";
-import honeymoonprofiletwo from "../assets/PackagesImages/honeymoonprofiletwo.jpg";
+import coupleone from "../assets/PackagesImages/honeymoonprofile.jpg";
+import coupletwo from "../assets/PackagesImages/honeymoonprofiletwo.jpg";
 import couplethree from "../assets/PackagesImages/honeymoonthree.jpg";
 import couplefour from "../assets/PackagesImages/honeymoonfour.jpg";
 import couplefive from "../assets/PackagesImages/honeymoonfive.jpg";
@@ -15,42 +15,10 @@ import coupleeight from "../assets/PackagesImages/coupletwo.jpg";
 import couplenine from "../assets/PackagesImages/couplethree.jpg";
 import coupleten from "../assets/PackagesImages/couplefour.jpg";
 import coupleEleven from "../assets/PackagesImages/couplefive.jpg";
-import shanglaDayTour from "../assets/PackagesImages/shanglaDayTour.jpg";
-import mahodandboat from "../assets/PackagesImages/mahodandboat.jpg";
-import murghuzardaytour from "../assets/PackagesImages/murghuzardaytour.jpg";
-import malamjabbadaytour from "../assets/PackagesImages/malamjabbadaytour.jpg";
-import snowroad from "../assets/PackagesImages/snowroad.jpg";
-import swattour from "../assets/PackagesImages/swattour.jpg";
-import sangartop from "../assets/PackagesImages/sangartop.jpg";
-import SwatValley2 from "../assets/PackagesImages/SwatValley2.jpg";
-import ushuforestroad from "../assets/PackagesImages/ushuforestroad.jpg";
-import mahodandcamping from "../assets/PackagesImages/mahodandcamping.jpg";
-import chukailmeadhows from "../assets/PackagesImages/chukailmeadhows.jpg";
-import ushusnowyroad from "../assets/PackagesImages/ushusnowyroad.jpg";
-import snowysunny from "../assets/PackagesImages/snowysunny.jpg";
-import snowsunnytwo from "../assets/PackagesImages/snowsunnytwo.jpg";
-import treesinsnow from "../assets/PackagesImages/treesinsnow.jpg";
 
 import AutoScrollGallery from "./ScrollGallery";
 
 const Gallery = () => {
-  const swatScenes = [
-    shanglaDayTour,
-    mahodandboat,
-    murghuzardaytour,
-    malamjabbadaytour,
-    snowroad,
-    swattour,
-    sangartop,
-    ushuforestroad,
-    SwatValley2,
-    snowysunny,
-    mahodandcamping,
-    chukailmeadhows,
-    ushusnowyroad,
-    snowsunnytwo,
-    treesinsnow,
-  ];
   return (
     <>
       <div className="py-6 bg-white dark:bg-gray-800 sm:py-8 lg:py-12 font-Manrope">
@@ -166,14 +134,14 @@ const Gallery = () => {
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={honeymoonprofile}
+                src={coupleone}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={honeymoonprofiletwo}
+                src={coupletwo}
                 alt=""
               />
             </div>
@@ -259,7 +227,7 @@ const Gallery = () => {
       <h1 className="w-full mt-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Swat Valley Beautiful Sceneries
       </h1>
-      <AutoScrollGallery swatScenes={swatScenes} />
+      <AutoScrollGallery />
     </>
   );
 };

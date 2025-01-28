@@ -7,6 +7,7 @@ const Contact = () => {
   const [selectedCar, setSelectedCar] = useState("");
   const [message, setMessage] = useState("");
   const [selectedServices, setSelectedServices] = useState([]);
+  const [formResponse, setFormResponse] = useState(false);
   const carOptions = [
     "Prado Jeep",
     "Corolla Car",
@@ -23,65 +24,6 @@ const Contact = () => {
     "Events planning",
     "Tours packages",
   ];
-  // const tourPackageOptions = [
-  //   { id: 1, name: "Luxury Honeymoon/Couple Tour Package" },
-  //   { id: 2, name: "Honeymoon Couple / Family Tour Package" },
-  //   { id: 3, name: "Private Luxury Honeymoon/Couple Tour Package" },
-  //   { id: 4, name: "Deluxe Private Luxury Honeymoon/Couple Tour Package" },
-  //   { id: 5, name: "Private Luxury Honeymoon/Couple Tour Package" },
-  //   { id: 6, name: "Deluxe Private Luxury Honeymoon/Couple Tour Package" },
-  //   { id: 7, name: "Luxury 3-Day Swat Tour Package" },
-  //   { id: 8, name: "Luxury 2-Day Swat Tour Package" },
-  // ];
-
-  // const tourDurationOptions = [
-  //   "4 Days 3 Nights",
-  //   "3 Days 2 Nights",
-  //   "7 Days 4 Nights (Karachi)",
-  //   "4 days 3 Nights (Karachi)",
-  //   "2 Days 1 Night",
-  // ];
-
-  // const tourDestinationOptions = [
-  //   "Kalam",
-  //   "Malam Jabba",
-  //   "Mingora",
-  //   "Ushu Forest",
-  //   "Mahodand Lake",
-  //   "White Palace",
-  // ];
-
-  // const packageTypeOptions = ["Executive Package", "Deluxe Accommodations"];
-
-  // const packagePriceOptions = [
-  //   { id: 1, prices: { for1Couple: "₨ 80,000", for2Couples: "₨ 130,000" } },
-  //   { id: 2, prices: { for1Couple: "₨ 45,000", for2Couples: "₨ 75,000" } },
-  //   { id: 3, prices: { for1Couple: "₨ 95,000", for2Couples: "₨ 150,000" } },
-  //   { id: 4, prices: { for1Couple: "₨ 60,000", for2Couples: "₨ 100,000" } },
-  //   { id: 5, prices: { for1Couple: "₨ 65,000", for2Couples: "₨ 98,000" } },
-  //   { id: 6, prices: { for1Couple: "₨ 38,000", for2Couples: "₨ 60,000" } },
-  //   { id: 7, prices: "₨ 35,000" },
-  //   { id: 8, prices: "₨ 20,000" },
-  // ];
-
-  // const coupleOptions = ["Single Couple", "Double Couple"];
-
-  // const accommodationTypeOptions = [
-  //   "Executive Hotels",
-  //   "Deluxe Accommodations",
-  // ];
-
-  // const hotelOptions = [
-  //   "Malam Jabba Palace",
-  //   "Burj Al Swat",
-  //   "Swat Hilton",
-  //   "Rock City Resort",
-  //   "Honeymoon Hotel",
-  //   "Hotel Liberty Bahrain",
-  //   "Swat Palace",
-  //   "Swastu Resorts",
-  //   "Holiday Inn Kalam",
-  // ];
 
   const handleFormSwitch = (type) => setFormType(type);
   const handleSubmit = (e) => {
@@ -307,16 +249,36 @@ const Contact = () => {
         )}
 
         {formType === "serviceForm" && (
-          <form onSubmit={handleSubmit}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              // Create WhatsApp message with form data
+              const name = e.target.elements.name.value;
+              const phone = e.target.elements.phone.value;
+              const car = selectedCar;
+              const services = selectedServices.join(", ");
+
+              // Format the message for WhatsApp
+              const message = `New Service Request%0A
+                                Name: ${name}%0A
+                                Phone: ${phone}%0A
+                                Selected Car: ${car}%0A
+                                Requested Services:%0A${services}`;
+
+              // WhatsApp API URL
+              const whatsappURL = `https://wa.me/923489857193?text=${message}`;
+              window.open(whatsappURL, "_blank");
+            }}
+          >
             <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
               Rent a Car or Service
             </h2>
             <div className="mb-4">
-              <input type="hidden" name="formType" value="serviceForm" />
               <label className="block mb-2 font-semibold text-slate-700">
                 Your Name
               </label>
               <input
+                name="name"
                 type="text"
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 placeholder="Enter Your Name"
@@ -328,6 +290,7 @@ const Contact = () => {
                 Phone Number
               </label>
               <input
+                name="phone"
                 type="tel"
                 className="w-full px-4 py-2 border-none rounded-full outline-none"
                 placeholder="Enter Phone Number"
@@ -342,6 +305,7 @@ const Contact = () => {
                 className="w-full px-8 py-2 border-none rounded-full outline-none"
                 value={selectedCar}
                 onChange={(e) => setSelectedCar(e.target.value)}
+                required
               >
                 <option value="">Select a car</option>
                 {carOptions.map((car) => (
@@ -376,14 +340,29 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-            <p className="mb-4 text-slate-600">
-              We have received your information. Kindly wait for our response.
-              If we are available, we will let you know. If we are busy with
-              other clients, we sincerely apologize for the inconvenience.
-            </p>
-            <button className="px-6 py-2 text-white rounded-lg bg-slate-800">
-              Send
-            </button>
+
+            <div className="flex items-center gap-4">
+              <button
+                type="submit"
+                className="flex items-center gap-2 px-6 py-2 text-lg font-bold text-white transition-all duration-300 bg-green-600 border-2 border-green-600 rounded-lg "
+              >
+                Send WhatsApp <AiOutlineWhatsApp size={28} />
+              </button>
+
+              <a
+                href="tel:+923489857193"
+                className="flex items-center gap-2 px-6 py-2 text-lg font-bold text-white transition-all duration-300 border-2 rounded-lg bg-slate-600 border-slate-600 hover:text-slate-800 "
+              >
+                Call Now <IoCall size={28} />
+              </a>
+            </div>
+            <br />
+            <marquee
+              href="tel:+923489857193"
+              className="text-md text-slate-800 "
+            >
+              Call us for More information and Queries at +923489857193
+            </marquee>
           </form>
         )}
       </div>

@@ -1,6 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
+import { store } from "../assets/Store/Context";
 
-const AutoScrollGallery = ({ swatScenes }) => {
+const AutoScrollGallery = () => {
+  const { swatScenes } = useContext(store);
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
   const [isDragging1, setIsDragging1] = useState(false);
@@ -107,7 +109,7 @@ const AutoScrollGallery = ({ swatScenes }) => {
   };
 
   return (
-    <div className="w-full scenes-gallery">
+    <div className="w-full gap-0 scenes-gallery">
       {/* First auto-scrolling gallery */}
       <div
         ref={scrollRef1}
@@ -126,14 +128,17 @@ const AutoScrollGallery = ({ swatScenes }) => {
         onMouseMove={handleMouseMove1}
       >
         <div className="inline-flex py-4 space-x-4">
-          {swatScenes.slice(0, 8).map((image, index) => (
+          {swatScenes.slice(0, 8).map((item, index) => (
             <div
               key={index}
               className="flex-none"
               onDragStart={(e) => e.preventDefault()}
             >
+              <h1 className="w-full text-lg font-bold text-center text-white rounded-lg bg-slate-800 font-Manrope">
+                {item.name}
+              </h1>
               <img
-                src={image}
+                src={item.image}
                 alt={`Couple ${index}`}
                 className="object-cover w-[300px] h-[300px] rounded-lg hover:shadow-xl shadow-2xl shadow-slate-800"
                 draggable="false"
@@ -160,15 +165,18 @@ const AutoScrollGallery = ({ swatScenes }) => {
         onMouseLeave={handleMouseUp2}
         onMouseMove={handleMouseMove2}
       >
-        <div className="inline-flex py-4 space-x-4">
-          {swatScenes.slice(8, 16).map((image, index) => (
+        <div className="inline-flex space-x-4">
+          {swatScenes.slice(8, 16).map((item, index) => (
             <div
               key={index}
               className="flex-none"
               onDragStart={(e) => e.preventDefault()}
             >
+              <h1 className="w-full text-lg font-bold text-center text-white rounded-lg bg-slate-800 font-Manrope">
+                {item.name}
+              </h1>
               <img
-                src={image}
+                src={item.image}
                 alt={`Scene ${index + 8}`}
                 className="object-cover w-[300px] h-[300px] rounded-lg hover:shadow-xl shadow-2xl shadow-slate-800"
                 draggable="false"

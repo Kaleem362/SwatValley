@@ -35,7 +35,7 @@ const Navbar = () => {
             selectedTab === "Home"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
-          } hover:text-slate-100 hover:bg-green-500`}
+          } hover:text-white hover:bg-green-600`}
           to={"/"}
           onClick={() => handleTabClick("Home")}
         >
@@ -46,7 +46,7 @@ const Navbar = () => {
             selectedTab === "Packages"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
-          } hover:text-slate-100 hover:bg-green-500`}
+          } hover:text-white hover:bg-green-600`}
           onClick={() => handleTabClick("Packages")}
           to={"/tourpackages"}
         >
@@ -57,7 +57,7 @@ const Navbar = () => {
             selectedTab === "services"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
-          } hover:text-slate-100 hover:bg-green-500`}
+          } hover:text-white hover:bg-green-600`}
           to={"/ourservices"}
           onClick={() => handleTabClick("services")}
         >
@@ -68,7 +68,7 @@ const Navbar = () => {
             selectedTab === "Events"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
-          } hover:text-slate-100 hover:bg-green-500`}
+          } hover:text-white hover:bg-green-600`}
           onClick={() => handleTabClick("Events")}
           to={"/eventsactivites"}
         >
@@ -80,7 +80,7 @@ const Navbar = () => {
             selectedTab === "Contact"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
-          } hover:text-slate-100 hover:bg-green-500`}
+          } hover:text-white hover:bg-green-600`}
           onClick={() => handleTabClick("Contact")}
           to={"/contact"}
         >
@@ -91,7 +91,7 @@ const Navbar = () => {
             selectedTab === "About us"
               ? "bg-green-900 text-white"
               : "text-slate-900 lg:text-black"
-          } hover:text-slate-100 hover:bg-green-500`}
+          } hover:text-white hover:bg-green-600`}
           onClick={() => handleTabClick("About us")}
           to={"/about"}
         >
