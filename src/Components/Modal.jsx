@@ -6,6 +6,7 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
   const [userName, setUserName] = useState("");
   const [userPhone, setUserPhone] = useState("");
   const [errors, setErrors] = useState({ userName: false, userPhone: false });
+  const [loading, setLoading] = useState(false);
 
   if (!isOpen || !packageDetails) return null;
 
@@ -28,7 +29,7 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
     }
 
     if (hasError) return; // Prevent form submission if there's any error
-
+    setLoading(true);
     // Send email using Email.js
     const templateParams = {
       user_name: userName,
@@ -51,10 +52,12 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
         console.log("Email successfully sent!", response.status, response.text);
         alert("Booking request has been sent successfully.");
         onClose();
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Failed to send email:", error);
         alert("Failed to send booking request. Please try again.");
+        setLoading(false);
       });
   };
 
@@ -85,6 +88,7 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
                       checked={selectedPrice?.category === category}
                       onChange={() => handlePriceSelect(category, price)}
                     />
+                    {loading ? <Loader /> : ""}
                     <label
                       htmlFor={category}
                       className="flex-grow cursor-pointer"

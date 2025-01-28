@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { store } from "../assets/Store/Context";
 import Modal from "./Modal";
+import Loader from "../Components/Loader";
 
 const ForeignerPackages = () => {
   const { foreignerPackages, modalState, setModalState } = useContext(store);
