@@ -4,17 +4,17 @@ import gateway from "../assets/PackagesImages/gateway.jpg";
 import swatroad from "../assets/PackagesImages/swatroad.jpg";
 import mesmerizingBeauty from "../assets/PackagesImages/greenerymountains.jpg";
 import travel from "../assets/Valley images/travel.jpg";
-import coupleone from "../assets/PackagesImages/honeymoonprofile.jpg";
-import coupletwo from "../assets/PackagesImages/honeymoonprofiletwo.jpg";
-import couplethree from "../assets/PackagesImages/honeymoonthree.jpg";
-import couplefour from "../assets/PackagesImages/honeymoonfour.jpg";
-import couplefive from "../assets/PackagesImages/honeymoonfive.jpg";
-import couplesix from "../assets/PackagesImages/honeymoonsix.jpg";
-import coupleseven from "../assets/PackagesImages/CoupleOne.jpg";
-import coupleeight from "../assets/PackagesImages/Coupletwo.jpg";
-import couplenine from "../assets/PackagesImages/Couplethree.jpg";
-import coupleten from "../assets/PackagesImages/CoupleFour.jpg";
-import coupleEleven from "../assets/PackagesImages/Couplefive.jpg";
+import Couple1 from "../assets/PackagesImages/honeymoonprofile.jpg";
+import couple2 from "../assets/PackagesImages/honeymoonprofiletwo.jpg";
+import couple3 from "../assets/PackagesImages/honeymoonthree.jpg";
+import couple4 from "../assets/PackagesImages/honeymoonfour.jpg";
+import couple5 from "../assets/PackagesImages/honeymoonfive.jpg";
+import couple6 from "../assets/PackagesImages/honeymoonsix.jpg";
+import couple7 from "../assets/PackagesImages/CoupleOne.jpg";
+import couple8 from "../assets/PackagesImages/Coupletwo.jpg";
+import couple9 from "../assets/PackagesImages/Couplethree.jpg";
+import couple10 from "../assets/PackagesImages/CoupleFour.jpg";
+import coupleeleven from "../assets/PackagesImages/Couplefive.jpg";
 
 import AutoScrollGallery from "./ScrollGallery";
 
@@ -134,21 +134,21 @@ const Gallery = () => {
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={coupleone}
+                src={Couple1}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={coupletwo}
+                src={couple2}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={couplethree}
+                src={couple3}
                 alt=""
               />
             </div>
@@ -157,21 +157,21 @@ const Gallery = () => {
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={couplefour}
+                src={couple4}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={couplefive}
+                src={couple5}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={couplesix}
+                src={couple6}
                 alt=""
               />
             </div>
@@ -180,21 +180,21 @@ const Gallery = () => {
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={couplesix}
+                src={couple7}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={coupleseven}
+                src={couple8}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={coupleeight}
+                src={couple9}
                 alt=""
               />
             </div>
@@ -203,21 +203,21 @@ const Gallery = () => {
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={couplenine}
+                src={couple10}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={coupleten}
+                src={coupleeleven}
                 alt=""
               />
             </div>
             <div className="group">
               <img
                 class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
-                src={coupleEleven}
+                src={coupleeleven}
                 alt=""
               />
             </div>
