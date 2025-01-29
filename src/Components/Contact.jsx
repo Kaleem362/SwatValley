@@ -1,13 +1,38 @@
 import React, { useState } from "react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { IoCall } from "react-icons/io5";
+import Loader from "../Components/Loader";
+import emailjs from "emailjs-com";
+
 const Contact = () => {
-  const [formType, setFormType] = useState("customizeTour"); // Default form type
+  const [formType, setFormType] = useState("customizeTour");
   const [kids, setKids] = useState(false);
   const [selectedCar, setSelectedCar] = useState("");
-  const [message, setMessage] = useState("");
   const [selectedServices, setSelectedServices] = useState([]);
-  const [formResponse, setFormResponse] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  // Form state
+  const [formData, setFormData] = useState({
+    userName: "",
+    phoneNumber: "",
+    destination: "",
+    totalMembers: "",
+    males: "",
+    females: "",
+    message: "",
+  });
+
+  // Error state
+  const [errors, setErrors] = useState({
+    userName: "",
+    phoneNumber: "",
+    destination: "",
+    totalMembers: "",
+    males: "",
+    females: "",
+    message: "",
+  });
+
   const carOptions = [
     "Prado Jeep",
     "Corolla Car",
@@ -15,6 +40,7 @@ const Contact = () => {
     "APV",
     "BRV Seven Seater",
   ];
+
   const servicesOptions = [
     "Rent A Car or Taxi service",
     "Hotal accommodation",
@@ -25,176 +51,298 @@ const Contact = () => {
     "Tours packages",
   ];
 
-  const handleFormSwitch = (type) => setFormType(type);
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior (page reload).
+  const validateField = (name, value) => {
+    switch (name) {
+      case "userName":
+        return value.trim() === ""
+          ? "Name is required"
+          : value.length < 2
+          ? "Name must be at least 2 characters"
+          : "";
+      case "phoneNumber":
+        return value.trim() === ""
+          ? "Phone number is required"
+          : !/^\d{10,}$/.test(value)
+          ? "Please enter a valid phone number"
+          : "";
+      case "destination":
+        return value.trim() === "" ? "Destination is required" : "";
+      case "totalMembers":
+        return value.trim() === ""
+          ? "Total members is required"
+          : isNaN(value) || value <= 0
+          ? "Please enter a valid number"
+          : "";
+      case "males":
+        return value.trim() === ""
+          ? "Number of males is required"
+          : isNaN(value) || value < 0
+          ? "Please enter a valid number"
+          : "";
+      case "females":
+        return value.trim() === ""
+          ? "Number of females is required"
+          : isNaN(value) || value < 0
+          ? "Please enter a valid number"
+          : "";
+      case "message":
+        return value.trim() === ""
+          ? "Message is required"
+          : value.length < 10
+          ? "Message must be at least 10 characters"
+          : "";
+      default:
+        return "";
+    }
+  };
 
-    // 1. Collect the submitted form data.
-    const formData = new FormData(e.target);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
 
-    // 2. Convert form data to a plain JavaScript object.
-    const data = Object.fromEntries(formData.entries());
+    // Clear error when user starts typing
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
+  };
 
-    // 3. Print the collected data to verify it works.
-    console.log(data);
+  const validateForm = () => {
+    const newErrors = {};
+    let isValid = true;
 
-    // 4. Send the form data to Email.js.
-    emailjs
-      .send(
-        "YOUR_SERVICE_ID", // Replace with Email.js Service ID
-        "YOUR_TEMPLATE_ID", // Replace with Email.js Template ID
-        data, // Form data collected as an object
-        "YOUR_PUBLIC_KEY" // Replace with Email.js Public Key
-      )
-      .then(
-        (result) => {
-          console.log("Email sent successfully:", result.text);
-          alert("Form submitted successfully!");
-        },
-        (error) => {
-          console.error("Error sending email:", error.text);
-          alert("Failed to submit the form. Please try again.");
-        }
+    Object.keys(formData).forEach((key) => {
+      const error = validateField(key, formData[key]);
+      if (error) {
+        newErrors[key] = error;
+        isValid = false;
+      }
+    });
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const templateParams = {
+        user_name: formData.userName || "No Name Provided ",
+        user_phone: formData.phoneNumber || "No Phone number Provided",
+        package_name:
+          formData.packageName || "No package Name for customized Tours",
+        destinations: formData.destination
+          ? formData.destination
+          : "No Destination Entered",
+        duration: formData.duration || "No duration for customized Tours",
+        price: formData.price || "Price are only for tour packages",
+        accommodation:
+          formData.accommodation ||
+          "No accommodation Specified for customized Tours",
+        transportation:
+          formData.transportation ||
+          "No transportation Specified for customized Tours",
+        total_members: formData.totalMembers || "Not Provided",
+        males: formData.males || 0,
+        females: formData.females || 0,
+        has_kids: kids !== undefined ? (kids ? "Yes" : "No") : "Not Specified",
+        customer_message: formData.message || "No Message Provided",
+      };
+
+      const result = await emailjs.send(
+        "service_mrk3x8a",
+        "template_tdnpfww",
+        templateParams,
+        "Pt_mzuyRqieukIXdt"
       );
+
+      // Reset form
+      setFormData({
+        userName: "",
+        phoneNumber: "",
+        destination: "",
+        totalMembers: "",
+        males: "",
+        females: "",
+        message: "",
+      });
+      setKids(false);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to submit the form. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="container w-full p-6 mx-auto my-10">
-      {/* Header Section */}
+      {/* Header Section remains the same */}
       <h1 className="w-full my-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Contact Us
       </h1>
-      <p className="my-2 text-xl text-start text-slate-600">
-        Get in touch with us for personalized tour packages, booking a tour, or
-        renting a car for your travel needs in Swat and beyond.
-      </p>
-      <p className="my-2 text-xl text-center underline font-Manrope">
-        Select your Desire Form
-      </p>
-      {/* Form Selection Buttons */}
-      <div className="flex justify-center my-2 mb-8 space-x-4 font-Manrope">
-        <button
-          onClick={() => handleFormSwitch("customizeTour")}
-          className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
-            formType === "customizeTour"
-              ? "bg-slate-800 text-white"
-              : "bg-gray-200 text-gray-800"
-          }`}
-        >
-          Customize Budget Tour
-        </button>
 
-        <button
-          onClick={() => handleFormSwitch("serviceForm")}
-          className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 py-2 font-semibold rounded-full text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl ${
-            formType === "serviceForm"
-              ? "bg-slate-800 text-white"
-              : "bg-gray-200 text-gray-800"
-          }`}
-        >
-          Service Form
-        </button>
-      </div>
-      <p className="my-2 text-xs text-center xs:text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl text-slate-800">
-        Book a Tour with us Fill the Form below and we'll Call you.
-        <br />
-        For Urgency Call us on{" "}
-      </p>
-      <div className="flex items-center justify-center w-full p-2 my-2 text-xs text-center buttons xs:text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl">
-        <a
-          href="tel:+923489857193"
-          className="flex items-center justify-center mx-2 text-xs font-semibold text-center underline xs:text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl"
-        >
-          <IoCall className="text-xl xs:text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl" />
-          +923489857193
-        </a>
-        {" / "}
-        <a
-          href="https://wa.me/923489857193"
-          className="flex items-center justify-center mx-2 text-xs font-semibold text-center xs:text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl"
-        >
-          WhatsApp Us
-          <AiOutlineWhatsApp className="mx-1 text-xl text-green-500 xs:text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl" />
-        </a>
+      {/* Form Selection Buttons remain the same */}
+      <div className="flex flex-col items-center justify-center my-2 mb-8 space-x-4 font-Manrope">
+        <div className="w-full my-2 text-center font-Manrope">
+          <small className="text-lg ">Select Your desired Form here</small>
+        </div>
+        <div className="space-x-4 space-y-4 buttons">
+          <button
+            onClick={() => setFormType("customizeTour")}
+            className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
+              formType === "customizeTour"
+                ? "bg-slate-800 text-white"
+                : "bg-gray-200 text-gray-800"
+            }`}
+          >
+            Customize Budget Tour
+          </button>
+          {/* Other buttons remain the same */}
+          <button
+            onClick={() => setFormType("serviceForm")}
+            className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
+              formType === "serviceForm"
+                ? "bg-slate-800 text-white"
+                : "bg-gray-200 text-gray-800"
+            }`}
+          >
+            Service Form
+          </button>
+        </div>
       </div>
 
-      {/* Conditional Forms */}
       <div className="p-6 my-2 rounded-lg shadow-xl bg-slate-400 shadow-slate-700 font-Manrope">
         {formType === "customizeTour" && (
           <form onSubmit={handleSubmit}>
-            <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-              Customize Your Budget Tour
-            </h2>
-            <p className="text-sm text-center xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-slate-800">
-              Tell us About yourself and Your desired Destination and we'll
-              response you Soon
-            </p>
             <div className="mb-4">
-              <input type="hidden" name="formType" value="customizeTour" />
               <label className="block mb-2 font-semibold text-slate-700">
                 Your Name
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-2 border border-none rounded-full outline-none"
+                name="userName"
+                className={`w-full px-4 py-2 border rounded-full outline-none ${
+                  errors.userName ? "border-red-500" : "border-none"
+                }`}
                 placeholder="Enter Name"
-                required
+                value={formData.userName}
+                onChange={handleInputChange}
               />
+              {errors.userName && (
+                <p className="mt-1 text-sm text-red-500">{errors.userName}</p>
+              )}
             </div>
+
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Phone Number
               </label>
               <input
-                required
                 type="text"
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                name="phoneNumber"
+                className={`w-full px-4 py-2 border rounded-full outline-none ${
+                  errors.phoneNumber ? "border-red-500" : "border-none"
+                }`}
                 placeholder="Enter Phone Number..."
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
               />
+              {errors.phoneNumber && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.phoneNumber}
+                </p>
+              )}
             </div>
+
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Destination
               </label>
               <input
-                required
                 type="text"
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                name="destination"
+                className={`w-full px-4 py-2 border rounded-full outline-none ${
+                  errors.destination ? "border-red-500" : "border-none"
+                }`}
                 placeholder="Where you want to travel..."
+                value={formData.destination}
+                onChange={handleInputChange}
               />
+              {errors.destination && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.destination}
+                </p>
+              )}
             </div>
+
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Number of Members
               </label>
               <input
                 type="number"
-                className="w-full px-4 py-2 border rounded-full outline-none"
-                required
+                name="totalMembers"
+                className={`w-full px-4 py-2 border rounded-full outline-none ${
+                  errors.totalMembers ? "border-red-500" : "border-none"
+                }`}
                 placeholder="Amount of Persons..."
+                value={formData.totalMembers}
+                onChange={handleInputChange}
               />
+              {errors.totalMembers && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.totalMembers}
+                </p>
+              )}
             </div>
+
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Number of Males
               </label>
               <input
                 type="number"
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                name="males"
+                className={`w-full px-4 py-2 border rounded-full outline-none ${
+                  errors.males ? "border-red-500" : "border-none"
+                }`}
                 placeholder="No of males..."
-                required
+                value={formData.males}
+                onChange={handleInputChange}
               />
+              {errors.males && (
+                <p className="mt-1 text-sm text-red-500">{errors.males}</p>
+              )}
             </div>
+
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Number of Females
               </label>
               <input
                 type="number"
-                className="w-full px-4 py-2 border-none rounded-full outline-none"
+                name="females"
+                className={`w-full px-4 py-2 border rounded-full outline-none ${
+                  errors.females ? "border-red-500" : "border-none"
+                }`}
                 placeholder="No of Females..."
-                required
+                value={formData.females}
+                onChange={handleInputChange}
               />
+              {errors.females && (
+                <p className="mt-1 text-sm text-red-500">{errors.females}</p>
+              )}
             </div>
 
             <div className="flex gap-2 mb-4">
@@ -203,9 +351,8 @@ const Contact = () => {
               </label>
               <input
                 type="checkbox"
+                checked={kids}
                 onChange={(e) => setKids(e.target.checked)}
-                className="w-5 h-5 mr-2 border-none outline-none"
-                required
               />
               Yes
             </div>
@@ -215,7 +362,7 @@ const Contact = () => {
                 <label className="block mb-2 font-semibold text-slate-700">
                   Number of Kids
                 </label>
-                <select className="w-full px-4 py-2 border border-none rounded-lg outline-none">
+                <select className="w-full px-4 py-2 border-none rounded-lg outline-none">
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                     <option key={num} value={num}>
                       {num}
@@ -224,25 +371,34 @@ const Contact = () => {
                 </select>
               </div>
             )}
+
             <div className="mb-4">
-              <label className="block mb-2 font-semibold text-slate-700 font-Manrope">
+              <label className="block mb-2 font-semibold text-slate-700">
                 Write Your Message
               </label>
               <textarea
-                type="text"
-                onChange={(e) => setMessage(e.target.value)}
-                maxLength={100}
+                name="message"
+                className={`w-[70%] p-2 rounded-lg outline-none ${
+                  errors.message ? "border-red-500" : "border-none"
+                }`}
                 rows={5}
-                className="mr-2 w-[70%] p-2 rounded-lg border-none outline-none"
-                value={message}
                 placeholder="Write a message"
-                required
+                value={formData.message}
+                onChange={handleInputChange}
+                maxLength={100}
               />
+              {errors.message && (
+                <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+              )}
             </div>
-            <p className="my-2 font-semibold font-Manrope">
-              Submit the Form , and We Will get back to you very Soon.
-            </p>
-            <button className="px-6 py-2 text-white rounded-full bg-slate-800">
+
+            {loading && <Loader />}
+
+            <button
+              type="submit"
+              className="px-6 py-2 text-white transition-colors rounded-full bg-slate-800 hover:bg-slate-700"
+              disabled={loading}
+            >
               Submit
             </button>
           </form>
@@ -252,12 +408,16 @@ const Contact = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
+
               // Create WhatsApp message with form data
               const name = e.target.elements.name.value;
               const phone = e.target.elements.phone.value;
               const car = selectedCar;
               const services = selectedServices.join(", ");
-
+              if (!name || !phone || !car || !services) {
+                alert("please fill the input forms first");
+                return;
+              }
               // Format the message for WhatsApp
               const message = `New Service Request%0A
                                 Name: ${name}%0A
@@ -268,6 +428,9 @@ const Contact = () => {
               // WhatsApp API URL
               const whatsappURL = `https://wa.me/923489857193?text=${message}`;
               window.open(whatsappURL, "_blank");
+
+              // Reset form fields
+              e.target.reset();
             }}
           >
             <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
@@ -302,14 +465,12 @@ const Contact = () => {
                 Select a Car
               </label>
               <select
-                className="w-full px-8 py-2 border-none rounded-full outline-none"
+                name="selectedCar"
                 value={selectedCar}
                 onChange={(e) => setSelectedCar(e.target.value)}
-                required
               >
-                <option value="">Select a car</option>
-                {carOptions.map((car) => (
-                  <option key={car} value={car}>
+                {carOptions.map((car, index) => (
+                  <option key={index} value={car}>
                     {car}
                   </option>
                 ))}
@@ -333,7 +494,7 @@ const Contact = () => {
                             : [...prev, value]
                         );
                       }}
-                      className="mr-2"
+                      className="w-5 h-5 mr-2 text-slate-800"
                     />
                     {service}
                   </label>

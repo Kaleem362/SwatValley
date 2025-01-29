@@ -60,14 +60,38 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
     }
     setLoading(true);
     const emailData = {
-      user_name: userName,
-      user_phone: phoneNumber,
-      package_name: tourDetails.packageName,
-      destinations: tourDetails.destination,
-      duration: tourDetails.duration,
+      user_name: userName ? userName : "only for Package Tours",
+      user_phone: phoneNumber ? (
+        phoneNumber
+      ) : (
+        <small>No Phone Number Entered</small>
+      ),
+      package_name: tourDetails.packageName ? (
+        tourDetails.packageName
+      ) : (
+        <small>"Only for package Tours</small>
+      ),
+      destinations: tourDetails.destination ? (
+        tourDetails.destination
+      ) : (
+        <small>No destination entered</small>
+      ),
+      duration: tourDetails.duration ? (
+        tourDetails.duration
+      ) : (
+        <small>No Duration for the customized Tours</small>
+      ),
       price: selectedPrice || tourDetails.price, // Use selectedPrice or the fixed price
-      accommodation: tourDetails.accommodation,
-      transportation: tourDetails.transportation,
+      accommodation: tourDetails.accommodation ? (
+        tourDetails.accommodation
+      ) : (
+        <small>No Accomodation specified</small>
+      ),
+      transportation: tourDetails.transportation ? (
+        tourDetails.transportation
+      ) : (
+        <small>No transportation Specified</small>
+      ),
     };
 
     emailjs

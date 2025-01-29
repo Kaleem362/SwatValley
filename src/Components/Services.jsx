@@ -10,7 +10,6 @@ import { store } from "../assets/Store/Context";
 
 const Services = () => {
   const { toursPackage, services } = useContext(store);
-  console.log(toursPackage);
 
   return (
     // services we offer

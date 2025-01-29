@@ -14,10 +14,12 @@ import EventsActivities from "./Components/EventsActivities";
 import Contact from "./Components/Contact";
 import Gallery from "./Components/Gallery";
 import AboutUs from "./Components/About";
+import WhatsAppButton from "./Components/WhatsappButton";
 
 const App = () => {
   return (
     <div>
+      <WhatsAppButton />
       <Routes>
         <Route path="*" element={<ErrorPage />} />
         <Route
