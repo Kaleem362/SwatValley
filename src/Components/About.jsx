@@ -1,4 +1,9 @@
 import React from "react";
+import owner from "../assets/images/ownersix.jpg";
+import campbackground from "../assets/images/ownerfive.jpg";
+import snowysunny from "../assets/PackagesImages/snowysunny.jpg";
+import malamjabba from "../assets/Valley images/malamjabba mountains.jpg";
+import vehicle from "../assets/PackagesImages/vehicle.jpg";
 
 import FAQ from "./FAQ";
 import { Camera, Mountain, Vegan } from "lucide-react";
@@ -42,16 +47,136 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen py-10 overflow-hidden ">
-      <div className="w-full mb-16">
-        <h1 className="mb-2 text-5xl font-bold text-center md:text-5xl text-slate-800 animate-fade-in">
+    <div className="w-full min-h-screen overflow-hidden font-Manrope ">
+      {" "}
+      <div className="min-h-screen ">
+        {/* Hero Section */}
+        <div className="relative h-[400px] overflow-hidden ">
+          <img
+            src={campbackground}
+            alt="Swat Valley"
+            className="object-cover object-center w-full h-full"
+          />
+          <div className="absolute inset-0  bg-black bg-opacity-50 flex items-center justify-center">
+            <h1 className="text-5xl font-bold text-white text-center animate-fade-in">
+              About The Swat Tours
+            </h1>
+          </div>
+        </div>
+
+        {/* About Company Section */}
+        <div className="container px-6 py-12 mx-auto">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {/* Company Description */}
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-slate-800">Who We Are</h2>
+              <p className="text-lg text-slate-700">
+                At <strong>The Swat Tours</strong>, we are passionate about
+                showcasing the breathtaking beauty of Swat Valley. Known as the
+                "Switzerland of Asia," Swat Valley is a paradise for nature
+                lovers, adventure seekers, and culture enthusiasts. Our mission
+                is to provide unforgettable travel experiences, whether you're
+                planning a honeymoon, a day tour, or an extended stay.
+              </p>
+              <p className="text-lg text-slate-700">
+                With years of experience, we have built a reputation for trust,
+                reliability, and excellence. Our team is dedicated to ensuring
+                that every traveler enjoys a seamless and memorable journey.
+              </p>
+            </div>
+
+            {/* Owner's Image */}
+            <div className="flex flex-col gap-4 items-center justify-center">
+              <div className="relative w-[375px] h-[375px] overflow-hidden rounded-full shadow-lg">
+                <img
+                  src={owner}
+                  alt="Owner of The Swat Tours"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <h1 className="text-slate-800 xs:text-sm sm:text-md md:text-lg lg:text-2xl xl:text-3xl font-extrabold uppercase">
+                Fawad Khan
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        {/* Services Section */}
+        <div className="p-6 !w-full">
+          <div className="container w-full">
+            <h1 className="my-4 text-5xl font-bold text-center md:text-5xl text-slate-800 animate-fade-in">
+              Your Journey Into Paradise
+            </h1>
+            <div className=" p-6 rounded-2xl w-full">
+              <p className="text-slate-700 leading-relaxed text-lg w-full">
+                Welcome to The Swat Tours, where your dream Pakistani adventure
+                comes to life. From the moment you envision your journey, our
+                dedicated team crafts a seamless experience tailored just for
+                you. Whether you're newlyweds seeking a romantic escapade in our
+                enchanting honeymoon packages, international travelers yearning
+                to explore our cultural treasures, or adventurers ready for
+                immersive day tours, we transform your aspirations into
+                unforgettable memories. Our premium fleet of vehicles ensures
+                your travels through the valley are as magnificent as the
+                destinations themselves, while our carefully curated network of
+                luxury accommodations provides peaceful havens amidst the
+                mountains. With exclusive pick-and-drop services from major
+                cities like Islamabad, Peshawar, and beyond, your paradise
+                getaway begins the moment you reach out to us. Every detail,
+                from the warm welcome at your arrival to the careful selection
+                of scenic routes and comfortable stays, is thoughtfully
+                orchestrated to create not just a tour, but a journey that
+                touches your soul. Let us be your gateway to experiencing the
+                majestic beauty, rich culture, and warm hospitality of Swat
+                Valley – where every path leads to wonder, and every moment
+                becomes a cherished memory.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Gallery Section */}
+        <div className="container px-6 py-12 mx-auto">
+          <h1 className="my-2 text-5xl font-bold text-center md:text-5xl text-slate-800 animate-fade-in">
+            Explore Swat Valley
+          </h1>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3 my-4">
+            {/* Image 1 */}
+            <div className="overflow-hidden rounded-lg">
+              <img
+                src={snowysunny}
+                alt="Swat Valley"
+                className="object-cover w-full h-64"
+              />
+            </div>
+
+            {/* Image 2 */}
+            <div className="overflow-hidden rounded-lg ">
+              <img
+                src={malamjabba}
+                alt="Swat Valley"
+                className="object-cover w-full h-64"
+              />
+            </div>
+
+            {/* Image 3 */}
+            <div className="overflow-hidden rounded-lg">
+              <img
+                src={vehicle}
+                alt="Swat Valley"
+                className="object-cover w-full h-64"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full my-4">
+        <h1 className=" text-5xl font-bold text-center md:text-5xl text-slate-800 animate-fade-in">
           Discover the Hidden Gem of Pakistan: Swat Valley
         </h1>
-        <div className="w-24 h-1 mx-auto mb-8 bg-slate-800 animate-width" />
       </div>
-
-      <div className="p-6 mx-auto space-y-10 max-full">
-        <div className="p-6 bg-white shadow-lg rounded-xl animate-slide-in-left">
+      <div className="p-6 mx-auto  max-full">
+        <div className="p-6 rounded-xl animate-slide-in-left">
           <p className="mb-6 text-lg leading-relaxed text-slate-800">
             Tucked away in the northeastern part of Pakistan, Swat Valley is a
             breathtakingly beautiful destination that will leave you spellbound.
@@ -64,7 +189,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="p-8 bg-white shadow-lg rounded-xl animate-slide-in-right">
+        <div className="p-8 rounded-xl animate-slide-in-right">
           <h2 className="mb-2 text-3xl font-bold text-slate-800">
             Natural Beauty
           </h2>
@@ -78,7 +203,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="p-8 bg-white shadow-lg rounded-xl animate-slide-in-left">
+        <div className="p-8  rounded-xl animate-slide-in-left">
           <h2 className="mb-2 text-3xl font-bold text-slate-800">
             Cultural Heritage
           </h2>
@@ -92,21 +217,24 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="p-8 bg-white shadow-lg rounded-xl animate-slide-in-left">
+        <div className="p-8 rounded-xl animate-slide-in-left">
           <h2 className="mb-2 text-3xl font-bold text-slate-800">
             Things to do
           </h2>
           <p className="text-lg leading-relaxed text-slate-800">
             Swat Valley offers a wide range of activities for visitors,
-            including: <br />- Trekking and hiking in the Hindu Kush mountains
-            <br /> - Skiing and snowboarding at the Malam Jabba ski resort
-            <br /> - White water rafting and kayaking in the Swat River -
-            Fishing and boating in the valley's lakes and rivers
-            <br /> - Exploring the valley's archaeological sites and cultural
+            including: <br />
+            - Trekking and hiking in the Hindu Kush mountains
+            <br />
+            - Skiing and snowboarding at the Malam Jabba ski resort
+            <br />
+            - White water rafting and kayaking in the Swat River -Fishing and
+            boating in the valley's lakes and rivers
+            <br />- Exploring the valley's archaeological sites and cultural
             heritage
           </p>
         </div>
-        <div className="p-8 bg-white shadow-lg rounded-xl animate-slide-in-left">
+        <div className="p-8 rounded-xl animate-slide-in-left">
           <h2 className="mb-2 text-3xl font-bold text-slate-800">
             Plan Your Trip
           </h2>
@@ -230,7 +358,7 @@ const AboutUs = () => {
           </p>
           <FAQ />
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 my-10">
           {activities.map((category, index) => (
             <div
               key={index}
@@ -255,7 +383,7 @@ const AboutUs = () => {
           ))}
         </div>
 
-        <div className="p-8 text-center shadow-lg bg-slate-800 rounded-xl">
+        <div className="p-8 text-center  bg-slate-800 rounded-xl">
           <h2 className="mb-4 text-3xl font-bold text-white">
             Ready to Experience Swat Valley?
           </h2>
@@ -270,7 +398,6 @@ const AboutUs = () => {
           </Link>
         </div>
       </div>
-
       <style jsx>{`
         @keyframes fadeIn {
           from {
