@@ -12,7 +12,6 @@ import malamjabbamountains from "../assets/Valley images/malamjabba mountains.jp
 const HomeScreenCarousal = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Array of images
   const images = [
     chairlifts,
     kalamhills,
@@ -25,30 +24,26 @@ const HomeScreenCarousal = () => {
     forestroad,
   ];
 
-  // Function to handle automatic slide change
   const nextSlide = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  // Set interval for automatic slide change (2 seconds in this case)
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 2000); // Change slide every 2 seconds
+    }, 2000);
 
     return () => {
       clearInterval(interval);
     };
-  }, []); // Run effect only once on component mount
+  }, []);
 
   return (
     <div>
       <div id="carouselExample" className="carousel slide h-[500px] relative">
-        {/* Your other carousel content here */}
         <div className="h-full carousel-inner">
-          {/* Map through images array to render carousel items */}
           {images.map((image, index) => (
             <div
               key={index}
@@ -65,7 +60,7 @@ const HomeScreenCarousal = () => {
             </div>
           ))}
         </div>
-        {/* Your navigation buttons */}
+
         <button
           className="absolute z-10 text-white -translate-y-1/2 bg-gray-800 rounded-full carousel-control-prev top-1/2 left-4 xs:h-[40px] xs:w-[40px] sm:h-[50px] sm:w-[50px] md:h-[60px] md:w-[60px] lg:h-[70px] lg:w-[70px] xl:h-[80px] xl:w-[80px] 2xl:h-[90px] 2xl:w-[90px] h-14 w-14"
           type="button"

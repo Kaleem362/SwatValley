@@ -5,23 +5,19 @@ import Loader from "../Components/Loader";
 const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
   if (!isOpen || !packageDetails) return null;
 
-  // State for user inputs
   const [userName, setUserName] = useState("");
   const [userPhone, setUserPhone] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // State for error messages
   const [errors, setErrors] = useState({
     userName: "",
     userPhone: "",
   });
 
-  // Email.js send function
   const sendEmail = () => {
     let formErrors = { ...errors };
     let formIsValid = true;
 
-    // Validate the fields
     if (!userName) {
       formErrors.userName = "Please enter your name.";
       formIsValid = false;
@@ -33,15 +29,13 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
 
     setErrors(formErrors);
 
-    // If validation fails, don't proceed but set loading to false
     if (!formIsValid) {
       setLoading(false);
       return;
     }
 
-    setLoading(true); // Set loading before sending the email
+    setLoading(true);
 
-    // Define template parameters for Email.js
     const templateParams = {
       package_name: packageDetails.tourName || "-",
       destinations: packageDetails.destinations || "-",
@@ -54,7 +48,6 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
       user_phone: userPhone,
     };
 
-    // Replace these with your Email.js credentials
     const serviceId = "service_casw1hg";
     const templateId = "template_tdnpfww";
     const userId = "Pt_mzuyRqieukIXdt";
@@ -62,18 +55,17 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
     emailjs.send(serviceId, templateId, templateParams, userId).then(
       (response) => {
         console.log("Email successfully sent!", response.status, response.text);
-        setLoading(false); // Stop loading
-        onClose(); // Close modal on success
+        setLoading(false);
+        onClose();
       },
       (error) => {
         console.error("Failed to send email:", error);
         alert("Failed to send booking request. Please try again.");
-        setLoading(false); // Stop loading on error
+        setLoading(false);
       }
     );
   };
 
-  // Handle input change and remove the error when the user starts typing
   const handleInputChange = (e, field) => {
     if (e.target.value) {
       setErrors((prev) => ({ ...prev, [field]: "" }));
@@ -95,7 +87,6 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
           {packageDetails.tourName}
         </h2>
 
-        {/* User Input Fields */}
         <div className="mt-4">
           <label className="block mb-2 text-lg font-bold text-slate-800">
             Your Name:
@@ -131,19 +122,16 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
           )}
         </div>
         {loading && <Loader />}
-        {/* Pricing Section */}
         <div className="mt-4">
           <h3 className="text-lg font-bold text-slate-800">Tour Price:</h3>
           <p className="text-slate-600">Price: {packageDetails.price}</p>
         </div>
 
-        {/* Description Section */}
         <div className="mt-4">
           <h3 className="text-lg font-bold text-slate-800">Description:</h3>
           <p className="text-slate-600">{packageDetails.description}</p>
         </div>
 
-        {/* Key Highlights */}
         <div className="mt-4">
           {packageDetails.highlights && (
             <h3 className="text-lg font-bold text-slate-800">Highlights:</h3>
@@ -156,9 +144,6 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
           </ul>
         </div>
 
-        {/* Loader */}
-
-        {/* Buttons */}
         <div className="flex items-center justify-start gap-6 mt-6">
           <button
             onClick={onClose}
@@ -169,7 +154,7 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
           <button
             onClick={sendEmail}
             className="px-4 py-2 text-white rounded bg-slate-800 hover:bg-green-500"
-            disabled={loading} // Disable button while loading
+            disabled={loading}
           >
             {loading ? "Booking..." : "Book Now (Send Email)"}
           </button>

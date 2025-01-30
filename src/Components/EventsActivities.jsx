@@ -1,7 +1,5 @@
 import React from "react";
 
-// Importing all images (keeping your original import statements)
-import skating from "./../assets/PackagesImages/skatinggallerycoverimage.jpg";
 import winterfestival from "./../assets/PackagesImages/swattour.jpg";
 import swatsummerfestival from "./../assets/PackagesImages/swatsummerfestival.jpg";
 import boating from "./../assets/PackagesImages/boating.jpg";
@@ -59,7 +57,6 @@ const EventsActivities = () => {
 
   return (
     <div className="w-full min-h-screen p-8 font-Manrope">
-      {/* Events Gallery */}
       <div
         ref={eventsRef}
         className={`
@@ -96,7 +93,6 @@ const EventsActivities = () => {
         </div>
       </div>
 
-      {/* Activities Gallery */}
       <div
         ref={activitiesRef}
         className={`

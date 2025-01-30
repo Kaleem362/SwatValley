@@ -39,7 +39,7 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
       newErrors.phoneNumber = "Please enter your phone number";
       isValid = false;
     }
-    // Only validate selectedPrice if there are multiple price options
+
     if (
       typeof tourDetails.price === "object" &&
       !selectedPrice &&
@@ -81,7 +81,7 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
       ) : (
         <small>No Duration for the customized Tours</small>
       ),
-      price: selectedPrice || tourDetails.price, // Use selectedPrice or the fixed price
+      price: selectedPrice || tourDetails.price,
       accommodation: tourDetails.accommodation ? (
         tourDetails.accommodation
       ) : (
@@ -96,14 +96,13 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
 
     emailjs
       .send(
-        "service_casw1hg", // Your service ID
-        "template_tdnpfww", // Your template ID
+        "service_casw1hg",
+        "template_tdnpfww",
         emailData,
-        "Pt_mzuyRqieukIXdt" // Your public key
+        "Pt_mzuyRqieukIXdt"
       )
       .then(
         (result) => {
-          // alert("Email sent successfully!");
           setLoading(false);
           console.log(result.text);
           setIsModalOpen(false);
@@ -138,15 +137,12 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto font-Manrope">
-      {/* Overlay */}
       <div
         className="fixed inset-0 transition-opacity bg-black bg-opacity-50"
         onClick={onClose}
       />
 
-      {/* Modal */}
       <div className="relative w-full max-w-3xl p-6 mx-4 bg-white rounded-lg shadow-xl">
-        {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-2xl font-bold text-slate-800">
             Confirm Your Booking
@@ -169,9 +165,7 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
           </button>
         </div>
 
-        {/* Content */}
         <div className="max-h-[60vh] overflow-y-auto pr-4">
-          {/* User input fields at the top */}
           <div className="mb-6 space-y-4">
             <div>
               <label className="block text-lg font-semibold text-slate-700">
@@ -210,7 +204,6 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
             </div>
           </div>
 
-          {/* Existing tour details */}
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-semibold text-slate-700">
@@ -289,7 +282,6 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
           </div>
         </div>
 
-        {/* Footer */}
         <div className="flex justify-end gap-4 mt-6">
           <button
             onClick={onClose}

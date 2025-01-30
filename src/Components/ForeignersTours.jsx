@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { store } from "../assets/Store/Context";
 import Modal from "./Modal";
-import Loader from "../Components/Loader";
 
 const ForeignerPackages = () => {
   const { foreignerPackages, modalState, setModalState } = useContext(store);
@@ -31,7 +30,6 @@ const ForeignerPackages = () => {
             key={index}
             className="mb-20 overflow-hidden shadow-xl bg-slate-300 rounded-2xl"
           >
-            {/* Package Header */}
             <div className="p-8 text-white bg-gradient-to-r from-slate-800 to-slate-900">
               <h2 className="mb-3 font-bold md:text-3xl xs:text-2xl sm:text-2xl">
                 {title}
@@ -41,7 +39,6 @@ const ForeignerPackages = () => {
               </p>
             </div>
 
-            {/* Pricing Section */}
             {pricing && pricing.luxuryPackage && (
               <div className="p-8 bg-slate-300">
                 <h3 className="mb-6 text-2xl font-bold text-slate-800">
@@ -70,7 +67,6 @@ const ForeignerPackages = () => {
               </div>
             )}
 
-            {/* Inclusions Section */}
             {inclusions && (
               <div className="p-8">
                 <h3 className="mb-6 text-2xl font-bold text-slate-800">
@@ -99,7 +95,6 @@ const ForeignerPackages = () => {
               </div>
             )}
 
-            {/* Book Now Button */}
             {callToAction && (
               <div className="p-8 bg-slate-300">
                 <button
@@ -127,7 +122,6 @@ const ForeignerPackages = () => {
         );
       })}
 
-      {/* Modal Component */}
       {modalState && (
         <Modal
           isOpen={modalState}

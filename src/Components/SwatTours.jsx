@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { store } from "../assets/Store/Context";
-import SwatToursModal from "./SwatToursModal"; // Assuming you created this modal
+import SwatToursModal from "./SwatToursModal";
 import malamjabbadaytour from "./../assets/PackagesImages/malamjabbadaytour.jpg";
 import kalamValleyTour from "./../assets/PackagesImages/kalamvalleytourenhanced.jpg";
 import gabenJabbaTour from "./../assets/PackagesImages/gabinjabbadaytour.jpg";
@@ -63,7 +63,6 @@ const SwatTours = () => {
         ))}
       </div>
 
-      {/* Modal Component */}
       {modalState && (
         <SwatToursModal
           isOpen={modalState}

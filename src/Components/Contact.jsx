@@ -103,7 +103,6 @@ const Contact = () => {
       [name]: value,
     }));
 
-    // Clear error when user starts typing
     setErrors((prev) => ({
       ...prev,
       [name]: "",
@@ -166,7 +165,6 @@ const Contact = () => {
         "Pt_mzuyRqieukIXdt"
       );
 
-      // Reset form
       setFormData({
         userName: "",
         phoneNumber: "",
@@ -187,12 +185,10 @@ const Contact = () => {
 
   return (
     <div className="container w-full p-6 mx-auto my-10">
-      {/* Header Section remains the same */}
       <h1 className="w-full my-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Contact Us
       </h1>
 
-      {/* Form Selection Buttons remain the same */}
       <div className="flex flex-col items-center justify-center  mb-8 space-x-4 font-Manrope">
         <div className="w-full  text-center font-Manrope">
           <small className="text-lg ">Select Your desired Form here</small>
@@ -208,7 +204,7 @@ const Contact = () => {
           >
             Customize Budget Tour
           </button>
-          {/* Other buttons remain the same */}
+
           <button
             onClick={() => setFormType("serviceForm")}
             className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
@@ -418,7 +414,6 @@ const Contact = () => {
             onSubmit={(e) => {
               e.preventDefault();
 
-              // Create WhatsApp message with form data
               const name = e.target.elements.name.value;
               const phone = e.target.elements.phone.value;
               const car = selectedCar;
@@ -427,18 +422,16 @@ const Contact = () => {
                 alert("please fill the input forms first");
                 return;
               }
-              // Format the message for WhatsApp
+
               const message = `New Service Request%0A
                                 Name: ${name}%0A
                                 Phone: ${phone}%0A
                                 Selected Car: ${car}%0A
                                 Requested Services:%0A${services}`;
 
-              // WhatsApp API URL
               const whatsappURL = `https://wa.me/923489857193?text=${message}`;
               window.open(whatsappURL, "_blank");
 
-              // Reset form fields
               e.target.reset();
             }}
           >

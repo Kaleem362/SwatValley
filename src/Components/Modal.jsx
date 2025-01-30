@@ -28,9 +28,9 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
       hasError = true;
     }
 
-    if (hasError) return; // Prevent form submission if there's any error
+    if (hasError) return;
     setLoading(true);
-    // Send email using Email.js
+ 
     const templateParams = {
       user_name: userName,
       user_phone: userPhone,
@@ -67,7 +67,6 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
         <h2 className="mb-4 text-2xl font-bold text-slate-800">{title}</h2>
         <p className="mb-4 text-lg text-slate-600">{duration}</p>
 
-        {/* Pricing Section with Radio Button Selection */}
         {pricing && pricing.luxuryPackage && (
           <div>
             <h3 className="text-lg font-bold text-slate-800">
@@ -105,7 +104,6 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
           </div>
         )}
 
-        {/* User Input Fields */}
         <div className="mt-4">
           <label className="block mb-2 text-lg font-bold text-slate-800">
             Your Name:
@@ -151,7 +149,6 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
           )}
         </div>
 
-        {/* Inclusions Section */}
         {inclusions && (
           <div className="mt-4">
             <h3 className="text-lg font-bold text-slate-800">
@@ -165,7 +162,6 @@ const Modal = ({ isOpen, onClose, packageDetails }) => {
           </div>
         )}
 
-        {/* Action Buttons */}
         <div className="flex justify-between mt-6 space-x-4">
           <button
             onClick={onClose}

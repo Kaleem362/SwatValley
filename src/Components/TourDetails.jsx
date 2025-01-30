@@ -9,11 +9,9 @@ const TourDetails = () => {
   const { toursPackage } = useContext(store);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Find the selected package based on id
   const selectedPackage = toursPackage.find((pkg) => pkg.id === parseInt(id));
 
   if (!selectedPackage) {
-    // Display an error message if the package is not found
     return (
       <div className="flex items-center justify-center h-screen">
         <h1 className="text-xl font-extrabold text-slate-800">
@@ -34,7 +32,6 @@ const TourDetails = () => {
     <>
       <div className="flex flex-col w-full bg-gray-100 ">
         <div className="w-full mx-auto bg-white shadow-lg">
-          {/* Image and Title */}
           <div className="relative">
             <img
               src={selectedPackage.coverImage || "defaultImage.jpg"} // Fallback for missing image
@@ -52,13 +49,11 @@ const TourDetails = () => {
             </div>
           </div>
 
-          {/* Package Information */}
           <div className="flex flex-col w-full xs:flex-col md:flex-row tourdetailsinformationdiv">
             <div className="p-6 w-full md:w-[70%]">
               <h1 className="min-w-full mb-2 text-xl font-extrabold text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl ">
                 {selectedPackage.packageName || "-"}
               </h1>
-              {/* tour destination */}
 
               <h1 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                 Tour Destinations :{" "}
@@ -68,7 +63,6 @@ const TourDetails = () => {
                 </span>
               </h1>
 
-              {/* Tour Duration */}
               <div className="my-2 packageduration">
                 <p className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                   Tour Duration:
@@ -79,7 +73,6 @@ const TourDetails = () => {
                 </p>
               </div>
 
-              {/* Package Price */}
               <div className="my-2 package-type">
                 <h2 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                   Package Price:
@@ -112,7 +105,6 @@ const TourDetails = () => {
                 </h2>
               </div>
 
-              {/* package Type */}
 
               {selectedPackage?.packageType && (
                 <div className="my-2 package-type">
@@ -126,7 +118,6 @@ const TourDetails = () => {
                 </div>
               )}
 
-              {/* Accommodation Details */}
               {selectedPackage.accommodation && (
                 <div className="my-2 accomodation">
                   <h2 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
@@ -149,7 +140,6 @@ const TourDetails = () => {
                 </div>
               )}
 
-              {/* Transportation Details */}
               {selectedPackage.transportation && (
                 <div className="my-2 Transporation">
                   <h2 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
@@ -162,7 +152,6 @@ const TourDetails = () => {
                 </div>
               )}
 
-              {/* Itinerary */}
               {Array.isArray(selectedPackage.itinerary) &&
               selectedPackage.itinerary.length > 0
                 ? selectedPackage.itinerary.map((day, index) => (
@@ -229,7 +218,6 @@ const TourDetails = () => {
               </div>
             </div>
 
-            {/* Sidebar: Tour Inclusive */}
             <div className="bg-white sidebar w-full xs:w-full sm:w-full md:w-[30%]  lg:w-[30%] border-2 border-slate-200 p-3 rounded-lg">
               <h3 className="min-w-full mb-2 text-xl font-extrabold text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-center">
                 Tour Inclusive

@@ -12,9 +12,7 @@ const Services = () => {
   const { toursPackage, services } = useContext(store);
 
   return (
-    // services we offer
     <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-3 xl:px-10 xs:px-3 sm:px-4 md:px-6 lg:px-10 animate-fadeIn font-Manrope">
-      {/* packages mapped here */}
       <div className="flex flex-col items-start justify-start w-full gap-2 px-1 py-0 h-fit lg:py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
         <h1 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Highlight Tours
@@ -39,7 +37,6 @@ const Services = () => {
                     <div className="bg-slate-800">{tour.duration || "-"}</div>
                   </h2>
                 </div>
-                {/* buttontag */}
                 <div className="absolute flex items-center justify-center w-full gap-2 transition-all duration lg:mt-0 xs:-bottom-10 -bottom-10 sm:-bottom-10 lg:group-hover:-bottom-12 lg:-bottom-0 -z-50 buttons">
                   <Link to={`/tourdetails/tour/${tour.id}`}>
                     <button className="relative flex items-center px-10 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 group ">
@@ -79,7 +76,6 @@ const Services = () => {
             covered.
           </p>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {/* Customize Tours */}
             <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black border-1 border-slate-800">
               <h3 className="mb-4 text-2xl font-bold text-gray-800">
                 Customize Tour
@@ -94,7 +90,6 @@ const Services = () => {
                 </button>
               </Link>
             </div>
-            {/* Family Tours */}
             <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
               <h3 className="mb-4 text-2xl font-bold text-gray-800">
                 Family Tours
@@ -109,7 +104,6 @@ const Services = () => {
                 </button>
               </Link>
             </div>
-            {/* Budget Tour Packages */}
             <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
               <h3 className="mb-4 text-2xl font-bold text-gray-800">
                 Foreigner Tours
@@ -124,7 +118,6 @@ const Services = () => {
                 </button>
               </Link>
             </div>
-            {/* Private Tour Packages */}
             <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
               <h3 className="mb-4 text-2xl font-bold text-gray-800">
                 Private Tours
@@ -140,7 +133,6 @@ const Services = () => {
               </Link>
             </div>
           </div>
-          {/* new div for customize tour */}
           <div className="w-full my-6 font-Manrope">
             <div className="container w-full">
               <div className="w-full  text-justify">
@@ -199,7 +191,6 @@ const Services = () => {
         Services We offer
       </h1>
       <div className="flex flex-wrap justify-center w-full gap-10 xs:p-2 sm:p-4 card-container animate-fadeInFromTop">
-        {/* card */}
         <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromLeft">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
@@ -218,7 +209,6 @@ const Services = () => {
             </p>
           </div>
         </div>
-        {/* card */}
         <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
@@ -238,7 +228,6 @@ const Services = () => {
             </p>
           </div>
         </div>
-        {/* card */}
         <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105">
           <img
             className="object-cover w-full h-auto rounded-t-lg"
@@ -276,7 +265,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-      {/* Rent a car Division */}
       <div className="w-full px-6 py-10 Car-service">
         <div className="flex flex-col md:pr-20 header animate-fadeInFromTop">
           <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
@@ -314,7 +302,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* why choose us */}
       <div className="py-10 why-choose-us">
         <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Why Choose us?
@@ -364,7 +351,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* why visit swat valley */}
       <div className="whyChooseSwat">
         <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Why Visit Swat Valley?
@@ -391,7 +377,6 @@ const Services = () => {
           locals, vibrant traditions, and year-round festivals, Swat Valley is
           truly a paradise waiting to be explored. Plan your trip today and
           immerse yourself in the unmatched beauty and charm of Swat Valley!{" "}
-          {/* <br /> */}
           <Link
             to={"/about"}
             className="text-sm underline font-Manrope text-slate-800"

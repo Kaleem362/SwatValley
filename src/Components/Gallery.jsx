@@ -15,13 +15,10 @@ import couple8 from "../assets/PackagesImages/c2.jpg";
 import couple9 from "../assets/PackagesImages/c3.jpg";
 import couple10 from "../assets/PackagesImages/c6.jpg";
 import coupleeleven from "../assets/PackagesImages/c5.jpg";
-import familytour from "../assets/PackagesImages/familyPhotowithBGremove.png";
-// import familiyphotoone from "../assets/PackagesImages/familiyphotoone.png";
 
 import AutoScrollGallery from "./ScrollGallery";
 
 const Gallery = () => {
-  // const familytourImages = [familiyphotoone];
   return (
     <>
       <div className="p-6 text-white bg-slate-100 sm:py-8 lg:py-12 font-Manrope">
@@ -123,7 +120,7 @@ const Gallery = () => {
         <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
           Couples Before
         </h1>
-        {/* beautiful grid */}
+
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2 bg-slate-100 p-6">
           <div class="grid gap-2">
             <div className="group">

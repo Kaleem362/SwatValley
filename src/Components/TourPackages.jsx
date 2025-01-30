@@ -8,12 +8,11 @@ import SwatTours from "./SwatTours";
 const TourPackages = () => {
   const { toursPackage } = useContext(store);
 
-  // State for modal
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState(null);
 
   const handleBookNow = (e, pkg) => {
-    e.preventDefault(); // Prevent Link navigation
+    e.preventDefault();
     setSelectedPackage(pkg);
     setIsModalOpen(true);
   };
@@ -33,13 +32,11 @@ const TourPackages = () => {
             key={pkg.id}
             className="relative overflow-hidden rounded-lg shadow-lg group"
           >
-            {/* Cover Image */}
             <img
               src={pkg.Image}
               alt={pkg.packageName}
               className="object-cover w-full h-64 transition-transform duration-300 transform group-hover:scale-110"
             />
-            {/* Overlay */}
             <div className="absolute inset-0 z-10 w-full h-64 transition-all duration-300 bg-black opacity-40 group-hover:opacity-60 group-hover:scale-110" />
             <div className="absolute inset-0 z-20 flex items-center justify-center w-full h-64 group">
               <button
@@ -50,7 +47,6 @@ const TourPackages = () => {
               </button>
             </div>
 
-            {/* Title and Description */}
             <div className="p-4 bg-white">
               <h2 className="text-xl font-bold">{pkg.packageName}</h2>
               <p className="mb-3 text-sm text-gray-600">
@@ -68,7 +64,6 @@ const TourPackages = () => {
         ))}
       </div>
 
-      {/* Booking Modal */}
       <BookingModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

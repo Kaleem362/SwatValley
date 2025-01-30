@@ -43,7 +43,6 @@ const AboutUs = () => {
 
   return (
     <div className="w-full min-h-screen py-10 overflow-hidden ">
-      {/* Header Section */}
       <div className="w-full mb-16">
         <h1 className="mb-2 text-5xl font-bold text-center md:text-5xl text-slate-800 animate-fade-in">
           Discover the Hidden Gem of Pakistan: Swat Valley
@@ -51,9 +50,7 @@ const AboutUs = () => {
         <div className="w-24 h-1 mx-auto mb-8 bg-slate-800 animate-width" />
       </div>
 
-      {/* Main Content */}
       <div className="p-6 mx-auto space-y-10 max-full">
-        {/* Introduction */}
         <div className="p-6 bg-white shadow-lg rounded-xl animate-slide-in-left">
           <p className="mb-6 text-lg leading-relaxed text-slate-800">
             Tucked away in the northeastern part of Pakistan, Swat Valley is a
@@ -67,7 +64,6 @@ const AboutUs = () => {
           </p>
         </div>
 
-        {/* Natural Beauty Section */}
         <div className="p-8 bg-white shadow-lg rounded-xl animate-slide-in-right">
           <h2 className="mb-2 text-3xl font-bold text-slate-800">
             Natural Beauty
@@ -82,7 +78,6 @@ const AboutUs = () => {
           </p>
         </div>
 
-        {/* Cultural Heritage */}
         <div className="p-8 bg-white shadow-lg rounded-xl animate-slide-in-left">
           <h2 className="mb-2 text-3xl font-bold text-slate-800">
             Cultural Heritage
@@ -97,7 +92,6 @@ const AboutUs = () => {
           </p>
         </div>
 
-        {/* Activities Grid */}
         <div className="p-8 bg-white shadow-lg rounded-xl animate-slide-in-left">
           <h2 className="mb-2 text-3xl font-bold text-slate-800">
             Things to do
@@ -261,7 +255,6 @@ const AboutUs = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="p-8 text-center shadow-lg bg-slate-800 rounded-xl">
           <h2 className="mb-4 text-3xl font-bold text-white">
             Ready to Experience Swat Valley?
@@ -278,7 +271,6 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* CSS Animations */}
       <style jsx>{`
         @keyframes fadeIn {
           from {

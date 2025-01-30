@@ -10,7 +10,6 @@ import honeymoonsix from "./../assets/PackagesImages/honeymoonsix.jpg";
 import familytour from "./../assets/PackagesImages/familytour.jpg";
 import swattour from "./../assets/PackagesImages/swattour.jpg";
 export const toursPackage = [
-  // consistent object
   {
     id: 1,
     packageName: "Luxury Honeymoon/Couple Tour ",
@@ -48,7 +47,7 @@ export const toursPackage = [
       "Breakfast at the hotel",
     ],
   },
-  // consistent object
+
   {
     id: 2,
     packageName: "Honeymoon Couple / Family Tour ",
@@ -88,7 +87,7 @@ export const toursPackage = [
       "Breakfast at the hotel",
     ],
   },
-  // consistent object
+
   {
     id: 3,
     packageName: "Private Luxury Honeymoon/Couple Tour ",
@@ -130,7 +129,7 @@ export const toursPackage = [
       "Breakfast and dinner at the hotel",
     ],
   },
-  // consistent object
+
   {
     id: 4,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour ",
@@ -170,7 +169,7 @@ export const toursPackage = [
       "Breakfast and dinner at the hotel",
     ],
   },
-  // consistent object
+
   {
     id: 5,
     packageName: "Private Luxury Honeymoon/Couple Tour ",
@@ -211,7 +210,7 @@ export const toursPackage = [
       "Breakfast and dinner at the hotel",
     ],
   },
-  // consistent object
+
   {
     id: 6,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour ",
@@ -252,7 +251,7 @@ export const toursPackage = [
       "Breakfast and dinner at the hotel",
     ],
   },
-  // unconsistent data with intinerary
+
   {
     id: 7,
     packageName: "Luxury 3-Day Swat Tour ",
@@ -344,7 +343,7 @@ export const toursPackage = [
     ],
   },
 ];
-//services
+
 export const services = [
   {
     title: "Rent A Car or Taxi Service",
@@ -375,7 +374,7 @@ export const services = [
     description: "Exciting tour packages tailored for you.",
   },
 ];
-//day packages
+
 export const Swatdaytourpackage = [
   {
     swatTourPackages: {
@@ -474,7 +473,6 @@ export const Swatdaytourpackage = [
   },
 ];
 
-//foregier Packages
 export const foreignerPackages = [
   {
     tourPackage: {

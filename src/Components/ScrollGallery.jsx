@@ -14,7 +14,6 @@ const AutoScrollGallery = () => {
   const [autoScrollEnabled1, setAutoScrollEnabled1] = useState(true);
   const [autoScrollEnabled2, setAutoScrollEnabled2] = useState(true);
 
-  // Auto scroll functionality for the first div (left to right)
   useEffect(() => {
     if (!autoScrollEnabled1) return;
 
@@ -110,7 +109,6 @@ const AutoScrollGallery = () => {
 
   return (
     <div className="w-full gap-0 scenes-gallery">
-      {/* First auto-scrolling gallery */}
       <div
         ref={scrollRef1}
         className={`block w-full overflow-x-auto h-fit scrollbar-hide cursor-grab ${
@@ -148,7 +146,6 @@ const AutoScrollGallery = () => {
         </div>
       </div>
 
-      {/* Second auto-scrolling gallery */}
       <div
         ref={scrollRef2}
         className={`block w-full overflow-x-auto h-96 scrollbar-hide cursor-grab ${
