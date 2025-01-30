@@ -94,7 +94,7 @@ export const toursPackage = [
     packageName: "Private Luxury Honeymoon/Couple Tour ",
     coverImage: MalamJabba,
     Image: HoneyMoonthree,
-    tourPoints: "(Karachi)",
+    tourPoints: "Karachi to Karachi",
     duration: "7 days (Karachi)",
 
     destinations: ["Swat", "Kalam", "Malam Jabba"],

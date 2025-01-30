@@ -41,13 +41,14 @@ const TourDetails = () => {
               alt={selectedPackage.destination || "Unknown Destination"}
               className="relative object-cover w-full h-64 sm:h-72"
             />
-            <div className="absolute inset-0 flex items-end justify-center pb-4 bg-opacity-50 bg-gradient-to-t from-black to-transparent">
+            <div className="absolute inset-0 flex  flex-col items-center justify-end pb-4 bg-opacity-50 bg-gradient-to-t from-black to-transparent">
               <h1 className="text-xl font-bold text-center text-white uppercase xs:text-2xl sm:text-lg md:text-3xl lg:text-5xl">
                 {selectedPackage.packageName}
-                to
                 <br />
-                {selectedPackage.destinations?.join(" - ") || "No Destinations"}
               </h1>
+              <p className=" text-2xl font-semibold tracking-widest text-white word-spacing-[20px] mt-4">
+                {selectedPackage.tourPoints ? selectedPackage.tourPoints : ""}
+              </p>
             </div>
           </div>
 
@@ -194,9 +195,9 @@ const TourDetails = () => {
               <h1 className="my-2 text-2xl font-extrabold text-slate-800 font-Manrope">
                 Book Your Tour Now
               </h1>
-              <div className="flex flex-wrap justify-center gap-3 book-now-buttons">
+              <div className="flex  justify-start">
                 <button
-                  className="flex items-center justify-center px-4 py-2 mx-1 font-semibold text-white transition-all duration-300 rounded-full bg-slate-800 xs:px-3 xs:py-1 sm:px-4 sm:py-2 md:px-5 md:py-2 lg:px-6 lg:py-3 xl:px-6 xl:py-3 "
+                  className="flex items-center justify-center px-4 py-2 mx-1 font-semibold text-white transition-all duration-300 rounded-full bg-slate-800 xs:px-auto xs:py-1 sm:px-auto sm:py- md:px-auto md:py-2 lg:px-auto lg:py-3 xl:px-auto xl:py-3 "
                   onClick={handleBookNow}
                 >
                   Book Now
@@ -230,7 +231,7 @@ const TourDetails = () => {
 
             {/* Sidebar: Tour Inclusive */}
             <div className="bg-white sidebar w-full xs:w-full sm:w-full md:w-[30%]  lg:w-[30%] border-2 border-slate-200 p-3 rounded-lg">
-              <h3 className="min-w-full mb-2 text-xl font-extrabold text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl ">
+              <h3 className="min-w-full mb-2 text-xl font-extrabold text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-center">
                 Tour Inclusive
               </h3>
               <ul className="flex flex-col w-full gap-1">

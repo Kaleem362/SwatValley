@@ -7,7 +7,7 @@ const WhatsAppButton = () => {
       href="https://wa.me/923489857193" // Replace with your WhatsApp number
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed z-50 w-auto bg-white rounded-full bottom-10 right-5 animate-float "
+      className="fixed z-50 w-auto bg-white rounded-full bottom-10 right-5 animate-float shadow-2xl border-2  border-slate-800 shadow-slate-800 "
     >
       <img
         src={whatsapp} // Replace with your icon path

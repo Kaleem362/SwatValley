@@ -24,7 +24,7 @@ const Gallery = () => {
   // const familytourImages = [familiyphotoone];
   return (
     <>
-      <div className="p-6 bg-white dark:bg-gray-800 sm:py-8 lg:py-12 font-Manrope">
+      <div className="p-6 text-white bg-slate-100 sm:py-8 lg:py-12 font-Manrope">
         <div className="h-auto px-4 mx-auto max-w-screen-2xl md:px-8">
           <div className="flex items-center justify-between gap-8 mb-4 sm:mb-8 md:mb-12 ">
             <div className="flex flex-col items-start gap-4">
@@ -64,8 +64,6 @@ const Gallery = () => {
                 className="absolute inset-0 object-center w-full h-full transition duration-200 object-fit group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 opacity-50 pointer-events-none bg-gradient-to-t from-gray-800 via-transparent to-transparent"></div>
-
               <span className="relative inline-block mb-3 ml-4 text-sm text-white md:ml-5 md:text-lg">
                 Gateway to Swat Valley
               </span>
@@ -81,8 +79,6 @@ const Gallery = () => {
                 alt="Photo by Magicle"
                 className="absolute inset-0 object-cover object-center w-full h-full transition duration-200 group-hover:scale-110 animate-fadeInFromLeft"
               />
-
-              <div className="absolute inset-0 opacity-50 pointer-events-none bg-gradient-to-t from-gray-800 via-transparent to-transparent"></div>
 
               <span className="relative inline-block mb-3 ml-4 text-sm text-white md:ml-5 md:text-lg">
                 Enchanting Roads with Heights
@@ -100,8 +96,6 @@ const Gallery = () => {
                 className="absolute inset-0 object-cover object-center w-full h-full transition duration-200 group-hover:scale-110 animate-fadeInFromRight"
               />
 
-              <div className="absolute inset-0 opacity-50 pointer-events-none bg-gradient-to-t from-gray-800 via-transparent to-transparent"></div>
-
               <span className="relative inline-block mb-3 ml-4 text-sm text-white md:ml-5 md:text-lg">
                 Mesmerizing Greenery & Bliss Beauty
               </span>
@@ -118,8 +112,6 @@ const Gallery = () => {
                 className="absolute inset-0 object-cover object-center w-full h-full transition duration-200 group-hover:scale-110 animate-fadeInFromLeft"
               />
 
-              <div className="absolute inset-0 opacity-50 pointer-events-none bg-gradient-to-t from-gray-800 via-transparent to-transparent"></div>
-
               <span className="relative inline-block mb-3 ml-4 text-sm text-white md:ml-5 md:text-lg">
                 Enchanting places with Heights
               </span>
@@ -127,30 +119,30 @@ const Gallery = () => {
           </div>
         </div>
       </div>
-      <div className="w-full p-6 grid-parent bg-slate-800">
-        <h1 className="w-full my-4 text-4xl font-bold text-center text-white xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
+      <div className="w-full p-6 grid-parent bg-slate-100">
+        <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
           Couples Before
         </h1>
         {/* beautiful grid */}
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 bg-slate-800 p-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 bg-slate-100 p-6">
           <div class="grid gap-2">
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all "
                 src={Couple1}
                 alt=""
               />
             </div>
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={couple2}
                 alt=""
               />
             </div>
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={couple3}
                 alt=""
               />
@@ -159,21 +151,21 @@ const Gallery = () => {
           <div class="grid gap-2">
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={couple4}
                 alt=""
               />
             </div>
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={couple5}
                 alt=""
               />
             </div>
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={couple6}
                 alt=""
               />
@@ -182,21 +174,21 @@ const Gallery = () => {
           <div class="grid gap-2">
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={couple7}
                 alt=""
               />
             </div>
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={couple8}
                 alt=""
               />
             </div>
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:skew-y-2 group-hover:-skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={couple9}
                 alt=""
               />
@@ -205,21 +197,21 @@ const Gallery = () => {
           <div class="grid gap-2">
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={couple10}
                 alt=""
               />
             </div>
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={coupleeleven}
                 alt=""
               />
             </div>
             <div className="group">
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg group-hover:shadow-white"
+                class="h-auto max-w-full rounded-lg object-cover object-center overflow-hidden group-hover:-skew-y-2 group-hover:skew-x-2 group-hover:scale-110 duration-300 transition-all group-hover:shadow-lg "
                 src={coupleeleven}
                 alt=""
               />
@@ -235,9 +227,6 @@ const Gallery = () => {
         <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
           Family Tours
         </h1>
-        <marquee>
-          {/* <img src={familytour} alt="familyTour" className="w-48 h-48" /> */}
-        </marquee>
       </div>
     </>
   );

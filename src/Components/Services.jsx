@@ -13,7 +13,7 @@ const Services = () => {
 
   return (
     // services we offer
-    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-3 xl:px-10 xs:px-3 sm:px-4 md:px-6 lg:px-10 animate-fadeIn">
+    <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-3 xl:px-10 xs:px-3 sm:px-4 md:px-6 lg:px-10 animate-fadeIn font-Manrope">
       {/* packages mapped here */}
       <div className="flex flex-col items-start justify-start w-full gap-2 px-1 py-0 h-fit lg:py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
         <h1 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
@@ -40,9 +40,9 @@ const Services = () => {
                   </h2>
                 </div>
                 {/* buttontag */}
-                <div className="absolute flex items-center justify-center w-full gap-2 transition-all duration lg:mt-0 xs:-bottom-14 -bottom-16 sm:-bottom-14 lg:group-hover:-bottom-12 lg:-bottom-0 -z-50 buttons">
+                <div className="absolute flex items-center justify-center w-full gap-2 transition-all duration lg:mt-0 xs:-bottom-10 -bottom-10 sm:-bottom-10 lg:group-hover:-bottom-12 lg:-bottom-0 -z-50 buttons">
                   <Link to={`/tourdetails/tour/${tour.id}`}>
-                    <button className="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 group ">
+                    <button className="relative flex items-center px-10 py-2 overflow-hidden font-medium transition-all rounded-md bg-slate-800 group ">
                       <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-slate-400 group-hover:-mr-4 group-hover:-mt-4">
                         <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
                       </span>
@@ -68,7 +68,7 @@ const Services = () => {
         </Link>
       </div>
       <section className="w-full py-10 ">
-        <div className="container px-6 mx-auto md:px-10">
+        <div className="container mx-auto">
           <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
             Explore Our Tour Packages
           </h2>
@@ -138,6 +138,59 @@ const Services = () => {
                   Contact
                 </button>
               </Link>
+            </div>
+          </div>
+          {/* new div for customize tour */}
+          <div className="w-full my-6 font-Manrope">
+            <div className="container w-full">
+              <div className="w-full  text-justify">
+                <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
+                  Customize Your Perfect Tour
+                </h2>
+                <div className=" bg-white rounded-lg w-full">
+                  <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                    We specialize in creating personalized tour experiences
+                    tailored exactly to your preferences. To help us craft your
+                    perfect journey, please contact us with the following
+                    information:
+                  </p>
+                  <ul className="mb-8 space-y-2 text-left text-gray-600">
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 mr-3 rounded-full bg-slate-600"></span>
+                      Number of travelers in your group
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 mr-3 rounded-full bg-slate-600"></span>
+                      Preferred destinations or regions
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 mr-3 rounded-full bg-slate-600"></span>
+                      Duration of your ideal trip
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 mr-3 rounded-full bg-slate-600"></span>
+                      Specific interests (adventure, culture, relaxation, etc.)
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 mr-3 rounded-full bg-slate-600"></span>
+                      Accommodation preferences
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 mr-3 rounded-full bg-slate-600"></span>
+                      Budget range for your trip
+                    </li>
+                  </ul>
+                  <p className="mb-8 text-gray-700">
+                    Our expert travel consultants will review your requirements
+                    and create a custom itinerary that perfectly matches your
+                    preferences. We'll get back to you within 24 hours with a
+                    personalized proposal.
+                  </p>
+                  <button className="px-8 py-3 text-lg font-semibold text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
+                    Start Planning Your Custom Tour
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
