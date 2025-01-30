@@ -178,9 +178,11 @@ const Services = () => {
                     preferences. We'll get back to you within 24 hours with a
                     personalized proposal.
                   </p>
-                  <button className="px-8 py-3 text-lg font-semibold text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
-                    Start Planning Your Custom Tour
-                  </button>
+                  <div className="w-full grid items-center">
+                    <button className="px-8 py-3 text-lg text-center mx-auto font-semibold text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
+                      Start Planning Your Custom Tour
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
