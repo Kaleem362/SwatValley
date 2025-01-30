@@ -16,6 +16,7 @@ export const toursPackage = [
     coverImage: kalamvalley,
     Image: HoneyMoonone,
     duration: "4 days 3 nights",
+    tourPoints: "Lahore to Lahore",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packageType: "Executive Package",
     packagePrices: {
@@ -54,6 +55,7 @@ export const toursPackage = [
     coverImage: malamjabbacover,
     Image: HoneyMoontwo,
     duration: "days 3 nights 2",
+    tourPoints: "Lahore to Lahore",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
       for1Couple: "Rs. 45,000/-",
@@ -93,8 +95,8 @@ export const toursPackage = [
     packageName: "Private Luxury Honeymoon/Couple Tour ",
     coverImage: MalamJabba,
     Image: HoneyMoonthree,
-    tourPoints: "Karachi to Karachi",
     duration: "7 days (Karachi)",
+    tourPoints: "Karachi to Karachi",
 
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
@@ -136,6 +138,7 @@ export const toursPackage = [
     coverImage: MalamJabba,
     Image: honeymoonfour,
     duration: "6 days (karachi)",
+    tourpoints: "karachi to karachi",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
       for1Couple: "₨ 60,000/-",
@@ -176,6 +179,7 @@ export const toursPackage = [
     coverImage: MalamJabba,
     Image: honeymoonfive,
     duration: "4 Days, 3 Nights",
+    tourpoints: "Islamabad to Islamabad",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     startingAndEndingPoint: "Islamabad",
 
@@ -218,6 +222,7 @@ export const toursPackage = [
     Image: honeymoonsix,
 
     duration: "3 Days, 2 Nights",
+    tourpoints: "Islamabad to Islamabad",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
 
     packagePrices: {
@@ -258,6 +263,7 @@ export const toursPackage = [
     coverImage: MalamJabba,
     Image: familytour,
     duration: "3 Days, 2 Nights",
+    tourpoints: "Mingora swat to Mingora Swat",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: "₨ 35,000/-",
 
@@ -308,6 +314,7 @@ export const toursPackage = [
     coverImage: MalamJabba,
     Image: swattour,
     duration: "2 Days, 1 Night",
+    tourpoints: "Mingora Swat to Mingora Swat",
     destinations: ["Swat", "Kalam"],
     packagePrices: "₨ 20,000/-",
     itinerary: [
