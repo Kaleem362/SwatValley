@@ -142,8 +142,8 @@ export const toursPackage = [
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour ",
     coverImage: MalamJabba,
     Image: honeymoonfour,
-    tourpoints: "karachi to karachi",
     duration: "6 days (karachi)",
+    tourPoints: "karachi to karachi",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
       for1Couple: "₨ 60,000/-",
@@ -184,7 +184,7 @@ export const toursPackage = [
     coverImage: MalamJabba,
     Image: honeymoonfive,
     duration: "4 Days, 3 Nights",
-    tourpoints: "Islamabad to Islamabad",
+    tourPoints: "Islamabad to Islamabad",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     startingAndEndingPoint: "Islamabad",
 
@@ -227,7 +227,7 @@ export const toursPackage = [
     Image: honeymoonsix,
 
     duration: "3 Days, 2 Nights",
-    tourpoints: "Islamabad to Islamabad",
+    tourPoints: "Islamabad to Islamabad",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
 
     packagePrices: {
@@ -268,7 +268,7 @@ export const toursPackage = [
     coverImage: MalamJabba,
     Image: familytour,
     duration: "3 Days, 2 Nights",
-    tourpoints: "Mingora swat to Mingora Swat",
+    tourPoints: "Mingora swat to Mingora Swat",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: "₨ 35,000/-",
 
@@ -319,7 +319,7 @@ export const toursPackage = [
     coverImage: MalamJabba,
     Image: swattour,
     duration: "2 Days, 1 Night",
-    tourpoints: "Mingora Swat to Mingora Swat",
+    tourPoints: "Mingora Swat to Mingora Swat",
     destinations: ["Swat", "Kalam"],
     packagePrices: "₨ 20,000/-",
     itinerary: [
