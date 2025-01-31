@@ -13,7 +13,7 @@ const Hero = () => {
       <h4 className="xs:text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-600 animate-fadeInFromLeft">
         Discover Nature’s Paradise!
       </h4>
-      <div className="flex flex-col w-full h-auto gap-2 my-2 lg:flex-row lg:items-start lg:justify-between">
+      <div className="flex flex-col w-full h-auto gap-2 my-2 text-justify lg:flex-row lg:items-start lg:justify-between">
         <p className="flex justify-start  items-start text-slate-500 flex-start font-manrope text-sm sm:text-md md:text-lg lg:text-lg xl:text-xl lg:w-[50%] animate-fadeInFromLeft ">
           Escape to the stunning Swat Valley with our meticulously crafted,
           all-inclusive tour packages. Immerse yourself in the natural beauty of

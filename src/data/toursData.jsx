@@ -9,6 +9,11 @@ import honeymoonfive from "./../assets/PackagesImages/honeymoonfive.jpg";
 import honeymoonsix from "./../assets/PackagesImages/honeymoonsix.jpg";
 import familytour from "./../assets/PackagesImages/familytour.jpg";
 import swattour from "./../assets/PackagesImages/swattour.jpg";
+import foreignone from "../assets/PackagesImages/foreignersImageone.jpg";
+import foreigntwo from "../assets/PackagesImages/foreignersImagetwo.jpg";
+import foreignthree from "../assets/PackagesImages/foreignersImagethree.jpg";
+import foreignfour from "../assets/PackagesImages/foreignersImagefour.jpg";
+
 export const toursPackage = [
   {
     id: 1,
@@ -485,6 +490,7 @@ export const foreignerPackages = [
     tourPackage: {
       title: "Luxury Swat Valley Tour Package for Foreigners",
       duration: "7-Day Itinerary",
+      image: foreignone,
       itinerary: {
         day1: {
           title: "Arrival in Islamabad",
@@ -558,13 +564,14 @@ export const foreignerPackages = [
       ],
       notes:
         "The package price may vary depending on the season, accommodation options, and other factors.",
-      callToAction: "Book Your Luxury Tour Today!",
+      callToAction: "Book Tour",
     },
   },
   {
     tourPackage: {
       title: "Luxury Swat Valley and Kumrat Valley Tour Package",
       duration: "7-Day Itinerary",
+      image: foreigntwo,
       itinerary: {
         day1: {
           title: "Arrival in Islamabad",
@@ -640,7 +647,7 @@ export const foreignerPackages = [
       ],
       notes:
         "The package price may vary depending on the season, accommodation options, and other factors.",
-      callToAction: "Book Tour Now",
+      callToAction: "Book Tour",
     },
   },
   {
@@ -648,7 +655,7 @@ export const foreignerPackages = [
       title:
         "Luxury 7-Day Swat and Hunza Tour Package for International Tourists",
       duration: "7-Day Itinerary",
-
+      image: foreignthree,
       pricing: {
         luxuryPackage: {
           singleOrCouple: "$550",
@@ -665,13 +672,13 @@ export const foreignerPackages = [
       ],
       notes:
         "The package price may vary depending on the season, accommodation options, and other factors.",
-      callToAction: "Book Tour Now",
+      callToAction: "Book Tour",
     },
   },
   {
     tourPackage: {
       title: "Luxury 7-Day Swat and Hunza Tour Package for Pakistani Citizens",
-
+      image: foreignfour,
       itinerary: {
         day1: {
           title: "Arrival in Islamabad",
@@ -745,7 +752,7 @@ export const foreignerPackages = [
       ],
       notes:
         "The package price may vary depending on the season, accommodation options, and other factors.",
-      callToAction: "Book Tour Now",
+      callToAction: "Book Tour",
     },
   },
 ];

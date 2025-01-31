@@ -64,12 +64,12 @@ const Services = () => {
           See All Tour Packages
         </Link>
       </div>
-      <section className="w-full py-10 ">
-        <div className="container mx-auto">
+      <section className="w-full py-10">
+        <div className="px-2 ">
           <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
             Explore Our Tour Packages
           </h2>
-          <p className="mb-10 text-lg text-center text-gray-600">
+          <p className="mb-10 text-lg text-justify text-gray-600 md:text-center">
             Discover a range of tour options tailored to meet your unique
             preferences. Whether you're planning a family vacation, a
             budget-friendly adventure, or a private getaway, we’ve got you
@@ -133,14 +133,14 @@ const Services = () => {
               </Link>
             </div>
           </div>
-          <div className="w-full my-6 font-Manrope">
-            <div className="container w-full">
+          <div className="w-full my-10 font-Manrope">
+            <div className="w-full ">
               <div className="w-full text-justify">
                 <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
                   Customize Your Perfect Tour
                 </h2>
                 <div className="w-full bg-white rounded-lg ">
-                  <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                  <p className="w-full mb-6 text-lg leading-relaxed text-gray-700">
                     We specialize in creating personalized tour experiences
                     tailored exactly to your preferences. To help us craft your
                     perfect journey, please contact us with the following
@@ -270,7 +270,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div className="w-full px-6 py-10 Car-service">
+      <div className="w-full px-0 py-5 md:px-6 Car-service">
         <div className="flex flex-col md:pr-20 header animate-fadeInFromTop">
           <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
             Pick and Drop Service
@@ -307,11 +307,11 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="py-10 why-choose-us">
+      <div className="py-10 md:px-6 why-choose-us">
         <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Why Choose us?
         </h1>
-        <div className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromLeft">
+        <div className="px-2 my-4 text-justify bg-white rounded-lg md:p-4 xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromLeft">
           At <b>The Swat Tours</b>, we strive to make your travel experience
           seamless, comfortable, and memorable. Here’s why we stand out:
           <br />
@@ -360,14 +360,14 @@ const Services = () => {
         <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Why Visit Swat Valley?
         </h1>
-        <p className="p-4 my-4 xs:text-md sm:text-lg lg:text-xl  bg-white rounded-lg shadow-lg  xs:w-full sm:w-[520px] md:w-[600px] lg:w-[700px] text-slate-500 animate-fadeInFromLeft">
+        <p className="px-2 my-4 text-justify xs:text-md sm:text-lg lg:text-xl  bg-white rounded-lg  xs:w-full sm:w-[520px] md:w-[600px] lg:w-[700px] text-slate-500 animate-fadeInFromLeft">
           <b>Swat Valley,</b> the Switzerland of the East! Whether you're
           seeking adventure, relaxation, or a mix of both, our tour services are
           designed to provide an unforgettable experience. From serene valleys
           and majestic peaks to luxurious accommodations and hassle-free travel,
           we ensure your trip is seamless and extraordinary.
         </p>
-        <p className="p-4 my-4 bg-white rounded-lg shadow-lg xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromRight">
+        <p className="px-2 my-4 text-justify bg-white rounded-lg md:p-4 xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromRight">
           <b>Swat Valley,</b> often called the{" "}
           <strong>"Switzerland of the East,"</strong> is a breathtaking
           destination known for its majestic mountains, lush green meadows, and

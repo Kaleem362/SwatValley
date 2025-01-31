@@ -26,10 +26,10 @@ const SwatTours = () => {
   };
 
   return (
-    <div className="container py-10 mx-auto md:px-4 xs:px-2 sm:px-6 lg:px-6 xl:px-6 ">
-      <h2 className="mb-8 text-5xl font-extrabold text-center text-slate-800 font-Manrope">
+    <div className="py-10 mx-auto md:px-4 xs:px-2 sm:px-6 lg:px-6 xl:px-6">
+      <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Swat Tour Packages
-      </h2>
+      </h1>
       <h2 className="my-4 text-2xl text-start xs:text-md sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-Manrope text-slate-800">
         We Provide Day packages for swat Valley
       </h2>
