@@ -5,11 +5,50 @@ import Travel from "../assets/Valley images/travel.jpg";
 import guide from "../assets/images/guide.jpg";
 import ContactButton from "../Components/ContactButton";
 import { Link } from "react-router";
+
 import whatsappIcon from "../assets/icons-asset/whatsapp (1).png";
 import { store } from "../assets/Store/Context";
 
+import sangartop from "./../assets/PackagesImages/sangartop.jpg";
+import shangladaytour from "./../assets/PackagesImages/shangladaytour.jpg";
+import treesinsnow from "./../assets/PackagesImages/snowysunny.jpg";
+import c2 from "./../assets/PackagesImages/c2.jpg";
 const Services = () => {
   const { toursPackage, services } = useContext(store);
+  const cards = [
+    {
+      title: "Customize Tour",
+      description:
+        "Create your dream tour! Choose destinations, activities, and plan a trip that fits your needs and budget.",
+      link: "/contact",
+      buttonText: "Book Now",
+      backgroundImage: sangartop,
+    },
+    {
+      title: "Family Tours",
+      description:
+        "Spend quality time with your loved ones! Our family-friendly packages include activities for all ages.",
+      link: "/contact",
+      buttonText: "See Now",
+      backgroundImage: shangladaytour,
+    },
+    {
+      title: "Foreigner Tours",
+      description:
+        "Enjoy amazing adventures without breaking the bank! Our budget packages offer great value and unforgettable experiences.",
+      link: "/tourpackages",
+      buttonText: "View Packages",
+      backgroundImage: treesinsnow,
+    },
+    {
+      title: "Private Tours",
+      description:
+        "Looking for exclusivity? Our customized tour packages ensure a personalized and luxurious travel experience.",
+      link: "/contact",
+      buttonText: "Contact",
+      backgroundImage: c2,
+    },
+  ];
 
   return (
     <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-3 xl:px-10 xs:px-3 sm:px-4 md:px-6 lg:px-10 animate-fadeIn font-Manrope">
@@ -66,9 +105,9 @@ const Services = () => {
       </div>
       <section className="w-full py-10">
         <div className="px-2 ">
-          <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
+          <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
             Explore Our Tour Packages
-          </h2>
+          </h1>
           <p className="mb-10 text-lg text-justify text-gray-600 md:text-center">
             Discover a range of tour options tailored to meet your unique
             preferences. Whether you're planning a family vacation, a
@@ -76,69 +115,43 @@ const Services = () => {
             covered.
           </p>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black border-1 border-slate-800">
-              <h3 className="mb-4 text-2xl font-bold text-gray-800">
-                Customize Tour
-              </h3>
-              <p className="mb-6 text-gray-600">
-                Create your dream tour! Choose destinations, activities, and
-                plan a trip that fits your needs and budget.
-              </p>
-              <Link to={"/contact"}>
-                <button className="px-4 py-2 text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
-                  Book Now
-                </button>
-              </Link>
-            </div>
-            <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
-              <h3 className="mb-4 text-2xl font-bold text-gray-800">
-                Family Tours
-              </h3>
-              <p className="mb-6 text-gray-600">
-                Spend quality time with your loved ones! Our family-friendly
-                packages include activities for all ages.
-              </p>
-              <Link to={"/contact"}>
-                <button className="px-4 py-2 text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
-                  See Now
-                </button>
-              </Link>
-            </div>
-            <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
-              <h3 className="mb-4 text-2xl font-bold text-gray-800">
-                Foreigner Tours
-              </h3>
-              <p className="mb-6 text-gray-600">
-                Enjoy amazing adventures without breaking the bank! Our budget
-                packages offer great value and unforgettable experiences.
-              </p>
-              <Link to={"/tourpackages"}>
-                <button className="px-4 py-2 text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
-                  View Packages
-                </button>
-              </Link>
-            </div>
-            <div className="p-6 text-center transition-all duration-300 bg-gray-200 rounded-lg hover:shadow-lg hover:shadow-black">
-              <h3 className="mb-4 text-2xl font-bold text-gray-800">
-                Private Tours
-              </h3>
-              <p className="mb-6 text-gray-600">
-                Looking for exclusivity? Our customized tour packages ensure a
-                personalized and luxurious travel experience.
-              </p>
-              <Link to={"/contact"}>
-                <button className="px-4 py-2 text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
-                  Contact
-                </button>
-              </Link>
-            </div>
+            {cards.map((card, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-lg h-96 group"
+                style={{
+                  backgroundImage: `url(${card.backgroundImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                {/* Dark overlay */}
+                <div className="absolute inset-0 transition-all duration-300 bg-black/60 group-hover:bg-black/40"></div>
+
+                {/* Content container */}
+                <div className="relative z-10 flex flex-col justify-between h-full p-6">
+                  <div>
+                    <h3 className="mb-4 text-2xl font-bold text-white">
+                      {card.title}
+                    </h3>
+                    <p className="mb-6 text-gray-200">{card.description}</p>
+                  </div>
+
+                  <Link to={card.link} className="mt-auto">
+                    <button className="w-full px-4 py-2 text-white transition rounded-full bg-slate-600/80 hover:bg-slate-800 backdrop-blur-sm">
+                      {card.buttonText}
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
           <div className="w-full my-10 font-Manrope">
             <div className="w-full ">
               <div className="w-full text-justify">
-                <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
+                <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
                   Customize Your Perfect Tour
-                </h2>
+                </h1>
                 <div className="w-full bg-white rounded-lg ">
                   <p className="w-full mb-6 text-lg leading-relaxed text-gray-700">
                     We specialize in creating personalized tour experiences
@@ -192,7 +205,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+      <h1 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Services We offer
       </h1>
       <div className="flex flex-wrap justify-center w-full gap-10 xs:p-2 sm:p-4 card-container animate-fadeInFromTop">
@@ -272,7 +285,7 @@ const Services = () => {
       </div>
       <div className="w-full px-0 py-5 md:px-6 Car-service">
         <div className="flex flex-col md:pr-20 header animate-fadeInFromTop">
-          <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+          <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
             Pick and Drop Service
           </h1>
           <div className="flex items-center justify-center w-full gap-4 my-2 animate-fadeInFromRight">
