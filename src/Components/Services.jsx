@@ -135,11 +135,11 @@ const Services = () => {
           </div>
           <div className="w-full my-6 font-Manrope">
             <div className="container w-full">
-              <div className="w-full  text-justify">
+              <div className="w-full text-justify">
                 <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
                   Customize Your Perfect Tour
                 </h2>
-                <div className=" bg-white rounded-lg w-full">
+                <div className="w-full bg-white rounded-lg ">
                   <p className="mb-6 text-lg leading-relaxed text-gray-700">
                     We specialize in creating personalized tour experiences
                     tailored exactly to your preferences. To help us craft your
@@ -178,10 +178,13 @@ const Services = () => {
                     preferences. We'll get back to you within 24 hours with a
                     personalized proposal.
                   </p>
-                  <div className="w-full grid items-center">
-                    <button className="px-8 py-3 text-lg text-center mx-auto font-semibold text-white transition rounded-full bg-slate-600 hover:bg-slate-800">
+                  <div className="grid items-center w-full">
+                    <Link
+                      className="px-8 py-3 mx-auto text-lg font-semibold text-center text-white transition rounded-full bg-slate-600 hover:bg-slate-800"
+                      to={"/contact"}
+                    >
                       Start Planning Your Custom Tour
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

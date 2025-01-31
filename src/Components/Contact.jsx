@@ -189,11 +189,11 @@ const Contact = () => {
         Contact Us
       </h1>
 
-      <div className="flex flex-col items-center justify-center  mb-8 space-x-4 font-Manrope">
-        <div className="w-full  text-center font-Manrope">
+      <div className="flex flex-col items-center justify-center mb-8 space-x-4 font-Manrope">
+        <div className="w-full text-center font-Manrope">
           <small className="text-lg ">Select Your desired Form here</small>
         </div>
-        <div className="space-x-4 space-y-4 my-4 buttons">
+        <div className="my-4 space-x-4 space-y-4 buttons">
           <button
             onClick={() => setFormType("customizeTour")}
             className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
@@ -221,10 +221,10 @@ const Contact = () => {
       <div className="p-6 my-2 rounded-lg shadow-xl bg-slate-400 shadow-slate-700 font-Manrope">
         {formType === "customizeTour" && (
           <form onSubmit={handleSubmit}>
-            <h1 className="text-center font-extrabold text-5xl text-slate-800">
+            <h1 className="text-5xl font-extrabold text-center text-slate-800">
               Customize Tour Form
             </h1>
-            <p className="text-xl my-2 text-slate-800 text-center">
+            <p className="my-2 text-xl text-center text-slate-800">
               Fill the Form below for planning a Customize tour , let us know
               how many persons you are, and where you want to travel we get back
               to you for customizing a tour according to your budget.
@@ -349,15 +349,15 @@ const Contact = () => {
               )}
             </div>
 
-            <div className="flex gap-2 items-center mb-4">
-              <label className="block  font-semibold text-slate-700">
+            <div className="flex items-center gap-2 mb-4">
+              <label className="block font-semibold text-slate-700">
                 Do you have kids?
               </label>
               <input
                 type="checkbox"
                 checked={kids}
                 onChange={(e) => setKids(e.target.checked)}
-                className="h-6 w-6 "
+                className="w-6 h-6 "
               />
               Yes
             </div>
@@ -436,8 +436,13 @@ const Contact = () => {
             }}
           >
             <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-              Rent a Car or Service
+              Service Form
             </h2>
+            <p className="text-center text-slate-800 xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-xl 2xl:text-3xl">
+              Fill the service form with the below required data and make sure
+              to send the details via whatsapp, if invain, <br /> Try Calling on
+              the Phone Number
+            </p>
             <div className="mb-4">
               <label className="block mb-2 font-semibold text-slate-700">
                 Your Name
