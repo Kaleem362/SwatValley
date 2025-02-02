@@ -23,6 +23,10 @@ import ushusnowyroad from "./../PackagesImages/ushusnowyroad.jpg";
 import snowysunny from "./../PackagesImages/snowysunny.jpg";
 import snowsunnytwo from "./../PackagesImages/snowsunnytwo.jpg";
 import treesinsnow from "./../PackagesImages/treesinsnow.jpg";
+import newone from "./../PackagesImages/newone.jpg";
+import newtwo from "./../PackagesImages/newtwo.jpg";
+import newthree from "./../PackagesImages/newthree.jpg";
+import newfour from "./../PackagesImages/newfour.jpg";
 
 // Swat Scenes Array
 const swatScenes = [
@@ -41,6 +45,10 @@ const swatScenes = [
   { name: "Ushu forest Snowy Road", image: ushusnowyroad },
   { name: "Sunny Snowy View", image: snowsunnytwo },
   { name: "Bliss Snowfall", image: treesinsnow },
+  { name: "Freezed mahodand ", image: newone },
+  { name: "PC continental malamjabba ", image: newtwo },
+  { name: "Ushu forest Snowfall", image: newthree },
+  { name: "Ushu forest ", image: newfour },
 ];
 
 // Store Provider Component
