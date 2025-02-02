@@ -15,6 +15,7 @@ import treesinsnow from "./../assets/PackagesImages/snowysunny.jpg";
 import c2 from "./../assets/PackagesImages/c2.jpg";
 const Services = () => {
   const { toursPackage, services } = useContext(store);
+  console.log(toursPackage.tourpoints);
   const cards = [
     {
       title: "Customize Tour",
@@ -73,7 +74,12 @@ const Services = () => {
                   <h2 className="w-full text-xl font-bold text-center text-white ">
                     {tour.packageName}
                     <br />
-                    <div className="bg-slate-800">{tour.duration || "-"}</div>
+                    <div className="bg-slate-800 bg-opacity-80">
+                      {tour.duration || ""}
+                    </div>
+                    <div className="text-[16px] bg-opacity-80 bg-slate-800">
+                      {tour.tourPoints || "-"}
+                    </div>
                   </h2>
                 </div>
                 <div className="absolute flex items-center justify-center w-full gap-2 transition-all duration lg:mt-0 xs:-bottom-10 -bottom-10 sm:-bottom-10 lg:group-hover:-bottom-12 lg:-bottom-0 -z-50 buttons">

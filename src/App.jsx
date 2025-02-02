@@ -18,7 +18,7 @@ import WhatsAppButton from "./Components/WhatsappButton";
 
 const App = () => {
   return (
-    <div className="font-Manrope">
+    <div className="font-Manrope ">
       <WhatsAppButton />
       <Routes>
         <Route path="*" element={<ErrorPage />} />
