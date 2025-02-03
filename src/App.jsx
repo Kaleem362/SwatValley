@@ -15,106 +15,110 @@ import Contact from "./Components/Contact";
 import Gallery from "./Components/Gallery";
 import AboutUs from "./Components/About";
 import WhatsAppButton from "./Components/WhatsappButton";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
-    <div className="font-Manrope ">
-      <WhatsAppButton />
-      <Routes>
-        <Route path="*" element={<ErrorPage />} />
-        <Route
-          path="/"
-          element={
-            <>
-              <Topbar />
-              <Navbar />
-              <HomeScreenCarousal />
-              <Hero />
-              <Services />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/tourpackages"
-          element={
-            <>
-              <Topbar />
-              <Navbar />
-              <TourPackages />
-              <Footer />
-            </>
-          }
-        />
+    <>
+      <Analytics />
+      <div className="font-Manrope ">
+        <WhatsAppButton />
+        <Routes>
+          <Route path="*" element={<ErrorPage />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Topbar />
+                <Navbar />
+                <HomeScreenCarousal />
+                <Hero />
+                <Services />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/tourpackages"
+            element={
+              <>
+                <Topbar />
+                <Navbar />
+                <TourPackages />
+                <Footer />
+              </>
+            }
+          />
 
-        <Route
-          path="/tourdetails/tour/:id"
-          element={
-            <>
-              <Topbar />
-              <Navbar />
-              <TourDetails />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/ourservices"
-          element={
-            <>
-              <Topbar />
-              <Navbar />
-              <TourServices />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/eventsactivites"
-          element={
-            <>
-              <Topbar />
-              <Navbar />
-              <EventsActivities />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <>
-              <Topbar />
-              <Navbar />
-              <Contact />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/gallery"
-          element={
-            <>
-              <Topbar />
-              <Navbar />
-              <Gallery />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <>
-              <Topbar />
-              <Navbar />
-              <AboutUs />
-              <Footer />
-            </>
-          }
-        />
-      </Routes>
-    </div>
+          <Route
+            path="/tourdetails/tour/:id"
+            element={
+              <>
+                <Topbar />
+                <Navbar />
+                <TourDetails />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/ourservices"
+            element={
+              <>
+                <Topbar />
+                <Navbar />
+                <TourServices />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/eventsactivites"
+            element={
+              <>
+                <Topbar />
+                <Navbar />
+                <EventsActivities />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <Topbar />
+                <Navbar />
+                <Contact />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/gallery"
+            element={
+              <>
+                <Topbar />
+                <Navbar />
+                <Gallery />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <>
+                <Topbar />
+                <Navbar />
+                <AboutUs />
+                <Footer />
+              </>
+            }
+          />
+        </Routes>
+      </div>
+    </>
   );
 };
 
