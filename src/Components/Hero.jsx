@@ -5,16 +5,16 @@ import { Link } from "react-router";
 const Hero = () => {
   return (
     <div className="relative flex flex-col items-start justify-start h-auto px-3 py-10 tracking-tighter transition-all duration-200 xl:px-10 xs:px-3 sm:px-5 md:px-6 animate-fadeIn lg:px-8">
-      <div className="flex w-full text-center header">
+      <div className="flex w-full my-4 text-center header">
         <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
           Welcome to Swat Tours
         </h1>
       </div>
-      <h4 className="xs:text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-600 animate-fadeInFromLeft">
+      <h4 className="xs:text-md sm:text-lg md:text-xl lg:text-lg xl:text-3xl text-slate-600 animate-fadeInFromLeft">
         Discover Nature’s Paradise!
       </h4>
-      <div className="flex flex-col w-full h-auto gap-2 my-2 text-justify lg:flex-row lg:items-start lg:justify-between">
-        <p className="flex justify-start  items-start text-slate-500 flex-start font-manrope text-sm sm:text-md md:text-lg lg:text-lg xl:text-xl lg:w-[50%] animate-fadeInFromLeft ">
+      <div className="flex flex-col w-full h-auto gap-4 my-2 text-justify lg:flex-row lg:items-start lg:justify-between">
+        <p className="flex justify-start  items-start text-slate-500 flex-start font-manrope text-sm sm:text-md md:text-lg lg:text-lg xl:text-lg lg:w-[50%] animate-fadeInFromLeft ">
           Escape to the stunning Swat Valley with our meticulously crafted,
           all-inclusive tour packages. Immerse yourself in the natural beauty of
           this picturesque region, where lush green valleys meet towering
