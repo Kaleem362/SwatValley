@@ -220,11 +220,6 @@ const Gallery = () => {
         Swat Valley Beautiful Sceneries
       </h1>
       <AutoScrollGallery />
-      <div className="familyTours">
-        <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
-          Family Tours
-        </h1>
-      </div>
     </>
   );
 };

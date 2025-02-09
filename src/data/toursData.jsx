@@ -738,9 +738,9 @@ export const foreignerPackages = [
       },
       pricing: {
         luxuryPackage: {
-          singleOrCouple: "3,50,000 pkr/-",
-          twoCouples: "6,00,000 pkr/-",
-          Family: "8,00,000 pkr/-",
+          singleOrCouple: "1,05,000 pkr/-",
+          twoCouples: "1,80,000 pkr/-",
+          Family: "2,50,000 pkr/-",
         },
       },
       inclusions: [
