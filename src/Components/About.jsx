@@ -50,7 +50,7 @@ const AboutUs = () => {
   return (
     <>
       <Helmet>
-        <title>Swat Tours - About us</title>
+        <title>About us</title>
         <meta
           name="description"
           content="The Swat Tours is a leading tour operator in Swat Valley, offering premium travel services to local and international tourists. Our team is dedicated to providing unforgettable travel experiences, from honeymoon packages to day tours and more."
