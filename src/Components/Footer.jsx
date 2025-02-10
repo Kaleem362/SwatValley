@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <Helmet>
-        <title>Swat Tours</title>
+        <title>Swat Valley Travels</title>
         <meta
           name="description"
           content="Choose The Swat Tours for a stress-free and unforgettable tour, where every detail is taken care of with care and expertise. Let’s make your travel dreams a reality!"
