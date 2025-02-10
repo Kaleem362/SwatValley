@@ -10,6 +10,7 @@ import {
   CarFront,
 } from "lucide-react";
 import { AiFillPhone, AiOutlineWhatsApp } from "react-icons/ai";
+import { Helmet } from "react-helmet-async";
 
 const TourServices = () => {
   const services = [
@@ -68,73 +69,83 @@ const TourServices = () => {
   ];
 
   return (
-    <div className="gap-4">
-      <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
-        Our Services
-      </h1>
+    <>
+      <Helmet>
+        <title>Swat Tours - Tour services</title>
+        <meta
+          name="description"
+          content="Swat Tours offers a variety of services including pick & drop, rent a car, hotel accommodation, tourist information, tour guides, event planning, tour packages, and guest services"
+        />
+        <link rel="canonical" href="https://theswattours.com/ourservices" />
+      </Helmet>
+      <div className="gap-4">
+        <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+          Our Services
+        </h1>
 
-      <div className="grid grid-cols-1 gap-6 px-6 my-4 sm:grid-cols-2 lg:grid-cols-4">
-        {services.map((service, index) =>
-          service.title === "Pick & Drop" ? (
-            <div
-              key={index}
-              className="col-span-1 p-6 transition-shadow duration-300 transform shadow-lg sm:col-span-2 lg:col-span-4 bg-slate-300 rounded-xl hover:shadow-xl hover:-translate-y-1 font-manrope"
-            >
-              <service.icon className="mb-4 w-14 h-14 text-slate-800" />
-              <h3 className="flex flex-col items-center justify-between mb-2 text-3xl font-extrabold lg:flex lg:flex-row text-slate-800 font-Manrope">
-                {service.title}
-                <div className="flex flex-col items-center justify-around w-full text-sm lg:w-fit lg:items-center lg:justify-center xs:text-lg sm:text-lg lg:text-2xl font-Manrope">
-                  <a
-                    href="tel:+923489857193"
-                    className="flex items-center gap-1 min-w-fit animate-fadeIn"
-                  >
-                    Contact Us :
-                    <span className="font-normal underline">03489857193</span>
-                    <AiFillPhone className="w-8 h-8 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:h-12 xl:w-12 text-slate-800" />
-                  </a>
-                  <a
-                    href="https://wa.me/923489857193"
-                    className="flex items-center gap-2 ml-2 min-w-fit animate-fadeIn "
-                  >
-                    {" "}
-                    WhatsApp us at{" "}
-                    <span className="font-normal underline">03489857193</span>
-                    <AiOutlineWhatsApp className="w-8 h-8 p-1 text-white bg-green-500 rounded-full xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:h-12 xl:w-12" />
-                  </a>
-                </div>
-              </h3>
-              <p className="mb-4 text-lg text-slate-600">{service.desc}</p>
-              <ul className="ml-8 text-lg text-slate-600 font-Manrope">
-                {service.packages.map((pkg, pkgIndex) => (
-                  <li key={pkgIndex} className="my-2 list-disc">
-                    <div className="flex items-center justify-between w-full text-xs font-bold xs:text-sm sm:text-md md:text-lg lg:text-xl text-slate-800">
-                      {pkg.location}
+        <div className="grid grid-cols-1 gap-6 px-6 my-4 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((service, index) =>
+            service.title === "Pick & Drop" ? (
+              <div
+                key={index}
+                className="col-span-1 p-6 transition-shadow duration-300 transform shadow-lg sm:col-span-2 lg:col-span-4 bg-slate-300 rounded-xl hover:shadow-xl hover:-translate-y-1 font-manrope"
+              >
+                <service.icon className="mb-4 w-14 h-14 text-slate-800" />
+                <h3 className="flex flex-col items-center justify-between mb-2 text-3xl font-extrabold lg:flex lg:flex-row text-slate-800 font-Manrope">
+                  {service.title}
+                  <div className="flex flex-col items-center justify-around w-full text-sm lg:w-fit lg:items-center lg:justify-center xs:text-lg sm:text-lg lg:text-2xl font-Manrope">
+                    <a
+                      href="tel:+923489857193"
+                      className="flex items-center gap-1 min-w-fit animate-fadeIn"
+                    >
+                      Contact Us :
+                      <span className="font-normal underline">03489857193</span>
+                      <AiFillPhone className="w-8 h-8 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:h-12 xl:w-12 text-slate-800" />
+                    </a>
+                    <a
+                      href="https://wa.me/923489857193"
+                      className="flex items-center gap-2 ml-2 min-w-fit animate-fadeIn "
+                    >
+                      {" "}
+                      WhatsApp us at{" "}
+                      <span className="font-normal underline">03489857193</span>
+                      <AiOutlineWhatsApp className="w-8 h-8 p-1 text-white bg-green-500 rounded-full xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:h-12 xl:w-12" />
+                    </a>
+                  </div>
+                </h3>
+                <p className="mb-4 text-lg text-slate-600">{service.desc}</p>
+                <ul className="ml-8 text-lg text-slate-600 font-Manrope">
+                  {service.packages.map((pkg, pkgIndex) => (
+                    <li key={pkgIndex} className="my-2 list-disc">
+                      <div className="flex items-center justify-between w-full text-xs font-bold xs:text-sm sm:text-md md:text-lg lg:text-xl text-slate-800">
+                        {pkg.location}
 
-                      <strong className="p-1 ml-8 text-xs font-bold bg-white rounded-lg xs:text-sm sm:text-md md:text-lg lg:text-xl">
-                        {pkg.price}
-                      </strong>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
-            <div
-              key={index}
-              className="p-6 transition-shadow duration-300 transform shadow-lg bg-slate-300 rounded-xl hover:shadow-xl hover:-translate-y-1"
-            >
-              <service.icon className="w-12 h-12 mb-4 text-slate-800" />
-              <h3 className="mb-2 text-2xl font-extrabold text-slate-800 font-Manrope">
-                {service.title}
-              </h3>
-              <p className="text-lg text-slate-600 font-Manrope">
-                {service.desc}
-              </p>
-            </div>
-          )
-        )}
+                        <strong className="p-1 ml-8 text-xs font-bold bg-white rounded-lg xs:text-sm sm:text-md md:text-lg lg:text-xl">
+                          {pkg.price}
+                        </strong>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <div
+                key={index}
+                className="p-6 transition-shadow duration-300 transform shadow-lg bg-slate-300 rounded-xl hover:shadow-xl hover:-translate-y-1"
+              >
+                <service.icon className="w-12 h-12 mb-4 text-slate-800" />
+                <h3 className="mb-2 text-2xl font-extrabold text-slate-800 font-Manrope">
+                  {service.title}
+                </h3>
+                <p className="text-lg text-slate-600 font-Manrope">
+                  {service.desc}
+                </p>
+              </div>
+            )
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
