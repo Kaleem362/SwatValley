@@ -203,10 +203,10 @@ const Contact = () => {
           <div className="w-full text-center font-Manrope">
             <small className="text-lg ">Select Your desired Form here</small>
           </div>
-          <div className="flex items-center justify-center w-full gap-4 my-2 buttons">
+          <div className="flex items-center justify-center w-full gap-2 my-2 xs:gap-4 buttons">
             <button
               onClick={() => setFormType("customizeTour")}
-              className={`px-6 xs:px-4 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-[15px] sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
+              className={`px-6 xs:px-4 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[12px]  xs:text-[15px] sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
                 formType === "customizeTour"
                   ? "bg-slate-800 text-white"
                   : "bg-gray-200 text-gray-800"
@@ -217,7 +217,7 @@ const Contact = () => {
 
             <button
               onClick={() => setFormType("serviceForm")}
-              className={`px-6 xs:px-4 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-[15px] sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
+              className={`px-6 xs:px-4 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[12px]  xs:text-[15px] sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
                 formType === "serviceForm"
                   ? "bg-slate-800 text-white"
                   : "bg-gray-200 text-gray-800"
@@ -414,7 +414,7 @@ const Contact = () => {
                 className="px-6 py-2 text-white transition-all rounded-full bg-slate-800 hover:bg-slate-700 hover:scale-110 hover:translate-x-1 hover:-skew-y-2"
                 disabled={loading}
               >
-                Customize Tour
+                Send Details
               </button>
             </form>
           )}
