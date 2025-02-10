@@ -445,7 +445,7 @@ const Contact = () => {
                 e.target.reset();
               }}
             >
-              <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+              <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
                 Service Form
               </h2>
               <p className="text-center text-slate-800 xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-xl 2xl:text-3xl">
