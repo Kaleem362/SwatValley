@@ -57,7 +57,7 @@ const AboutUs = () => {
         />
         <link rel="canonical" href="https://theswattours.com/about" />
       </Helmet>
-      <div className="w-full min-h-screen overflow-hidden font-Manrope ">
+      <div className="w-full min-h-screen overflow-hidden text-justify font-Manrope">
         {" "}
         <div className="min-h-screen ">
           {/* Hero Section */}
@@ -67,22 +67,18 @@ const AboutUs = () => {
               alt="Swat Valley"
               className="object-cover object-center w-full h-full"
             />
-            <div className="absolute inset-0  bg-black bg-opacity-50 flex items-center justify-center">
-              <h1 className="text-5xl font-bold text-white text-center animate-fade-in">
-                About The Swat Tours
-              </h1>
-            </div>
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75"></div>
           </div>
 
           {/* About Company Section */}
-          <div className="container px-6 py-12 mx-auto">
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="px-6 py-10 mx-auto ">
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
               {/* Company Description */}
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-slate-800">
+              <div className="w-full space-y-4">
+                <h2 className="text-5xl font-bold text-center text-slate-800">
                   Who We Are
                 </h2>
-                <p className="text-lg text-slate-700">
+                <p className="text-lg text-justify text-slate-700">
                   At <strong>The Swat Tours</strong>, we are passionate about
                   showcasing the breathtaking beauty of Swat Valley. Known as
                   the "Switzerland of Asia," Swat Valley is a paradise for
@@ -100,15 +96,15 @@ const AboutUs = () => {
               </div>
 
               {/* Owner's Image */}
-              <div className="flex flex-col gap-4 items-center justify-center">
-                <div className="relative w-[375px] h-[375px] overflow-hidden rounded-full shadow-lg">
+              <div className="flex flex-col items-center justify-center gap-4 p-10 my-4">
+                <div className="relative xs:w-[290px] md:w-[375px] xs:h-[290px] md:h-[375px] overflow-hidden rounded-full shadow-lg ">
                   <img
                     src={owner}
                     alt="Owner of The Swat Tours"
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full "
                   />
                 </div>
-                <h1 className="text-slate-800 xs:text-sm sm:text-md md:text-lg lg:text-2xl xl:text-3xl font-extrabold uppercase">
+                <h1 className="font-extrabold uppercase font-Manrope text-slate-800 xs:text-xl sm:text-xl md:text-xl lg:text-2xl xl:text-3xl">
                   Fawad Khan
                 </h1>
               </div>
@@ -117,12 +113,13 @@ const AboutUs = () => {
 
           {/* Services Section */}
           <div className="p-6 !w-full">
-            <div className="container w-full">
-              <h1 className="my-4 text-5xl font-bold text-center md:text-5xl text-slate-800 animate-fade-in">
+            <div className="w-full">
+              <h1 className="my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl text-slate-800 animate-fade-in">
                 Your Journey Into Paradise
               </h1>
-              <div className=" p-6 rounded-2xl w-full">
-                <p className="text-slate-700 leading-relaxed text-lg w-full">
+
+              <div className="w-full rounded-2xl">
+                <p className="w-full text-lg leading-relaxed text-slate-700">
                   Welcome to The Swat Tours, where your dream Pakistani
                   adventure comes to life. From the moment you envision your
                   journey, our dedicated team crafts a seamless experience
@@ -152,10 +149,10 @@ const AboutUs = () => {
 
           {/* Gallery Section */}
           <div className="container px-6 py-12 mx-auto">
-            <h1 className="my-2 text-5xl font-bold text-center md:text-5xl text-slate-800 animate-fade-in">
+            <h1 className="my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl text-slate-800 animate-fade-in">
               Explore Swat Valley
             </h1>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3 my-4">
+            <div className="grid grid-cols-1 gap-6 my-4 md:grid-cols-3">
               {/* Image 1 */}
               <div className="overflow-hidden rounded-lg">
                 <img
@@ -186,13 +183,13 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="w-full my-4">
-          <h1 className=" text-5xl font-bold text-center md:text-5xl text-slate-800 animate-fade-in">
+          <h1 className="my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl text-slate-800 animate-fade-in">
             Discover the Hidden Gem of Pakistan: Swat Valley
           </h1>
         </div>
-        <div className="p-6 mx-auto  max-full">
-          <div className="p-6 rounded-xl animate-slide-in-left">
-            <p className="mb-6 text-lg leading-relaxed text-slate-800">
+        <div className="p-6 mx-auto max-full">
+          <div className=" rounded-xl animate-slide-in-left">
+            <p className="mb-6 text-base leading-relaxed sm:text-lg md:text-xl sm:leading-loose text-slate-800">
               Tucked away in the northeastern part of Pakistan, Swat Valley is a
               breathtakingly beautiful destination that will leave you
               spellbound. Dubbed the "Switzerland of Asia," Swat Valley is a
@@ -204,10 +201,11 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="p-8 rounded-xl animate-slide-in-right">
-            <h2 className="mb-2 text-3xl font-bold text-slate-800">
+          <div className=" rounded-xl animate-slide-in-right">
+            <h2 className="mb-2 text-2xl font-bold text-center sm:text-3xl md:text-4xl text-slate-800">
               Natural Beauty
             </h2>
+
             <p className="text-lg leading-relaxed text-slate-800">
               Swat Valley is a nature lover's paradise, with its lush green
               meadows, towering mountains, and sparkling lakes. The valley is
@@ -219,11 +217,11 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="p-8  rounded-xl animate-slide-in-left">
-            <h2 className="mb-2 text-3xl font-bold text-slate-800">
+          <div className="rounded-xl animate-slide-in-left">
+            <h2 className="mb-2 text-2xl font-bold text-center sm:text-3xl md:text-4xl text-slate-800">
               Cultural Heritage
             </h2>
-            <p className="text-lg leading-relaxed text-slate-800">
+            <p className="mb-6 text-base leading-relaxed sm:text-lg md:text-xl sm:leading-loose text-slate-800">
               Swat Valley is steeped in history and culture, with a rich
               heritage that dates back to the ancient Gandhara civilization. The
               valley is home to numerous archaeological sites, including the
@@ -233,11 +231,11 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="p-8 rounded-xl animate-slide-in-left">
-            <h2 className="mb-2 text-3xl font-bold text-slate-800">
+          <div className=" rounded-xl animate-slide-in-left">
+            <h2 className="mb-2 text-2xl font-bold text-center sm:text-3xl md:text-4xl text-slate-800">
               Things to do
             </h2>
-            <p className="text-lg leading-relaxed text-slate-800">
+            <p className="mb-6 text-base leading-relaxed sm:text-lg md:text-xl sm:leading-loose text-slate-800">
               Swat Valley offers a wide range of activities for visitors,
               including: <br />
               - Trekking and hiking in the Hindu Kush mountains
@@ -250,11 +248,11 @@ const AboutUs = () => {
               heritage
             </p>
           </div>
-          <div className="p-8 rounded-xl animate-slide-in-left">
-            <h2 className="mb-2 text-3xl font-bold text-slate-800">
+          <div className=" rounded-xl animate-slide-in-left">
+            <h2 className="mb-2 text-2xl font-bold text-center sm:text-3xl md:text-4xl text-slate-800">
               Plan Your Trip
             </h2>
-            <p className="text-lg leading-relaxed text-slate-800">
+            <p className="mb-6 text-base leading-relaxed sm:text-lg md:text-xl sm:leading-loose text-slate-800">
               Swat Valley is easily accessible by road or air, with the nearest
               airport located in Peshawar. The valley has a range of
               accommodation options, from luxury hotels to budget-friendly
@@ -375,7 +373,7 @@ const AboutUs = () => {
             </p>
             <FAQ />
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 my-10">
+          <div className="grid grid-cols-1 gap-8 my-10 md:grid-cols-3">
             {activities.map((category, index) => (
               <div
                 key={index}
@@ -400,7 +398,7 @@ const AboutUs = () => {
             ))}
           </div>
 
-          <div className="p-8 text-center  bg-slate-800 rounded-xl">
+          <div className="p-8 text-center bg-slate-800 rounded-xl">
             <h2 className="mb-4 text-3xl font-bold text-white">
               Ready to Experience Swat Valley?
             </h2>
