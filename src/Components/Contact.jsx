@@ -194,19 +194,19 @@ const Contact = () => {
         />
         <link rel="canonical" href="https://theswattours.com/contact" />
       </Helmet>{" "}
-      <div className="container w-full p-6 mx-auto my-10">
+      <div className="container w-full p-6 mx-auto my-4">
         <h1 className="w-full my-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Contact Us
         </h1>
 
-        <div className="flex flex-col items-center justify-center mb-8 space-x-4 font-Manrope">
+        <div className="flex flex-col items-center justify-center mb-4 space-x-4 font-Manrope">
           <div className="w-full text-center font-Manrope">
             <small className="text-lg ">Select Your desired Form here</small>
           </div>
-          <div className="my-4 space-x-4 space-y-4 buttons">
+          <div className="flex items-center justify-center w-full gap-4 my-2 buttons">
             <button
               onClick={() => setFormType("customizeTour")}
-              className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
+              className={`px-6 xs:px-4 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-[15px] sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
                 formType === "customizeTour"
                   ? "bg-slate-800 text-white"
                   : "bg-gray-200 text-gray-800"
@@ -217,7 +217,7 @@ const Contact = () => {
 
             <button
               onClick={() => setFormType("serviceForm")}
-              className={`px-6 xs:px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-sm sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
+              className={`px-6 xs:px-4 sm:px-3 md:px-4 lg:px-5 xl:px-6 text-[10px] xs:text-[15px] sm:text-sm md:text-lg lg:text-xl xl:text-2xl py-2 font-semibold rounded-full ${
                 formType === "serviceForm"
                   ? "bg-slate-800 text-white"
                   : "bg-gray-200 text-gray-800"
@@ -231,15 +231,15 @@ const Contact = () => {
         <div className="p-6 my-2 rounded-lg shadow-xl bg-slate-400 shadow-slate-700 font-Manrope">
           {formType === "customizeTour" && (
             <form onSubmit={handleSubmit}>
-              <h1 className="text-5xl font-extrabold text-center text-slate-800">
+              <h1 className="text-3xl font-extrabold text-center xs:text-3xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl text-slate-800">
                 Customize Tour Form
               </h1>
-              <p className="my-2 text-xl text-center text-slate-800">
+              <p className="my-2 text-center xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl text-slate-800">
                 Fill the Form below for planning a Customize tour , let us know
                 how many persons you are, and where you want to travel we get
                 back to you for customizing a tour according to your budget.
               </p>
-              <div className="mb-4">
+              <div className="my-4">
                 <label className="block mb-2 font-semibold text-slate-700">
                   Your Name
                 </label>
@@ -389,15 +389,15 @@ const Contact = () => {
 
               <div className="mb-4">
                 <label className="block mb-2 font-semibold text-slate-700">
-                  Write Your Message
+                  Write a Message
                 </label>
                 <textarea
                   name="message"
-                  className={`w-[70%] p-2 rounded-lg outline-none ${
+                  className={`w-full p-3 rounded-lg outline-none ${
                     errors.message ? "border-red-500" : "border-none"
                   }`}
                   rows={5}
-                  placeholder="Write a message"
+                  placeholder="Write a message...."
                   value={formData.message}
                   onChange={handleInputChange}
                   maxLength={100}
