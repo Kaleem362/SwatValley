@@ -25,7 +25,7 @@ const TourPackages = () => {
   return (
     <>
       <Helmet>
-        <title>Swat Tours - TourPackages</title>
+        <title>Swat Valley Travels - Tour Packages</title>
         <meta
           name="description"
           content="Swat Tours offers a variety of tour packages to explore the beauty of Swat Valley and its surroundings."
