@@ -485,9 +485,14 @@ const Contact = () => {
                   name="selectedCar"
                   value={selectedCar}
                   onChange={(e) => setSelectedCar(e.target.value)}
+                  className="w-64 px-4 py-2 border-none rounded-full outline-none accent-slate-800"
                 >
                   {carOptions.map((car, index) => (
-                    <option key={index} value={car}>
+                    <option
+                      key={index}
+                      value={car}
+                      className="text-slate-800 bg-slate-100"
+                    >
                       {car}
                     </option>
                   ))}
