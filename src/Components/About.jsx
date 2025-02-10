@@ -75,7 +75,7 @@ const AboutUs = () => {
             <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
               {/* Company Description */}
               <div className="w-full space-y-4">
-                <h2 className="text-5xl font-bold text-center text-slate-800">
+                <h2 className="text-5xl font-bold sm:text-center text-start text-slate-800">
                   Who We Are
                 </h2>
                 <p className="text-lg text-justify text-slate-700">
@@ -114,7 +114,7 @@ const AboutUs = () => {
           {/* Services Section */}
           <div className="p-6 !w-full">
             <div className="w-full">
-              <h1 className="my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl text-slate-800 animate-fade-in">
+              <h1 className="my-4 text-3xl font-bold text-start sm:text-center sm:text-4xl md:text-5xl lg:text-6xl text-slate-800 animate-fade-in">
                 Your Journey Into Paradise
               </h1>
 
@@ -149,7 +149,7 @@ const AboutUs = () => {
 
           {/* Gallery Section */}
           <div className="container px-6 py-12 mx-auto">
-            <h1 className="my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl text-slate-800 animate-fade-in">
+            <h1 className="my-4 text-3xl font-bold text-start sm:text-center sm:text-4xl md:text-5xl lg:text-6xl text-slate-800 animate-fade-in">
               Explore Swat Valley
             </h1>
             <div className="grid grid-cols-1 gap-6 my-4 md:grid-cols-3">
@@ -182,8 +182,8 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="w-full my-4">
-          <h1 className="my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl text-slate-800 animate-fade-in">
+        <div className="w-full p-4 my-4">
+          <h1 className="my-4 text-3xl font-bold text-start xs:text-center sm:text-4xl md:text-5xl lg:text-6xl text-slate-800 animate-fade-in">
             Discover the Hidden Gem of Pakistan: Swat Valley
           </h1>
         </div>
@@ -202,7 +202,7 @@ const AboutUs = () => {
           </div>
 
           <div className=" rounded-xl animate-slide-in-right">
-            <h2 className="mb-2 text-2xl font-bold text-center sm:text-3xl md:text-4xl text-slate-800">
+            <h2 className="mb-2 text-2xl font-bold text-start sm:text-center sm:text-3xl md:text-4xl text-slate-800">
               Natural Beauty
             </h2>
 
@@ -218,7 +218,7 @@ const AboutUs = () => {
           </div>
 
           <div className="rounded-xl animate-slide-in-left">
-            <h2 className="mb-2 text-2xl font-bold text-center sm:text-3xl md:text-4xl text-slate-800">
+            <h2 className="mb-2 text-2xl font-bold text-start sm:text-center sm:text-3xl md:text-4xl text-slate-800">
               Cultural Heritage
             </h2>
             <p className="mb-6 text-base leading-relaxed sm:text-lg md:text-xl sm:leading-loose text-slate-800">
@@ -232,7 +232,7 @@ const AboutUs = () => {
           </div>
 
           <div className=" rounded-xl animate-slide-in-left">
-            <h2 className="mb-2 text-2xl font-bold text-center sm:text-3xl md:text-4xl text-slate-800">
+            <h2 className="mb-2 text-2xl font-bold text-start sm:text-center sm:text-3xl md:text-4xl text-slate-800">
               Things to do
             </h2>
             <p className="mb-6 text-base leading-relaxed sm:text-lg md:text-xl sm:leading-loose text-slate-800">
@@ -249,7 +249,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className=" rounded-xl animate-slide-in-left">
-            <h2 className="mb-2 text-2xl font-bold text-center sm:text-3xl md:text-4xl text-slate-800">
+            <h2 className="mb-2 text-2xl font-bold text-start sm:text-center sm:text-3xl md:text-4xl text-slate-800">
               Plan Your Trip
             </h2>
             <p className="mb-6 text-base leading-relaxed sm:text-lg md:text-xl sm:leading-loose text-slate-800">
