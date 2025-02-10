@@ -17,10 +17,19 @@ import couple10 from "../assets/PackagesImages/c6.jpg";
 import coupleeleven from "../assets/PackagesImages/c5.jpg";
 
 import AutoScrollGallery from "./ScrollGallery";
+import { Helmet } from "react-helmet-async";
 
 const Gallery = () => {
   return (
     <>
+      <Helmet>
+        <title>Swat Tours - Photos Gallery</title>
+        <meta
+          name="description"
+          content="Gallery provides some of the best photos of Swat Valley, showcasing its scenic beauty, lush green valleys, snow-capped mountains, crystal-clear rivers, and serene lakes."
+        />
+        <link rel="canonical" href="https://theswattours.com/gallery" />
+      </Helmet>
       <div className="p-6 text-white bg-slate-100 sm:py-8 lg:py-12 font-Manrope">
         <div className="h-auto px-4 mx-auto max-w-screen-2xl md:px-8">
           <div className="flex items-center justify-between gap-8 mb-4 sm:mb-8 md:mb-12 ">
