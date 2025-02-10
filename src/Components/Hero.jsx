@@ -2,6 +2,7 @@ import React from "react";
 import car from "../assets/icons-asset/yellowcar.png";
 import thumbnailimage from "./../assets/images/thumbnailimage.png";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
 const Hero = () => {
   return (
     <>
