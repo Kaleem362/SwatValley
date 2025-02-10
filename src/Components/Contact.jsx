@@ -519,19 +519,20 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
                 <button
                   type="submit"
-                  className="flex items-center gap-2 px-6 py-2 text-lg font-bold text-white transition-all duration-300 bg-green-600 border-2 border-green-600 rounded-lg "
+                  className="flex items-center gap-2 px-6 py-2 font-bold text-white transition-all duration-300 bg-green-600 border-2 border-green-600 rounded-lg text-md xs:px-4 sm:px-4 md:px-5 "
                 >
-                  Send WhatsApp <AiOutlineWhatsApp size={28} />
+                  Send <span className="hidden md:visible">Whatsapp</span>{" "}
+                  <AiOutlineWhatsApp size={28} />
                 </button>
 
                 <a
                   href="tel:+923489857193"
                   className="flex items-center gap-2 px-6 py-2 text-lg font-bold text-white transition-all duration-300 border-2 rounded-lg bg-slate-600 border-slate-600 hover:text-slate-800 "
                 >
-                  Call Now <IoCall size={28} />
+                  Call us <IoCall size={28} />
                 </a>
               </div>
               <br />
