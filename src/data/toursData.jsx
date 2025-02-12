@@ -18,6 +18,8 @@ export const toursPackage = [
   {
     id: 1,
     packageName: "Luxury Honeymoon/Couple Tour ",
+    description:
+      "Enjoy a luxurious honeymoon or couple tour in Swat Valley with our executive package. Explore the stunning landscapes of Swat, Kalam, and Malam Jabba with your loved one.",
     coverImage: kalamvalley,
     Image: HoneyMoonone,
     duration: "4 days 3 nights",
@@ -57,6 +59,8 @@ export const toursPackage = [
   {
     id: 2,
     packageName: "Honeymoon Couple / Family Tour ",
+    description:
+      "Experience a memorable honeymoon or family tour in Swat Valley with our deluxe package, Pick & drop you from Lahore to Explore the beautiful landscapes of Swat, Kalam, and Malam Jabba.",
     coverImage: malamjabbacover,
     Image: HoneyMoontwo,
     duration: "days 3 nights 2",
@@ -98,6 +102,8 @@ export const toursPackage = [
   {
     id: 3,
     packageName: "Private Luxury Honeymoon/Couple Tour ",
+    description:
+      "Enjoy a private luxury honeymoon or couple tour in Swat Valley, we are ready to pick you from Karachi to Swat.",
     coverImage: MalamJabba,
     Image: HoneyMoonthree,
     duration: "7 days (Karachi)",
@@ -140,6 +146,8 @@ export const toursPackage = [
   {
     id: 4,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour ",
+    description:
+      "Experience a six days luxurious honeymoon or couple tour in Swat Valley, visit from your starting point Karachi.",
     coverImage: MalamJabba,
     Image: honeymoonfour,
     duration: "6 days (karachi)",
@@ -181,6 +189,8 @@ export const toursPackage = [
   {
     id: 5,
     packageName: "Private Luxury Honeymoon/Couple Tour ",
+    description:
+      "enjoy a luxurious honeymoon or couple tour in Swat Valley, visit the beautiful famous places of Swat, Kalam, and Malam Jabba with your loved one, we are ready to pick you from Islamabad.",
     coverImage: MalamJabba,
     Image: honeymoonfive,
     duration: "4 Days, 3 Nights",
@@ -223,6 +233,8 @@ export const toursPackage = [
   {
     id: 6,
     packageName: "Deluxe Private Luxury Honeymoon/Couple Tour ",
+    description:
+      "Experience a Deluxe HoneyMoon Tour in swat valley, visit the mesmerizing places of Swat, Kalam, and Malam Jabba with your loved one, we are ready to pick & drop you from Islamabad.",
     coverImage: malamjabbacover,
     Image: honeymoonsix,
 
@@ -265,6 +277,8 @@ export const toursPackage = [
   {
     id: 7,
     packageName: "Luxury 3-Day Swat Tour ",
+    description:
+      "Explore the Beauty of Swat Valley with our Luxury Tour Package of 3 days and 2 nights, make the moments memorable with your family.",
     coverImage: MalamJabba,
     Image: familytour,
     duration: "3 Days, 2 Nights",
@@ -316,6 +330,8 @@ export const toursPackage = [
   {
     id: 8,
     packageName: "Luxury 2-Day Swat Tour ",
+    description:
+      "experience the beauty of swat valley with the luxury tour package of 2 days and 1 night, picking you from mingora and drop you back to mingora.",
     coverImage: MalamJabba,
     Image: swattour,
     duration: "2 Days, 1 Night",
@@ -556,7 +572,7 @@ export const foreignerPackages = [
         },
       },
       inclusions: [
-        "Private transportation (luxury car + pradu 4by4 or SUV)",
+        "Private transportation (luxury car + pradu 4x4 or SUV)",
         "Accommodation in luxury hotels",
         "Breakfast and dinner at hotels",
         "Guided tours of Swat Valley",
