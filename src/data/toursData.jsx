@@ -505,7 +505,8 @@ export const foreignerPackages = [
   {
     tourPackage: {
       title: "Luxury Swat Valley Tour Package for Foreigners",
-      duration: "7-Day Itinerary",
+      duration:
+        "It is a 7-Day Itinerary for foreigners to visit swat valley & hunza valley with the best services offered.",
       image: foreignone,
       itinerary: {
         day1: {
@@ -586,7 +587,8 @@ export const foreignerPackages = [
   {
     tourPackage: {
       title: "Luxury Swat Valley and Kumrat Valley Tour Package",
-      duration: "7-Day Itinerary",
+      duration:
+        "it is a 7-Day Itinerary package for foreigners to explore the beauty of swat and kumrat valley",
       image: foreigntwo,
       itinerary: {
         day1: {
@@ -670,7 +672,8 @@ export const foreignerPackages = [
     tourPackage: {
       title:
         "Luxury 7-Day Swat and Hunza Tour Package for International Tourists",
-      duration: "7-Day Itinerary",
+      duration:
+        "it is a 7-Day Itinerary tour package for international tourists coming from all over the world to explore the beauty of swat and hunza valley",
       image: foreignthree,
       pricing: {
         luxuryPackage: {
@@ -695,6 +698,8 @@ export const foreignerPackages = [
     tourPackage: {
       title: "Luxury 7-Day Swat and Hunza Tour Package for Pakistani Citizens",
       image: foreignfour,
+      duration:
+        "It is a 7-Day Itinerary tour package for pakistani citizens from all over the country (pakistan) to explore the beauty of swat and hunza valley",
       itinerary: {
         day1: {
           title: "Arrival in Islamabad",

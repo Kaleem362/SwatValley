@@ -35,7 +35,7 @@ const ForeignerPackages = () => {
               <h2 className="text-2xl font-bold md:text-3xl xs:text-2xl sm:text-2xl">
                 {title}
               </h2>
-              <p className="md:text-3xl xs:text-xl sm:text-xl lg:text-3xl text-slate-200">
+              <p className="md:text-xl xs:text-xl sm:text-xl lg:text-xl text-slate-200">
                 {duration}
               </p>
             </div>
