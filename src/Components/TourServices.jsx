@@ -17,27 +17,27 @@ const TourServices = () => {
     {
       icon: CarFront,
       title: "Rent A Car / Taxi",
-      desc: "Premium vehicle rental and taxi services for comfortable travel",
+      desc: "we provide cars for rent and for taxi services in swat valley for tour and your own occasions",
     },
     {
       icon: HotelIcon,
       title: "Hotel Accommodation",
-      desc: "Quality lodging options across Swat Valley",
+      desc: "Providing the best luxury and executive hotel accommodation in Swat Valley, the hotels are equipped with all modern facilities",
     },
     {
       icon: InfoIcon,
       title: "Tourist Information",
-      desc: "Comprehensive guidance and support center",
+      desc: "For local and foreign tourists, we provide information about the best places to visit in Swat Valley",
     },
     {
       icon: LanguagesIcon,
       title: "Tour Guides",
-      desc: "Professional guides fluent in English, Urdu, and Pashto",
+      desc: "professional guides that can talk in multiple languages ( urdu, English, and pusho language )",
     },
     {
       icon: Truck,
       title: "Pick & Drop",
-      desc: "Convenient transportation from your location",
+      desc: "we are providing transportation services in swat, peshawar, islamabad, we are ready to pick you from your destination and drop you to your destination, we have multiple packages for pick and drop, and feel free to contact us for car booking and pick and drop services, you can call us from picking you from your destination if you are locating in peshawar islamabad or swat, we are providing pick and drop services in swat valley, peshawar, and islamabad",
       packages: [
         { location: "Malam Jabba Pick/Drop", price: "Rs 5,500/-" },
         { location: "Kalam Pick/Drop", price: "Rs 7,000/-" },
@@ -54,17 +54,17 @@ const TourServices = () => {
     {
       icon: Calendar1,
       title: "Event Planning",
-      desc: "Custom event organization in Swat Valley",
+      desc: "we can plan an event for you if you want to celebrate your birthday, wedding anniversary, or any other event, we can plan an event for you in swat valley, your happiness and satisfaction is our responsibility and our first priority",
     },
     {
       icon: Package2,
       title: "Tour Packages",
-      desc: "All-inclusive tour packages for every preference",
+      desc: "All inclusive we are providing the best tour packages in swat valley and other northern areas of pakistan, the tour packages has multiple options and you can choose the best package for you, we are providing the best tour packages in swat valley, the tour packages are for families, groups, and couples, we are providing the best tour packages in swat valley, the tour packages are for families, groups, and couples",
     },
     {
       icon: Users2,
       title: "Guest Services",
-      desc: "Personalized attention for local and foreign tourists",
+      desc: "we are providing personalized attention to our special guests, coming from all over the world, your respect , care and satisfaction in every thick and thin is our responsibility, we are comitted to provide you the best of our services and make your trip memorable",
     },
   ];
 

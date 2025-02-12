@@ -28,11 +28,11 @@ const Navbar = () => {
         <link rel="canonical" href="https://theswattours.com/" />
       </Helmet>
       <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-400 animate-fadeInFromTop">
-        <Link to={"/"}>
+        <a href="https://theswattours.com/">
           <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xlmd:text-3xl lg:text-5xl xs:text-4xl ">
             The Swat Tours
           </h1>
-        </Link>
+        </a>
         <ul
           className={`${
             isMenuOpen
