@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TiThMenu } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 const Navbar = () => {
@@ -16,6 +16,9 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  useEffect(() => {
+    localStorage.setItem("selectedTab", selectedTab);
+  }, [selectedTab]);
 
   return (
     <>
@@ -25,16 +28,16 @@ const Navbar = () => {
           name="description"
           content="This is the navbar component of the Swat Tours website."
         />
-        <link rel="canonical" href="https://theswattours.com/" />
+        <link rel="canonical" to="https://theswattours.com/" />
       </Helmet>
       <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-400 animate-fadeInFromTop">
-        <a href="https://theswattours.com/">
-          <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xlmd:text-3xl lg:text-5xl xs:text-4xl ">
+        <Link to={"/"}>
+          <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xl md:text-3xl lg:text-5xl ">
             The Swat Tours
           </h1>
-        </a>
+        </Link>
         <ul
-          className={`${
+          className={`transition-all duration-300 ease-in-out ${
             isMenuOpen
               ? "flex flex-col absolute top-48 text-slate-800  sm:top-40 xs:text-slate-800 md:text-slate-800 lg:text-slate-800 xl:text-slate-800 left-0 w-full bg-[#becbd6] p-4 space-y-2  z-50"
               : "hidden"
@@ -110,6 +113,8 @@ const Navbar = () => {
         </ul>
         <span
           className="p-2 border rounded-lg cursor-pointer bg-slate-800 border-slate-800 menu lg:hidden"
+          aria-label="Toggle menu"
+          role="button"
           onClick={toggleMenu}
         >
           {isMenuOpen ? (

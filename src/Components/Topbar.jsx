@@ -56,7 +56,7 @@ const Topbar = () => {
               className="w-6 h-6 animate-fadeIn"
             />
           </a>
-          <a href="https://www.instagram.com">
+          <a href="https://www.instagram.com/the_swat_tours?igsh=MTgzbWRjdDNvamZwdg==">
             <img
               src={instagram}
               alt="instagram"

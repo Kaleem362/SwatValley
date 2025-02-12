@@ -7,7 +7,7 @@ import vehicle from "../assets/PackagesImages/vehicle.jpg";
 
 import FAQ from "./FAQ";
 import { Camera, Mountain, Vegan } from "lucide-react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 const AboutUs = () => {
@@ -66,6 +66,7 @@ const AboutUs = () => {
               src={campbackground}
               alt="Swat Valley"
               className="object-cover object-center w-full h-full"
+              loading="lazy"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75"></div>
           </div>
@@ -102,6 +103,7 @@ const AboutUs = () => {
                     src={owner}
                     alt="Owner of The Swat Tours"
                     className="object-cover w-full h-full "
+                    loading="lazy"
                   />
                 </div>
                 <h1 className="font-extrabold uppercase font-Manrope text-slate-800 xs:text-xl sm:text-xl md:text-xl lg:text-2xl xl:text-3xl">
@@ -159,6 +161,7 @@ const AboutUs = () => {
                   src={snowysunny}
                   alt="Swat Valley"
                   className="object-cover w-full h-64"
+                  loading="lazy"
                 />
               </div>
 
@@ -168,6 +171,7 @@ const AboutUs = () => {
                   src={malamjabba}
                   alt="Swat Valley"
                   className="object-cover w-full h-64"
+                  loading="lazy"
                 />
               </div>
 
@@ -177,6 +181,7 @@ const AboutUs = () => {
                   src={vehicle}
                   alt="Swat Valley"
                   className="object-cover w-full h-64"
+                  loading="lazy"
                 />
               </div>
             </div>

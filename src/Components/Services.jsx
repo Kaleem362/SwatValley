@@ -4,11 +4,9 @@ import CozyHotels from "../assets/Valley images/PC hotel malamjabba.jpg";
 import Travel from "../assets/Valley images/travel.jpg";
 import guide from "../assets/images/guide.jpg";
 import ContactButton from "../Components/ContactButton";
-import { Link } from "react-router";
-
+import { Link } from "react-router-dom";
 import whatsappIcon from "../assets/icons-asset/whatsapp (1).png";
 import { store } from "../assets/Store/Context";
-
 import sangartop from "./../assets/PackagesImages/sangartop.jpg";
 import shangladaytour from "./../assets/PackagesImages/shangladaytour.jpg";
 import treesinsnow from "./../assets/PackagesImages/snowysunny.jpg";

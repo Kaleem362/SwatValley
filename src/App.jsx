@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
-
 import Topbar from "./Components/Topbar";
 import Navbar from "./Components/Navbar";
 import HomeScreenCarousal from "./Components/HomeScreenCarousal";
@@ -27,7 +26,6 @@ const App = () => {
         <div className="font-Manrope">
           <WhatsAppButton />
           <Routes>
-            <Route path="*" element={<ErrorPage />} />
             <Route
               path="/"
               element={
@@ -42,23 +40,23 @@ const App = () => {
               }
             />
             <Route
+              path="/about"
+              element={
+                <>
+                  <Topbar />
+                  <Navbar />
+                  <AboutUs />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
               path="/tourpackages"
               element={
                 <>
                   <Topbar />
                   <Navbar />
                   <TourPackages />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/tourdetails/tour/:id"
-              element={
-                <>
-                  <Topbar />
-                  <Navbar />
-                  <TourDetails />
                   <Footer />
                 </>
               }
@@ -86,17 +84,6 @@ const App = () => {
               }
             />
             <Route
-              path="/contact"
-              element={
-                <>
-                  <Topbar />
-                  <Navbar />
-                  <Contact />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
               path="/gallery"
               element={
                 <>
@@ -108,16 +95,30 @@ const App = () => {
               }
             />
             <Route
-              path="/about"
+              path="/contact"
               element={
                 <>
                   <Topbar />
                   <Navbar />
-                  <AboutUs />
+                  <Contact />
                   <Footer />
                 </>
               }
             />
+
+            <Route
+              path="/tourdetails/tour/:id"
+              element={
+                <>
+                  <Topbar />
+                  <Navbar />
+                  <TourDetails />
+                  <Footer />
+                </>
+              }
+            />
+            {/* Catch-all route at the end */}
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
       </>

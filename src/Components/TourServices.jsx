@@ -90,7 +90,7 @@ const TourServices = () => {
                 key={index}
                 className="col-span-1 p-6 transition-shadow duration-300 transform shadow-lg sm:col-span-2 lg:col-span-4 bg-slate-300 rounded-xl hover:shadow-xl hover:-translate-y-1 font-manrope"
               >
-                <service.icon className="mb-4 w-14 h-14 text-slate-800" />
+                <service.icon className="w-12 h-12 mb-4 text-slate-800" />
                 <h3 className="flex flex-col items-center justify-between mb-2 text-3xl font-extrabold lg:flex lg:flex-row text-slate-800 font-Manrope">
                   {service.title}
                   <div className="flex flex-col items-center justify-around w-full text-sm lg:w-fit lg:items-center lg:justify-center xs:text-lg sm:text-lg lg:text-2xl font-Manrope">
@@ -107,7 +107,7 @@ const TourServices = () => {
                       className="flex items-center gap-2 ml-2 min-w-fit animate-fadeIn "
                     >
                       {" "}
-                      WhatsApp us at{" "}
+                      WhatsApp us at
                       <span className="font-normal underline">03489857193</span>
                       <AiOutlineWhatsApp className="w-8 h-8 p-1 text-white bg-green-500 rounded-full xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:h-12 xl:w-12" />
                     </a>

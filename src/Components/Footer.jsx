@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/logo/logo.png";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -26,45 +26,35 @@ const Footer = () => {
       <div className="flex flex-col items-start justify-center w-full h-full gap-2 border-t-2 pages-content md:w-fit animate-fadeInFromBottom border-slate-500 xs:border-none">
         <h4 className="w-full text-lg text-slate-900 hover:underline font-manrope">
           {" "}
-          <Link rel="stylesheet" to={"/tourpackages"}>
-            Tour packages
-          </Link>
+          <Link to="/tourpackages">Tour packages</Link>
         </h4>
         <h4 className="text-lg text-slate-900 hover:underline font-manrope">
           {" "}
-          <Link rel="stylesheet" to={"/eventsactivites"}>
-            Events & Activities
-          </Link>
+          <Link to="/eventsactivites">Events & Activities</Link>
         </h4>
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}
-          <Link rel="stylesheet" to={"/gallery"}>
-            Gallery
-          </Link>
+          <Link to="/gallery">Gallery</Link>
         </h4>
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}
-          <Link rel="stylesheet" to={"/contact"}>
-            Contact us
-          </Link>
+          <Link to="/contact">Contact us</Link>
         </h4>
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}
-          <Link rel="stylesheet" to={"/about"}>
-            About us
-          </Link>
+          <Link to="/about">About us</Link>
         </h4>
       </div>
 
       <div className="flex flex-col items-start justify-center w-full gap-2 my-2 border-t-2 md:p-0 md:w-fit misc-pages text-slate-200 animate-fadeInFromTop border-slate-500 xs:border-none">
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
-          <Link>Privacy Policy</Link>
+          Privacy Policy
         </h4>
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
-          <Link>Terms of Service</Link>
+          Terms of Service
         </h4>
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
-          <Link>FAQ</Link>
+          FAQ
         </h4>
       </div>
     </div>

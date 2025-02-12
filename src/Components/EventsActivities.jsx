@@ -77,7 +77,10 @@ const EventsActivities = () => {
           property="og:url"
           content="https://theswattours.com/eventsactivities"
         />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://theswattours.com/images/winterfestival.jpg"
+        />
       </Helmet>
 
       <div className="w-full min-h-screen p-8 font-Manrope">
