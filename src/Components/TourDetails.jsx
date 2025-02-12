@@ -50,7 +50,7 @@ const TourDetails = () => {
               alt={selectedPackage.destination || "Unknown Destination"}
               className="relative object-cover w-full h-64 sm:h-72"
             />
-            <div className="absolute inset-0 flex  flex-col items-center justify-end pb-4 bg-opacity-50 bg-gradient-to-t from-black to-transparent">
+            <div className="absolute inset-0 flex flex-col items-center justify-end pb-4 bg-opacity-50 bg-gradient-to-t from-black to-transparent">
               <h1 className="text-xl font-bold text-center text-white uppercase xs:text-2xl sm:text-lg md:text-3xl lg:text-5xl">
                 {selectedPackage.packageName}
                 <br />
@@ -155,7 +155,7 @@ const TourDetails = () => {
                 <div className="my-2 Transporation">
                   <h2 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                     Transportation:{" "}
-                    <span className="ml-1 text-xl font-normal">
+                    <span className="font-normal">
                       {selectedPackage.transportation?.options?.join(", ") ||
                         "-"}
                     </span>
@@ -195,7 +195,7 @@ const TourDetails = () => {
               <h1 className="my-2 text-2xl font-extrabold text-slate-800 font-Manrope">
                 Book Your Tour Now
               </h1>
-              <div className="flex  justify-start">
+              <div className="flex justify-start">
                 <button
                   className="flex items-center justify-center px-4 py-2 mx-1 font-semibold text-white transition-all duration-300 rounded-full bg-slate-800 xs:px-auto xs:py-1 sm:px-auto sm:py- md:px-auto md:py-2 lg:px-auto lg:py-3 xl:px-auto xl:py-3 "
                   onClick={handleBookNow}
@@ -230,7 +230,7 @@ const TourDetails = () => {
             </div>
 
             <div className="bg-white sidebar w-full xs:w-full sm:w-full md:w-[30%]  lg:w-[30%] border-2 border-slate-200 p-3 rounded-lg">
-              <h3 className="min-w-full mb-2 text-xl font-extrabold text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-center">
+              <h3 className="min-w-full mb-2 text-xl font-extrabold text-center text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl">
                 Tour Inclusive
               </h3>
               <ul className="flex flex-col w-full gap-1">
