@@ -10,7 +10,7 @@ const Hero = () => {
         <title>Swat Tours - HeroPage</title>
         <meta
           name="description"
-          content="This is the hero component of the Swat Tours website."
+          content="Hero page of the swat tour packages website, one of the best tour packages in pakistan"
         />
         <link rel="canonical" href="https://theswattours.com/" />
       </Helmet>

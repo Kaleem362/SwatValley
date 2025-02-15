@@ -25,10 +25,10 @@ const TourPackages = () => {
     <>
       {/* SEO Meta Tags */}
       <Helmet>
-        <title>Swat Valley Travels - Tour Packages</title>
+        <title>Tour Packages -book now at theswattours.com</title>
         <meta
           name="description"
-          content="Explore a variety of tour packages offered by Swat Valley Travels to experience the beauty of Swat Valley and its surroundings."
+          content="tour packages of swat valley for the local swat citizens, couples from all over the world, families and international travellers"
         />
         <link rel="canonical" href="https://theswattours.com/tourpackages" />
         <meta

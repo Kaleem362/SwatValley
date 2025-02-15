@@ -35,7 +35,7 @@ const TourDetails = () => {
         <title>Swat Tours - Tour Detail Page</title>
         <meta
           name="description"
-          content="Swat Tours offers a variety of tour packages to explore the beauty of Swat Valley and its surroundings."
+          content="tour details page of the tour packages website"
         />
         <link
           rel="canonical"

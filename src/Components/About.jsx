@@ -53,7 +53,7 @@ const AboutUs = () => {
         <title>About us</title>
         <meta
           name="description"
-          content="The Swat Tours is a leading tour operator in Swat Valley, offering premium travel services to local and international tourists. Our team is dedicated to providing unforgettable travel experiences, from honeymoon packages to day tours and more."
+          content="the swat tours is one of the best tour services provider in swat valley and offers a various range of tour packages in swat valley for couple and families"
         />
         <link rel="canonical" href="https://theswattours.com/about" />
       </Helmet>
