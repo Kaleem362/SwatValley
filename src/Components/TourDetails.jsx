@@ -229,7 +229,7 @@ const TourDetails = () => {
               </div>
             </div>
 
-            <div className="bg-white sidebar w-full xs:w-full sm:w-full md:w-[30%]  lg:w-[30%] border-2 border-slate-200 p-3 rounded-lg">
+            <div className="bg-white sidebar w-full xs:w-full sm:w-full md:w-[30%]  lg:w-[30%] border-2 border-slate-200 p-3 ">
               <h3 className="min-w-full mb-2 text-xl font-extrabold text-center text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl">
                 Tour Inclusive
               </h3>
@@ -267,7 +267,6 @@ const TourDetails = () => {
           transportation: selectedPackage.transportation?.options?.join(", "),
         }}
       />
-      ;
     </>
   );
 };
