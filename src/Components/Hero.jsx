@@ -7,7 +7,6 @@ const Hero = () => {
   return (
     <>
       <Helmet>
-        <title>Swat Tours - HeroPage</title>
         <meta
           name="description"
           content="Hero page of the swat tour packages website, one of the best tour packages in pakistan"

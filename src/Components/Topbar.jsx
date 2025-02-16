@@ -12,7 +12,6 @@ const Topbar = () => {
   return (
     <>
       <Helmet>
-        <title>Swat Tours - [Page Name]</title>
         <meta
           name="description"
           content="the top bar of the website with contact information and social media handles"

@@ -44,7 +44,6 @@ const HomeScreenCarousal = () => {
   return (
     <>
       <Helmet>
-        <title>Swat Tours - Carousal</title>
         <meta
           name="description"
           content="This is the carousal component of the Swat Tours website."

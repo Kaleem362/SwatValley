@@ -23,7 +23,6 @@ const Navbar = () => {
   return (
     <>
       <Helmet>
-        <title>Swat Tours - Navbar</title>
         <meta
           name="description"
           content="This is the navbar component of the Swat Tours website."

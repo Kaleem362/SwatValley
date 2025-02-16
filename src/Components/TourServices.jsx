@@ -71,7 +71,7 @@ const TourServices = () => {
   return (
     <>
       <Helmet>
-        <title>Tour services </title>
+        <title>Tour services</title>
         <meta
           name="description"
           content="Swat Tours offers a variety of services including pick & drop, rent a car, hotel accommodation, tourist information, tour guides, event planning, tour packages, and guest services"

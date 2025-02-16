@@ -53,7 +53,6 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Swat Tours - Services</title>
         <meta
           name="description"
           content="Discover a range of tour options tailored to meet your unique preferences. Whether you're planning a family vacation, a budget-friendly adventure, or a private getaway, we’ve got you covered."
