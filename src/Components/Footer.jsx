@@ -30,7 +30,7 @@ const Footer = () => {
         </h4>
         <h4 className="text-lg text-slate-900 hover:underline font-manrope">
           {" "}
-          <Link to="/eventsactivites">Events & Activities</Link>
+          <Link to="/eventsactivities">Events & Activities</Link>
         </h4>
         <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}

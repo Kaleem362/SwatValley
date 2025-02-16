@@ -73,7 +73,7 @@ const App = () => {
               }
             />
             <Route
-              path="/eventsactivites"
+              path="/eventsactivities"
               element={
                 <>
                   <Topbar />

@@ -82,7 +82,7 @@ const Navbar = () => {
                 : "text-slate-900 lg:text-black"
             } hover:text-white hover:bg-green-600`}
             onClick={() => handleTabClick("Events")}
-            to={"/eventsactivites"}
+            to={"/eventsactivities"}
           >
             Events & Activities
           </Link>
