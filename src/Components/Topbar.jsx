@@ -6,18 +6,10 @@ import facebook from "../assets/icons-asset/facebook.png";
 import instagram from "../assets/icons-asset/instagram.png";
 import twitter from "../assets/icons-asset/twitter.png";
 import googleplus from "../assets/icons-asset/googleplus.png";
-import { Helmet } from "react-helmet-async";
 
 const Topbar = () => {
   return (
     <>
-      <Helmet>
-        <meta
-          name="description"
-          content="the top bar of the website with contact information and social media handles"
-        />
-        <link rel="canonical" href="https://theswattours.com/" />
-      </Helmet>
       <div className="lg:flex sm:flex sm:gap-4 sm:justify-between sm:items-center  xs:gap-4 xs:p-4 items-center justify-between w-full lg:h-8 sm:h-auto px-5 bg-[#222] p-4">
         <div className=" flex items-center justify-center  text-white contact-bar  text-[14px] my-2 sm:text-[16px] text-start xs:my-2 animate-fadeInFromLeft">
           <a

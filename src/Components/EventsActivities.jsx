@@ -21,7 +21,6 @@ import decoratedroom from "./../assets/PackagesImages/decoratedroom.jpeg";
 import fishing from "./../assets/PackagesImages/fishing.jpeg";
 import photography from "./../assets/PackagesImages/photography.jpeg";
 import { useScrollAnimation } from "./useScrollAnimation";
-import { Helmet } from "react-helmet-async";
 
 const EventsActivities = () => {
   const { ref: eventsRef, isVisible: eventsVisible } = useScrollAnimation(0.1);
@@ -57,32 +56,6 @@ const EventsActivities = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Swat Tours - Events & Activities</title>
-        <meta
-          name="description"
-          content="Explore Swat Tours' exciting events and activities, including festivals, outdoor adventures, and cultural experiences."
-        />
-        <link
-          rel="canonical"
-          href="https://theswattours.com/eventsactivities"
-        />
-        <meta property="og:title" content="Swat Tours - Events & Activities" />
-        <meta
-          property="og:description"
-          content="Discover Swat Tours' events and activities, offering unforgettable experiences in Swat Valley."
-        />
-        <meta property="og:image" content={winterfestival} />
-        <meta
-          property="og:url"
-          content="https://theswattours.com/eventsactivities"
-        />
-        <meta
-          name="twitter:image"
-          content="https://theswattours.com/images/winterfestival.jpg"
-        />
-      </Helmet>
-
       <div className="w-full min-h-screen p-8 font-Manrope">
         {/* Events Section */}
         <div

@@ -3,7 +3,6 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { IoCall } from "react-icons/io5";
 import Loader from "../Components/Loader";
 import emailjs from "emailjs-com";
-import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const [formType, setFormType] = useState("customizeTour");
@@ -186,14 +185,7 @@ const Contact = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Swat Tours - Contact us</title>
-        <meta
-          name="description"
-          content="Contact Swat Tours for customizing a tour according to your budget, or for any service request including pick & drop, rent a car, hotel accommodation, tourist information, tour guides, event planning, tour packages, and guest services"
-        />
-        <link rel="canonical" href="https://theswattours.com/contact" />
-      </Helmet>{" "}
+      {" "}
       <div className="container w-full p-6 mx-auto my-4">
         <h1 className="w-full my-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
           Contact Us

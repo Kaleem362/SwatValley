@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { TiThMenu } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 
 const Navbar = () => {
   const [selectedTab, setSelectedTab] = useState("");
@@ -22,13 +21,6 @@ const Navbar = () => {
 
   return (
     <>
-      <Helmet>
-        <meta
-          name="description"
-          content="This is the navbar component of the Swat Tours website."
-        />
-        <link rel="canonical" to="https://theswattours.com/" />
-      </Helmet>
       <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-400 animate-fadeInFromTop">
         <Link to={"/"}>
           <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xl md:text-3xl lg:text-5xl ">

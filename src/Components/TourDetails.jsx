@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { store } from "../assets/Store/Context";
 import email from "../assets/icons-asset/gmail.png";
 import BookingModal from "./BookingModal";
-import { Helmet } from "react-helmet-async";
+
 
 const TourDetails = () => {
   const { id } = useParams();
@@ -31,17 +31,6 @@ const TourDetails = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Swat Tours - Tour Detail Page</title>
-        <meta
-          name="description"
-          content="tour details page of the tour packages website"
-        />
-        <link
-          rel="canonical"
-          href="https://theswattours.com/tourdetails/tour/:id"
-        />
-      </Helmet>
       <div className="flex flex-col w-full bg-gray-100 ">
         <div className="w-full mx-auto bg-white shadow-lg">
           <div className="relative">

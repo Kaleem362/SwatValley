@@ -8,7 +8,6 @@ import vehicle from "../assets/PackagesImages/vehicle.jpg";
 import FAQ from "./FAQ";
 import { Camera, Mountain, Vegan } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 
 const AboutUs = () => {
   const activities = [
@@ -49,14 +48,6 @@ const AboutUs = () => {
 
   return (
     <>
-      <Helmet>
-        <title>About us</title>
-        <meta
-          name="description"
-          content="the swat tours is one of the best tour services provider in swat valley and offers a various range of tour packages in swat valley for couple and families"
-        />
-        <link rel="canonical" href="https://theswattours.com/about" />
-      </Helmet>
       <div className="w-full min-h-screen overflow-hidden text-justify font-Manrope">
         {" "}
         <div className="min-h-screen ">

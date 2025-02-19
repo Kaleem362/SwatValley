@@ -8,7 +8,6 @@ import kalammountains from "../assets/Valley images/beautifulhills.jpg";
 import kandollake from "../assets/Valley images/kandollake.jpg";
 import Mahodandlakecover from "../assets/Valley images/Mahodandlakecover.jpg";
 import malamjabbamountains from "../assets/Valley images/malamjabba mountains.jpg";
-import { Helmet } from "react-helmet-async";
 
 const HomeScreenCarousal = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -43,13 +42,6 @@ const HomeScreenCarousal = () => {
 
   return (
     <>
-      <Helmet>
-        <meta
-          name="description"
-          content="This is the carousal component of the Swat Tours website."
-        />
-        <link rel="canonical" href="https://theswattours.com/" />
-      </Helmet>
       <div>
         <div id="carouselExample" className="carousel slide h-[500px] relative">
           <div className="h-full carousel-inner">

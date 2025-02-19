@@ -11,7 +11,7 @@ import sangartop from "./../assets/PackagesImages/sangartop.jpg";
 import shangladaytour from "./../assets/PackagesImages/shangladaytour.jpg";
 import treesinsnow from "./../assets/PackagesImages/snowysunny.jpg";
 import c2 from "./../assets/PackagesImages/c2.jpg";
-import { Helmet } from "react-helmet-async";
+
 const Services = () => {
   const { toursPackage, services } = useContext(store);
   console.log(toursPackage.tourpoints);
@@ -52,13 +52,6 @@ const Services = () => {
 
   return (
     <>
-      <Helmet>
-        <meta
-          name="description"
-          content="Discover a range of tour options tailored to meet your unique preferences. Whether you're planning a family vacation, a budget-friendly adventure, or a private getaway, we’ve got you covered."
-        />
-        <link rel="canonical" href="https://theswattours.com/ourservices" />
-      </Helmet>
       <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-3 xl:px-10 xs:px-3 sm:px-4 md:px-6 lg:px-10 animate-fadeIn font-Manrope">
         <div className="flex flex-col items-start justify-start w-full gap-2 px-1 py-0 h-fit lg:py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
           <h1 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"; // Updated import for React Router v6
 import BookingModal from "./BookingModal";
 import ForeignerPackages from "./ForeignersTours";
 import SwatTours from "./SwatTours";
-import { Helmet } from "react-helmet-async";
 
 const TourPackages = () => {
   const { toursPackage } = useContext(store);
@@ -23,30 +22,6 @@ const TourPackages = () => {
 
   return (
     <>
-      {/* SEO Meta Tags */}
-      <Helmet>
-        <title>Tour Packages -book now at theswattours.com</title>
-        <meta
-          name="description"
-          content="tour packages of swat valley for the local swat citizens, couples from all over the world, families and international travellers"
-        />
-        <link rel="canonical" href="https://theswattours.com/tourpackages" />
-        <meta
-          property="og:title"
-          content="Swat Valley Travels - Tour Packages"
-        />
-        <meta
-          property="og:description"
-          content="Discover exclusive tour packages to explore Swat Valley's stunning landscapes and cultural heritage."
-        />
-        <meta property="og:image" content={toursPackage[0]?.Image || ""} />
-        <meta
-          property="og:url"
-          content="https://theswattours.com/tourpackages"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
-
       {/* JSON-LD Structured Data for Tour Packages */}
       <script type="application/ld+json">
         {`
