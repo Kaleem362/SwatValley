@@ -34,7 +34,7 @@ const App = () => {
                 <>
                   <Helmet>
                     <title>
-                      Swat Tour Packages 2025 | Book Now at <a href="https://www.theswattours.com">theswattours.com</a>
+                      Swat Tour Packages 2025 | Book Now at theswattours.com
                     </title>
                     <meta
                       name="description"
