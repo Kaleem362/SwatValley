@@ -60,10 +60,7 @@ const App = () => {
                       name="description"
                       content="the swat tours is one of the best tour services provider in swat valley and offers a various range of tour packages in swat valley for couple and families"
                     />
-                    <link
-                      rel="canonical"
-                      href="https://theswattours.com/about"
-                    />
+                   <link rel="canonical" href="https://theswattours.com/about" />
                   </Helmet>
                   <Topbar />
                   <Navbar />
@@ -83,10 +80,7 @@ const App = () => {
                       name="description"
                       content="tour packages of swat valley for the local swat citizens, couples from all over the world, families and international travellers"
                     />
-                    <link
-                      rel="canonical"
-                      href="https://theswattours.com/tourpackages"
-                    />
+                   <link rel="canonical" href="https://www.theswattours.com/tourpackages" />
                     <meta
                       property="og:title"
                       content="Swat Valley Travels - Tour Packages"
@@ -122,10 +116,7 @@ const App = () => {
                       name="description"
                       content="Swat Tours offers a variety of services including pick & drop, rent a car, hotel accommodation, tourist information, tour guides, event planning, tour packages, and guest services"
                     />
-                    <link
-                      rel="canonical"
-                      href="https://theswattours.com/ourservices"
-                    />
+                   <link rel="canonical" href="https://theswattours.com/ourservices" />
                   </Helmet>
                   <Topbar />
                   <Navbar />
@@ -144,10 +135,7 @@ const App = () => {
                       name="description"
                       content="Explore Swat Tours' exciting events and activities, including festivals, outdoor adventures, and cultural experiences."
                     />
-                    <link
-                      rel="canonical"
-                      href="https://theswattours.com/eventsactivities"
-                    />
+                   <link rel="canonical" href="https://www.theswattours.com/eventsactivities" />
                     <meta
                       property="og:title"
                       content="Swat Tours - Events & Activities"
@@ -183,10 +171,7 @@ const App = () => {
                       name="description"
                       content="Gallery provides some of the best photos of Swat Valley, showcasing its scenic beauty, lush green valleys, snow-capped mountains, crystal-clear rivers, and serene lakes."
                     />
-                    <link
-                      rel="canonical"
-                      href="https://theswattours.com/gallery"
-                    />
+                   <link rel="canonical" href="https://www.theswattours.com/gallery" />
                   </Helmet>
                   <Topbar />
                   <Navbar />
@@ -205,10 +190,7 @@ const App = () => {
                       name="description"
                       content="Contact Swat Tours for customizing a tour according to your budget, or for any service request including pick & drop, rent a car, hotel accommodation, tourist information, tour guides, event planning, tour packages, and guest services"
                     />
-                    <link
-                      rel="canonical"
-                      href="https://theswattours.com/contact"
-                    />
+                  <link rel="canonical" href="https://theswattours.com/contact" />
                   </Helmet>
                   <Topbar />
                   <Navbar />
