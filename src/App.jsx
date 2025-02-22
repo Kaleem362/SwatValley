@@ -61,10 +61,7 @@ const App = () => {
                       content="the swat tours is one of the best tour services provider in swat valley and offers a various range of tour packages in swat valley for couple and families"
                     />
 
-                    <link
-                      rel="canonical"
-                      href="https://theswattours.com/about"
-                    />
+                   <link rel="canonical" href="https://theswattours.com/about" />
                   </Helmet>
                   <Topbar />
                   <Navbar />
@@ -86,7 +83,7 @@ const App = () => {
                     />
                     <link
                       rel="canonical"
-                      href="https://theswattours.com/tourpackages"
+                      href="https://www.theswattours.com/tourpackages"
                     />
                     <meta
                       property="og:title"
@@ -147,7 +144,7 @@ const App = () => {
                     />
                     <link
                       rel="canonical"
-                      href="https://theswattours.com/eventsactivities"
+                      href="https://www.theswattours.com/eventsactivities"
                     />
                     <meta
                       property="og:title"
@@ -186,7 +183,7 @@ const App = () => {
                     />
                     <link
                       rel="canonical"
-                      href="https://theswattours.com/gallery"
+                      href="https://www.theswattours.com/gallery"
                     />
                   </Helmet>
                   <Topbar />
