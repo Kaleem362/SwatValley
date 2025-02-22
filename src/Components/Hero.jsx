@@ -11,9 +11,9 @@ const Hero = () => {
             Welcome to Swat Tours
           </h1>
         </div>
-        <h4 className="xs:text-md sm:text-lg md:text-xl lg:text-lg xl:text-3xl text-slate-600 animate-fadeInFromLeft">
+        <h2 className="xs:text-md sm:text-lg md:text-xl lg:text-lg xl:text-3xl text-slate-600 animate-fadeInFromLeft">
           Discover Nature’s Paradise!
-        </h4>
+        </h2>
         <div className="flex flex-col w-full h-auto gap-4 my-2 text-justify lg:flex-row lg:items-start lg:justify-between">
           <p className="flex justify-start  items-start text-slate-500 flex-start font-manrope text-sm sm:text-md md:text-lg lg:text-lg xl:text-lg lg:w-[50%] animate-fadeInFromLeft ">
             Escape to the stunning Swat Valley with our meticulously crafted,

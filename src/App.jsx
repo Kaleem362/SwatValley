@@ -60,6 +60,7 @@ const App = () => {
                       name="description"
                       content="the swat tours is one of the best tour services provider in swat valley and offers a various range of tour packages in swat valley for couple and families"
                     />
+
                     <link
                       rel="canonical"
                       href="https://theswattours.com/about"

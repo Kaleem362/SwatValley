@@ -54,9 +54,9 @@ const Services = () => {
     <>
       <div className="flex flex-col items-start justify-center w-full h-auto gap-4 px-3 py-3 xl:px-10 xs:px-3 sm:px-4 md:px-6 lg:px-10 animate-fadeIn font-Manrope">
         <div className="flex flex-col items-start justify-start w-full gap-2 px-1 py-0 h-fit lg:py-10 sm:px-3 highlighted-tours xs:w-full sm:w-full md:w-full lg:w-full animate-fadeInFromBottom">
-          <h1 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+          <h3 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
             Highlight Tours
-          </h1>
+          </h3>
           <div className="flex flex-wrap items-center justify-start w-full md:my-4 xs:w-full sm:w-full md:w-full lg:w-full cards-container xs:px-3">
             {toursPackage.slice(0, 4).map((tour) => {
               return (
@@ -71,7 +71,7 @@ const Services = () => {
                   ></img>
                   <div className="absolute inset-0 bg-gray-700 rounded-md opacity-60 "></div>
                   <div className="absolute inset-0 flex items-end justify-center">
-                    <h2 className="w-full text-xl font-bold text-center text-white ">
+                    <h3 className="w-full text-xl font-bold text-center text-white ">
                       {tour.packageName}
                       <br />
                       <div className="bg-slate-800 bg-opacity-80">
@@ -80,7 +80,7 @@ const Services = () => {
                       <div className="text-[16px] bg-opacity-80 bg-slate-800">
                         {tour.tourPoints || "-"}
                       </div>
-                    </h2>
+                    </h3>
                   </div>
                   <div className="absolute flex items-center justify-center w-full gap-2 transition-all duration lg:mt-0 xs:-bottom-10 -bottom-10 sm:-bottom-10 lg:group-hover:-bottom-12 lg:-bottom-0 -z-50 buttons">
                     <Link to={`/tourdetails/tour/${tour.id}`}>
@@ -111,9 +111,9 @@ const Services = () => {
         </div>
         <section className="w-full py-10">
           <div className="px-2 ">
-            <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+            <h3 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
               Explore Our Tour Packages
-            </h1>
+            </h3>
             <p className="mb-10 text-lg text-justify text-gray-600 md:text-center">
               Discover a range of tour options tailored to meet your unique
               preferences. Whether you're planning a family vacation, a
@@ -155,9 +155,9 @@ const Services = () => {
             <div className="w-full my-10 font-Manrope">
               <div className="w-full ">
                 <div className="w-full text-justify">
-                  <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+                  <h3 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
                     Customize Your Perfect Tour
-                  </h1>
+                  </h3>
                   <div className="w-full bg-white rounded-lg ">
                     <p className="w-full mb-6 text-lg leading-relaxed text-gray-700">
                       We specialize in creating personalized tour experiences
@@ -212,9 +212,9 @@ const Services = () => {
             </div>
           </div>
         </section>
-        <h1 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+        <h3 className="w-full text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Services We offer
-        </h1>
+        </h3>
         <div className="flex flex-wrap justify-center w-full gap-10 xs:p-2 sm:p-4 card-container animate-fadeInFromTop">
           <div className="h-auto transition-all duration-300 bg-white border-2 rounded-lg shadow sm:w-72 xs border-slate-300 lg:hover:scale-105 animate-fadeInFromLeft">
             <img
@@ -224,9 +224,9 @@ const Services = () => {
             />
 
             <div className="px-4 py-2 ">
-              <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              <h3 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
                 Luxury Transportation
-              </h5>
+              </h3>
 
               <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
                 We provide all types of vehicles for a comfortable ride both
@@ -242,9 +242,9 @@ const Services = () => {
             />
 
             <div className="px-4 py-2 ">
-              <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              <h3 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
                 Cozy Hotels
-              </h5>
+              </h3>
 
               <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
                 Enjoy comfort and luxury in our cozy hotels with exceptional
@@ -261,9 +261,9 @@ const Services = () => {
             />
 
             <div className="px-4 py-2 ">
-              <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              <h3 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
                 Travel with Ease
-              </h5>
+              </h3>
 
               <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
                 Travel with ease and discover new horizons through seamless
@@ -279,9 +279,9 @@ const Services = () => {
             />
 
             <div className="px-4 py-2 ">
-              <h5 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+              <h3 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl md:text-2xl">
                 Experienced Travelling Guide
-              </h5>
+              </h3>
 
               <p className="mb-4 text-sm font-normal text-gray-700 sm:text-base md:text-lg">
                 Our guides ensure a safe, enriching journey, sharing local
@@ -292,9 +292,9 @@ const Services = () => {
         </div>
         <div className="w-full px-0 py-5 md:px-6 Car-service">
           <div className="flex flex-col md:pr-20 header animate-fadeInFromTop">
-            <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+            <h3 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
               Pick and Drop Service
-            </h1>
+            </h3>
             <div className="flex items-center justify-center w-full gap-4 my-2 animate-fadeInFromRight">
               <a href="https://wa.me/923489857193">
                 <img

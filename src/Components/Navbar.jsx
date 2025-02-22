@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { TiThMenu } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo/logo1.png";
 
 const Navbar = () => {
   const [selectedTab, setSelectedTab] = useState("");
@@ -23,9 +24,7 @@ const Navbar = () => {
     <>
       <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-400 animate-fadeInFromTop">
         <Link to={"/"}>
-          <h1 className="ml-10 text-3xl font-extrabold tracking-tighter text-slate-800 font-Manrope xs:text-2xl md:text-3xl lg:text-5xl ">
-            The Swat Tours
-          </h1>
+          <img className="ml-4 text-3xl  w-80 h-fit" src={logo}></img>
         </Link>
         <ul
           className={`transition-all duration-300 ease-in-out ${
