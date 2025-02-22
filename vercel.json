@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "https://theswattours.com/:path*",
       "destination": "/index.html"
     }
   ]
