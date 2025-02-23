@@ -76,10 +76,11 @@ const App = () => {
                 <>
                   {/* SEO Meta Tags */}
                   <Helmet>
-                    <title>Tour Packages -book now at theswattours.com</title>
+                    <title>
+Swat Tour Packages 2025 | Family & Holidays | TheSwatTours</title>
                     <meta
                       name="description"
-                      content="tour packages of swat valley for the local swat citizens, couples from all over the world, families and international travellers"
+                      content="Discover the best Swat tour packages for 2025! Book family vacations, honeymoon getaways, or Holidays  tours with exclusive travel deals at the best prices"
                     />
                     <link
                       rel="canonical"
