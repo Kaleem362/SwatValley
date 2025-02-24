@@ -82,6 +82,11 @@ Swat Tour Packages 2025 | Family & Holidays | TheSwatTours</title>
                       name="description"
                       content="Discover the best Swat tour packages for 2025! Book family vacations, honeymoon getaways, or Holidays  tours with exclusive travel deals at the best prices"
                     />
+                    <meta
+  name="keywords"
+  content="Swat tour packages 2025, Pakistan tour packages, honeymoon tour packages, adventure tours in Swat, family trip to Swat, private Swat tours, customized Swat Valley tours, best travel deals in Swat"
+/>
+
                     <link
                       rel="canonical"
                       href="https://www.theswattours.com/tourpackages"
