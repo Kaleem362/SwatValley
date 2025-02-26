@@ -132,9 +132,9 @@ const AutoScrollGallery = () => {
               className="flex-none"
               onDragStart={(e) => e.preventDefault()}
             >
-              <h1 className="text-lg font-bold text-center text-slate-500 font-Manrope">
+              <h3 className="text-lg font-bold text-center text-slate-500 font-Manrope">
                 {item.name}
-              </h1>
+              </h3>
               <img
                 src={item.image}
                 alt={`Couple ${index}`}
@@ -169,9 +169,9 @@ const AutoScrollGallery = () => {
               className="flex-none"
               onDragStart={(e) => e.preventDefault()}
             >
-              <h1 className="text-lg font-bold text-center text-slate-500 font-Manrope">
+              <h3 className="text-lg font-bold text-center text-slate-500 font-Manrope">
                 {item.name}
-              </h1>
+              </h3>
               <img
                 src={item.image}
                 alt={`Scene ${index + 8}`}

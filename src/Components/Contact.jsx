@@ -223,9 +223,9 @@ const Contact = () => {
         <div className="p-6 my-2 rounded-lg shadow-xl bg-slate-400 shadow-slate-700 font-Manrope">
           {formType === "customizeTour" && (
             <form onSubmit={handleSubmit}>
-              <h1 className="text-3xl font-extrabold text-center xs:text-3xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl text-slate-800">
+              <h2 className="text-3xl font-extrabold text-center xs:text-3xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl text-slate-800">
                 Customize Tour Form
-              </h1>
+              </h2>
               <p className="my-2 text-center xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl text-slate-800">
                 Fill the Form below for planning a Customize tour , let us know
                 how many persons you are, and where you want to travel we get
@@ -437,9 +437,9 @@ const Contact = () => {
                 e.target.reset();
               }}
             >
-              <h2 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
+              <h3 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
                 Service Form
-              </h2>
+              </h3>
               <p className="text-center text-slate-800 xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-xl 2xl:text-3xl">
                 Fill the service form with the below required data and make sure
                 to send the details via whatsapp, if invain, <br /> Try Calling

@@ -4,7 +4,6 @@ import { store } from "../assets/Store/Context";
 import email from "../assets/icons-asset/gmail.png";
 import BookingModal from "./BookingModal";
 
-
 const TourDetails = () => {
   const { id } = useParams();
   const { toursPackage } = useContext(store);
@@ -40,10 +39,10 @@ const TourDetails = () => {
               className="relative object-cover w-full h-64 sm:h-72"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-end pb-4 bg-opacity-50 bg-gradient-to-t from-black to-transparent">
-              <h1 className="text-xl font-bold text-center text-white uppercase xs:text-2xl sm:text-lg md:text-3xl lg:text-5xl">
+              <h2 className="text-xl font-bold text-center text-white uppercase xs:text-2xl sm:text-lg md:text-3xl lg:text-5xl">
                 {selectedPackage.packageName}
                 <br />
-              </h1>
+              </h2>
               <p className=" text-2xl font-semibold tracking-widest text-white word-spacing-[20px] mt-4">
                 {selectedPackage.tourPoints ? selectedPackage.tourPoints : ""}
               </p>
@@ -52,17 +51,17 @@ const TourDetails = () => {
 
           <div className="flex flex-col w-full xs:flex-col md:flex-row tourdetailsinformationdiv">
             <div className="p-6 w-full md:w-[70%]">
-              <h1 className="min-w-full mb-2 text-xl font-extrabold text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl ">
+              <h3 className="min-w-full mb-2 text-xl font-extrabold text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl ">
                 {selectedPackage.packageName || "-"}
-              </h1>
+              </h3>
 
-              <h1 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
+              <h3 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                 Tour Destinations :{" "}
                 <span className="font-normal">
                   {selectedPackage.destinations?.join(" - ") ||
                     "No Destinations"}
                 </span>
-              </h1>
+              </h3>
 
               <div className="my-2 packageduration">
                 <p className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
@@ -75,7 +74,7 @@ const TourDetails = () => {
               </div>
 
               <div className="my-2 package-type">
-                <h2 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
+                <h3 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                   Package Price:
                   {typeof selectedPackage.packagePrices === "object" ? (
                     <>
@@ -103,29 +102,29 @@ const TourDetails = () => {
                       </span>
                     </span>
                   )}
-                </h2>
+                </h3>
               </div>
 
               {selectedPackage?.packageType && (
                 <div className="my-2 package-type">
-                  <h2 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
+                  <h3 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                     Package Type:
                     <span className="font-normal">
                       {" "}
                       {selectedPackage.packageType}
                     </span>
-                  </h2>
+                  </h3>
                 </div>
               )}
 
               {selectedPackage.accommodation && (
                 <div className="my-2 accomodation">
-                  <h2 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
+                  <h3 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                     Accommodation Type:{" "}
                     <span className="font-normal">
                       {selectedPackage.accommodation?.type || "-"}
                     </span>
-                  </h2>
+                  </h3>
                   <ul className="my-2 text-xl font-bold text-gray-700 accomodation-hotels xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                     {selectedPackage.accommodation?.hotels?.length > 0
                       ? selectedPackage.accommodation.hotels.map(
@@ -142,13 +141,13 @@ const TourDetails = () => {
 
               {selectedPackage.transportation && (
                 <div className="my-2 Transporation">
-                  <h2 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
+                  <h3 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">
                     Transportation:{" "}
                     <span className="font-normal">
                       {selectedPackage.transportation?.options?.join(", ") ||
                         "-"}
                     </span>
-                  </h2>
+                  </h3>
                 </div>
               )}
 
@@ -160,9 +159,9 @@ const TourDetails = () => {
                       className="w-full py-6 itinerary-container"
                     >
                       <div className="p-2 text-slate-900 font-Manrope bg-slate-300 days card">
-                        <h1 className="text-xl font-bold xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl font-Manrope">
+                        <h3 className="text-xl font-bold xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl font-Manrope">
                           {day.title || `Day ${index + 1}`}
-                        </h1>
+                        </h3>
                         <p className="float-right text-2xl font-extrabold">
                           Day:{day.day || "-"}
                         </p>
@@ -181,9 +180,9 @@ const TourDetails = () => {
                     </div>
                   ))
                 : ""}
-              <h1 className="my-2 text-2xl font-extrabold text-slate-800 font-Manrope">
+              <h3 className="my-2 text-2xl font-extrabold text-slate-800 font-Manrope">
                 Book Your Tour Now
-              </h1>
+              </h3>
               <div className="flex justify-start">
                 <button
                   className="flex items-center justify-center px-4 py-2 mx-1 font-semibold text-white transition-all duration-300 rounded-full bg-slate-800 xs:px-auto xs:py-1 sm:px-auto sm:py- md:px-auto md:py-2 lg:px-auto lg:py-3 xl:px-auto xl:py-3 "

@@ -85,9 +85,9 @@ const EventsActivities = () => {
                   className="object-cover w-full h-64 transition-transform duration-700 transform scale-animate"
                 />
                 <div className="absolute inset-0 transition-opacity duration-500 opacity-50 bg-gradient-to-t from-black to-transparent group-hover:opacity-75"></div>
-                <h3 className="absolute text-xl font-bold text-white transition-colors duration-500 bottom-4 left-4 group-hover:text-yellow-400">
+                <h2 className="absolute text-xl font-bold text-white transition-colors duration-500 bottom-4 left-4 group-hover:text-yellow-400">
                   {event.name}
-                </h3>
+                </h2>
               </div>
             ))}
           </div>
@@ -100,9 +100,9 @@ const EventsActivities = () => {
             activitiesVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          <h1 className="w-full my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl text-slate-800 font-Manrope">
+          <h3 className="w-full my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl text-slate-800 font-Manrope">
             Activities
-          </h1>
+          </h3>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-6">
             {activities.map((activity, index) => (
               <div

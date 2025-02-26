@@ -117,9 +117,9 @@ const Gallery = () => {
         </div>
       </div>
       <div className="w-full p-6 grid-parent bg-slate-100">
-        <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
+        <h2 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromTop">
           Couples Before
-        </h1>
+        </h2>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2 bg-slate-100 p-6">
           <div class="grid gap-2">
