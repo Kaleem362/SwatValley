@@ -328,9 +328,9 @@ const Services = () => {
         </div>
 
         <div className="py-10 md:px-6 why-choose-us">
-          <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
+          <h3 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
             Why Choose us?
-          </h1>
+          </h3>
           <div className="px-2 my-4 text-justify bg-white rounded-lg md:p-4 xs:text-md sm:text-lg lg:text-xl xs:w-full sm:w-full md:w-full lg:w-full text-slate-500 animate-fadeInFromLeft">
             At <b>The Swat Tours</b>, we strive to make your travel experience
             seamless, comfortable, and memorable. Here’s why we stand out:
@@ -377,9 +377,9 @@ const Services = () => {
         </div>
 
         <div className="whyChooseSwat">
-          <h1 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
+          <h3 className="w-full mb-2 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
             Why Visit Swat Valley?
-          </h1>
+          </h3>
           <p className="px-2 my-4 text-justify xs:text-md sm:text-lg lg:text-xl  bg-white rounded-lg  xs:w-full sm:w-[520px] md:w-[600px] lg:w-[700px] text-slate-500 animate-fadeInFromLeft">
             <b>Swat Valley,</b> the Switzerland of the East! Whether you're
             seeking adventure, relaxation, or a mix of both, our tour services
