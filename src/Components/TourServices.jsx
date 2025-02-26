@@ -70,9 +70,9 @@ const TourServices = () => {
   return (
     <>
       <div className="gap-4">
-        <h1 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+        <h2 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
           Our Services
-        </h1>
+        </h2>
 
         <div className="grid grid-cols-1 gap-6 px-6 my-4 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) =>
