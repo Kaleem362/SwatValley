@@ -24,7 +24,10 @@ const Navbar = () => {
     <>
       <nav className="flex items-center justify-between w-full h-20 py-4 pr-5 bg-slate-400 animate-fadeInFromTop">
         <Link to={"/"}>
-          <img className="ml-4 text-3xl  w-80 h-fit" src={logo}></img>
+          <img
+            className="ml-4 text-3xl  xs:w-80 xs:h-fit w-64 h-fit"
+            src={logo}
+          ></img>
         </Link>
         <ul
           className={`transition-all duration-300 ease-in-out ${

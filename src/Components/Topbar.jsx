@@ -11,7 +11,7 @@ const Topbar = () => {
   return (
     <>
       <div className="lg:flex sm:flex sm:gap-4 sm:justify-between sm:items-center  xs:gap-4 xs:p-4 items-center justify-between w-full lg:h-8 sm:h-auto px-5 bg-[#222] p-4">
-        <div className=" flex items-center justify-center  text-white contact-bar  text-[14px] my-2 sm:text-[16px] text-start xs:my-2 animate-fadeInFromLeft">
+        <div className=" flex items-center justify-center  text-white contact-bar  text-[12px] my-2 sm:text-[16px] text-start xs:my-2 animate-fadeInFromLeft">
           <a
             href="mailto:fawadkhan1930@gmail.com"
             className="flex items-center justify-center gap-1 mr-2 min-w-fit "

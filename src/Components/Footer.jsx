@@ -1,28 +1,26 @@
 import React from "react";
-import logo from "../assets/logo/logo.png";
+// import logo from "../assets/logo/logo.png";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo/logo1.png";
 
 const Footer = () => {
   return (
-    <div className="items-center w-full p-6 xs:justify-around xs:flex xs:flex-col sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-row animate-fadeInFromRight bg-slate-400">
-      <div className="flex items-center justify-center h-full w-fit ">
+    <div className="items-center w-full p-6 md:p-6 xs:justify-around xs:flex xs:flex-col sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-row animate-fadeInFromRight bg-slate-400">
+      <div className="flex items-center flex-col justify-center h-fit  w-fit ">
         <img
           src={logo}
           alt="Logo"
-          className="w-fit xs:h-[300px] animate-fadeInFromLeft "
+          className="w-fit animate-fadeInFromLeft !h-44 object-contain"
         />
+        <div className="flex-col items-start justify-center h-full title md:w-[410px]">
+          <p className="my-2 text-slate-900 md:w-fit animate-fadeInFromBottom">
+            Choose <b>The Swat Tours</b> for a stress-free and unforgettable
+            tour, where every detail is taken care of with care and expertise.
+            Let’s make your travel dreams a reality!
+          </p>
+        </div>
       </div>
 
-      <div className="flex-col items-start justify-center h-full title md:w-[410px]">
-        <h3 className="w-full text-3xl font-extrabold uppercase xs:text-center sm:text-left md:text-left md:text-4xl lg:text-5xl text-slate-900 animate-fadeInFromTop">
-          The Swat Tours
-        </h3>
-        <p className="my-2 text-slate-900 md:w-fit animate-fadeInFromBottom">
-          Choose <b>The Swat Tours</b> for a stress-free and unforgettable tour,
-          where every detail is taken care of with care and expertise. Let’s
-          make your travel dreams a reality!
-        </p>
-      </div>
       <div className="flex flex-col items-start justify-center w-full h-full gap-2 border-t-2 pages-content md:w-fit animate-fadeInFromBottom border-slate-500 xs:border-none">
         <h3 className="w-full text-lg text-slate-900 hover:underline font-manrope">
           {" "}
