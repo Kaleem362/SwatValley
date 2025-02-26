@@ -55,13 +55,14 @@ const App = () => {
               element={
                 <>
                   <Helmet>
-                    <title>the swat tours |About us</title>
+                    <title>About Us | TheSwatTours - Your Trusted Travel Partner</title>
                     <meta
                       name="description"
-                      content="the swat tours is one of the best tour services provider in swat valley and offers a various range of tour packages in swat valley for couple and families"
+                      content="Explore Swat Valley with TheSwatTours, your trusted travel partner for unforgettable tours, honeymoon trips, and adventure experiences"
                     />
+                     <meta name="keywords" content="TheSwatTours, Swat Valley tours, Swat travel agency, best tour operators in Swat, Swat tourism services, adventure tours Swat, honeymoon trips Swat, guided tours Swat, customized Swat tours" />
 
-                   <link rel="canonical" href="https://theswattours.com/about" />
+                   <link rel="canonical" href="https://www.theswattours.com/about" />
                   </Helmet>
                   <Topbar />
                   <Navbar />
@@ -76,22 +77,28 @@ const App = () => {
                 <>
                   {/* SEO Meta Tags */}
                   <Helmet>
-                    <title>Tour Packages -book now at theswattours.com</title>
+                    <title>
+                     Swat Tour Packages 2025 | Family & Holidays | TheSwatTours</title>
                     <meta
                       name="description"
-                      content="tour packages of swat valley for the local swat citizens, couples from all over the world, families and international travellers"
+                      content="Discover the best Swat tour packages for 2025! Book family vacations, honeymoon getaways, or Holidays  tours with exclusive travel deals at the best prices"
                     />
+                    <meta
+                     name="keywords"
+                      content="Swat tour packages 2025, Pakistan tour packages, honeymoon tour packages, adventure tours in Swat, family trip to Swat, private Swat tours, customized Swat Valley tours, best travel deals in Swat"
+                     />
+
                     <link
                       rel="canonical"
                       href="https://www.theswattours.com/tourpackages"
                     />
                     <meta
                       property="og:title"
-                      content="Swat Valley Travels - Tour Packages"
+                      content="Swat Tour Packages 2025 | Family & Holidays | TheSwatTours"
                     />
                     <meta
                       property="og:description"
-                      content="Discover exclusive tour packages to explore Swat Valley's stunning landscapes and cultural heritage."
+                      content="Discover the best Swat tour packages for 2025! Book family vacations, honeymoon getaways, or Holidays  tours with exclusive travel deals at the best prices."
                     />
                     <meta
                       property="og:image"
@@ -99,7 +106,7 @@ const App = () => {
                     />
                     <meta
                       property="og:url"
-                      content="https://theswattours.com/tourpackages"
+                      content="https://www.theswattours.com/tourpackages"
                     />
                     <meta name="twitter:card" content="summary_large_image" />
                   </Helmet>
@@ -115,14 +122,19 @@ const App = () => {
               element={
                 <>
                   <Helmet>
-                    <title>Tour services</title>
+                    <title>Our Services | Tours, Car Rentals & Hotels | TheSwatTours</title>
                     <meta
                       name="description"
-                      content="Swat Tours offers a variety of services including pick & drop, rent a car, hotel accommodation, tourist information, tour guides, event planning, tour packages, and guest services"
+                      content="Explore premium travel services with TheSwatTours! From customized tour planning and car rentals to hotel bookings, we offer the best travel solutions in Swat"
                     />
+                    <meta
+                    name="keywords"
+                   content="Swat travel services, Swat tour planning, car rentals in Swat, hotel booking in Swat, guided tours Swat Valley, Swat transport services, Swat tourism solutions, private tours Swat"
+                   />
+
                     <link
                       rel="canonical"
-                      href="https://theswattours.com/ourservices"
+                      href="https://www.theswattours.com/ourservices"
                     />
                   </Helmet>
                   <Topbar />
@@ -137,27 +149,32 @@ const App = () => {
               element={
                 <>
                   <Helmet>
-                    <title>Swat Tours - Events & Activities</title>
+                    <title>Events & Activities in Swat | Adventure & Cultural  | TheSwatTours</title>
                     <meta
                       name="description"
-                      content="Explore Swat Tours' exciting events and activities, including festivals, outdoor adventures, and cultural experiences."
+                      content="Explore exciting events and activities in Swat Valley! From adventure sports to cultural festivals, TheSwatTours offers unforgettable experiences."
                     />
+                    <meta
+                     name="keywords"
+                     content="Swat events, Swat activities, adventure sports Swat, cultural festivals Swat, trekking in Swat, paragliding Swat, Swat sightseeing tours, Swat tourism activities, hiking in Swat Valley, camping in Swat, white-water rafting Swat River, skiing in Malam Jabba, Swat Valley cultural events, Swat adventure tours, Swat Valley outdoor activities"
+                    />
+
                     <link
                       rel="canonical"
                       href="https://www.theswattours.com/eventsactivities"
                     />
                     <meta
                       property="og:title"
-                      content="Swat Tours - Events & Activities"
+                      content="Events & Activities in Swat | Adventure & Cultural  | TheSwatTours"
                     />
                     <meta
                       property="og:description"
-                      content="Discover Swat Tours' events and activities, offering unforgettable experiences in Swat Valley."
+                      content="Explore exciting events and activities in Swat Valley! From adventure sports to cultural festivals, TheSwatTours offers unforgettable experiences."
                     />
                     <meta property="og:image" content={winterfestival} />
                     <meta
                       property="og:url"
-                      content="https://theswattours.com/eventsactivities"
+                      content="https://www.theswattours.com/eventsactivities"
                     />
                     <meta
                       name="twitter:image"
@@ -176,11 +193,13 @@ const App = () => {
               element={
                 <>
                   <Helmet>
-                    <title>Swat Tours - Photos Gallery</title>
+                    <title>Swat Tours - Photo Gallery | Best Travel Memorie</title>
                     <meta
                       name="description"
-                      content="Gallery provides some of the best photos of Swat Valley, showcasing its scenic beauty, lush green valleys, snow-capped mountains, crystal-clear rivers, and serene lakes."
+                      content="See the best of Swat Valley! Browse our travel gallery to explore scenic landscapes, top attractions, and unforgettable tour experiences."
                     />
+                    <meta name="keywords" content="Swat photo gallery, Swat Valley pictures, Swat travel photography, best places in Swat, Swat tourism images, scenic views of Swat, Swat Valley attractions, Swat travel memories, adventure photography in Swat, beautiful landscapes of Swat" />
+
                     <link
                       rel="canonical"
                       href="https://www.theswattours.com/gallery"
@@ -198,14 +217,19 @@ const App = () => {
               element={
                 <>
                   <Helmet>
-                    <title>Swat Tours - contact us</title>
+                    <title>Contact Us | Plan Your Swat Tour Today | TheSwatTours</title>
                     <meta
                       name="description"
-                      content="Contact Swat Tours for customizing a tour according to your budget, or for any service request including pick & drop, rent a car, hotel accommodation, tourist information, tour guides, event planning, tour packages, and guest services"
+                      content="Get in touch with TheSwatTours for customized travel plans, car rentals, hotel bookings, tour guides, and event planning in Swat Valley."
                     />
+                    <meta
+                    name="keywords"
+                    content="Contact Swat Tours, Swat travel inquiry, book Swat tour, rent a car Swat, Swat hotel booking, tour guide Swat, Swat tourism services, Swat pick and drop, Swat guest services, Swat event planning"
+                    />
+
                     <link
                       rel="canonical"
-                      href="https://theswattours.com/contact"
+                      href="https://www.theswattours.com/contact"
                     />
                   </Helmet>
                   <Topbar />
@@ -221,15 +245,15 @@ const App = () => {
               element={
                 <>
                   <Helmet>
-                    <title>Swat Tours - Tour Detail Page</title>
+                    <title>Swat Tours - Tour Detail Page | Explore Custom Travel Packages</title>
                     <meta
                       name="description"
-                      content="tour details page of the tour packages website"
+                      content="Find the perfect Swat tour for your next trip! Explore tour details, prices, and destinations, and book an unforgettable travel experience today."
                     />
-                    <link
+                    <meta name="keywords" content="Swat tour details, Swat travel packages, Swat Valley tours, best tours in Swat, adventure tours in Swat, family trip to Swat, honeymoon tour Swat, private Swat tours, customized Swat tours, tour prices in Swat, Swat tourism deals" />
+                      <link
                       rel="canonical"
-                      href="https://theswattours.com/tourdetails/tour/:id"
-                    />
+                      href="https://www.theswattours.com/tourdetails/tour/:id"  />
                   </Helmet>
                   <Topbar />
                   <Navbar />
