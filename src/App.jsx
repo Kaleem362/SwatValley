@@ -32,6 +32,25 @@ const App = () => {
               path="/"
               element={
                 <>
+                  <Helmet>
+                    <title>
+                      Swat Tour Packages 2025 | Book Now at theswattours.com
+                    </title>
+
+                    <meta
+                      name="description"
+                      content="Swat tour packages, and family tours to explore Swat Valley. Book now for affordable rates and unforgettable memories!"
+                    />
+                    <meta
+                      name="keywords"
+                      content="TheSwatTours, Swat Valley tours, Swat travel agency, best tour operators in Swat, Swat tourism services, adventure tours Swat, honeymoon trips Swat, guided tours Swat, customized Swat tours"
+                    />
+
+                    <link
+                      rel="canonical"
+                      href="https://www.theswattours.com/about"
+                    />
+                  </Helmet>
                   <Topbar />
                   <Navbar />
                   <HomeScreenCarousal />
