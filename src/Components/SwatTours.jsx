@@ -27,16 +27,16 @@ const SwatTours = () => {
 
   return (
     <div className="py-10 mx-auto ">
-      <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+      <h3 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Swat Tour Packages
-      </h1>
-      <h2 className="my-4 text-xl text-start xs:text-md sm:text-lg md:text-lg lg:text-xl xl:text-xl font-Manrope text-slate-800">
+      </h3>
+      <h3 className="my-4 text-xl text-start xs:text-md sm:text-lg md:text-lg lg:text-xl xl:text-xl font-Manrope text-slate-800">
         Providing the day packages for the local tourist of swat valley to
         explore the beautiful places of swat valley, the tours can be plan to
         visit the archaelogical sites, the beautiful lakes and the lush greenery
         of swat kalam , malamjabba mountains beauty, snowfall moments and picnic
         points.
-      </h2>
+      </h3>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {swatTourPackages.dayTours.map((tour, index) => (
           <div

@@ -14,9 +14,9 @@ const ForeignerPackages = () => {
 
   return (
     <div className="w-full my-10 transition-all duration-300 md:p-6 font-Manrope">
-      <h1 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
+      <h3 className="w-full mb-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft">
         Exclusive Swat Valley Tour Packages for Foreigners
-      </h1>
+      </h3>
 
       {foreignerPackages.map((item, index) => {
         if (!item || !item.tourPackage) {
@@ -32,9 +32,9 @@ const ForeignerPackages = () => {
             className="mb-20 overflow-hidden shadow-xl bg-slate-300 rounded-2xl"
           >
             <div className="p-6 text-white sm:p-8 bg-gradient-to-r from-slate-800 to-slate-900">
-              <h2 className="text-2xl font-bold md:text-3xl xs:text-2xl sm:text-2xl">
+              <h3 className="text-2xl font-bold md:text-3xl xs:text-2xl sm:text-2xl">
                 {title}
-              </h2>
+              </h3>
               <p className="md:text-xl xs:text-xl sm:text-xl lg:text-xl text-slate-200">
                 {duration}
               </p>
@@ -60,12 +60,12 @@ const ForeignerPackages = () => {
                         key={category}
                         className="p-3 bg-white rounded-lg shadow-md"
                       >
-                        <h4 className="mb-2 text-lg font-semibold text-slate-800">
+                        <h3 className="mb-2 text-lg font-semibold text-slate-800">
                           {category
                             .replace(/([A-Z])/g, " $1")
                             .replace(/([0-9]+)/g, " $1 ")
                             .trim()}
-                        </h4>
+                        </h3>
                         <p className="text-2xl font-bold text-slate-900">
                           {price}
                         </p>

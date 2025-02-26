@@ -144,9 +144,9 @@ const BookingModal = ({ isOpen, onClose, tourDetails, setIsModalOpen }) => {
 
       <div className="relative w-full max-w-3xl p-6 mx-4 bg-white rounded-lg shadow-xl">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-bold text-slate-800">
+          <h3 className="text-2xl font-bold text-slate-800">
             Confirm Your Booking
-          </h2>
+          </h3>
           <button
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700"

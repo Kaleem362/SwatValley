@@ -83,9 +83,9 @@ const SwatToursModal = ({ isOpen, onClose, packageDetails }) => {
         <p className="mb-4 text-5xl font-extrabold text-center text-slate-800">
           Swat Tours
         </p>
-        <h2 className="mb-4 text-2xl font-bold text-center text-slate-800">
+        <h3 className="mb-4 text-2xl font-bold text-center text-slate-800">
           {packageDetails.tourName}
-        </h2>
+        </h3>
 
         <div className="mt-4">
           <label className="block mb-2 text-lg font-bold text-slate-800">

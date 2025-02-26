@@ -14,9 +14,9 @@ const Footer = () => {
       </div>
 
       <div className="flex-col items-start justify-center h-full title md:w-[410px]">
-        <h1 className="w-full text-3xl font-extrabold uppercase xs:text-center sm:text-left md:text-left md:text-4xl lg:text-5xl text-slate-900 animate-fadeInFromTop">
+        <h3 className="w-full text-3xl font-extrabold uppercase xs:text-center sm:text-left md:text-left md:text-4xl lg:text-5xl text-slate-900 animate-fadeInFromTop">
           The Swat Tours
-        </h1>
+        </h3>
         <p className="my-2 text-slate-900 md:w-fit animate-fadeInFromBottom">
           Choose <b>The Swat Tours</b> for a stress-free and unforgettable tour,
           where every detail is taken care of with care and expertise. Let’s
@@ -24,38 +24,38 @@ const Footer = () => {
         </p>
       </div>
       <div className="flex flex-col items-start justify-center w-full h-full gap-2 border-t-2 pages-content md:w-fit animate-fadeInFromBottom border-slate-500 xs:border-none">
-        <h4 className="w-full text-lg text-slate-900 hover:underline font-manrope">
+        <h3 className="w-full text-lg text-slate-900 hover:underline font-manrope">
           {" "}
           <Link to="/tourpackages">Tour packages</Link>
-        </h4>
-        <h4 className="text-lg text-slate-900 hover:underline font-manrope">
+        </h3>
+        <h3 className="text-lg text-slate-900 hover:underline font-manrope">
           {" "}
           <Link to="/eventsactivities">Events & Activities</Link>
-        </h4>
-        <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
+        </h3>
+        <h3 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}
           <Link to="/gallery">Gallery</Link>
-        </h4>
-        <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
+        </h3>
+        <h3 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}
           <Link to="/contact">Contact us</Link>
-        </h4>
-        <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
+        </h3>
+        <h3 className="text-lg hover:underline font-manrope text-slate-900 ">
           {" "}
           <Link to="/about">About us</Link>
-        </h4>
+        </h3>
       </div>
 
       <div className="flex flex-col items-start justify-center w-full gap-2 my-2 border-t-2 md:p-0 md:w-fit misc-pages text-slate-200 animate-fadeInFromTop border-slate-500 xs:border-none">
-        <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
+        <h3 className="text-lg hover:underline font-manrope text-slate-900 ">
           Privacy Policy
-        </h4>
-        <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
+        </h3>
+        <h3 className="text-lg hover:underline font-manrope text-slate-900 ">
           Terms of Service
-        </h4>
-        <h4 className="text-lg hover:underline font-manrope text-slate-900 ">
+        </h3>
+        <h3 className="text-lg hover:underline font-manrope text-slate-900 ">
           FAQ
-        </h4>
+        </h3>
       </div>
     </div>
   );
