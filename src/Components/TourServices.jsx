@@ -82,7 +82,7 @@ const TourServices = () => {
                 className="col-span-1 p-6 transition-shadow duration-300 transform shadow-lg sm:col-span-2 lg:col-span-4 bg-slate-300 rounded-xl hover:shadow-xl hover:-translate-y-1 font-manrope"
               >
                 <service.icon className="w-12 h-12 mb-4 text-slate-800" />
-                <h2 className="flex flex-col items-center justify-between mb-2 text-3xl font-extrabold lg:flex lg:flex-row text-slate-800 font-Manrope">
+                <h3 className="flex flex-col items-center justify-between mb-2 text-3xl font-extrabold lg:flex lg:flex-row text-slate-800 font-Manrope">
                   {service.title}
                   <div className="flex flex-col items-center justify-around w-full text-sm lg:w-fit lg:items-center lg:justify-center xs:text-lg sm:text-lg lg:text-2xl font-Manrope">
                     <a
@@ -103,7 +103,7 @@ const TourServices = () => {
                       <AiOutlineWhatsApp className="w-8 h-8 p-1 text-white bg-green-500 rounded-full xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:h-12 xl:w-12" />
                     </a>
                   </div>
-                </h2>
+                </h3>
                 <p className="mb-4 text-lg text-slate-600">{service.desc}</p>
                 <ul className="ml-8 text-lg text-slate-600 font-Manrope">
                   {service.packages.map((pkg, pkgIndex) => (
