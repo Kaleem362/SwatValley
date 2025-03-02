@@ -87,8 +87,7 @@ const App = () => {
                   {/* SEO Meta Tags */}
                   <Helmet>
                     <title>
-                      Best Swat Tour Packages 2025 | Family & Honeymoon
-                      Trips
+                      Best Swat Tour Packages 2025 | Family & Honeymoon Trips
                     </title>
                     <meta
                       name="description"
