@@ -61,7 +61,7 @@ const Topbar = () => {
               className="w-6 h-6 animate-fadeIn"
             />
           </a>
-          <a href="https://www.google.com">
+          <a href="https://g.co/kgs/mFQTDHc">
             <img
               src={googleplus}
               alt="google+"
