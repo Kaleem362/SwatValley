@@ -11,6 +11,9 @@ import sangartop from "./../assets/PackagesImages/sangartop.jpg";
 import shangladaytour from "./../assets/PackagesImages/shangladaytour.jpg";
 import treesinsnow from "./../assets/PackagesImages/snowysunny.jpg";
 import c2 from "./../assets/PackagesImages/c2.jpg";
+import tz from "./../assets/images/tz.jpg";
+import SUVLUV from "./../assets/images/LUVSUV.jpg";
+import g from "./../assets/images/g.jpg";
 
 const Services = () => {
   const { toursPackage, services } = useContext(store);
@@ -324,6 +327,59 @@ const Services = () => {
                 ))}
               </div>
             </Link>
+          </div>
+          <h3 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
+            We give the featured cars for rent
+          </h3>
+          <div class=" py-12 px-4">
+            <div class="max-w-6xl mx-auto">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div class="h-56 overflow-hidden">
+                    <img
+                      src={g}
+                      alt="Luxury Sedan"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-4 text-center">
+                    <h3 class="text-xl font-Manrope font-extrabold text-gray-800">
+                      G Corolla
+                    </h3>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div class="h-56 overflow-hidden">
+                    <img
+                      src={SUVLUV}
+                      alt="Premium SUV"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-4 text-center">
+                    <h3 class="text-xl font-Manrope font-extrabold text-gray-800">
+                      Premium SUV LUV
+                    </h3>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div class="h-56 overflow-hidden">
+                    <img
+                      src={tz}
+                      alt="TZ car"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-4 text-center">
+                    <h3 class="text-xl font-Manrope font-extrabold text-gray-800">
+                      TZ land Cruisers
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
