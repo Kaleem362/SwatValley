@@ -20,6 +20,10 @@ const TourPackages = () => {
     setIsModalOpen(false);
   };
 
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/923489857193", "_blank");
+  };
+
   return (
     <>
       {/* JSON-LD Structured Data for Tour Packages */}
