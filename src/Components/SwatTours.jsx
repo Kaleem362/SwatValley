@@ -91,7 +91,7 @@ const SwatTours = () => {
                       href={`https://wa.me/923489857193?text=I'm interested in the ${tour.tourName} of ${tour.description} with ${tour.price} package`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 font-semibold text-white bg-green-500 rounded-full"
+                      className="p-2 bg-green-600 rounded-full"
                     >
                       WhatsApp
                     </a>
