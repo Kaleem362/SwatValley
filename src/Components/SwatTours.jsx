@@ -30,7 +30,7 @@ const SwatTours = () => {
   };
 
   // Your business WhatsApp number - replace with actual number
-  const whatsappNumber = "923001234567"; // Replace with your number
+  const whatsappNumber = "923489857193"; // Replace with your number
 
   // Function to handle WhatsApp booking
   const handleWhatsAppBooking = (packageInfo) => {
@@ -42,7 +42,7 @@ const SwatTours = () => {
 
     // Prepare message text
     const message =
-      `Hello! I would like to book a Swat Valley Tour:\n\n` +
+      `Hello! I would like to book a Tour:\n\n` +
       `*Package Type:* ${category}\n` +
       `*Duration:* ${duration}\n` +
       `*Price:* ${price} PKR\n` +
@@ -91,13 +91,13 @@ const SwatTours = () => {
                       href={`https://wa.me/923489857193?text=I'm interested in the ${tour.tourName} of ${tour.description} with ${tour.price} package`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-green-600 rounded-full"
+                      className="px-4 py-2 bg-green-600 rounded-full h-fit"
                     >
                       WhatsApp
                     </a>
                     <button
                       onClick={() => handleBookNow(tour)}
-                      className="px-6 py-2 font-semibold bg-white rounded-full text-slate-800 hover:scale-105 hover:bg-slate-800"
+                      className="h-10 px-4 font-semibold bg-white rounded-full xs:px-6 w-fit px-auto text-slate-800 hover:scale-105 hover:bg-slate-800"
                     >
                       Book Now
                     </button>
@@ -129,23 +129,25 @@ const SwatTours = () => {
                         key={idx}
                         className="flex justify-between py-2 border-b"
                       >
-                        <span>{pkg.duration}</span>
-                        <span className="font-semibold">PKR {pkg.price}</span>
+                        <div className="flex-col sm:flex-row ">
+                          <span>{pkg.duration}</span>
+                          <span className="font-semibold"> {pkg.price}PKR</span>
+                        </div>
                         <div className="flex gap-2">
                           <a
                             href={`https://wa.me/923489857193?text=I'm interested in the ${category.category}, ${category.accommodation}, of ${pkg.price} with the duration ${pkg.duration} package`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-3 py-1 text-white bg-green-500 rounded-md"
+                            className="px-6 py-4 text-white bg-green-500 rounded-md h-fit"
                           >
                             WhatsApp
                           </a>
-                          <button
+                          {/* <button
                             className="px-3 py-1 text-white bg-blue-600 rounded-md"
                             onClick={() => handleBookNow(pkg)}
                           >
                             Book Now
-                          </button>
+                          </button> */}
                         </div>
                       </li>
                     ))}
@@ -235,12 +237,12 @@ const SwatTours = () => {
               </div>
             </div>
           )}
-        <div className="min-h-screen px-4 py-12 bg-gradient-to-br from-green-50 to-blue-50 sm:px-6 lg:px-8">
+        <div className="min-h-screen px-4 py-12 bg-gradient-to-br from-slate-400 to-slate-400 sm:px-6 lg:px-8">
           <div className="w-full mx-auto">
             {/* Header with mountain silhouette */}
             <div className="relative mb-12">
               <div className="absolute inset-x-0 bottom-0">
-                <svg
+                {/* <svg
                   viewBox="0 0 1440 120"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -250,13 +252,13 @@ const SwatTours = () => {
                     d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 45C840 60 960 90 1080 90C1200 90 1320 60 1380 45L1440 30V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
                     fill="currentColor"
                   />
-                </svg>
+                </svg> */}
               </div>
               <div className="relative text-center">
                 <h1 className="mb-2 text-4xl font-bold text-gray-800 sm:text-5xl">
                   Swat Family & Private Tour Packages
                 </h1>
-                <p className="max-w-2xl mx-auto text-xl text-gray-600">
+                <p className="max-w-2xl mx-auto text-xl text-slate-800">
                   Discover the breathtaking beauty of Pakistan's Switzerland
                 </p>
               </div>
@@ -288,10 +290,10 @@ const SwatTours = () => {
                   key={index}
                   className="overflow-hidden transition duration-300 transform bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1"
                 >
-                  <div className="relative h-40 overflow-hidden bg-green-600">
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-500 opacity-90"></div>
+                  <div className="relative h-40 overflow-hidden bg-slate-600">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 opacity-90"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <h3 className="font-bold text-white text-7xl">
+                      <h3 className="text-6xl font-bold text-center text-white">
                         {pkg.duration}
                       </h3>
                     </div>
@@ -309,23 +311,22 @@ const SwatTours = () => {
                       <div>
                         <p className="text-sm text-gray-500">Starting from</p>
                         <p className="text-2xl font-bold text-gray-800">
-                          {pkg.price}{" "}
-                          <span className="text-sm font-normal">PKR</span>
+                          {pkg.price}
                         </p>
                       </div>
                       <button
                         onClick={() => handleWhatsAppBooking(pkg)}
-                        className="flex items-center px-4 py-2 font-medium text-white transition-colors duration-200 bg-green-600 rounded hover:bg-green-700"
+                        className="flex items-center px-3 py-3 font-medium text-white transition-colors duration-200 bg-green-600 rounded xs:px-2 xs:py-2 hover:bg-green-700"
                       >
                         <svg
-                          className="w-5 h-5 mr-2"
+                          className="w-8 h-8 mr-2"
                           viewBox="0 0 24 24"
                           fill="currentColor"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path d="M17.6 6.32C16.12 4.82 14.12 4 12 4C7.72 4 4.23 7.5 4.23 11.78C4.23 13.38 4.68 14.94 5.5 16.29L4.14 20L7.93 18.68C9.25 19.42 10.63 19.8 12.02 19.8H12.03C16.31 19.8 19.78 16.3 19.78 12.02C19.78 9.88 18.98 7.9 17.6 6.32ZM12 18.28C10.78 18.28 9.58 17.92 8.56 17.26L8.28 17.09L5.94 17.87L6.73 15.61L6.54 15.31C5.81 14.24 5.42 12.94 5.42 11.78C5.42 8.25 8.35 5.32 12 5.32C13.78 5.32 15.44 6.02 16.7 7.28C17.96 8.54 18.6 10.2 18.6 12C18.6 15.53 15.55 18.28 12 18.28ZM15.83 13.36C15.64 13.27 14.56 12.73 14.38 12.68C14.21 12.63 14.08 12.6 13.94 12.79C13.81 12.98 13.37 13.47 13.26 13.61C13.15 13.74 13.04 13.76 12.85 13.67C12.66 13.58 11.94 13.35 11.1 12.59C10.44 11.99 10.01 11.26 9.9 11.06C9.78 10.87 9.88 10.76 9.98 10.66C10.07 10.57 10.18 10.43 10.28 10.32C10.38 10.21 10.41 10.13 10.45 10C10.5 9.87 10.47 9.76 10.43 9.67C10.4 9.58 9.96 8.49 9.81 8.1C9.66 7.73 9.51 7.77 9.39 7.77C9.28 7.76 9.15 7.76 9.01 7.76C8.88 7.76 8.67 7.8 8.5 7.99C8.32 8.18 7.74 8.72 7.74 9.81C7.74 10.9 8.51 11.95 8.61 12.08C8.71 12.21 9.94 14.12 11.85 14.96C13.77 15.8 13.77 15.53 14.12 15.5C14.47 15.46 15.37 14.97 15.52 14.52C15.67 14.06 15.67 13.67 15.64 13.61C15.6 13.54 15.47 13.51 15.28 13.42L15.83 13.36Z" />
                         </svg>
-                        Book via WhatsApp
+                        WhatsApp
                       </button>
                     </div>
                   </div>
@@ -447,7 +448,7 @@ const SwatTours = () => {
             </div>
 
             {/* Call to action */}
-            <div className="p-8 mt-10 text-center rounded-lg shadow-md bg-gradient-to-r from-green-600 to-blue-600">
+            <div className="p-8 mt-10 text-center rounded-lg shadow-md bg-gradient-to-r from-slate-500 to-slate-800">
               <h2 className="mb-4 text-2xl font-bold text-white">
                 Ready for an Unforgettable Adventure?
               </h2>
@@ -467,17 +468,17 @@ const SwatTours = () => {
                     "_blank"
                   );
                 }}
-                className="flex items-center px-8 py-3 mx-auto font-bold text-green-700 transition-colors duration-200 bg-white rounded-lg shadow-lg hover:bg-green-50"
+                className="flex items-center px-8 py-3 mx-auto text-2xl font-bold text-green-700 transition-colors duration-200 bg-white rounded-lg shadow-lg hover:bg-green-50"
               >
                 <svg
-                  className="w-6 h-6 mr-2"
+                  className="w-12 h-12 mr-2 "
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M17.6 6.32C16.12 4.82 14.12 4 12 4C7.72 4 4.23 7.5 4.23 11.78C4.23 13.38 4.68 14.94 5.5 16.29L4.14 20L7.93 18.68C9.25 19.42 10.63 19.8 12.02 19.8H12.03C16.31 19.8 19.78 16.3 19.78 12.02C19.78 9.88 18.98 7.9 17.6 6.32ZM12 18.28C10.78 18.28 9.58 17.92 8.56 17.26L8.28 17.09L5.94 17.87L6.73 15.61L6.54 15.31C5.81 14.24 5.42 12.94 5.42 11.78C5.42 8.25 8.35 5.32 12 5.32C13.78 5.32 15.44 6.02 16.7 7.28C17.96 8.54 18.6 10.2 18.6 12C18.6 15.53 15.55 18.28 12 18.28ZM15.83 13.36C15.64 13.27 14.56 12.73 14.38 12.68C14.21 12.63 14.08 12.6 13.94 12.79C13.81 12.98 13.37 13.47 13.26 13.61C13.15 13.74 13.04 13.76 12.85 13.67C12.66 13.58 11.94 13.35 11.1 12.59C10.44 11.99 10.01 11.26 9.9 11.06C9.78 10.87 9.88 10.76 9.98 10.66C10.07 10.57 10.18 10.43 10.28 10.32C10.38 10.21 10.41 10.13 10.45 10C10.5 9.87 10.47 9.76 10.43 9.67C10.4 9.58 9.96 8.49 9.81 8.1C9.66 7.73 9.51 7.77 9.39 7.77C9.28 7.76 9.15 7.76 9.01 7.76C8.88 7.76 8.67 7.8 8.5 7.99C8.32 8.18 7.74 8.72 7.74 9.81C7.74 10.9 8.51 11.95 8.61 12.08C8.71 12.21 9.94 14.12 11.85 14.96C13.77 15.8 13.77 15.53 14.12 15.5C14.47 15.46 15.37 14.97 15.52 14.52C15.67 14.06 15.67 13.67 15.64 13.61C15.6 13.54 15.47 13.51 15.28 13.42L15.83 13.36Z" />
                 </svg>
-                Contact Us via WhatsApp
+                WhatsApp
               </button>
             </div>
           </div>
