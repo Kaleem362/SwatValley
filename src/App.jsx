@@ -36,6 +36,7 @@ const App = () => {
                     <title>
                       Swat Tour Packages 2025 | Book Now at theswattours.com
                     </title>
+                    <link rel="canonical" href="https://theswattours.com/" />
                     <meta
                       name="description"
                       content="Discover Swat tours, Swat tour packages, and family tours to explore Swat Valley. Book now for affordable rates and unforgettable memories!"
