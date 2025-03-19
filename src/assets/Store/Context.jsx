@@ -4,6 +4,7 @@ import {
   Swatdaytourpackage,
   foreignerPackages,
   services,
+  newtourpackages,
 } from "../../data/toursData";
 export const store = createContext();
 
@@ -54,7 +55,7 @@ const swatScenes = [
 // Store Provider Component
 export const StoreProvider = ({ children }) => {
   const [modalState, setModalState] = useState(false);
-
+  console.log(newtourpackages);
   return (
     <store.Provider
       value={{
@@ -65,6 +66,7 @@ export const StoreProvider = ({ children }) => {
         setModalState,
         services,
         swatScenes,
+        newtourpackages,
       }}
     >
       {children}

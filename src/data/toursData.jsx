@@ -13,6 +13,10 @@ import foreignone from "../assets/PackagesImages/foreignersImageone.jpg";
 import foreigntwo from "../assets/PackagesImages/foreignersImagetwo.jpg";
 import foreignthree from "../assets/PackagesImages/foreignersImagethree.jpg";
 import foreignfour from "../assets/PackagesImages/foreignersImagefour.jpg";
+import BRVimage from "../assets/PackagesImages/newtourimageone.jpeg";
+import privatetourimage from "../assets/PackagesImages/newtourimagetwo.jpeg";
+import honeymoonimage from "../assets/PackagesImages/newtourimagethree.jpg";
+import familyprivate from "../assets/PackagesImages/newtourimagefour.jpeg";
 
 export const toursPackage = [
   {
@@ -537,6 +541,127 @@ export const Swatdaytourpackage = [
       phone: "+92 348 9857193",
       email: "fawadkhan1930@gmail.com",
     },
+  },
+  {
+    familytourpackages: [
+      {
+        category: "Family Trip (2 to 4 persons)",
+        accommodation: "1 Room per night",
+        packages: [
+          { duration: "3 Days 2 Nights", price: 35000 },
+          { duration: "4 Days 3 Nights", price: 45000 },
+          { duration: "5 Days 4 Nights", price: 55000 },
+        ],
+      },
+      {
+        category: "Family Trip (4 to 7 persons)",
+        accommodation: "2 Rooms per night",
+        packages: [
+          { duration: "3 Days 2 Nights", price: 50000 },
+          { duration: "4 Days 3 Nights", price: 65000 },
+          { duration: "5 Days 4 Nights", price: 75000 },
+        ],
+      },
+      {
+        category: "Large Family Trip",
+        accommodation: "More than 7 persons",
+        contact: "Click on WhatsApp for details",
+      },
+    ],
+    destinations: [
+      "Swat River Fezagat",
+      "Township",
+      "White Palace",
+      "Swat Museum",
+      "Madyan Valley",
+      "Trout Fishing Farm",
+      "Bahrain Valley",
+      "Kalam Bazar",
+      "Usho Forest",
+      "Chota Mahodand Lake",
+      "Malam Jabba Ski Resort",
+      "Green Valley Adventure Park",
+      "and many others...",
+    ],
+    transportation: [
+      { vehicle: "Prius/Corolla", capacity: "2-4 persons" },
+      { vehicle: "BRV/APV", capacity: "4-7 persons" },
+      {
+        info: "Privately booked in Swat with all fuel, driver, and toll expenses covered",
+      },
+    ],
+    packageIncludes: [
+      "Accommodation in standard hotels",
+      "Private transportation with fuel and toll expenses",
+      "Driver or guide with all expenses",
+    ],
+    extraCharges: [
+      { from: "Islamabad", price: 1200 },
+      { from: "Lahore", price: 2300 },
+      { from: "Karachi", price: 5600 },
+    ],
+    contactInfo: {
+      phone: "+92 348 9857193",
+      email: "fawadkhan1930@gmail.com",
+      website: "www.theswattours.com",
+    },
+  },
+];
+
+export const newtourpackages = [
+  {
+    category: "Family Customize or Private Tours",
+    image: privatetourimage,
+    groupSize: "2 to 4 persons",
+    accommodation: "1 Room per night",
+    packages: [
+      { duration: "3 Days 2 Nights", price: 35000 },
+      { duration: "4 Days 3 Nights", price: 45000 },
+      { duration: "5 Days 4 Nights", price: 55000 },
+    ],
+  },
+  {
+    category: "Family Customize or Private Tours",
+    image: familyprivate,
+    groupSize: "4 to 7 persons",
+    accommodation: "2 Rooms per night",
+    packages: [
+      { duration: "3 Days 2 Nights", price: 50000 },
+      { duration: "4 Days 3 Nights", price: 65000 },
+      { duration: "5 Days 4 Nights", price: 75000 },
+    ],
+  },
+  {
+    category: "Private Car or BRV Tour Packages",
+    image: BRVimage,
+    groupSize: "2 to 4 persons",
+    accommodation: "1 Room per night",
+    packages: [
+      { duration: "3 Days 2 Nights", price: 65000 },
+      { duration: "4 Days 3 Nights", price: 75000 },
+      { duration: "5 Days 4 Nights", price: 85000 },
+    ],
+  },
+  {
+    category: "Private Car or BRV Tour Packages",
+    image: BRVimage,
+    groupSize: "4 to 7 persons",
+    accommodation: "2 Rooms per night",
+    packages: [
+      { duration: "3 Days 2 Nights", price: 80000 },
+      { duration: "4 Days 3 Nights", price: 95000 },
+      { duration: "5 Days 4 Nights", price: 105000 },
+    ],
+  },
+  {
+    category: "5-Star Royal Couple or Honeymoon Packages",
+    image: honeymoonimage,
+    groupSize: "Couple",
+    accommodation: "Luxury Hotels",
+    packages: [
+      { name: "Dx Plus Package", duration: "5 Days 4 Nights", price: 180000 },
+      { name: "Executive Package", duration: "4 Days 3 Nights", price: 120000 },
+    ],
   },
 ];
 

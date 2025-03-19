@@ -329,7 +329,7 @@ const Services = () => {
             </Link>
           </div>
           <h3 className="w-full my-4 text-4xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-Manrope animate-fadeInFromLeft ">
-            We give the featured cars for rent
+            Our featured cars for rent
           </h3>
           <div class=" py-12 px-4">
             <div class="max-w-6xl mx-auto">

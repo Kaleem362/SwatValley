@@ -48,16 +48,16 @@ export default {
         float: "float 5s infinite ease-in-out",
         roll: "roll 5s infinite linear",
       },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: "1rem",
-          sm: "2rem",
-          lg: "4rem",
-          xl: "5rem",
-          "2xl": "6rem",
-        },
-      },
+      // container: {
+      //   center: true,
+      //   padding: {
+      //     DEFAULT: "1rem",
+      //     sm: "2rem",
+      //     lg: "4rem",
+      //     xl: "5rem",
+      //     "2xl": "6rem",
+      //   },
+      // },
       screens: {
         xs: "414px",
         sm: "640px",
