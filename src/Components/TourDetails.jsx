@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { store } from "../assets/Store/Context";
 import email from "../assets/icons-asset/gmail.png";
 import BookingModal from "./BookingModal";
+import { Link } from "react-router";
 
 const TourDetails = () => {
   const { id } = useParams();
@@ -36,7 +37,7 @@ const TourDetails = () => {
             <img
               src={selectedPackage.coverImage || "defaultImage.jpg"} // Fallback for missing image
               alt={selectedPackage.destination || "Unknown Destination"}
-              className="relative object-cover w-full h-64 sm:h-72"
+              className="relative object-cover w-full h-64 sm:h-96 md:h-96 lg:h-96 xl:h-96"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-end pb-4 bg-opacity-50 bg-gradient-to-t from-black to-transparent">
               <h2 className="text-xl font-bold text-center text-white uppercase xs:text-2xl sm:text-lg md:text-3xl lg:text-5xl">
@@ -53,6 +54,9 @@ const TourDetails = () => {
             <div className="p-6 w-full md:w-[70%]">
               <h3 className="min-w-full mb-2 text-xl font-extrabold text-gray-800 uppercase xs:text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl ">
                 {selectedPackage.packageName || "-"}
+              </h3>
+              <h3 className="min-w-full p-4 mb-2 text-xl font-semibold text-gray-800 bg-gray-200 rounded-lg xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-xl ">
+                {selectedPackage.description || "-"}
               </h3>
 
               <h3 className="text-xl font-bold text-gray-700 xs:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-2xl">

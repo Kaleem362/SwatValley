@@ -17,31 +17,37 @@ import foreignfour from "../assets/PackagesImages/foreignersImagefour.jpg";
 export const toursPackage = [
   {
     id: 1,
-    packageName: "Luxury Honeymoon/Couple Tour ",
+    packageName:
+      "Luxury Honeymoon Tour – Lahore to Lahore | 5-Star Executive Package 2025",
     description:
-      "Enjoy a luxurious honeymoon or couple tour in Swat Valley with our executive package. Explore the stunning landscapes of Swat, Kalam, and Malam Jabba with your loved one.",
+      "Experience a Luxurious honeymoon tour from lahore to lahore with our 5-star executive couple package. Explore Swat, Kalam & Malamjabba with premium stays, private transport and exclusive experiences. Limited slots - Book Now!",
     coverImage: kalamvalley,
     Image: HoneyMoonone,
     duration: "4 days 3 nights",
     tourPoints: "Lahore to Lahore",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
-    packageType: "Executive Package",
+    packageType: "Executive Luxury Package",
     packagePrices: {
       for1Couple: "₨ 80,000",
       for2Couples: "₨ 130,000",
     },
     accommodation: {
-      type: "Executive Hotels",
+      type: "Luxury 5-star hotels",
       hotels: [
         "Malam Jabba Palace",
         "Burj Al Swat",
         "Swat Hilton",
         "Rock City Resort",
-        "Honeymoon Hotel",
+        "HoneMoon Hotel",
       ],
     },
     transportation: {
-      options: ["Private Car (Prius/Corolla)", "Mini Jeep"],
+      options: [
+        "Private Car (Prius/Corolla)",
+        "from Islamabad to Swat & Kalam",
+        "Luxury Bus (lahore to Islamabad)",
+        "Mini Jeep for Off-road adventures",
+      ],
       details: "Fuel and toll expenses covered",
       busTickets: {
         companies: ["Faisal Movers", "Shahid Coach"],
@@ -58,12 +64,13 @@ export const toursPackage = [
 
   {
     id: 2,
-    packageName: "Honeymoon Couple / Family Tour ",
+    packageName:
+      "Honeymoon & Family Tour – Swat, Kalam & Malam Jabba | 3 Days from Lahore",
     description:
-      "Experience a memorable honeymoon or family tour in Swat Valley with our deluxe package, Pick & drop you from Lahore to Explore the beautiful landscapes of Swat, Kalam, and Malam Jabba.",
+      "Experience a 3-day honeymoon or family tour from Lahore to Swat, Kalam & Malam Jabba. Stay in deluxe hotels, enjoy private transport, and explore scenic landscapes. Affordable rates – book now!",
     coverImage: malamjabbacover,
     Image: HoneyMoontwo,
-    duration: "days 3 nights 2",
+    duration: "3 days  nights 2",
     tourPoints: "Lahore to Lahore",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
@@ -71,7 +78,7 @@ export const toursPackage = [
       for2Couples: "Rs. 75,000/-",
     },
     accommodation: {
-      type: "Deluxe Accommodations",
+      type: "Deluxe Hotels",
       hotels: [
         "Malam Jabba Palace",
         "Hotel Liberty Bhrain",
@@ -81,9 +88,14 @@ export const toursPackage = [
       ],
     },
     transportation: {
-      options: ["Prius/Corolla Car", "Fielder Car"],
+      options: [
+        "Toyota Prius",
+        "Corolla",
+        "Fielder Car",
+        "Luxury Bus (Lahore to swat Round trip)",
+      ],
       details:
-        "Privately booked in Swat with all fuel and toll expenses covered",
+        "Privately booked in Swat with all fuel and toll expenses covered & Lahore to swat Round Trip",
     },
     travelStyle: {
       busTickets: {
@@ -101,21 +113,22 @@ export const toursPackage = [
 
   {
     id: 3,
-    packageName: "Private Luxury Honeymoon/Couple Tour ",
+    packageName:
+      "Private Luxury Honeymoon Tour – Karachi to Swat (7 Days Executive Package 2025)",
     description:
-      "Enjoy a private luxury honeymoon or couple tour in Swat Valley, we are ready to pick you from Karachi to Swat.",
+      "Experience a private luxury honeymoon tour from Karachi to Swat with executive accommodations, private transport,and premium experiences. Enjoy a 7-day romantic trip with 4-star hotels & adventure activities – Book Now!",
     coverImage: MalamJabba,
     Image: HoneyMoonthree,
-    duration: "7 days (Karachi)",
+    duration: "7 days (Karachi to karachi)",
     tourPoints: "Karachi to Karachi",
-
+    packageType: "Private Executive Package",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
       for1Couple: "₨ 95,000/-",
       for2Couples: "₨ 150,000/-",
     },
     accommodation: {
-      type: "Executive Accommodations",
+      type: "Luxury Executive Hotels",
       hotels: [
         "Malam Jabba Palace",
         "Burj Al Swat",
@@ -125,7 +138,11 @@ export const toursPackage = [
       ],
     },
     transportation: {
-      options: ["Prius/Corolla Car", "Prado Jeep"],
+      options: [
+        "Private Car (Toyota Prius / Corolla) from Islamabad to Swat & Kalam",
+        "Luxury Bus (Karachi to Islamabad & Back)",
+        "Prado Jeep for Off-Road Adventures",
+      ],
       details:
         "Privately booked in Swat with all fuel and toll expenses covered",
     },
@@ -145,12 +162,14 @@ export const toursPackage = [
 
   {
     id: 4,
-    packageName: "Deluxe Private Luxury Honeymoon/Couple Tour ",
+    packageName:
+      "Deluxe Private Honeymoon Tour – Karachi to Swat (6 Days Affordable Luxury 2025)",
     description:
-      "Experience a six days luxurious honeymoon or couple tour in Swat Valley, visit from your starting point Karachi.",
+      "Enjoy a 6-day deluxe private honeymoon tour from Karachi to Swat with romantic getaways, scenic landscapes, and deluxe stays.Explore Malam Jabba, Kalam & Swat with private transport & premium inclusions. Limited slots – Book Now!",
     coverImage: MalamJabba,
     Image: honeymoonfour,
-    duration: "6 days (karachi)",
+    packageType: "Deluxe Private Tour",
+    duration: "6 days (karachi to karachi)",
     tourPoints: "karachi to karachi",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: {
@@ -158,7 +177,7 @@ export const toursPackage = [
       for2Couples: "₨ 100,000/-",
     },
     accommodation: {
-      type: "Deluxe Accommodations",
+      type: "Deluxe Hotels",
       hotels: [
         "Malam Jabba Palace",
         "Hotel Liberty Bhrain",
@@ -168,7 +187,10 @@ export const toursPackage = [
       ],
     },
     transportation: {
-      options: ["Prius/Corolla Car", "Fielder Car"],
+      options: [
+        "Private Car (Toyota Prius / Corolla / Fielder) from Islamabad to Swat & Kalam",
+        "Luxury Bus (Karachi to Islamabad & Back)",
+      ],
       details:
         "Privately booked in Swat with all fuel and toll expenses covered",
     },
@@ -188,13 +210,15 @@ export const toursPackage = [
 
   {
     id: 5,
-    packageName: "Private Luxury Honeymoon/Couple Tour ",
+    packageName:
+      "Private Luxury Honeymoon Tour – Islamabad to Swat | 4 Days Romantic Escape 2025",
     description:
-      "enjoy a luxurious honeymoon or couple tour in Swat Valley, visit the beautiful famous places of Swat, Kalam, and Malam Jabba with your loved one, we are ready to pick you from Islamabad.",
+      "Embark on a 4-day luxury honeymoon tour from Islamabad to Swat, Kalam & Malam Jabba. Stay in executive hotels, enjoy private transportation, and experience breathtaking romantic getaways. Limited slots – Book Now!",
     coverImage: MalamJabba,
     Image: honeymoonfive,
     duration: "4 Days, 3 Nights",
     tourPoints: "Islamabad to Islamabad",
+    packageType: "Private Executive Tour",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     startingAndEndingPoint: "Islamabad",
 
@@ -203,7 +227,7 @@ export const toursPackage = [
       for2Couples: "₨ 98,000/-",
     },
     accommodation: {
-      type: "Executive Accommodations",
+      type: "Executive Hotels & Resorts",
       hotels: [
         "Malamjabba Palace",
         "Burj Al Swat",
@@ -213,7 +237,10 @@ export const toursPackage = [
       ],
     },
     transportation: {
-      options: ["Prius/Corolla Car", "Mini Jeep"],
+      options: [
+        "Private Car (Toyota Prius / Corolla) from Islamabad to Swat & Kalam",
+        "Mini Jeep for Off-Road Adventures",
+      ],
       details:
         "Privately booked in Swat with all fuel and toll expenses covered",
     },
@@ -232,9 +259,10 @@ export const toursPackage = [
 
   {
     id: 6,
-    packageName: "Deluxe Private Luxury Honeymoon/Couple Tour ",
+    packageName:
+      "Deluxe Private Honeymoon Tour – Islamabad to Swat | 3 Days Romantic Escape 2025",
     description:
-      "Experience a Deluxe HoneyMoon Tour in swat valley, visit the mesmerizing places of Swat, Kalam, and Malam Jabba with your loved one, we are ready to pick & drop you from Islamabad.",
+      "Enjoy a 3-day deluxe honeymoon tour from Islamabad to Swat, Kalam & Malam Jabba with luxurious stays, private transportation & breathtaking romantic experiences. Limited slots – Book Now!",
     coverImage: malamjabbacover,
     Image: honeymoonsix,
 
@@ -247,7 +275,7 @@ export const toursPackage = [
       for2Couples: "₨ 60,000/-",
     },
     accommodation: {
-      type: "Deluxe Accommodations",
+      type: "Deluxe Hotels",
       hotels: [
         "Malam Jabba Palace",
         "Hotel Liberty Bhrain",
@@ -257,7 +285,10 @@ export const toursPackage = [
       ],
     },
     transportation: {
-      options: ["Prius/Corolla Car", "Fielder Car"],
+      options: [
+        "Private Car (Toyota Prius / Corolla / Fielder) from Islamabad to Swat & Kalam",
+        "",
+      ],
       details:
         "Privately booked in Swat with all fuel and toll expenses covered",
     },
@@ -276,98 +307,106 @@ export const toursPackage = [
 
   {
     id: 7,
-    packageName: "Luxury 3-Day Swat Tour ",
+    packageName:
+      "Luxury 3-Day Swat Tour | Explore Mingora, Kalam & Malam Jabba 2025",
     description:
-      "Explore the Beauty of Swat Valley with our Luxury Tour Package of 3 days and 2 nights, make the moments memorable with your family.",
+      "Enjoy a 3-day luxury tour from Mingora to Swat, Kalam & Malam Jabba with private transport, executive stays & thrilling adventures.Visit Swat Museum, White Palace & Malam Jabba Zipline – Book Now!",
     coverImage: MalamJabba,
     Image: familytour,
     duration: "3 Days, 2 Nights",
     tourPoints: "Mingora swat to Mingora Swat",
     destinations: ["Swat", "Kalam", "Malam Jabba"],
     packagePrices: "₨ 35,000/-",
+    packageType: "Luxury Private Tour",
 
     itinerary: [
       {
         day: 1,
-        title: "Explore Mingora",
+        title: "Day 1: Explore Mingora – The Heart of Swat",
         activities: [
           "Departure from Mingora",
-          "Visit Swat Museum",
-          "Explore White Palace",
-          "Local shopping and food in Mingora",
-          "Overnight stay in Swat (Fizagat)",
+          "Visit Swat Museum – Explore the History of Swat",
+          "Visit White Palace – A Royal Retreat",
+          "Enjoy Local Shopping & Traditional Cuisine",
+          "Overnight Stay in Swat (Fizagat)",
         ],
       },
       {
         day: 2,
-        title: "Discover Kalam",
+        title: "Day 2: Discover Kalam – A Natural Wonderland",
         activities: [
           "Departure for Kalam",
-          "Breakfast",
-          "Visit Madyan, Bahrain, Ushu Forest, and Chota Mahodand Lake",
-          "Enjoy time at Ushu Forest",
-          "Overnight stay in Kalam Valley",
+          "Breakfast at the Hotel",
+          "Drive to Madyan & Bahrain Valleys",
+          "Visit Ushu Forest & Chota Mahodand Lake",
+          "Enjoy Leisure Time in Ushu Forest",
+          "Overnight Stay in Kalam Valley",
         ],
       },
       {
         day: 3,
-        title: "Adventure in Malam Jabba",
+        title: "Day 3: Adventure in Malam Jabba – Thrills & Fun",
         activities: [
-          "Breakfast",
-          "Explore Malam Jabba",
-          "Activities: Zipline, Chairlift, Green Valley Adventure Park",
-          "Return to Mingora",
+          "Breakfast & Hotel Checkou",
+          "Visit Malam Jabba – Pakistan’s Premier Ski Resort ",
+          "Enjoy Zipline, Chairlift & Green Valley Adventure Park",
+          " Return to Mingora – Tour Ends with Beautiful Memories",
         ],
       },
     ],
     packageIncludes: [
-      "Private car with fuel, tolls, and parking fees",
-      "Driver or guide",
-      "Hotel accommodation",
-      "Breakfast",
+      "Private Car with Fuel, Toll & Parking Fees",
+      "Dedicated Driver / Guide",
+      "Hotel Accommodation in Executive Hotels",
+      "Daily Breakfast at the Hotel",
+      "Sightseeing of Swat Museum, White Palace & Malam Jabba",
+      "Adventure Activities in Malam Jabba 🎿",
     ],
   },
   {
     id: 8,
-    packageName: "Luxury 2-Day Swat Tour ",
+    packageName: "Luxury 2-Day Swat Tour | Mingora & Kalam Private Trip 2025",
     description:
-      "experience the beauty of swat valley with the luxury tour package of 2 days and 1 night, picking you from mingora and drop you back to mingora.",
+      "Experience a 2-day luxury tour in Swat & Kalam with private transport, executive stays & guided sightseeing. Explore Swat Museum, White Palace, Ushu Forest & Chota Mahodand Lake – Book Now!",
     coverImage: MalamJabba,
     Image: swattour,
     duration: "2 Days, 1 Night",
     tourPoints: "Mingora Swat to Mingora Swat",
     destinations: ["Swat", "Kalam"],
     packagePrices: "₨ 20,000/-",
+    packageType: "Luxury Private Tour",
     itinerary: [
       {
         day: 1,
-        title: "Explore Mingora and Kalam",
+        title: "Day 1: Explore Mingora & Travel to Kalam",
         activities: [
           "Departure from Mingora",
-          "Visit Swat Museum",
-          "Explore White Palace",
-          "Local shopping and food in Mingora",
-          "Departure for Kalam",
-          "Visit Madyan and Bahrain",
-          "Overnight stay in Kalam Bazar",
+          "Visit Swat Museum – Discover the Rich History of Swat 🏛️",
+          "Visit White Palace – Experience Royal Heritage",
+          "Enjoy Local Shopping & Traditional Food",
+          "Drive to Kalam via Madyan & Bahrain Valleys",
+          "Overnight Stay in Kalam Bazaar",
         ],
       },
       {
         day: 2,
-        title: "Discover Ushu Forest",
+        title: "Day 2: Explore Ushu Forest & Chota Mahodand Lake",
         activities: [
+          "Breakfast at Hotel",
           "Departure from Kalam Bazar",
-          "Visit Ushu Forest and Chota Mahodand Lake",
-          "Enjoy time at Shahi Ground",
-          "Return to Mingora",
+          "Visit Ushu Forest – A Natural Wonderland ",
+          "Explore Chota Mahodand Lake – A Hidden Paradise",
+          "Enjoy Scenic Views at Shahi Ground",
+          "Return to Mingora – End of Tour",
         ],
       },
     ],
     packageIncludes: [
-      "Private car with fuel, tolls, and parking fees",
-      "Driver or guide",
-      "Hotel accommodation",
-      "Breakfast",
+      "Private Car with Fuel, Toll & Parking Fees",
+      "Dedicated Driver / Guide",
+      " Hotel Accommodation in Premium Hotels",
+      "Daily Breakfast at the Hotel",
+      "Sightseeing of Swat Museum, White Palace & Ushu Forest",
     ],
   },
 ];
