@@ -20,6 +20,7 @@ import WhatsAppButton from "./Components/WhatsappButton";
 import { toursPackage } from "./data/toursData";
 import winterfestival from "./assets/PackagesImages/swattour.jpg";
 import Blog from "./Blog/Blog";
+import BlogDetail from "./Blog/BlogDetail";
 // import Blog from "./Blog/Blog";
 
 const App = () => {
@@ -283,9 +284,31 @@ const App = () => {
                 </>
               }
             />
+
+            <Route
+              path="/blog"
+              element={
+                <>
+                  <Topbar />
+                  <Navbar />
+                  <Blog />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/blogdetail"
+              element={
+                <>
+                  <Topbar />
+                  <Navbar />
+                  <BlogDetail />
+                  <Footer />
+                </>
+              }
+            />
             {/* Catch-all route at the end */}
             <Route path="*" element={<ErrorPage />} />
-            <Route path="/blog/*" element={<Blog />} />
           </Routes>
         </div>
       </>

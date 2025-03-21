@@ -109,7 +109,7 @@ const Navbar = () => {
                 ? "bg-green-900 text-white"
                 : "text-slate-900 lg:text-black"
             } hover:text-white hover:bg-green-600`}
-            onClick={() => handleTabClick("About us")}
+            onClick={() => handleTabClick("Blog")}
             to={"/blog"}
           >
             Blog

@@ -6,7 +6,7 @@ import logo from "../assets/logo/logo1.png";
 const Footer = () => {
   return (
     <div className="items-center w-full p-6 md:p-6 xs:justify-around xs:flex xs:flex-col sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-row animate-fadeInFromRight bg-slate-400">
-      <div className="flex items-center flex-col justify-center h-fit  w-fit ">
+      <div className="flex flex-col items-center justify-center h-fit w-fit ">
         <img
           src={logo}
           alt="Logo"
