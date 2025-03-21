@@ -77,11 +77,11 @@ const Services = () => {
                     <h3 className="w-full text-xl font-bold text-center text-white ">
                       {tour.packageName}
                       <br />
-                      <div className="bg-slate-800 bg-opacity-80">
+                      {/* <div className="bg-slate-800 bg-opacity-80">
                         {tour.duration || ""}
-                      </div>
+                      </div> */}
                       <div className="text-[16px] bg-opacity-80 bg-slate-800">
-                        {tour.tourPoints || "-"}
+                        {/* {tour.tourPoints || "-"} */}
                       </div>
                     </h3>
                   </div>

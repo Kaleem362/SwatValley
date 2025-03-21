@@ -19,6 +19,8 @@ import AboutUs from "./Components/About";
 import WhatsAppButton from "./Components/WhatsappButton";
 import { toursPackage } from "./data/toursData";
 import winterfestival from "./assets/PackagesImages/swattour.jpg";
+import Blog from "./Blog/Blog";
+// import Blog from "./Blog/Blog";
 
 const App = () => {
   return (
@@ -36,7 +38,7 @@ const App = () => {
                     <title>
                       Swat Tour Packages 2025 | Book Now at theswattours.com
                     </title>
-                    <link rel="canonical" href="https://theswattours.com/" />
+                    {/* <link rel="canonical" href="https://theswattours.com/" /> */}
                     <meta
                       name="description"
                       content="Discover Swat tours, Swat tour packages, and family tours to explore Swat Valley. Book now for affordable rates and unforgettable memories!"
@@ -283,6 +285,7 @@ const App = () => {
             />
             {/* Catch-all route at the end */}
             <Route path="*" element={<ErrorPage />} />
+            <Route path="/blog/*" element={<Blog />} />
           </Routes>
         </div>
       </>

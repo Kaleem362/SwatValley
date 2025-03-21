@@ -103,6 +103,17 @@ const Navbar = () => {
           >
             About us
           </Link>
+          <Link
+            className={`p-2 px-auto text-md text-slate-900 font-semibold transition-all duration-200 rounded-full cursor-pointer font-Manrope ${
+              selectedTab === "About us"
+                ? "bg-green-900 text-white"
+                : "text-slate-900 lg:text-black"
+            } hover:text-white hover:bg-green-600`}
+            onClick={() => handleTabClick("About us")}
+            to={"/blog"}
+          >
+            Blog
+          </Link>
         </ul>
         <span
           className="p-2 border rounded-lg cursor-pointer bg-slate-800 border-slate-800 menu lg:hidden"
