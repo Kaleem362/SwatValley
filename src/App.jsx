@@ -107,6 +107,7 @@ const App = () => {
                       rel="canonical"
                       href="https://www.theswattours.com/tourpackages"
                     />
+
                     <meta
                       property="og:title"
                       content="Swat Valley Travels - Tour Packages"
