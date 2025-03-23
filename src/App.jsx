@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Topbar from "./Components/Topbar";
 import Navbar from "./Components/Navbar";
 import HomeScreenCarousal from "./Components/HomeScreenCarousal";
@@ -29,7 +28,6 @@ const App = () => {
     <HelmetProvider>
       <>
         <Analytics />
-        <SpeedInsights />
         <div className="font-Manrope">
           <WhatsAppButton />
           <Routes>
@@ -109,7 +107,6 @@ const App = () => {
                       rel="canonical"
                       href="https://www.theswattours.com/tourpackages"
                     />
-
                     <meta
                       property="og:title"
                       content="Swat Valley Travels - Tour Packages"
