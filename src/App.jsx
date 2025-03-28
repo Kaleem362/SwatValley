@@ -289,6 +289,25 @@ const App = () => {
               path="/blog"
               element={
                 <>
+                  <Helmet>
+                    <title>
+                      Blog Page | The Swat Tours – About Swat Valley
+                    </title>
+                    <meta
+                      name="description"
+                      content="Read about the swat valley. know the reason to visit the swat valley & explore the green mountains, the enchanting views and the lush green beauty of swat valley. Plan your Swat Valley trip today!
+"
+                    />
+                    <meta
+                      name="keywords"
+                      content="Swat Travel Booking, Swat Tour Inquiry, Book Swat Trip, Contact Swat Tours, Swat Tour Packages Inquiry, Swat Valley Tours Booking
+"
+                    />
+                    <link
+                      rel="canonical"
+                      href="https://theswattours.com/blog"
+                    />
+                  </Helmet>
                   <Topbar />
                   <Navbar />
                   <Blog />
@@ -300,6 +319,25 @@ const App = () => {
               path="/blogdetail"
               element={
                 <>
+                  <Helmet>
+                    <title>
+                      Contact Us | The Swat Tours – Book Your Swat Trip Now
+                    </title>
+                    <meta
+                      name="description"
+                      content="Read about the swat valley. know the reason to visit the swat valley & explore the green mountains, the enchanting views and the lush green beauty of swat valley. Plan your Swat Valley trip today!
+"
+                    />
+                    <meta
+                      name="keywords"
+                      content="Swat Travel Booking, Swat Tour Inquiry, Book Swat Trip, Contact Swat Tours, Swat Tour Packages Inquiry, Swat Valley Tours Booking
+"
+                    />
+                    <link
+                      rel="canonical"
+                      href="https://theswattours.com/blogdetail"
+                    />
+                  </Helmet>
                   <Topbar />
                   <Navbar />
                   <BlogDetail />
