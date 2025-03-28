@@ -67,6 +67,14 @@ const EventsActivities = () => {
           <h1 className="w-full my-4 text-6xl font-bold text-center text-slate-800 xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-8xl font-Manrope">
             Events
           </h1>
+          <p className="px-2 my-4 text-justify bg-white rounded-lg xs:text-md sm:text-lg lg:text-xl xs:w-full text-slate-500">
+            Celebrate Life’s Special Moments with Unforgettable Tours" At The
+            Swat Tours, we turn your celebrations into extraordinary
+            experiences. Whether it’s a romantic honeymoon, a dreamy anniversary
+            trip, or an adventure-filled birthday tour, we design personalized
+            journeys that create lifelong memories. Plus, explore Swat in style
+            with our premium car rentals!
+          </p>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {events.map((event, index) => (
               <div
@@ -103,6 +111,40 @@ const EventsActivities = () => {
           <h3 className="w-full my-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl text-slate-800 font-Manrope">
             Activities
           </h3>
+          <ul className="bg-white">
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Trekking & Hiking : </b>
+              <br />
+              Mahodand Lake Trail: Moderate 4-hour hike with alpine views.{" "}
+              <br />
+              Ushu Forest Walk: Easy guided nature trails (family-friendly).
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Skiing & Snow Fun :</b> <br />
+              Malam Jabba Resort: Dec-Feb skiing, snowboarding, and cozy lodge
+              stays.
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>
+                Cultural Experiences : <br />{" "}
+              </b>
+              Swat Museum Tours: <br /> Ancient Gandhara artifacts in Saidu
+              Sharif. <br /> Local Village Visits: <br />
+              Meet Kalash communities, taste organic walnuts.
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Water Adventures:</b>
+              <br />
+              River Rafting: Swat River rapids (May-August, grade III). <br />
+              Fishing at Gabral: Trout fishing in crystal streams.
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Zip-lining through Ushu Forest :</b>- 800m cable over pine
+            </li>
+            <li className="p-1 my-1 list-disc sm:ml-10 bg-slate-100 ">
+              <b>Ice Climbing (Winter):</b> - Frozen waterfalls near Malam Jabba
+            </li>
+          </ul>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-6">
             {activities.map((activity, index) => (
               <div
